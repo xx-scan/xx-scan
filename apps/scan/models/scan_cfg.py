@@ -52,6 +52,7 @@ class ScanRecode(models.Model):
     scan_tool = models.ForeignKey(ScanTool, verbose_name="使用的扫描工具", on_delete=models.CASCADE, related_name="scan_event_2_scan_tool" )
     target = models.GenericIPAddressField(verbose_name="扫描的IP目标")
     port = models.IntegerField(verbose_name="扫描端口")
+    path = models.CharField(verbose_name="PATH路径", blank=True, max_length=255)
     output = models.CharField(max_length=255, verbose_name=u"保存路径", blank=True)
     # managers = models.ManyToManyField("ConnectManagerUserInfo", related_name="sys_cop_conn_users")
     date_created = models.DateTimeField(auto_now_add=True)
