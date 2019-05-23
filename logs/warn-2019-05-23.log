@@ -22,3 +22,4 @@ Traceback (most recent call last):
 IndexError: list index out of range
 WARNING 2019-05-23 15:19:34,483 log Not Found: /favicon.ico
 WARNING 2019-05-23 15:19:47,750 log Not Found: /
+WARNING 2019-05-23 17:53:39,883 log Not Found: /favicon.ico
