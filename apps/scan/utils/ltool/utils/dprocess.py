@@ -11,6 +11,7 @@ import subprocess
 #     lines = out_info.split('\n')
 #     return lines
 
+
 import sys, io
 # Change default encoding to utf8
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf8')

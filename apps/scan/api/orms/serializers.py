@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from ...models import ScanTool, ScanRecode, Scheme, Host, Service, \
-    Protocol, Xprotocal, ScanReport, ScanTask, ReportFormat
+    Protocol, NmapServiceName, ScanReport, ScanTask, ReportFormat
 
 class ScanToolSerializer(serializers.ModelSerializer):
     class Meta:
@@ -36,9 +36,9 @@ class ProtocolSerializer(serializers.ModelSerializer):
         model = Protocol
         fields = '__all__'
 
-class XprotocalSerializer(serializers.ModelSerializer):
+class NmapServiceNameSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Xprotocal
+        model = NmapServiceName
         fields = '__all__'
 
 class ScanReportSerializer(serializers.ModelSerializer):

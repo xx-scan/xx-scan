@@ -15,12 +15,12 @@ class Protocol(models.Model):
         verbose_name = "协议组"
 
 
-class Xprotocal(models.Model):
+class NmapServiceName(models.Model):
     protocol = models.CharField(max_length=255, verbose_name=u"归纳协议", blank=True)
-    xprotocol = models.CharField(max_length=255, verbose_name=u"模糊协议", blank=True)
+    service_name = models.CharField(max_length=255, verbose_name=u"模糊协议", blank=True)
 
     class Meta:
-        db_table = "xprotocols"
+        db_table = "nmap_service_names"
         verbose_name = "协议对照表"
 
 

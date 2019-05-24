@@ -4,10 +4,10 @@ from rest_framework import serializers, viewsets, routers
 # from rest_framework.response import Response
 
 from .serializers import ScanTool, ScanRecode, Scheme, Host, Service, \
-    Protocol, Xprotocal, ScanReport, ScanTask, ReportFormat
+    Protocol, NmapServiceName, ScanReport, ScanTask, ReportFormat
 
 from .serializers import ScanToolSerializer, ScanRecodeSerializer, SchemeSerializer, HostSerializer, ServiceSerializer, \
-    ProtocolSerializer, XprotocalSerializer, ScanReportSerializer, ScanTaskSerializer, ReportFormatSerializer
+    ProtocolSerializer, NmapServiceNameSerializer, ScanReportSerializer, ScanTaskSerializer, ReportFormatSerializer
 
 
 class ScanToolViewSet(viewsets.ModelViewSet):
@@ -41,9 +41,9 @@ class ProtocolViewSet(viewsets.ModelViewSet):
     serializer_class = ProtocolSerializer
 
 
-class XprotocalViewSet(viewsets.ModelViewSet):
-    queryset = Xprotocal.objects.all()
-    serializer_class = XprotocalSerializer
+class NmapServiceNameViewSet(viewsets.ModelViewSet):
+    queryset = NmapServiceName.objects.all()
+    serializer_class = NmapServiceNameSerializer
 
 
 class ScanReportViewSet(viewsets.ModelViewSet):
@@ -66,7 +66,7 @@ scan_v1_router.register(r'hosts', HostViewSet)
 scan_v1_router.register(r'services', ServiceViewSet)
 
 scan_v1_router.register(r'protocal', ProtocolViewSet)
-scan_v1_router.register(r'xprotocal', XprotocalViewSet)
+scan_v1_router.register(r'nmap_service_names', NmapServiceNameViewSet)
 
 scan_v1_router.register(r'scan_tools', ScanToolViewSet)
 scan_v1_router.register(r'scan_recodes', ScanRecodeViewSet)
@@ -74,5 +74,6 @@ scan_v1_router.register(r'scan_reports', ScanReportViewSet)
 scan_v1_router.register(r'scan_tasks', ScanTaskViewSet)
 scan_v1_router.register(r'scan_schemes', SchemeViewSet)
 scan_v1_router.register(r'report_formats', ReportFormatViewSet)
+
 
 

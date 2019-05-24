@@ -40,7 +40,7 @@ except ImportError as e:
         pass
 
 try:
-    from website.conf import load_user_config
+    from apps.services.conf import load_user_config
     CONFIG = load_user_config()
 except ImportError as e:
     print("Import error: {}".format(e))
@@ -186,6 +186,7 @@ ServiceDict = {
             '--broker={}'.format(CELERY_BROKER_URL),
             '--pidfile={}'.format(get_pid_file_path("flower")),
             '--log-to-stderr={}'.format(get_log_file_path("flower")),
+            '--persistent',
         ],
         "stop_cmd":"ps -axu | grep 'flower' | grep -v grep | awk '{print $2}' | xargs kill -15",
         "status_cmd":"ps -axu | grep 'flower' | grep -v  grep | wc -l"
