@@ -6,7 +6,7 @@ from src import django_setup
 def test():
     django_setup()
     from scan.api.mudules.scan_v2.prepare.put_default_2cfg import orm_delete, inital_scan_cfgs, inintal_services, inital_scheme, inital_scan_tools
-    # orm_delete()
+    orm_delete()
     inital_scan_cfgs()
 
 
@@ -26,6 +26,6 @@ def test_recode():
 
 
 if __name__ == '__main__':
-    #test()
+    test()
     #test_discover()
-    test_recode()
+    #test_recode()

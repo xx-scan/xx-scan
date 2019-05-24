@@ -78,6 +78,14 @@ def push_cmd(cmd):
 
 
 @shared_task
+def loads_service_to_recodes(prepare=None):
+    from scan.api.mudules.scan_v2.recode import collect_recodes
+    collect_recodes()
+
+    return "Load Recode End."
+
+
+@shared_task
 def get_all_need_l2_scan_tasks(prepare=None):
     django_setup()
 
@@ -100,7 +108,12 @@ def nmap_tasks(targets="192.168.2.*"):
 
 @shared_task
 @register_as_period_task(interval=3600*3)
-def chain_all_tasks(targets="192.168.2.*"):
+def chain_all_tasks(targets="192.168.1.*"):
     # chord(header=[ nmap_scan.s(), ], body=nmap_result_import.s() )()
-    chain(nmap_scan.s(targets), nmap_result_import.s(), get_all_need_l2_scan_tasks.s() )()
+    chain(nmap_scan.s(targets), nmap_result_import.s(), loads_service_to_recodes.s(), get_all_need_l2_scan_tasks.s() )()
     return "Task End"
+
+"""
+from scan.tasks import chain_all_tasks
+chain_all_tasks().delay("192.168.1.*")
+"""

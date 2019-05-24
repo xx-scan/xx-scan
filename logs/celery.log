@@ -1,0 +1,113 @@
+consumer: Cannot connect to redis://:**@192.168.2.73:6379/5: Error 110 connecting to 192.168.2.73:6379. Connection timed out..
+Trying again in 2.00 seconds...
+
+Traceback (most recent call last):
+File "/usr/lib64/python3.6/multiprocessing/util.py", line 262, in _run_finalizers
+    finalizer()
+File "/usr/lib64/python3.6/multiprocessing/util.py", line 186, in __call__
+    res = self._callback(*self._args, **self._kwargs)
+File "/home/django/cso_venv/lib64/python3.6/site-packages/billiard/pool.py", line 1618, in _terminate_pool
+    cls._help_stuff_finish(*help_stuff_finish_args)
+File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/concurrency/asynpool.py", line 1290, in _help_stuff_finish
+    fileno_to_proc[fd].inq._reader.recv()
+File "/home/django/cso_venv/lib64/python3.6/site-packages/billiard/connection.py", line 281, in recv
+    return ForkingPickler.loadbuf(buf)
+File "/home/django/cso_venv/lib64/python3.6/site-packages/billiard/reduction.py", line 61, in loadbuf
+    return cls.loads(buf.getbuffer())
+EOFError: Ran out of input
+Connected to redis://:**@127.0.0.1:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/cso_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@xxscan ready.
+Events of group {task} enabled by remote.
+Connected to redis://:**@127.0.0.1:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/cso_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@xxscan ready.
+Events of group {task} enabled by remote.
+Received task: scan.tasks.nmap_scan[8756c738-7e58-4165-9e54-0c0bbc380875]  
+
+>>>>>>>>>>>>>>>>>>>Nmap--ERROR----
+
+Task scan.tasks.nmap_scan[8756c738-7e58-4165-9e54-0c0bbc380875] succeeded in 0.104875532999813s: '/home/django/xx-scan/datas/nmap_scan/result_f00e3af4-6e86-4bdb-87fe-ac67c71368f5.xml'
+Received task: scan.tasks.nmap_result_import[2a453057-edb8-4a42-a091-d3e013339b91]  
+
+>>>>Extract Error---
+
+Received task: scan.tasks.loads_service_to_recodes[7ddac799-fb9b-4f2c-9564-da61fb8c851f]  
+Task scan.tasks.nmap_result_import[2a453057-edb8-4a42-a091-d3e013339b91] succeeded in 0.2889702900001794s: 'Nmap Scan Result Extract!'
+Task scan.tasks.loads_service_to_recodes[7ddac799-fb9b-4f2c-9564-da61fb8c851f] raised unexpected: IndexError('list index out of range',)
+Traceback (most recent call last):
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 82, in loads_service_to_recodes
+    from scan.api.mudules.scan_v2.recode import collect_recodes
+  File "/home/django/xx-scan/apps/scan/api/mudules/scan_v2/recode.py", line 4, in <module>
+    DEFAULT_SCHEME = Scheme.objects.filter(name="scheme_nmap")[0]
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/django/db/models/query.py", line 303, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+Received task: scan.tasks.chain_all_tasks[125724e0-9e27-4c89-96b8-7829e0494b37]  
+Task scan.tasks.chain_all_tasks[125724e0-9e27-4c89-96b8-7829e0494b37] succeeded in 0.009490801000083593s: 'Task End'
+Received task: scan.tasks.nmap_scan[839bcb9b-fc4e-4caf-9d69-d60fdd79f7c6]  
+
+>>>>>>>>>>>>>>>>>>>Nmap--ERROR----
+
+Task scan.tasks.nmap_scan[839bcb9b-fc4e-4caf-9d69-d60fdd79f7c6] succeeded in 0.024495974000274146s: '/home/django/xx-scan/datas/nmap_scan/result_f00e3af4-6e86-4bdb-87fe-ac67c71368f5.xml'
+Received task: scan.tasks.nmap_result_import[d8f299af-63c6-47ca-a197-e6eb0eca2dfe]  
+
+>>>>Extract Error---
+
+Received task: scan.tasks.loads_service_to_recodes[24536fcb-2608-4769-b83d-cee036ca066c]  
+Task scan.tasks.nmap_result_import[d8f299af-63c6-47ca-a197-e6eb0eca2dfe] succeeded in 0.019440994999968098s: 'Nmap Scan Result Extract!'
+Task scan.tasks.loads_service_to_recodes[24536fcb-2608-4769-b83d-cee036ca066c] raised unexpected: IndexError('list index out of range',)
+Traceback (most recent call last):
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 82, in loads_service_to_recodes
+    from scan.api.mudules.scan_v2.recode import collect_recodes
+  File "/home/django/xx-scan/apps/scan/api/mudules/scan_v2/recode.py", line 4, in <module>
+    DEFAULT_SCHEME = Scheme.objects.filter(name="scheme_nmap")[0]
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/django/db/models/query.py", line 303, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+Received task: scan.tasks.chain_all_tasks[87808c3f-da1f-47b1-afac-bbe21f4970f4]  
+Task scan.tasks.chain_all_tasks[87808c3f-da1f-47b1-afac-bbe21f4970f4] succeeded in 0.006785424000099738s: 'Task End'
+Received task: scan.tasks.nmap_scan[386db081-639f-4844-a873-df50ba094270]  
+
+>>>>>>>>>>>>>>>>>>>Nmap--ERROR----
+
+Task scan.tasks.nmap_scan[386db081-639f-4844-a873-df50ba094270] succeeded in 0.02380386400000134s: '/home/django/xx-scan/datas/nmap_scan/result_f00e3af4-6e86-4bdb-87fe-ac67c71368f5.xml'
+Received task: scan.tasks.nmap_result_import[ce3b5202-6bbf-4b8c-a85e-7ec323322abe]  
+
+>>>>Extract Error---
+
+Task scan.tasks.nmap_result_import[ce3b5202-6bbf-4b8c-a85e-7ec323322abe] succeeded in 0.011967784999797004s: 'Nmap Scan Result Extract!'
+Received task: scan.tasks.loads_service_to_recodes[eb0313d8-b550-4bc6-9d61-b62e6901519e]  
+Task scan.tasks.loads_service_to_recodes[eb0313d8-b550-4bc6-9d61-b62e6901519e] succeeded in 0.0463326290000623s: 'Load Recode End.'
+Received task: scan.tasks.get_all_need_l2_scan_tasks[a5e3423d-7883-4528-b7e6-55c5bcef5af0]  
+Task scan.tasks.get_all_need_l2_scan_tasks[a5e3423d-7883-4528-b7e6-55c5bcef5af0] succeeded in 0.018267551000008098s: 'all_ok'
+Received task: scan.tasks.chain_all_tasks[f5a7494f-63ee-431d-9f4f-707ebabcefa3]  
+Task scan.tasks.chain_all_tasks[f5a7494f-63ee-431d-9f4f-707ebabcefa3] succeeded in 0.007042752999950608s: 'Task End'
+Received task: scan.tasks.nmap_scan[51f0bdb7-dfe4-4ab8-b75b-287602dc45aa]  
+Received task: scan.tasks.chain_all_tasks[a5b42e2d-4823-49c5-b76a-22e21fa8bff8]  
+Task scan.tasks.chain_all_tasks[a5b42e2d-4823-49c5-b76a-22e21fa8bff8] succeeded in 0.009053748000042106s: 'Task End'
+Received task: scan.tasks.nmap_scan[8393a40c-bd2c-49ce-b06b-1319dda8c15c]  
+Received task: scan.tasks.nmap_result_import[cb5669b6-88b5-4a1b-9e47-b676b32535ad]  
+Task scan.tasks.nmap_scan[51f0bdb7-dfe4-4ab8-b75b-287602dc45aa] succeeded in 3019.376536598s: '/home/django/xx-scan/datas/nmap_scan/result_693eedc2-f61b-4a38-b513-f7cf35cc75a5.xml'
+
+>>>>Extract Error---
+
+Received task: scan.tasks.loads_service_to_recodes[29cf0783-d284-4ae5-9b8e-72b3322b3900]  
+Task scan.tasks.nmap_result_import[cb5669b6-88b5-4a1b-9e47-b676b32535ad] succeeded in 0.11829076000049099s: 'Nmap Scan Result Extract!'
+Received task: scan.tasks.get_all_need_l2_scan_tasks[10516f7b-ba64-4b7d-aa4e-a760c0f02ef3]  
+Task scan.tasks.loads_service_to_recodes[29cf0783-d284-4ae5-9b8e-72b3322b3900] succeeded in 0.03565983299995423s: 'Load Recode End.'
+Task scan.tasks.get_all_need_l2_scan_tasks[10516f7b-ba64-4b7d-aa4e-a760c0f02ef3] succeeded in 0.023013455000182148s: 'all_ok'
