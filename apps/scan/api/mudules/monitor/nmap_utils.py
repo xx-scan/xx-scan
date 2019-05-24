@@ -1,67 +1,49 @@
 from libnmap.parser import NmapParser
-import uuid
+# import uuid
 
-from xsqlmb.src.ltool.utils.dt_tool import get_pydt_based_logdt, get_pydt2_based_nmap
-from cso.mudules.monitor.cop_info import create_cop_default_user
+from ....utils.ltool.utils.dt_tool import get_pydt_based_logdt, get_pydt2_based_nmap
+from ....models import Host, Service
 
-from cso.mudules.monitor.models import HostService
-from cso.models import SysManagerCopInfo, ConnectManagerUserInfo
+path = "F:\\workspace\\xx-scan\\apps\\scan\\datas\\nmap_results\\sV.xml"
 
-path = "F:\\workspace\\CSO\\apps\\cso\\datas\\nmap_results\\sV.xml"
+FilterByIp = True
 
-
-def cop_in_plat(_host):
+def get_current_host(_host):
     _ip = _host.id
     _mac = _host.mac
     _vendor = _host.vendor
-    _filters = SysManagerCopInfo.objects.filter(mac=_mac)
+    _filters = Host.objects.filter(mac=_mac)
+    if FilterByIp:
+        _filters = Host.objects.filter(ip=_ip)
     if len(_filters) > 0:
-        _cop = _filters[0]
+        host = _filters[0]
     else:
-        _cop = SysManagerCopInfo(
-            uniq_flag="CommonHost" + str(uuid.uuid4()),
-            name=_ip,
-            ip=_ip,
-            type="自发现设备",
-            os="Centos-7.4",
-            mac=_mac,
-            mac_vendor=_vendor,
-            up=True,
-        )
-        _cop.save()
-        _cop.managers.add(create_cop_default_user())
-    return dict(
-        _cop=_cop,
-        _ip=_host.id,
-        _mac = _host.mac,
-        _vendor = _host.vendor,
-    )
+        host = Host(name=_ip,ip=_ip,type="自发现设备",os="-",mac=_mac,mac_vendor=_vendor,up=True,)
+        host.save()
+    return dict(host=host, ip=_host.id, mac = _host.mac,  vendor= _host.vendor, )
 
 
-def get_needs_datas_from_xmlpath(xml_path=path, incomplete=False):
+def get_needs_datas_from_xmlpath(xml_path=path, incomplete=False, DEBUG=False):
     nmap_report = NmapParser.parse_fromfile(xml_path, incomplete=incomplete)
-    # print(nmap_report._scaninfo)
-    # print(nmap_report._runstats)
-    # print(nmap_report._nmaprun)
     _time = get_pydt2_based_nmap(nmap_report._runstats["finished"]["timestr"])
     # print(_time)
     _services_list = []
-    SysManagerCopInfo.objects.all().delete()
+    if not DEBUG:
+        Service.objects.all().delete()
 
-    HostService.objects.all().delete()
     for _host in nmap_report.hosts:
-        _cop_info = cop_in_plat(_host)
-        _ip = _cop_info["_ip"]
-        _cop = _cop_info["_cop"]
-
+        _host_info = get_current_host(_host)
+        # ip = _host_info["ip"]
+        host = _host_info["host"]
         for _service in _host.services:
             service = _service.get_dict()
+            if service["service"] in ["tcpwrapped", ]:
+                continue
             del service["id"]
-            print(service)
-            _services_list.append( HostService(**service, descover_time=_time, belongCop=_cop), )
+            _services_list.append( Service(**service, descover_time=_time, host=host), )
 
-    HostService.objects.bulk_create(_services_list)
-
+    if not DEBUG:
+        Service.objects.bulk_create(_services_list)
 
 
 

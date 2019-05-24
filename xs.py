@@ -40,7 +40,7 @@ except ImportError as e:
         pass
 
 try:
-    from apps.services.conf import load_user_config
+    from apps.website.conf import load_user_config
     CONFIG = load_user_config()
 except ImportError as e:
     print("Import error: {}".format(e))

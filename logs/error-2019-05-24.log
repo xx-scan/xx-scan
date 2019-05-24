@@ -1,0 +1,251 @@
+ERROR 2019-05-24 12:29:05,735 F:\workspace\xs_venv\lib\site-packages\django\utils\log.py log Internal Server Error: /xx/scan/v1/scan_schemes/
+Traceback (most recent call last):
+  File "F:\workspace\xs_venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "F:\workspace\xs_venv\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "F:\workspace\xs_venv\lib\site-packages\django\core\handlers\base.py", line 154, in _get_response
+    response = response.render()
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\response.py", line 72, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\renderers.py", line 697, in get_context
+    'post_form': self.get_rendered_html_form(data, view, 'POST', request),
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\renderers.py", line 520, in get_rendered_html_form
+    return self.render_form_for_serializer(serializer)
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\renderers.py", line 530, in render_form_for_serializer
+    {'style': {'template_pack': 'rest_framework/horizontal'}}
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\renderers.py", line 381, in render
+    return template.render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\defaulttags.py", line 209, in render
+    nodelist.append(node.render_annotated(context))
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\library.py", line 192, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\templatetags\rest_framework.py", line 90, in render_field
+    return renderer.render_field(field, style)
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\renderers.py", line 360, in render_field
+    return template.render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = self.sequence.resolve(context, ignore_failures=True)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "F:\workspace\xs_venv\lib\site-packages\django\template\base.py", line 858, in _resolve_lookup
+    current = current()
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\relations.py", line 534, in iter_options
+    self.get_choices(cutoff=self.html_cutoff),
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\relations.py", line 522, in get_choices
+    return self.child_relation.get_choices(cutoff)
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\relations.py", line 194, in get_choices
+    for item in queryset
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\relations.py", line 194, in <listcomp>
+    for item in queryset
+  File "F:\workspace\xs_venv\lib\site-packages\rest_framework\relations.py", line 213, in display_value
+    return six.text_type(instance)
+  File "F:\workspace\xx-scan\apps\scan\models\scan_cfg.py", line 58, in __str__
+    return self.protocol + "["+ self.name +"]"
+TypeError: unsupported operand type(s) for +: 'Protocol' and 'str'
+ERROR 2019-05-24 16:53:43,041 f:\workspace\xs_venv\lib\site-packages\celery\utils\dispatch\signal.py signal Signal handler <promise@0x20f6ee3e6d0 --> <bound method Celery._autodiscover_tasks of <Celery xxscan at 0x20f6eb3e780>>> raised: InvalidCacheBackendError("Could not find backend 'django.redis_cache.RedisCache': No module named 'django.redis_cache'",)
+Traceback (most recent call last):
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 50, in _create_cache
+    backend_cls = import_string(backend)
+  File "f:\workspace\xs_venv\lib\site-packages\django\utils\module_loading.py", line 17, in import_string
+    module = import_module(module_path)
+  File "G:\anaconda\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django.redis_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\workspace\xs_venv\lib\site-packages\celery\utils\dispatch\signal.py", line 227, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "f:\workspace\xs_venv\lib\site-packages\vine\promises.py", line 170, in __call__
+    return self.throw()
+  File "f:\workspace\xs_venv\lib\site-packages\vine\promises.py", line 167, in __call__
+    retval = fun(*final_args, **final_kwargs)
+  File "f:\workspace\xs_venv\lib\site-packages\celery\app\base.py", line 670, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_names(packages, related_name)
+  File "f:\workspace\xs_venv\lib\site-packages\celery\app\base.py", line 676, in _autodiscover_tasks_from_names
+    packages() if callable(packages) else packages, related_name,
+  File "f:\workspace\xs_venv\lib\site-packages\celery\loaders\base.py", line 223, in autodiscover_tasks
+    related_name) if mod)
+  File "f:\workspace\xs_venv\lib\site-packages\celery\loaders\base.py", line 248, in autodiscover_tasks
+    return [find_related_module(pkg, related_name) for pkg in packages]
+  File "f:\workspace\xs_venv\lib\site-packages\celery\loaders\base.py", line 248, in <listcomp>
+    return [find_related_module(pkg, related_name) for pkg in packages]
+  File "f:\workspace\xs_venv\lib\site-packages\celery\loaders\base.py", line 274, in find_related_module
+    return importlib.import_module('{0}.{1}'.format(package, related_name))
+  File "G:\anaconda\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "F:\workspace\xx-scan\apps\services\tasks.py", line 54, in <module>
+    @register_as_period_task(interval=3600*2)
+  File "F:\workspace\xx-scan\apps\ops\celery\decorator.py", line 71, in decorate
+    'enabled': True,
+  File "F:\workspace\xx-scan\apps\ops\celery\decorator.py", line 15, in add_register_period_task
+    value = cache.get(key, [])
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 98, in __getattr__
+    return getattr(caches[DEFAULT_CACHE_ALIAS], name)
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 79, in __getitem__
+    cache = _create_cache(alias)
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 53, in _create_cache
+    "Could not find backend '%s': %s" % (backend, e))
+django.core.cache.backends.base.InvalidCacheBackendError: Could not find backend 'django.redis_cache.RedisCache': No module named 'django.redis_cache'
+ERROR 2019-05-24 16:53:43,344 f:\workspace\xs_venv\lib\site-packages\celery\utils\dispatch\signal.py signal Signal handler <bound method DjangoFixup.on_worker_init of <celery.fixups.django.DjangoFixup object at 0x0000020F6EB3E978>> raised: InvalidCacheBackendError("Could not find backend 'django.redis_cache.RedisCache': No module named 'django.redis_cache'",)
+Traceback (most recent call last):
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 50, in _create_cache
+    backend_cls = import_string(backend)
+  File "f:\workspace\xs_venv\lib\site-packages\django\utils\module_loading.py", line 17, in import_string
+    module = import_module(module_path)
+  File "G:\anaconda\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django.redis_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\workspace\xs_venv\lib\site-packages\celery\utils\dispatch\signal.py", line 227, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "f:\workspace\xs_venv\lib\site-packages\celery\fixups\django.py", line 87, in on_worker_init
+    self.worker_fixup.install()
+  File "f:\workspace\xs_venv\lib\site-packages\celery\fixups\django.py", line 132, in install
+    self.close_cache()
+  File "f:\workspace\xs_venv\lib\site-packages\celery\fixups\django.py", line 196, in close_cache
+    self._cache.cache.close()
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 98, in __getattr__
+    return getattr(caches[DEFAULT_CACHE_ALIAS], name)
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 79, in __getitem__
+    cache = _create_cache(alias)
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 53, in _create_cache
+    "Could not find backend '%s': %s" % (backend, e))
+django.core.cache.backends.base.InvalidCacheBackendError: Could not find backend 'django.redis_cache.RedisCache': No module named 'django.redis_cache'
+ERROR 2019-05-24 16:54:49,978 f:\workspace\xs_venv\lib\site-packages\celery\utils\dispatch\signal.py signal Signal handler <promise@0x27be518e6d0 --> <bound method Celery._autodiscover_tasks of <Celery xxscan at 0x27be4e8e780>>> raised: InvalidCacheBackendError("Could not find backend 'django.redis_cache.RedisCache': No module named 'django.redis_cache'",)
+Traceback (most recent call last):
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 50, in _create_cache
+    backend_cls = import_string(backend)
+  File "f:\workspace\xs_venv\lib\site-packages\django\utils\module_loading.py", line 17, in import_string
+    module = import_module(module_path)
+  File "G:\anaconda\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django.redis_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\workspace\xs_venv\lib\site-packages\celery\utils\dispatch\signal.py", line 227, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "f:\workspace\xs_venv\lib\site-packages\vine\promises.py", line 170, in __call__
+    return self.throw()
+  File "f:\workspace\xs_venv\lib\site-packages\vine\promises.py", line 167, in __call__
+    retval = fun(*final_args, **final_kwargs)
+  File "f:\workspace\xs_venv\lib\site-packages\celery\app\base.py", line 670, in _autodiscover_tasks
+    return self._autodiscover_tasks_from_names(packages, related_name)
+  File "f:\workspace\xs_venv\lib\site-packages\celery\app\base.py", line 676, in _autodiscover_tasks_from_names
+    packages() if callable(packages) else packages, related_name,
+  File "f:\workspace\xs_venv\lib\site-packages\celery\loaders\base.py", line 223, in autodiscover_tasks
+    related_name) if mod)
+  File "f:\workspace\xs_venv\lib\site-packages\celery\loaders\base.py", line 248, in autodiscover_tasks
+    return [find_related_module(pkg, related_name) for pkg in packages]
+  File "f:\workspace\xs_venv\lib\site-packages\celery\loaders\base.py", line 248, in <listcomp>
+    return [find_related_module(pkg, related_name) for pkg in packages]
+  File "f:\workspace\xs_venv\lib\site-packages\celery\loaders\base.py", line 274, in find_related_module
+    return importlib.import_module('{0}.{1}'.format(package, related_name))
+  File "G:\anaconda\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "F:\workspace\xx-scan\apps\services\tasks.py", line 54, in <module>
+    @register_as_period_task(interval=3600*2)
+  File "F:\workspace\xx-scan\apps\ops\celery\decorator.py", line 71, in decorate
+    'enabled': True,
+  File "F:\workspace\xx-scan\apps\ops\celery\decorator.py", line 15, in add_register_period_task
+    value = cache.get(key, [])
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 98, in __getattr__
+    return getattr(caches[DEFAULT_CACHE_ALIAS], name)
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 79, in __getitem__
+    cache = _create_cache(alias)
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 53, in _create_cache
+    "Could not find backend '%s': %s" % (backend, e))
+django.core.cache.backends.base.InvalidCacheBackendError: Could not find backend 'django.redis_cache.RedisCache': No module named 'django.redis_cache'
+ERROR 2019-05-24 16:54:49,999 f:\workspace\xs_venv\lib\site-packages\celery\utils\dispatch\signal.py signal Signal handler <bound method DjangoFixup.on_worker_init of <celery.fixups.django.DjangoFixup object at 0x0000027BE4E8E978>> raised: InvalidCacheBackendError("Could not find backend 'django.redis_cache.RedisCache': No module named 'django.redis_cache'",)
+Traceback (most recent call last):
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 50, in _create_cache
+    backend_cls = import_string(backend)
+  File "f:\workspace\xs_venv\lib\site-packages\django\utils\module_loading.py", line 17, in import_string
+    module = import_module(module_path)
+  File "G:\anaconda\lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 953, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'django.redis_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "f:\workspace\xs_venv\lib\site-packages\celery\utils\dispatch\signal.py", line 227, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "f:\workspace\xs_venv\lib\site-packages\celery\fixups\django.py", line 87, in on_worker_init
+    self.worker_fixup.install()
+  File "f:\workspace\xs_venv\lib\site-packages\celery\fixups\django.py", line 132, in install
+    self.close_cache()
+  File "f:\workspace\xs_venv\lib\site-packages\celery\fixups\django.py", line 196, in close_cache
+    self._cache.cache.close()
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 98, in __getattr__
+    return getattr(caches[DEFAULT_CACHE_ALIAS], name)
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 79, in __getitem__
+    cache = _create_cache(alias)
+  File "f:\workspace\xs_venv\lib\site-packages\django\core\cache\__init__.py", line 53, in _create_cache
+    "Could not find backend '%s': %s" % (backend, e))
+django.core.cache.backends.base.InvalidCacheBackendError: Could not find backend 'django.redis_cache.RedisCache': No module named 'django.redis_cache'

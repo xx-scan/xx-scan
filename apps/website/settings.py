@@ -283,9 +283,9 @@ EMAIL_PORT = 25
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 SERVER_EMAIL = EMAIL_HOST_USER
 
-from .site_settings.logsettings import LOGGING
+#from .site_settings.logsettings import LOGGING
 
-from .site_settings.cors import *
+# from .site_settings.cors import *
 MEDIA_DIR = STATIC_ROOT
 if sys.platform == 'win32':
     MEDIA_DIR = "e://"
@@ -296,7 +296,7 @@ if not os.path.exists(MEDIA_DIR):
 MEDIA_URL = '/static/uploads/'
 MEDIA_ROOT = os.path.join(MEDIA_DIR, 'collect_static', 'uploads')
 
-PROJECT_DIR = STATIC_ROOT
+# PROJECT_DIR = STATIC_ROOT
 # import pymysql
 
 SITE_TITLE = u'XX-SCAN'
@@ -335,12 +335,16 @@ CELERY_WORKER_CONCURRENCY = 1
 # Cache use redis
 CACHES = {
     'default': {
-        'BACKEND': 'django.redis_cache.RedisCache',
+        'BACKEND': 'django_redis.cache.RedisCache',
+        #'BACKEND': 'redis_cache.cache.RedisCache',
         'LOCATION': 'redis://:%(password)s@%(host)s:%(port)s/%(db)s' % {
             'password': CONFIG.REDIS_PASSWORD,
             'host': CONFIG.REDIS_HOST,
             'port': CONFIG.REDIS_PORT,
             'db': CONFIG.REDIS_DB_CACHE,
+        },
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     }
 }
