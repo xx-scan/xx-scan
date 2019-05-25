@@ -111,3 +111,119 @@ Task scan.tasks.nmap_result_import[cb5669b6-88b5-4a1b-9e47-b676b32535ad] succeed
 Received task: scan.tasks.get_all_need_l2_scan_tasks[10516f7b-ba64-4b7d-aa4e-a760c0f02ef3]  
 Task scan.tasks.loads_service_to_recodes[29cf0783-d284-4ae5-9b8e-72b3322b3900] succeeded in 0.03565983299995423s: 'Load Recode End.'
 Task scan.tasks.get_all_need_l2_scan_tasks[10516f7b-ba64-4b7d-aa4e-a760c0f02ef3] succeeded in 0.023013455000182148s: 'all_ok'
+Received task: scan.tasks.nmap_result_import[71e1dc17-6ec5-4c28-ae44-453d5d8fa32f]  
+Task scan.tasks.nmap_scan[8393a40c-bd2c-49ce-b06b-1319dda8c15c] succeeded in 1455.582128006s: '/home/django/xx-scan/datas/nmap_scan/result_afb11d34-cce3-40b9-86e5-52d8a473e0ed.xml'
+Task scan.tasks.nmap_result_import[71e1dc17-6ec5-4c28-ae44-453d5d8fa32f] succeeded in 0.08517847699840786s: 'Nmap Scan Result Extract!'
+Received task: scan.tasks.loads_service_to_recodes[5bae513a-a2a4-46b5-8360-25b364afa62e]  
+Received task: scan.tasks.get_all_need_l2_scan_tasks[3cdfaebd-9b94-4187-b5b9-4d7b81bfaeec]  
+Task scan.tasks.loads_service_to_recodes[5bae513a-a2a4-46b5-8360-25b364afa62e] succeeded in 0.062422578999758116s: 'Load Recode End.'
+Task scan.tasks.get_all_need_l2_scan_tasks[3cdfaebd-9b94-4187-b5b9-4d7b81bfaeec] succeeded in 0.03533053499995731s: 'all_ok'
+Received task: scan.tasks.chain_all_tasks[6ecc7058-17a3-4049-8ac5-e0baa6b67336]  
+Task scan.tasks.chain_all_tasks[6ecc7058-17a3-4049-8ac5-e0baa6b67336] succeeded in 0.006369147999066627s: 'Task End'
+Received task: scan.tasks.nmap_scan[aff4e959-e541-48b0-a609-38bd3dc3193a]  
+Scaling up 5 processes.
+Scaling down 5 processes.
+Received task: scan.tasks.nmap_result_import[318903eb-443e-472e-8ca6-29344da79677]  
+Task scan.tasks.nmap_scan[aff4e959-e541-48b0-a609-38bd3dc3193a] succeeded in 127.42262866000056s: '/home/django/xx-scan/datas/nmap_scan/result_afb11d34-cce3-40b9-86e5-52d8a473e0ed.xml'
+Task scan.tasks.nmap_result_import[318903eb-443e-472e-8ca6-29344da79677] succeeded in 0.11558329400031653s: 'Nmap Scan Result Extract!'
+Received task: scan.tasks.loads_service_to_recodes[fd4830c9-9c7e-4927-825e-b955e64b90c9]  
+sun-answerbook没有注册服务
+redis没有注册服务
+Received task: scan.tasks.get_all_need_l2_scan_tasks[0a4fdf1c-dd6b-4383-8f38-5cb20517ea5c]  
+Task scan.tasks.loads_service_to_recodes[fd4830c9-9c7e-4927-825e-b955e64b90c9] succeeded in 1.0607386820011016s: 'Load Recode End.'
+nmap -sC -sV -Pn -v -p 5555 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 127.0.0.1 -oN /home/django/xx-scan/results/127.0.0.1-5555/nmap_http_vuln-127.0.0.1-5555-20190524.txt --host-timeout 40m --script-timeout 20m
+Received task: scan.tasks.push_cmd[4ebc7436-116f-46b9-bab7-db105f8e97ca]  
+nmap -sC -sV -v -Pn 127.0.0.1 -p 111 -oN /home/django/xx-scan/results/127.0.0.1-111/nmap_service_scan-127.0.0.1-111-20190524.txt
+Received task: scan.tasks.push_cmd[164a249d-f439-4963-9b05-2f1ff73ccdf3]  
+nmap 127.0.0.1 -p 5555 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m
+Received task: scan.tasks.push_cmd[ad6d0af6-6498-421d-a65c-ccc8e7bd94b8]  
+nmap -sC -sV -Pn -v -p 80 --script=http-* 127.0.0.1 -d -oN /home/django/xx-scan/results/127.0.0.1-80/nmap_script_http-127.0.0.1-80-20190524.txt -oX /home/django/xx-scan/results/127.0.0.1-80/nmap_script_http-127.0.0.1-80-20190524.xml --host-timeout 120m --script-timeout 20m
+Received task: scan.tasks.push_cmd[cb650021-079d-43c9-8993-55ca1d0d9bbb]  
+Scaling up 1 processes.
+nmap 127.0.0.1 -p 22 -sC -sV -v -Pn -oN /home/django/xx-scan/results/127.0.0.1-22/nmap_service_scan-127.0.0.1-22-20190524.txt
+Received task: scan.tasks.push_cmd[a62a5bd8-3ad4-45b8-8837-78a6705286a3]  
+Scaling up 1 processes.
+nmap -sC -sV -Pn -v -p 80 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 127.0.0.1 -oN /home/django/xx-scan/results/127.0.0.1-80/nmap_http_vuln-127.0.0.1-80-20190524.txt --host-timeout 40m --script-timeout 20m
+Received task: scan.tasks.push_cmd[5e1b855f-6fa9-4fc9-b90c-90caa61d4ae6]  
+Scaling up 1 processes.
+nmap -sC -sV -Pn -v -p 5555 --script=http-* 127.0.0.1 -d -oN /home/django/xx-scan/results/127.0.0.1-5555/nmap_script_http-127.0.0.1-5555-20190524.txt -oX /home/django/xx-scan/results/127.0.0.1-5555/nmap_script_http-127.0.0.1-5555-20190524.xml --host-timeout 120m --script-timeout 20m
+nmap 127.0.0.1 -p 80 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m
+Task scan.tasks.get_all_need_l2_scan_tasks[0a4fdf1c-dd6b-4383-8f38-5cb20517ea5c] succeeded in 0.8685441850011557s: 'all_ok'
+Received task: scan.tasks.push_cmd[8edb756a-5c38-4c35-9da1-cd73fb9533de]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[2fbc02ae-f68e-4c5a-a901-7637ba2e802e]  
+Task scan.tasks.push_cmd[4ebc7436-116f-46b9-bab7-db105f8e97ca] succeeded in 1.0500772689993028s: 'Task OK'
+Task scan.tasks.push_cmd[ad6d0af6-6498-421d-a65c-ccc8e7bd94b8] succeeded in 1.0440225069996814s: 'Task OK'
+Task scan.tasks.push_cmd[cb650021-079d-43c9-8993-55ca1d0d9bbb] succeeded in 1.0175509769997007s: 'Task OK'
+Task scan.tasks.push_cmd[a62a5bd8-3ad4-45b8-8837-78a6705286a3] succeeded in 1.035978936999527s: 'Task OK'
+Task scan.tasks.push_cmd[5e1b855f-6fa9-4fc9-b90c-90caa61d4ae6] succeeded in 1.0386292060011328s: 'Task OK'
+Task scan.tasks.push_cmd[8edb756a-5c38-4c35-9da1-cd73fb9533de] succeeded in 1.0291195459994924s: 'Task OK'
+Task scan.tasks.push_cmd[2fbc02ae-f68e-4c5a-a901-7637ba2e802e] succeeded in 1.035113217001708s: 'Task OK'
+Task scan.tasks.push_cmd[164a249d-f439-4963-9b05-2f1ff73ccdf3] succeeded in 7.346973484000046s: 'Task OK'
+Scaling down 4 processes.
+Connected to redis://:**@127.0.0.1:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/cso_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@xxscan ready.
+Events of group {task} enabled by remote.
+Received task: scan.tasks.chain_all_tasks[23319aef-3089-4d82-b2a8-664968901ea4]  
+Received task: scan.tasks.nmap_scan[2cb43d34-36d5-4c88-a500-020a333b73be]  
+Task scan.tasks.chain_all_tasks[23319aef-3089-4d82-b2a8-664968901ea4] succeeded in 0.06533139400016807s: 'Task End'
+Received task: scan.tasks.chain_all_tasks[8972d1b8-d736-49e2-98c5-a669514db6d4]  
+Received task: scan.tasks.nmap_scan[f1d4b5c5-a328-4788-959b-7acf59a6762b]  
+Task scan.tasks.chain_all_tasks[8972d1b8-d736-49e2-98c5-a669514db6d4] succeeded in 0.015083000999993601s: 'Task End'
+Received task: scan.tasks.chain_all_tasks[d7e1eade-b136-45ba-82a6-52b319ed43ca]  
+Task scan.tasks.chain_all_tasks[d7e1eade-b136-45ba-82a6-52b319ed43ca] succeeded in 0.006119804000036311s: 'Task End'
+Received task: scan.tasks.nmap_scan[2df8fa7c-86a7-43e2-83d5-356a03e5cfc4]  
+Received task: scan.tasks.chain_all_tasks[a03188ca-0c43-474b-8252-51c79dd92813]  
+Task scan.tasks.chain_all_tasks[a03188ca-0c43-474b-8252-51c79dd92813] succeeded in 0.06472525499998483s: 'Task End'
+Received task: scan.tasks.nmap_scan[c5d4a55b-71ff-43db-b2cd-c1b032ba53c0]  
+Scaling up 1 processes.
+Scaling down 1 processes.
+Received task: scan.tasks.nmap_result_import[4d0fa50a-5c11-45f5-8725-e5798772ee31]  
+Scaling up 1 processes.
+Task scan.tasks.nmap_scan[2cb43d34-36d5-4c88-a500-020a333b73be] succeeded in 127.42781136500003s: '/home/django/xx-scan/datas/nmap_scan/result_1dcc1339-624b-48a0-a04e-c01ef80e7c61.xml'
+Received task: scan.tasks.loads_service_to_recodes[ad97def2-491b-4a47-a443-36f78ccaea0b]  
+Task scan.tasks.nmap_result_import[4d0fa50a-5c11-45f5-8725-e5798772ee31] succeeded in 0.309133250000059s: 'Nmap Scan Result Extract!'
+sun-answerbook没有注册服务
+redis没有注册服务
+Received task: scan.tasks.get_all_need_l2_scan_tasks[b85b1339-07d6-42b1-8a3a-043da53ee43a]  
+Task scan.tasks.loads_service_to_recodes[ad97def2-491b-4a47-a443-36f78ccaea0b] succeeded in 1.1267152160000933s: 'Load Recode End.'
+nmap 127.0.0.1 -p 25 -sC -sV -v -Pn  -oN /home/django/xx-scan/results/127.0.0.1-25/nmap_service_scan-127.0.0.1-25-20190525.txt
+Received task: scan.tasks.push_cmd[e3b44835-ff4c-4ffe-b082-4e9c8e46e486]  
+nmap 127.0.0.1 -p 5555 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m
+Received task: scan.tasks.push_cmd[0858fc16-81c5-4cf3-bb75-35a2284c2eb4]  
+Scaling up 1 processes.
+nmap -sC -sV -Pn -v -p 80 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 127.0.0.1 -oN /home/django/xx-scan/results/127.0.0.1-80/nmap_http_vuln-127.0.0.1-80-20190525.txt --host-timeout 40m --script-timeout 20m
+nmap 127.0.0.1 -p 22 -sC -sV -v -Pn -oN /home/django/xx-scan/results/127.0.0.1-22/nmap_service_scan-127.0.0.1-22-20190525.txt
+nmap -sC -sV -v -Pn 127.0.0.1 -p 111 -oN /home/django/xx-scan/results/127.0.0.1-111/nmap_service_scan-127.0.0.1-111-20190525.txt
+nmap -sC -sV -Pn -v -p 5555 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 127.0.0.1 -oN /home/django/xx-scan/results/127.0.0.1-5555/nmap_http_vuln-127.0.0.1-5555-20190525.txt --host-timeout 40m --script-timeout 20m
+nmap -sC -sV -Pn -v -p 5555 --script=http-* 127.0.0.1 -d -oN /home/django/xx-scan/results/127.0.0.1-5555/nmap_script_http-127.0.0.1-5555-20190525.txt -oX /home/django/xx-scan/results/127.0.0.1-5555/nmap_script_http-127.0.0.1-5555-20190525.xml --host-timeout 120m --script-timeout 20m
+nmap -sC -sV -Pn -v -p 80 --script=http-* 127.0.0.1 -d -oN /home/django/xx-scan/results/127.0.0.1-80/nmap_script_http-127.0.0.1-80-20190525.txt -oX /home/django/xx-scan/results/127.0.0.1-80/nmap_script_http-127.0.0.1-80-20190525.xml --host-timeout 120m --script-timeout 20m
+nmap 127.0.0.1 -p 80 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m
+Received task: scan.tasks.push_cmd[744ddd6a-5f8b-4675-b830-9f04f14bece6]  
+Scaling up 1 processes.
+Task scan.tasks.get_all_need_l2_scan_tasks[b85b1339-07d6-42b1-8a3a-043da53ee43a] succeeded in 0.4408611669998663s: 'all_ok'
+Received task: scan.tasks.push_cmd[22bbf5bc-b77f-403e-8c43-6c0d35529ce1]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[ac8077bc-b417-4fc0-bf1c-c8eedf392d8e]  
+Received task: scan.tasks.push_cmd[cc26a32a-c51b-45c0-90f5-fa05f4d4202e]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[43bfadb0-99ca-4630-9a25-919e58ae79c9]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[ce1b8e6c-84e6-4666-a38a-81618c08811d]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[b421ac80-9c20-4041-8800-4653aac0c525]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[744ddd6a-5f8b-4675-b830-9f04f14bece6] succeeded in 1.0534202290000394s: 'Task OK'
+Task scan.tasks.push_cmd[0858fc16-81c5-4cf3-bb75-35a2284c2eb4] succeeded in 1.1008067840000422s: 'Task OK'
+Task scan.tasks.push_cmd[cc26a32a-c51b-45c0-90f5-fa05f4d4202e] succeeded in 1.090354421000029s: 'Task OK'
+Task scan.tasks.push_cmd[43bfadb0-99ca-4630-9a25-919e58ae79c9] succeeded in 1.1496604320000188s: 'Task OK'
+Task scan.tasks.push_cmd[e3b44835-ff4c-4ffe-b082-4e9c8e46e486] succeeded in 2.856344783000168s: 'Task OK'
+Task scan.tasks.push_cmd[ce1b8e6c-84e6-4666-a38a-81618c08811d] succeeded in 1.161218283999915s: 'Task OK'
+Task scan.tasks.push_cmd[b421ac80-9c20-4041-8800-4653aac0c525] succeeded in 1.1517864079999072s: 'Task OK'
+Task scan.tasks.push_cmd[22bbf5bc-b77f-403e-8c43-6c0d35529ce1] succeeded in 2.0462848600000143s: 'Task OK'
+Task scan.tasks.push_cmd[ac8077bc-b417-4fc0-bf1c-c8eedf392d8e] succeeded in 7.245592626999951s: 'Task OK'
+Scaling down 8 processes.

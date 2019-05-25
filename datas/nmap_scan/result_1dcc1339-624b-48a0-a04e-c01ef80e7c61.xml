@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 6.40 scan initiated Sat May 25 19:48:10 2019 as: /usr/bin/nmap -sS -sV -p1-65535 -O -oX /home/django/xx-scan/datas/nmap_scan/result_1dcc1339-624b-48a0-a04e-c01ef80e7c61.xml 127.0.0.1 -->
+<nmaprun scanner="nmap" args="/usr/bin/nmap -sS -sV -p1-65535 -O -oX /home/django/xx-scan/datas/nmap_scan/result_1dcc1339-624b-48a0-a04e-c01ef80e7c61.xml 127.0.0.1" start="1558784890" startstr="Sat May 25 19:48:10 2019" version="6.40" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1558784891" endtime="1558785017"><status state="up" reason="localhost-response" reason_ttl="0"/>
+<address addr="127.0.0.1" addrtype="ipv4"/>
+<hostnames>
+<hostname name="xxscan" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65527">
+<extrareasons reason="resets" count="65527"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service></port>
+<port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="smtp" product="Postfix smtpd" hostname=" xxscan.localdomain" method="probed" conf="10"><cpe>cpe:/a:postfix:postfix</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="nginx" version="1.12.2" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.12.2</cpe></service></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="mysql" product="MySQL" version="5.7.26" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.7.26</cpe></service></port>
+<port protocol="tcp" portid="5555"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http-proxy" product="sslstrip" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="6379"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="redis" product="Redis key-value store" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="8888"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="sun-answerbook" servicefp="SF-Port8888-TCP:V=6.40%I=7%D=5/25%Time=5CE92B83%P=x86_64-redhat-linux-gnu%r(GetRequest,AB8,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nServer:\x20gunicorn/19\.3\.0\r\nDate:\x20Sat,\x2025\x20May\x202019\x2011:48:19\x20GMT\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Length:\x202405\r\nVary:\x20Cookie\r\nSet-Cookie:\x20sessionid=fjrdj0icfkg6m6sg05lrx48y9y4xyj5u;\x20expires=Sun,\x2026\x20May\x202019\x2011:48:19\x20GMT;\x20HttpOnly;\x20Max-Age=86400;\x20Path=/;\x20SameSite=Lax\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n&lt;head&gt;\n\x20\x20&lt;meta\x20http-equiv=\&quot;content-type\&quot;\x20content=\&quot;text/html;\x20charset=utf-8\&quot;&gt;\n\x20\x20&lt;title&gt;Page\x20not\x20found\x20at\x20/&lt;/title&gt;\n\x20\x20&lt;meta\x20name=\&quot;robots\&quot;\x20content=\&quot;NONE,NOARCHIVE\&quot;&gt;\n\x20\x20&lt;style\x20type=\&quot;text/css\&quot;&gt;\n\x20\x20\x20\x20html\x20\*\x20{\x20padding:0;\x20margin:0;\x20}\n\x20\x20\x20\x20body\x20\*\x20{\x20padding:10px\x2020px;\x20}\n\x20\x20\x20\x20body\x20\*\x20\*\x20{\x20padding:0;\x20}\n\x20\x20\x20\x20body\x20{\x20font:small\x20sans-serif;\x20background:#eee;\x20color:#000;\x20}\n\x20\x20\x20\x20body&gt;div\x20{\x20border-bottom:1px\x20solid\x20#ddd;\x20}\n\x20\x20\x20\x20h1\x20{\x20font-weight:normal;\x20margin-bottom:\.4em;\x20}\n\x20\x20\x20\x20h1\x20span\x20{\x20font-size:60%;\x20color:#666;\x20font-weight:normal;\x20}\n\x20\x20\x20\x20table\x20{\x20bord&quot;)%r(HTTPOptions,ABC,&quot;HTTP/1\.0\x20404\x20Not\x20Found\r\nServer:\x20gunicorn/19\.3\.0\r\nDate:\x20Sat,\x2025\x20May\x202019\x2011:48:20\x20GMT\r\nConnection:\x20close\r\nContent-Type:\x20text/html\r\nX-Frame-Options:\x20SAMEORIGIN\r\nContent-Length:\x202409\r\nVary:\x20Cookie\r\nSet-Cookie:\x20sessionid=qq4d1dtar1gyk8kxbtqw6ip8u4alzr3q;\x20expires=Sun,\x2026\x20May\x202019\x2011:48:20\x20GMT;\x20HttpOnly;\x20Max-Age=86400;\x20Path=/;\x20SameSite=Lax\r\n\r\n&lt;!DOCTYPE\x20html&gt;\n&lt;html\x20lang=\&quot;en\&quot;&gt;\n&lt;head&gt;\n\x20\x20&lt;meta\x20http-equiv=\&quot;content-type\&quot;\x20content=\&quot;text/html;\x20charset=utf-8\&quot;&gt;\n\x20\x20&lt;title&gt;Page\x20not\x20found\x20at\x20/&lt;/title&gt;\n\x20\x20&lt;meta\x20name=\&quot;robots\&quot;\x20content=\&quot;NONE,NOARCHIVE\&quot;&gt;\n\x20\x20&lt;style\x20type=\&quot;text/css\&quot;&gt;\n\x20\x20\x20\x20html\x20\*\x20{\x20padding:0;\x20margin:0;\x20}\n\x20\x20\x20\x20body\x20\*\x20{\x20padding:10px\x2020px;\x20}\n\x20\x20\x20\x20body\x20\*\x20\*\x20{\x20padding:0;\x20}\n\x20\x20\x20\x20body\x20{\x20font:small\x20sans-serif;\x20background:#eee;\x20color:#000;\x20}\n\x20\x20\x20\x20body&gt;div\x20{\x20border-bottom:1px\x20solid\x20#ddd;\x20}\n\x20\x20\x20\x20h1\x20{\x20font-weight:normal;\x20margin-bottom:\.4em;\x20}\n\x20\x20\x20\x20h1\x20span\x20{\x20font-size:60%;\x20color:#666;\x20font-weight:normal;\x20}\n\x20\x20\x20\x20table\x20{\x20bord&quot;);" method="table" conf="3"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="36102"/>
+<osmatch name="Linux 3.7 - 3.9" accuracy="100" line="76104">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="1314" lastboot="Sat May 25 19:28:23 2019"/>
+<distance value="0"/>
+<tcpsequence index="261" difficulty="Good luck!" values="67C19D5E,E1FC70BE,21F589DC,AD314854,5BAA23BD,41C50C3C"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="1392DC,139341,1393A5,13940A,13946E,1394D2"/>
+<times srtt="62" rttvar="49" to="100000"/>
+</host>
+<runstats><finished time="1558785017" timestr="Sat May 25 19:50:17 2019" elapsed="127.13" summary="Nmap done at Sat May 25 19:50:17 2019; 1 IP address (1 host up) scanned in 127.13 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

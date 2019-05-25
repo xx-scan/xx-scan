@@ -41,7 +41,7 @@ class ScanTool(models.Model):
     desc = models.TextField(verbose_name=u"扫描器描述", default="")
     in_system = models.BooleanField(verbose_name="系统中存在", default=False)
     protocol = models.ForeignKey(Protocol, verbose_name="针对协议",
-         related_name="scan_protocol", on_delete=models.DO_NOTHING, blank=True)
+         related_name="scantool_protocol", on_delete=models.DO_NOTHING, blank=True)
     help_scripts = models.TextField(verbose_name=u"推荐的命令说明", default="")
 
     class Meta:
@@ -53,8 +53,9 @@ class ScanScript(models.Model):
     id = models.UUIDField(default=uuid.uuid4, primary_key=True)
     name = models.CharField(max_length=55, verbose_name=u"扫描脚本对应名称", blank=True)
     bin_name = models.CharField(max_length=55, verbose_name=u"扫描器bin", blank=True)
+    args = models.CharField(max_length=155, verbose_name=u"脚本填充参数", blank=True)
     protocol = models.ForeignKey(Protocol, verbose_name="针对协议",
-         related_name="scan_protocol", on_delete=models.DO_NOTHING, blank=True)
+         related_name="scanscript_protocol", on_delete=models.DO_NOTHING, blank=True)
     used_script = models.TextField(verbose_name=u"使用命令", default="")
 
     def save(self, *args, **kwargs):

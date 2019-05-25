@@ -10,7 +10,6 @@ def test():
     inital_scan_cfgs()
 
 
-
 def test_discover():
     django_setup()
     _path = "F:\\workspace\\CSO\\apps\\cso\\datas\\nmap_results\\sV.xml"
