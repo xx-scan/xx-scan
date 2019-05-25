@@ -227,3 +227,49 @@ Task scan.tasks.push_cmd[b421ac80-9c20-4041-8800-4653aac0c525] succeeded in 1.15
 Task scan.tasks.push_cmd[22bbf5bc-b77f-403e-8c43-6c0d35529ce1] succeeded in 2.0462848600000143s: 'Task OK'
 Task scan.tasks.push_cmd[ac8077bc-b417-4fc0-bf1c-c8eedf392d8e] succeeded in 7.245592626999951s: 'Task OK'
 Scaling down 8 processes.
+Received task: scan.tasks.nmap_result_import[c6e8eeae-4729-4cdf-a895-b32d33f532f4]  
+Task scan.tasks.nmap_scan[f1d4b5c5-a328-4788-959b-7acf59a6762b] succeeded in 278.31411975499987s: '/home/django/xx-scan/datas/nmap_scan/result_0c82d8f1-9e97-4feb-852a-83e031fb8486.xml'
+Received task: scan.tasks.loads_service_to_recodes[c128ee92-fc24-4a96-9ab3-8ba366ada654]  
+Task scan.tasks.nmap_result_import[c6e8eeae-4729-4cdf-a895-b32d33f532f4] succeeded in 0.6151064700000006s: 'Nmap Scan Result Extract!'
+d-s-n没有注册服务
+unknown没有注册服务
+simplifymedia没有注册服务
+socks5没有注册服务
+Task scan.tasks.loads_service_to_recodes[c128ee92-fc24-4a96-9ab3-8ba366ada654] succeeded in 0.18263137500002813s: 'Load Recode End.'
+Received task: scan.tasks.get_all_need_l2_scan_tasks[15b8f1b1-0410-4be2-806f-899652de46a7]  
+nmap 127.0.0.1 -p 25 -sC -sV -v -Pn  -oN /home/django/xx-scan/results/127.0.0.1-25/1c1ee850-e8bf-422f-a330-a919bfc8e4fc.txt
+Received task: scan.tasks.push_cmd[7c59da20-0274-4e8b-967e-3d05b893cfc8]  
+nmap 127.0.0.1 -p 5555 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m
+Received task: scan.tasks.push_cmd[eaadc3d4-27e2-44ab-9c84-130778c21b9c]  
+Scaling up 1 processes.
+nmap -sC -sV -Pn -v -p 80 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 127.0.0.1 -oN /home/django/xx-scan/results/127.0.0.1-80/950077c9-d21d-4f57-b131-89800cfa56dc.txt --host-timeout 40m --script-timeout 20m
+nmap 127.0.0.1 -p 22 -sC -sV -v -Pn -oN /home/django/xx-scan/results/127.0.0.1-22/2bde4d64-d5ad-452b-86bc-76a7d46ed6e1.txt
+nmap -sC -sV -v -Pn 127.0.0.1 -p 111 -oN /home/django/xx-scan/results/127.0.0.1-111/c32cd775-500e-403b-8ea3-4a37c921ba8b.txt
+nmap -sC -sV -Pn -v -p 5555 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 127.0.0.1 -oN /home/django/xx-scan/results/127.0.0.1-5555/a5d2537e-69c6-4aea-9209-0c5d942c04e7.txt --host-timeout 40m --script-timeout 20m
+nmap -sC -sV -Pn -v -p 5555 --script=http-* 127.0.0.1 -d -oN /home/django/xx-scan/results/127.0.0.1-5555/6dc0b408-b187-497e-8bde-e93bb5baade9.txt -oX /home/django/xx-scan/results/127.0.0.1-5555/6dc0b408-b187-497e-8bde-e93bb5baade9.xml --host-timeout 120m --script-timeout 20m
+nmap -sC -sV -Pn -v -p 80 --script=http-* 127.0.0.1 -d -oN /home/django/xx-scan/results/127.0.0.1-80/d2e8544c-0c20-45fe-bbc8-b356bc18e2ed.txt -oX /home/django/xx-scan/results/127.0.0.1-80/d2e8544c-0c20-45fe-bbc8-b356bc18e2ed.xml --host-timeout 120m --script-timeout 20m
+Received task: scan.tasks.push_cmd[953a892f-99dc-4148-8525-6f50cb269339]  
+Scaling up 1 processes.
+nmap 127.0.0.1 -p 80 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m
+Task scan.tasks.get_all_need_l2_scan_tasks[15b8f1b1-0410-4be2-806f-899652de46a7] succeeded in 0.47064220699985526s: 'all_ok'
+Received task: scan.tasks.push_cmd[c248f2dd-b2ee-4d5e-9bc2-5299f7f97583]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[59130fbe-0e8f-442c-9780-5e29df590209]  
+Received task: scan.tasks.push_cmd[87f21566-a3a2-4a4c-9410-aaa0e3824cb7]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[56d6d27a-5447-47fd-b321-5bb4c277b2c4]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[6099e15a-e714-4695-a596-21c14920a02b]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[7c59da20-0274-4e8b-967e-3d05b893cfc8] succeeded in 1.0167878029999429s: 'Task OK'
+Received task: scan.tasks.push_cmd[f2ffef05-5244-4a53-92d4-bd5e371b0561]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[953a892f-99dc-4148-8525-6f50cb269339] succeeded in 1.0303970959998878s: 'Task OK'
+Task scan.tasks.push_cmd[eaadc3d4-27e2-44ab-9c84-130778c21b9c] succeeded in 1.0474788419999186s: 'Task OK'
+Task scan.tasks.push_cmd[c248f2dd-b2ee-4d5e-9bc2-5299f7f97583] succeeded in 1.0241798570000356s: 'Task OK'
+Task scan.tasks.push_cmd[87f21566-a3a2-4a4c-9410-aaa0e3824cb7] succeeded in 1.0773015239999495s: 'Task OK'
+Task scan.tasks.push_cmd[6099e15a-e714-4695-a596-21c14920a02b] succeeded in 1.0328746350000984s: 'Task OK'
+Task scan.tasks.push_cmd[56d6d27a-5447-47fd-b321-5bb4c277b2c4] succeeded in 1.0314862100001392s: 'Task OK'
+Task scan.tasks.push_cmd[f2ffef05-5244-4a53-92d4-bd5e371b0561] succeeded in 1.0559029080000073s: 'Task OK'
+Task scan.tasks.push_cmd[59130fbe-0e8f-442c-9780-5e29df590209] succeeded in 6.583765539999831s: 'Task OK'
+Scaling down 7 processes.
