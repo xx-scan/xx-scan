@@ -6,11 +6,11 @@ from configparser import ConfigParser
 from website.settings import PROJECT_DIR
 SCAN_CONFIG_FILE = os.path.join(PROJECT_DIR, "apps", "scan", "config.ini")
 
-from .....models import Protocol, NmapServiceName, ScanTool, Scheme
+from .....models import Protocol, NmapServiceName, ScanScript, Scheme
 
 def orm_delete():
     Scheme.objects.all().delete()
-    ScanTool.objects.all().delete()
+    ScanScript.objects.all().delete()
     NmapServiceName.objects.all().delete()
     Protocol.objects.all().delete()
 
@@ -50,7 +50,7 @@ def inintal_services(config_file=SCAN_CONFIG_FILE, add_many=True):
 
 
 def inital_scan_tools():
-    ScanTool.objects.all().delete()
+    ScanScript.objects.all().delete()
 
     config = ConfigParser(allow_no_value=True)
     config.read([SCAN_CONFIG_FILE])
@@ -61,9 +61,9 @@ def inital_scan_tools():
         for (name, used_script) in config.items(protocol.protocol):
 
             args = ",".join(re.findall("\[(.*?)\]", used_script))
-            _scan_tool = ScanTool(name=name, used_script=used_script, args=args, protocol=protocol)
+            _scan_tool = ScanScript(name=name, used_script=used_script, args=args, protocol=protocol)
             scan_tools.append(_scan_tool)
-    ScanTool.objects.bulk_create(scan_tools)
+    ScanScript.objects.bulk_create(scan_tools)
 
 
 def inital_scheme():
@@ -79,7 +79,7 @@ def inital_scheme():
     scheme_nmap.save()
     scheme_all.save()
 
-    for x in ScanTool.objects.all():
+    for x in ScanScript.objects.all():
         have_installed_tools = ["nmap", ]
         _tool_sets = "|".join(have_installed_tools)
         matched = re.match("^({}).*?".format(_tool_sets), x.used_script)

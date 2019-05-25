@@ -1,11 +1,11 @@
 import uuid
 from django.db import models
 
-from .scan_cfg import ScanRecode, ScanTool
+from .scan_cfg import ScanRecode, ScanScript
 
 
 class ReportFormat(models.Model):
-    scan_tool = models.ForeignKey(ScanTool, on_delete=models.CASCADE, related_name="scan_out_put_format")
+    scan_tool = models.ForeignKey(ScanScript, on_delete=models.CASCADE, related_name="scan_out_put_format")
     format_func = models.CharField(max_length=155, verbose_name="格式化函数", blank=True)
 
 

@@ -19,4 +19,14 @@
 ## 2019-5-23 
 - 创建本项目。并添加了ORM关系和基本的逻辑实现。
 
+## 2019-5-24
+> 创建ORM并且进行实验。
+- [表格字段说明](./apps/scan/readme.md)
+- 流程已经全部跑通
+
+## 2019-5-25
+- 增加扫描器的声明; 增加了服务的记录不删除旧的。重新修改了ORM;
+- 增加了flower的验证 [flower-auth](https://flower.readthedocs.io/en/latest/auth.html#http-basic-authentication)
+- 修改了处理逻辑没有那么多 delete 了。
+
 

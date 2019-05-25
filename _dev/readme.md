@@ -1,5 +1,6 @@
 # 开发流程
 
+
 ## 安装python3
 ```
 yum install yum-fastestmirror
@@ -20,7 +21,7 @@ docker run --name redis -d --restart=always \
   sameersbn/redis:4.0.9-2
 ```
 
-## 安装Nysql
+## 安装Mysql
 ```
 docker run -itd --name=mysql -p 3306:3306 --restart=always \
 -v /srv/docker/data/mysqldata:/var/lib/mysql \
@@ -34,3 +35,7 @@ drop database xxscan;
 CREATE DATABASE xxscan DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
+## 初始化数据库并创建超级角色
+```bash
+cd apps && python manage.py createsuperuser 
+```

@@ -23,17 +23,15 @@ def get_current_host(_host):
     return dict(host=host, ip=_host.id, mac = _host.mac,  vendor= _host.vendor, )
 
 
-def get_needs_datas_from_xmlpath(xml_path=path, incomplete=False, DEBUG=False):
+def get_needs_datas_from_xmlpath(xml_path=path, incomplete=False):
     nmap_report = NmapParser.parse_fromfile(xml_path, incomplete=incomplete)
-    _time = get_pydt2_based_nmap(nmap_report._runstats["finished"]["timestr"])
-    # print(_time)
-    _services_list = []
-    if not DEBUG:
-        Service.objects.all().delete()
+    # 主机存活验证
+    judge_hosts_survived(nmap_report)
 
+    _time = get_pydt2_based_nmap(nmap_report._runstats["finished"]["timestr"])
+    _services_list = []
     for _host in nmap_report.hosts:
         _host_info = get_current_host(_host)
-        # ip = _host_info["ip"]
         host = _host_info["host"]
         for _service in _host.services:
             service = _service.get_dict()
@@ -41,9 +39,61 @@ def get_needs_datas_from_xmlpath(xml_path=path, incomplete=False, DEBUG=False):
                 continue
             del service["id"]
             _services_list.append( Service(**service, descover_time=_time, host=host), )
+    Service.objects.bulk_create(_services_list)
 
-    if not DEBUG:
-        Service.objects.bulk_create(_services_list)
+
+def judge_hosts_survived(nmap_report):
+    # _time = get_pydt2_based_nmap(nmap_report._runstats["finished"]["timestr"])
+    _services_list = []
+    survived_hosts = [_host.id for _host in nmap_report.hosts ]
+    for host in Host.objects.all():
+        _up = host.up ## 之前的状态
+        if host.ip in survived_hosts:
+            if _up == True:
+                continue
+            host.up = True
+        else:
+            if _up == False:
+                continue
+            host.up = False
+        host.save()
+
+    for service in Service.objects.all():
+        _up = service.running
+        if service.host.ip in survived_hosts:
+            if _up == True:
+                continue
+            service.running = True
+        else:
+            if _up == False:
+                continue
+            service.running = False
+        service.save()
+
+    from ....models import ScanRecode
+    for recode in ScanRecode.objects.all():
+        _up = recode.active
+        if recode.target in survived_hosts:
+            if _up == True:
+                continue
+            recode.active=True
+        else:
+            if _up == False:
+                continue
+            recode.active=False
+        recode.save()
+    ## 主机, 服务, 运行的记录
+
+
+
+
+
+
+
+
+
+
+
 
 
 
