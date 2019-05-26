@@ -55,13 +55,14 @@ def nmap_result_import(xml_path):
     django_setup()
 
     from scan.api.mudules.monitor.nmap_utils import get_needs_datas_from_xmlpath
-    try:
-        # from django.core.cache import cache
-        # _path = cache.get(__NMAP_SCAN_XML_PATH)
-        get_needs_datas_from_xmlpath(xml_path)
-    except Exception as e:
-        import logging
-        logging.error("\n>>>>Extract Error---\n")
+    # try:
+    # from django.core.cache import cache
+    # _path = cache.get(__NMAP_SCAN_XML_PATH)
+    # 2019-5-26 If extract Error Then Out  Not Run Then 
+    get_needs_datas_from_xmlpath(xml_path)
+    # except Exception as e:
+    #     import logging
+    #     logging.error("\n>>>>Extract Error---\n")
     return "Nmap Scan Result Extract!"
 
 
