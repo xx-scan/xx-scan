@@ -1,0 +1,23 @@
+apt-get install -f \
+ xsser gpp-decrypt plecost doona openvas-scanner joomscan vega patator bbqsql amap keimpx\
+wol-e cuckoo javasnoop enumiax statsprocessor bed parsero ua-tester zaproxy deblaze w3af\
+urlcrazy crunch dnsrecon fierce p0f eapmd5pass pdgmail twofi miranda webscarab oscanner\
+paros binwalk bulk-extractor copy-router-config weevely thc-pptp-bruter cisco-auditing-tool sslyze smali sniffjoke mdk3\
+ridenum davtest findmyhash apktool mitmproxy greenbone-security-assistant dnswalk websploit pdf-parser yara yersinia\
+extundelete shellnoob nishang burpsuite armitage hping3 goofile dotdotpwn rainbowcrack android-sdk intersect\
+crackle http-tunnel recon-ng lbd chntpw dc3dd padbuster sipvicious ollydbg mfoc funkload\
+rtpmixsound creddump cisco-ocs slowhttptest ace-voip cutycapt cowpatty blueranger linux-exploit-suggester pixiewps sqlmap\
+giskismet lynis thc-ssl-dos rtpinsertsound jd asleap jad rsmangler redfang cmospwd voiphopper\
+responder hexinject foremost maskprocessor dnsenum u3-pwn arduino snmpcheck dnsmap fragroute blindelephant\
+wireshark kismet protos-sip automater dns2tcp sslstrip nipper-ng rcracki-mt acccheck sslsplit ddrescue\
+wifi-honey multiforcer valgrind webshells cookie-cadger truecrack cryptcat aircrack-ng masscan dex2jar johnny\
+siparmyknife firewalk pack dnmap dradis theharvester guymager dmitry smtp-user-enum jsql python-distorm3\
+casefile backdoor-factory sidguesser spooftooph ghost-phisher sakis3g xspy grabber pipal nmap unix-privesc-check\
+dirb openvas-cli multimon-ng polenum exploitdb gqrx mfterm t50 oclgausscrack volatility magictree\
+set fern-wifi-cracker beef-xss ismtp cisco-global-exploiter rtpflood killerbee cdpsnarf braa tlssled fimap\
+hamster-sidejack termineter keepnote intrace apache-users sqlsus cewl wordlists dirbuster sfuzz rebind\
+powerfuzzer dnstracer dnschef dbd mfcuk iphone-backup-analyzer uniscan kalibrate-rtl httptunnel wifite maltego-teeth\
+galleta powersploit ncrack fragrouter pwnat dhcpig metagoofil wifitap sctpscan bully bluelog\
+tnscmd10g iaxflood sbd cisco-torch skipfish ohrwurm dos2unix sqlninja john hexorbase sslcaudit\
+sipp fiked inviteflood ipv6-toolkit cymothoa wfuzz thc-ipv6 golismero arachni enum4linux rtpbreak\
+edb-debugger proxystrike peepdf openvas-manager dumpzilla pdfid jboss-autopwn wpscan hash-identifier xplico bluesnarfer\
