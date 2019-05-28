@@ -5,7 +5,7 @@
 ```
 yum install yum-fastestmirror
 # /etc/yum/pluginconf.d/fastestmirror.conf
-
+yum -y install epel-release 
 yum -y install python36 python36-pip python36-devel gcc 
 
 mkidr /home/django && cd /home/django && python3 -m venv cso_venv && \ 
