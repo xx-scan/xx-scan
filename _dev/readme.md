@@ -3,6 +3,12 @@
 ## 宿主机centos7.4同步时间
 - `cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`
 
+## 安装docker-compose 
+```
+yum -y install gcc gcc-c++ make openssl openssl-devel
+pip3 install docker-compose -i https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
 ## 安装python3
 ```
 yum install yum-fastestmirror
@@ -37,7 +43,7 @@ drop database xxscan;
 CREATE DATABASE xxscan DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
-## 初始化数据库并创建超级角色
+## 初始化数据库并创建超级角色[免登陆中间件必须]
 ```bash
 cd apps && python manage.py createsuperuser 
 ```
