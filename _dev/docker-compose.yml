@@ -1,0 +1,46 @@
+version: "2.2"
+
+services:
+   mysql:
+      container_name: mysql-server
+      image: 'mysql:5.7'
+      volumes:
+        - /srv/docker/mysqldata2:/var/lib/mysql
+        - ./mysql/mysql.conf.d:/etc/mysql/mysql.conf.d
+        - /etc/localtime:/etc/localtime
+      restart: always
+      ports:
+        - "3306:3306"
+      environment:
+       - MYSQL_USER=admin007
+       - MYSQL_PASSWORD=myadmin@816
+       - MYSQL_DATABASE=cso
+       - MYSQL_ROOT_PASSWORD=test@1q2w2e4R
+       - character-set-server=utf8
+       - collation-server=utf8_general_ci
+      networks:
+        customize_net:
+          ipv4_address: 192.168.132.36
+
+   redis:
+     container_name: redis-server
+     image: 'sameersbn/redis:4.0.9-2'
+     restart: always
+     volumes:
+       - /srv/docker/redis:/var/lib/redis
+       - /etc/localtime:/etc/localtime
+     environment:
+       - REDIS_PASSWORD=xxscan
+     ports:
+       - "6379:6379"
+     networks:
+       customize_net:
+         ipv4_address: 192.168.132.79
+
+networks:
+  customize_net:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.168.132.0/24

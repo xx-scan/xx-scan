@@ -1,5 +1,7 @@
 # 开发流程
 
+## 宿主机centos7.4同步时间
+- `cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime`
 
 ## 安装python3
 ```
