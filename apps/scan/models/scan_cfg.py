@@ -40,9 +40,12 @@ class ScanTool(models.Model):
     name = models.CharField(max_length=55, verbose_name=u"扫描脚本对应名称", blank=True)
     desc = models.TextField(verbose_name=u"扫描器描述", default="")
     in_system = models.BooleanField(verbose_name="系统中存在", default=False)
+    judge_script = models.TextField(verbose_name=u"判断是否在程序中的脚本", default="")
     protocol = models.ForeignKey(Protocol, verbose_name="针对协议",
          related_name="scantool_protocol", on_delete=models.DO_NOTHING, blank=True)
     help_scripts = models.TextField(verbose_name=u"推荐的命令说明", default="")
+    install = models.TextField(verbose_name=u"执行的脚本命令行", default="")
+    summary = models.TextField(verbose_name=u"工具概要", default="")
 
     class Meta:
         db_table = "scan_tools"

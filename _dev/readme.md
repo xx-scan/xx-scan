@@ -37,6 +37,8 @@ docker run -itd --name=mysql -p 3306:3306 --restart=always \
 -e MYSQL_PASSWORD=myadmin@816 \
 -e MYSQL_DATABASE=xxscan \
 -e MYSQL_ROOT_PASSWORD=test@1q2w2e4R \
+-e character-set-server=utf8 \
+-e collation-server=utf8_general_ci \
 mysql:5.7
 
 drop database xxscan;
@@ -47,3 +49,9 @@ CREATE DATABASE xxscan DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```bash
 cd apps && python manage.py createsuperuser 
 ```
+
+
+## 2019-5-30
+- 昨天尝试了下 `backbox5.3` 今天尝试了 `ubuntu:16.04` 发现环境可以在这个中。
+- 已经更新对应的安装文档和说明的环境 [Ubuntu-Secuciry](https://github.com/xx-scan/ubsec)
+

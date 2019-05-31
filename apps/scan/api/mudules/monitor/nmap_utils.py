@@ -85,6 +85,48 @@ def judge_hosts_survived(nmap_report):
     ## 主机, 服务, 运行的记录
 
 
+SURVIVE_MONITOR_CACHE_KEY = "SURVIVE_MONITOR_CACHE_KEY"
+
+
+def hosts_survice_monitor(xml_path=path, incomplete=False):
+    """
+    最大范围行的存活性检测; 检测完毕之后进行入库。存活主机的扫描。
+    :param xml_path: nmap -sP -PR -sn <targets> -oX <xml_path>
+    :param incomplete: 中途写入
+    :return:
+    """
+    nmap_report = NmapParser.parse_fromfile(xml_path, incomplete=incomplete)
+    # 主机存活验证
+    judge_hosts_survived(nmap_report)
+
+    _time = get_pydt2_based_nmap(nmap_report._runstats["finished"]["timestr"])
+    _services_list = []
+    survived_hosts = []
+    for _host in nmap_report.hosts:
+        _host_info = get_current_host(_host)
+        survived_hosts.append(_host_info["host"])
+
+    for host in Host.objects.all():
+        _up = host.zip
+        if host in survived_hosts:
+            if _up == True:
+                continue
+            host.up = True
+        else:
+            if _up == False:
+                continue
+            host.up = False
+
+    from django.core.cache import cache
+
+    ## 存活主机加入外键
+    cache.set(SURVIVE_MONITOR_CACHE_KEY, [x.ip for x in Host.objects.filter(up=True)])
+
+
+
+
+
+
 
 
 

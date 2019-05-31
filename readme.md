@@ -29,4 +29,11 @@
 - 增加了flower的验证 [flower-auth](https://flower.readthedocs.io/en/latest/auth.html#http-basic-authentication)
 - 修改了处理逻辑没有那么多 delete 了。
 
+## 2019-5-29
+- 更新了扫描器的增加，通过Web安装，判断扫描器是否有效，是否在主机中的相关脚本。(未调试)
+- 更新了扫描目标，扫描方案的生成等一系列的措施。
 
+
+## 2019-5-30
+- 此项目中途放置一段时间了。
+- 先去打造和实验防护体系 [xx-sec](https://github.com/xx-sec/xx-sec)
