@@ -105,3 +105,62 @@ Traceback (most recent call last):
   File "/home/django/xx-scan/apps/scan/api/mudules/monitor/nmap_utils.py", line 110, in hosts_survice_monitor
     _up = host.zip
 AttributeError: 'Host' object has no attribute 'zip'
+Connected to redis://:**@127.0.0.1:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/cso_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@xxscan ready.
+Events of group {task} enabled by remote.
+Received task: scan.tasks.hosts_monitors[a64b9f9e-c7fd-4d6c-a553-1401f27553f1]  
+Received task: scan.tasks.nmap_survive_scan[6f49e694-d2a9-476a-96b3-b0f28bb1274f]  
+Task scan.tasks.hosts_monitors[a64b9f9e-c7fd-4d6c-a553-1401f27553f1] succeeded in 0.06856480099986584s: {'task_name': '存活性检测一条龙', 'args': '192.168.1.*', 'process': '只扫描存活的主机,而不是通用扫描。'}
+Received task: scan.tasks.hosts_stat[d0c48d4d-5624-4e2a-8301-b929f16a4f30]  
+Task scan.tasks.nmap_survive_scan[6f49e694-d2a9-476a-96b3-b0f28bb1274f] succeeded in 1.0962404120000429s: '/home/django/xx-scan/datas/nmap_scan/result_791b5410-6a9e-4e30-b1dc-817b934bcaba.xml'
+Task scan.tasks.hosts_stat[d0c48d4d-5624-4e2a-8301-b929f16a4f30] succeeded in 0.20417133499995543s: {'stat': True, 'reason': 'Pushed Survive Scan Results to DB.'}
+Received task: scan.tasks.load_cache_data[944b321b-32b7-4ebe-a58e-535430299437]  
+Task scan.tasks.load_cache_data[944b321b-32b7-4ebe-a58e-535430299437] succeeded in 0.035217014999943785s: ''
+Received task: scan.tasks.common_scan[c25cdec6-43bd-400a-b1f5-783ac2f59a7f]  
+Received task: scan.tasks.nmap_service_scan[ea8d0d7a-f558-4e2c-831b-32f2df7a4365]  
+Task scan.tasks.common_scan[c25cdec6-43bd-400a-b1f5-783ac2f59a7f] succeeded in 0.014654957999937324s: {'stat': True, 'reason': 'Scan Task End.'}
+Task scan.tasks.nmap_service_scan[ea8d0d7a-f558-4e2c-831b-32f2df7a4365] succeeded in 1.3218087099999138s: '/home/django/xx-scan/datas/nmap_scan/result_791b5410-6a9e-4e30-b1dc-817b934bcaba.xml'
+Received task: scan.tasks.nmap_result_import[bc56224a-0bc1-4434-94fd-26afa3ea8ec8]  
+Received task: scan.tasks.loads_service_to_recodes[43663cde-6785-4a8a-82a9-4eb5ae45785a]  
+Task scan.tasks.nmap_result_import[bc56224a-0bc1-4434-94fd-26afa3ea8ec8] succeeded in 0.13881071500009057s: {'stat': True, 'reason': 'Nmap Scan Result Extract!'}
+Received task: scan.tasks.get_all_need_l2_scan_tasks[734329ec-48bc-44d0-bbdb-0f63fdcb2516]  
+Task scan.tasks.loads_service_to_recodes[43663cde-6785-4a8a-82a9-4eb5ae45785a] succeeded in 0.05595317600000271s: {'stat': True, 'reason': 'Load All Service Prepare Recode Scan Tasks.'}
+Received task: scan.tasks.push_cmd[af832f02-f3ca-4ee8-926a-896d54e70e06]  
+Received task: scan.tasks.push_cmd[9940a454-014f-4879-b2a7-14bbac0181f7]  
+Received task: scan.tasks.push_cmd[75ecdc23-10f7-43d2-83e6-99816ba2d97d]  
+Received task: scan.tasks.push_cmd[1685b7ff-dc9e-44af-ab92-ff08f6d23f65]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[41e568e6-c6e8-42b3-9aec-2a824c525190]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[d6215f97-d4b5-4567-a366-f3a0f072171c]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[707bc020-cadb-47ed-8826-62c6daeb1171]  
+Scaling up 1 processes.
+Task scan.tasks.get_all_need_l2_scan_tasks[734329ec-48bc-44d0-bbdb-0f63fdcb2516] succeeded in 1.0862444700001106s: {'stat': True, 'reason': 'All OK of Tasks Scanner.'}
+Task scan.tasks.push_cmd[9940a454-014f-4879-b2a7-14bbac0181f7] succeeded in 1.1267603999999665s: {'stat': True, 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[75ecdc23-10f7-43d2-83e6-99816ba2d97d] succeeded in 1.0809416109996164s: {'stat': True, 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[ef9b866d-131b-428f-b067-0c4b1c47ca95]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[200eeec8-b156-48e5-901a-65fb7b7028c7]  
+Task scan.tasks.push_cmd[ef9b866d-131b-428f-b067-0c4b1c47ca95] succeeded in 1.039511136999863s: {'stat': True, 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[d6215f97-d4b5-4567-a366-f3a0f072171c] succeeded in 1.098146087999794s: {'stat': True, 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[707bc020-cadb-47ed-8826-62c6daeb1171] succeeded in 1.1208273510001163s: {'stat': True, 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[200eeec8-b156-48e5-901a-65fb7b7028c7] succeeded in 1.1168905439999435s: {'stat': True, 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[1685b7ff-dc9e-44af-ab92-ff08f6d23f65] succeeded in 1.9045639350001693s: {'stat': True, 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[af832f02-f3ca-4ee8-926a-896d54e70e06] succeeded in 4.449743271999978s: {'stat': True, 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[41e568e6-c6e8-42b3-9aec-2a824c525190] succeeded in 7.351614660999985s: {'stat': True, 'reason': '远程执行命令执行成功！'}
+Scaling down 5 processes.
+Connected to redis://:**@127.0.0.1:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/cso_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@xxscan ready.
+Events of group {task} enabled by remote.
+Received task: scan.tasks.hosts_monitors[4ff4b0fb-96d4-47c4-9f29-c5285cc2a4be]  
+Task scan.tasks.hosts_monitors[4ff4b0fb-96d4-47c4-9f29-c5285cc2a4be] succeeded in 0.09206714499987356s: {'task_name': '存活性检测一条龙', 'args': '192.168.1.0/8', 'process': '只扫描存活的主机,而不是通用扫描。'}
+Received task: scan.tasks.nmap_survive_scan[9cd2790f-4b0d-41ad-baa0-8a4d29906f7b]  

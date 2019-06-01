@@ -107,7 +107,7 @@ def hosts_survice_monitor(xml_path=path, incomplete=False):
         survived_hosts.append(_host_info["host"])
 
     for host in Host.objects.all():
-        _up = host.ip
+        _up = host.zip
         if host in survived_hosts:
             if _up == True:
                 continue

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 6.40 scan initiated Sat Jun  1 22:54:59 2019 as: /usr/bin/nmap -sS -sV -p1-65535 -O -oX /home/django/xx-scan/datas/nmap_scan/result_791b5410-6a9e-4e30-b1dc-817b934bcaba.xml  -->
+<nmaprun scanner="nmap" args="/usr/bin/nmap -sS -sV -p1-65535 -O -oX /home/django/xx-scan/datas/nmap_scan/result_791b5410-6a9e-4e30-b1dc-817b934bcaba.xml " start="1559400899" startstr="Sat Jun  1 22:54:59 2019" version="6.40" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<runstats><finished time="1559400899" timestr="Sat Jun  1 22:54:59 2019" elapsed="1.27" summary="Nmap done at Sat Jun  1 22:54:59 2019; 0 IP addresses (0 hosts up) scanned in 1.27 seconds" exit="success"/><hosts up="0" down="0" total="0"/>
+</runstats>
+</nmaprun>

@@ -59,7 +59,7 @@ def nmap_survive_scan(targets="172.17.*.*"):
     cmds = [
         NmapScanDefaultBin
     ]
-    cmds.extend(["-sP", "-PR", "-sn"])
+    cmds.extend(["-sP", "-PR", "-sn", targets])
     cmds.extend(["-oX", Nmap_xml_result_path])
     p = subprocess.Popen(cmds)
     import time
