@@ -65,10 +65,7 @@ def nmap_survive_scan(targets="172.17.*.*"):
     import time
     time.sleep(1)
     os.waitpid(p.pid, os.W_OK)
-    return {
-        "stat": True,
-        "reason":"Hosts Survice Monitor."
-    }
+    return Nmap_xml_result_path
 
 
 @shared_task
@@ -135,6 +132,7 @@ def nmap_tasks(targets="192.168.2.*"):
 
 @shared_task
 def load_cache_data(prepare=None):
+    
     django_setup()
     from scan.api.mudules.monitor.nmap_utils import SURVIVE_MONITOR_CACHE_KEY
     from django.core.cache import cache
@@ -146,7 +144,7 @@ def load_cache_data(prepare=None):
 
 @shared_task
 @register_as_period_task(interval=3600*3)
-def chain_all_tasks(targets="192.168.1.*"):
+def common_scan(targets="192.168.1.*"):
     # chord(header=[ nmap_scan.s(), ], body=nmap_result_import.s() )()
     chain(nmap_service_scan.s(targets), nmap_result_import.s(), loads_service_to_recodes.s(), get_all_need_l2_scan_tasks.s() )()
     return {"stat": True, "reason": "Scan Task End."}
@@ -170,7 +168,7 @@ def hosts_monitors(targets="192.168.2/0/24"):
     chain(nmap_survive_scan.s(targets),
           hosts_stat.s(),
           load_cache_data.s(),
-          chain_all_tasks.s())()
+          common_scan.s())()
 
     return {
         "task_name": "存活性检测一条龙",

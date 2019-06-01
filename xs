@@ -186,7 +186,7 @@ ServiceDict = {
             '--broker={}'.format(CELERY_BROKER_URL),
             '--pidfile={}'.format(get_pid_file_path("flower")),
             '--log-to-stderr={}'.format(get_log_file_path("flower")),
-            '--basic_auth=admin001:1q2w3e4r'.format(CONFIG.FLOWER_BASE_USER, CONFIG.FLOWER_BASE_PASSWORD),
+            '--basic_auth={}:{}'.format(CONFIG.FLOWER_BASE_USER, CONFIG.FLOWER_BASE_PASSWORD),
             '--persistent',
         ],
         "stop_cmd":"ps -axu | grep 'flower' | grep -v grep | awk '{print $2}' | xargs kill -15",

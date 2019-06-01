@@ -1,0 +1,74 @@
+Received unregistered task of type 'scan.tasks.hosts_monitors'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'\x80\x02X\x0b\x00\x00\x00192.168.1.*q\x00\x85q\x01}q\x02}q\x03(X\t\x00\x00\x00callbacksq\x04NX\x08\x00\x00\x00errbacksq\x05NX\x05\x00\x00\x00chainq\x06NX\x05\x00\x00\x00chordq\x07Nu\x87q\x08.' (94b)
+Traceback (most recent call last):
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/worker/consumer/consumer.py", line 561, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'scan.tasks.hosts_monitors'
+Received unregistered task of type 'scan.tasks.hosts_monitors'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you're using relative imports?
+
+Please see
+http://docs.celeryq.org/en/latest/internals/protocol.html
+for more information.
+
+The full contents of the message body was:
+b'\x80\x02X\x0b\x00\x00\x00192.168.1.*q\x00\x85q\x01}q\x02}q\x03(X\t\x00\x00\x00callbacksq\x04NX\x08\x00\x00\x00errbacksq\x05NX\x05\x00\x00\x00chainq\x06NX\x05\x00\x00\x00chordq\x07Nu\x87q\x08.' (94b)
+Traceback (most recent call last):
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/worker/consumer/consumer.py", line 561, in on_task_received
+    strategy = strategies[type_]
+KeyError: 'scan.tasks.hosts_monitors'
+Connected to redis://:**@127.0.0.1:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/cso_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@xxscan ready.
+Events of group {task} enabled by remote.
+Received task: scan.tasks.hosts_monitors[1502839c-ac7f-4ed6-9227-883c057504de]  
+Task scan.tasks.hosts_monitors[1502839c-ac7f-4ed6-9227-883c057504de] succeeded in 0.059836782000047606s: {'task_name': '存活性检测一条龙', 'args': '192.168.1.*,127.0.0.1', 'process': '只扫描存活的主机,而不是通用扫描。'}
+Received task: scan.tasks.nmap_survive_scan[882c36d6-b9f8-4bb5-b523-b1043dfb1a0a]  
+Received task: scan.tasks.hosts_stat[1084aac2-e2a3-47f2-9034-0b0728827714]  
+Task scan.tasks.nmap_survive_scan[882c36d6-b9f8-4bb5-b523-b1043dfb1a0a] succeeded in 1.2088318979999713s: {'stat': True, 'reason': 'Hosts Survice Monitor.'}
+Task scan.tasks.hosts_stat[1084aac2-e2a3-47f2-9034-0b0728827714] raised unexpected: TypeError('expected str, bytes or os.PathLike object, not dict',)
+Traceback (most recent call last):
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 158, in hosts_stat
+    hosts_survice_monitor(xml_path=xml_path)
+  File "/home/django/xx-scan/apps/scan/api/mudules/monitor/nmap_utils.py", line 98, in hosts_survice_monitor
+    nmap_report = NmapParser.parse_fromfile(xml_path, incomplete=incomplete)
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/libnmap/parser.py", line 191, in parse_fromfile
+    with open(nmap_report_path, 'r') as fileobj:
+TypeError: expected str, bytes or os.PathLike object, not dict
+Connected to redis://:**@127.0.0.1:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/cso_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@xxscan ready.
+Events of group {task} enabled by remote.
+Received task: scan.tasks.hosts_monitors[4901b4ff-8e67-419c-a334-897ea142b6aa]  
+Task scan.tasks.hosts_monitors[4901b4ff-8e67-419c-a334-897ea142b6aa] raised unexpected: NameError("name 'chain_all_tasks' is not defined",)
+Traceback (most recent call last):
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 170, in hosts_monitors
+    chain_all_tasks.s())()
+NameError: name 'chain_all_tasks' is not defined
