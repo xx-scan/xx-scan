@@ -159,6 +159,7 @@ def hosts_stat(xml_path):
     return {"stat": True, "reason": "Pushed Survive Scan Results to DB."}
 
 
+@shared_task
 def hosts_monitors(targets="192.168.2/0/24"):
     """
     步骤： 先进行存活扫描的检测, 再扫描对应的服务
@@ -175,4 +176,19 @@ def hosts_monitors(targets="192.168.2/0/24"):
         "task_name": "存活性检测一条龙",
         "args": targets,
         "process": "只扫描存活的主机,而不是通用扫描。"
+    }
+
+@shared_task
+@register_as_period_task(interval=3600*3)
+def saved_reportstxt_2db(prepared=None):
+    django_setup()
+
+    from scan.api.mudules.scan_v2.report import txt2reportdb
+    from scan.conf import REPORT_TO_SQL
+    if REPORT_TO_SQL:
+        txt2reportdb()
+
+    return {
+        "task_name": "ScamRecode Reports Logs 2 Db",
+        "REPORT_TO_SQL": REPORT_TO_SQL,
     }

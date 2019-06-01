@@ -118,6 +118,21 @@ class ScanRecode(models.Model):
                                         ).replace("[PATH]", self.path)
         return output, script
 
+    def get_report_txt(self):
+        reports_str = ""
+        try:
+            with open(self.output, "rb") as f:
+                temp_lines = f.readlines()
+                for line in temp_lines:
+                    try:
+                        reports_str += line.decode("utf-8") + "\n"
+                    except:
+                        pass
+                f.close()
+        except:
+            pass
+        return reports_str
+
     def save(self, *args, **kwargs):
         try:
             output, script = self.extract_self()

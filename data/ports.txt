@@ -1,0 +1,3047 @@
+<table class="wikitable    " style="color:rgb(0,0,0); font-family:Arial; font-size:14px">
+<tbody>
+<tr>
+<th>端口</th>
+<th>描述</th>
+<th>状态</th>
+</tr>
+<tr>
+<td>0/TCP,UDP</td>
+<td>保留端口；不使用（若发送过程不准备接受回复消息，则可以作为源端口）</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1/TCP,UDP</td>
+<td><a target="_blank" title="TCPMUX（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=TCPMUX&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">TCPMUX</a>（传输控制协议端口服务多路开关选择器）</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5/TCP,UDP</td>
+<td><a target="_blank" title="Remote Job Entry（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Remote_Job_Entry&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">RJE</a>（远程作业登录）</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>7/TCP,UDP</td>
+<td><a target="_blank" title="ECHO（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=ECHO&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">ECHO</a>（回显）协议</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>9/TCP,UDP</td>
+<td><a target="_blank" title="DISCARD（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=DISCARD&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">DISCARD</a>（丢弃）协议</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>11/TCP,UDP</td>
+<td><a target="_blank" title="SYSTAT（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=SYSTAT&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SYSTAT</a>协议</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>13/TCP,UDP</td>
+<td><a target="_blank" title="DAYTIME协议" class="mw-redirect" href="http://zh.wikipedia.org/wiki/DAYTIME%E5%8D%8F%E8%AE%AE" rel="nofollow" style="color:rgb(202,0,0)">DAYTIME协议</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>15/TCP,UDP</td>
+<td><a target="_blank" title="NETSTAT（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=NETSTAT&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">NETSTAT</a>协议</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>17/TCP,UDP</td>
+<td><a target="_blank" title="QOTD（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=QOTD&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">QOTD</a>（Quote of the Day，每日引用）协议</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>18/TCP,UDP</td>
+<td>消息发送协议</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>19/TCP,UDP</td>
+<td><a target="_blank" title="CHARGEN（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=CHARGEN&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">CHARGEN</a>（字符发生器）协议</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>20/TCP,UDP</td>
+<td><a target="_blank" title="文件传输协议" class="mw-redirect" href="http://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" rel="nofollow" style="color:rgb(202,0,0)">文件传输协议</a>&nbsp;- 默认数据端口</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>21/TCP,UDP</td>
+<td><a target="_blank" title="文件传输协议" class="mw-redirect" href="http://zh.wikipedia.org/wiki/%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" rel="nofollow" style="color:rgb(202,0,0)">文件传输协议</a>&nbsp;- 控制端口</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>22/TCP,UDP</td>
+<td><a target="_blank" title="SSH" class="mw-disambig" href="http://zh.wikipedia.org/wiki/SSH" rel="nofollow" style="color:rgb(202,0,0)">SSH</a>&nbsp;(Secure Shell) - 远程登录协议，用于安全登录<a target="_blank" title="文件传输（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">文件传输</a>（<a target="_blank" title="安全复制（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=%E5%AE%89%E5%85%A8%E5%A4%8D%E5%88%B6&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SCP</a>，<a target="_blank" title="SSH文件传输协议" href="http://zh.wikipedia.org/wiki/SSH%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" rel="nofollow" style="color:rgb(202,0,0)">SFTP</a>）及端口重新定向</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>23/TCP,UDP</td>
+<td><a target="_blank" title="Telnet" href="http://zh.wikipedia.org/wiki/Telnet" rel="nofollow" style="color:rgb(202,0,0)">Telnet</a>&nbsp;终端仿真协议 - 未加密文本通信</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>25/TCP,UDP</td>
+<td><a target="_blank" title="简单邮件传输协议" href="http://zh.wikipedia.org/wiki/%E7%AE%80%E5%8D%95%E9%82%AE%E4%BB%B6%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" rel="nofollow" style="color:rgb(202,0,0)">SMTP（简单邮件传输协议）</a>&nbsp;- 用于邮件服务器间的<a target="_blank" title="电子邮件" href="http://zh.wikipedia.org/wiki/%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6" rel="nofollow" style="color:rgb(202,0,0)">电子邮件</a>传递</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>26/TCP,UDP</td>
+<td><a target="_blank" title="RSFTP（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=RSFTP&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">RSFTP</a>&nbsp;- 一个简单的类似FTP的协议</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>35/TCP,UDP</td>
+<td><a target="_blank" title="QMS Magicolor 2 printer（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=QMS_Magicolor_2_printer&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">QMS Magicolor 2 printer</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>37/TCP,UDP</td>
+<td><a target="_blank" title="时间协议" href="http://zh.wikipedia.org/wiki/%E6%99%82%E9%96%93%E5%8D%94%E8%AD%B0" rel="nofollow" style="color:rgb(202,0,0)">TIME时间协议</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>39/TCP,UDP</td>
+<td><a target="_blank" title="资源定位协议（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=%E8%B5%84%E6%BA%90%E5%AE%9A%E4%BD%8D%E5%8D%8F%E8%AE%AE&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Resource Location Protocol（资源定位协议）</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>41/TCP,UDP</td>
+<td>图形</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>42/TCP,UDP</td>
+<td>Host Name Server（主机名服务）</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>42/TCP,UDP</td>
+<td><a target="_blank" title="WINS" href="http://zh.wikipedia.org/wiki/WINS" rel="nofollow" style="color:rgb(202,0,0)">WINS</a>（WINS主机名服务）</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>43/TCP</td>
+<td><a target="_blank" title="WHOIS" href="http://zh.wikipedia.org/wiki/WHOIS" rel="nofollow" style="color:rgb(202,0,0)">WHOIS</a>&nbsp;协议</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>49/TCP,UDP</td>
+<td><a target="_blank" title="TACACS" href="http://zh.wikipedia.org/wiki/TACACS" rel="nofollow" style="color:rgb(202,0,0)">TACACS</a>&nbsp;登录主机协议</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>53/TCP,UDP</td>
+<td><a target="_blank" title="域名服务器" class="mw-redirect" href="http://zh.wikipedia.org/wiki/%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8" rel="nofollow" style="color:rgb(202,0,0)">DNS</a>（域名服务系统）</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>56/TCP,UDP</td>
+<td>远程访问协议</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>57/TCP</td>
+<td>MTP，邮件传输协议</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>67/UDP</td>
+<td><a target="_blank" title="BOOTP" href="http://zh.wikipedia.org/wiki/BOOTP" rel="nofollow" style="color:rgb(202,0,0)">BOOTP</a>（BootStrap协议）服务；同时用于<a target="_blank" title="动态主机设置协议" href="http://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E4%B8%BB%E6%9C%BA%E8%AE%BE%E7%BD%AE%E5%8D%8F%E8%AE%AE" rel="nofollow" style="color:rgb(202,0,0)">动态主机设置协议</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>68/UDP</td>
+<td><a target="_blank" title="BOOTP" href="http://zh.wikipedia.org/wiki/BOOTP" rel="nofollow" style="color:rgb(202,0,0)">BOOTP</a>&nbsp;客户端；同时用于<a target="_blank" title="动态主机设定协议（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=%E5%8A%A8%E6%80%81%E4%B8%BB%E6%9C%BA%E8%AE%BE%E5%AE%9A%E5%8D%8F%E8%AE%AE&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">动态主机设定协议</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>69/UDP</td>
+<td><a target="_blank" title="Trivial File Transfer Protocol" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Trivial_File_Transfer_Protocol" rel="nofollow" style="color:rgb(202,0,0)">TFTP</a>（小型文件传输协议）</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>70/TCP</td>
+<td><a target="_blank" title="Gopher" href="http://zh.wikipedia.org/wiki/Gopher" rel="nofollow" style="color:rgb(202,0,0)">Gopher信息检索协议</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>79/TCP</td>
+<td><a target="_blank" title="Finger（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Finger&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Finger</a>协议</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>80/TCP</td>
+<td><a target="_blank" title="HTTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTP" rel="nofollow" style="color:rgb(202,0,0)">HTTP</a>（超文本传输协议）- 用于传输网页</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>81/TCP</td>
+<td><a target="_blank" title="HTTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTP" rel="nofollow" style="color:rgb(202,0,0)">HTTP</a>预备（超文本传输协议）</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>81/TCP</td>
+<td><a target="_blank" title="Torpark" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Torpark" rel="nofollow" style="color:rgb(202,0,0)">Torpark</a>&nbsp;-<a target="_blank" title="Onion routing（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Onion_routing&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Onion
+ routing</a>&nbsp;ORport</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>82/UDP</td>
+<td><a target="_blank" title="Torpark" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Torpark" rel="nofollow" style="color:rgb(202,0,0)">Torpark</a>&nbsp;- 控制端口</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>88/TCP</td>
+<td><a target="_blank" title="Kerberos" href="http://zh.wikipedia.org/wiki/Kerberos" rel="nofollow" style="color:rgb(202,0,0)">Kerberos</a>&nbsp;- 认证代理</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>101/TCP</td>
+<td>主机名</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>102/TCP</td>
+<td>ISO-TSAP 协议</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>107/TCP</td>
+<td>远程<a target="_blank" title="Telnet" href="http://zh.wikipedia.org/wiki/Telnet" rel="nofollow" style="color:rgb(202,0,0)">Telnet</a>协议</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>109/TCP</td>
+<td>POP（Post Office Protocol），“邮局协议”，第2版</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>110/TCP</td>
+<td><a target="_blank" title="POP3" class="mw-redirect" href="http://zh.wikipedia.org/wiki/POP3" rel="nofollow" style="color:rgb(202,0,0)">POP3</a>（“邮局协议”，第3版）- 用于接收<a target="_blank" title="电子邮件" href="http://zh.wikipedia.org/wiki/%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6" rel="nofollow" style="color:rgb(202,0,0)">电子邮件</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>111/TCP,UDP</td>
+<td>Sun协议</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>113/TCP</td>
+<td><a target="_blank" title="Ident（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Ident&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">ident</a>&nbsp;- 旧的服务器身份识别系统，仍然被<a target="_blank" title="IRC" href="http://zh.wikipedia.org/wiki/IRC" rel="nofollow" style="color:rgb(202,0,0)">IRC</a>&nbsp;服务器用来认证它的用户</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>115/TCP</td>
+<td>SFTP, 简单文件传输协议</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>117/TCP</td>
+<td>UUCP-PATH</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>118/TCP,UDP</td>
+<td><a target="_blank" title="SQL" href="http://zh.wikipedia.org/wiki/SQL" rel="nofollow" style="color:rgb(202,0,0)">SQL</a>&nbsp;服务</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>119/TCP</td>
+<td><a target="_blank" title="网络新闻传输协议" class="mw-redirect" href="http://zh.wikipedia.org/wiki/%E7%BD%91%E7%BB%9C%E6%96%B0%E9%97%BB%E4%BC%A0%E8%BE%93%E5%8D%8F%E8%AE%AE" rel="nofollow" style="color:rgb(202,0,0)">网络新闻传输协议</a>&nbsp;- 用来收取新闻组的消息</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>123/UDP</td>
+<td><a target="_blank" title="网络时间协议" href="http://zh.wikipedia.org/wiki/%E7%B6%B2%E7%B5%A1%E6%99%82%E9%96%93%E5%8D%94%E8%AD%B0" rel="nofollow" style="color:rgb(202,0,0)">NTP</a>&nbsp;(Network Time Protocol) - 用于时间同步</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>135/TCP,UDP</td>
+<td>EPMAP (End Point Mapper) / Microsoft RPC Locator Service</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>137/TCP,UDP</td>
+<td><a target="_blank" title="NetBIOS" href="http://zh.wikipedia.org/wiki/NetBIOS" rel="nofollow" style="color:rgb(202,0,0)">NetBIOS</a>&nbsp;NetBIOS Name Service</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>138/TCP,UDP</td>
+<td><a target="_blank" title="NetBIOS" href="http://zh.wikipedia.org/wiki/NetBIOS" rel="nofollow" style="color:rgb(202,0,0)">NetBIOS</a>&nbsp;NetBIOS Datagram Service</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>139/TCP,UDP</td>
+<td><a target="_blank" title="NetBIOS" href="http://zh.wikipedia.org/wiki/NetBIOS" rel="nofollow" style="color:rgb(202,0,0)">NetBIOS</a>&nbsp;NetBIOS Session Service</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>143/TCP,UDP</td>
+<td><a target="_blank" title="Internet Message Access Protocol" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Internet_Message_Access_Protocol" rel="nofollow" style="color:rgb(202,0,0)">IMAP4</a>&nbsp;(Internet Message Access Protocol 4) - used for retrieving<a target="_blank" title="E-mail" class="mw-redirect" href="http://zh.wikipedia.org/wiki/E-mail" rel="nofollow" style="color:rgb(202,0,0)">E-mail</a>s</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>152/TCP,UDP</td>
+<td>BFTP, Background File Transfer Program</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>153/TCP,UDP</td>
+<td>SGMP,&nbsp;<a target="_blank" title="Simple Gateway Monitoring Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Simple_Gateway_Monitoring_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Simple Gateway Monitoring
+ Protocol</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>156/TCP,UDP</td>
+<td>SQL服务</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>158/TCP,UDP</td>
+<td>DMSP, Distributed Mail Service Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>161/TCP,UDP</td>
+<td><a target="_blank" title="Simple Network Management Protocol" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Simple_Network_Management_Protocol" rel="nofollow" style="color:rgb(202,0,0)">SNMP</a>&nbsp;(Simple Network Management Protocol)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>162/TCP,UDP</td>
+<td>SNMPTRAP</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>170/TCP</td>
+<td>Print-srv</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>179/TCP</td>
+<td><a target="_blank" title="Border Gateway Protocol" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Border_Gateway_Protocol" rel="nofollow" style="color:rgb(202,0,0)">BGP</a>&nbsp;(Border Gateway Protocol)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>194/TCP</td>
+<td><a target="_blank" title="IRC" href="http://zh.wikipedia.org/wiki/IRC" rel="nofollow" style="color:rgb(202,0,0)">IRC</a>&nbsp;（互联网中继聊天）</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>201/TCP,UDP</td>
+<td>AppleTalk Routing Maintenance</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>209/TCP,UDP</td>
+<td>Quick Mail传输协议</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>213/TCP,UDP</td>
+<td><a target="_blank" title="IPX" class="mw-redirect" href="http://zh.wikipedia.org/wiki/IPX" rel="nofollow" style="color:rgb(202,0,0)">IPX</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>218/TCP,UDP</td>
+<td>MPP，信息发布协议</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>220/TCP,UDP</td>
+<td><a target="_blank" title="IMAP" href="http://zh.wikipedia.org/wiki/IMAP" rel="nofollow" style="color:rgb(202,0,0)">IMAP</a>，交互邮件访问协议第3版</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>259/TCP,UDP</td>
+<td>ESRO, Efficient Short Remote Operations</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>264/TCP,UDP</td>
+<td><a target="_blank" title="Border Gateway Multicast Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Border_Gateway_Multicast_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">BGMP</a>，Border Gateway Multicast
+ Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>308/TCP</td>
+<td>Novastor Online Backup</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>311/TCP</td>
+<td>Apple Server-Admin-Tool, Workgroup-Manager-Tool</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>318/TCP,UDP</td>
+<td>TSP，<span class="ilh-all"><span class="ilh-page"><a target="_blank" class="new" href="http://zh.wikipedia.org/w/index.php?title=%E6%97%B6%E9%97%B4%E6%88%B3%E5%8D%8F%E8%AE%AE&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)"><span style="color:rgb(0,153,153)">时间戳协议</span></a></span><span class="noprint ilh-comment">（<span class="ilh-lang"><a target="_blank" title="英语" href="http://zh.wikipedia.org/wiki/%E8%8B%B1%E8%AF%AD" rel="nofollow" style="color:rgb(202,0,0)">英语</a></span><span class="ilh-colon">：</span><span class="ilh-link"><a target="_blank" title="en:Time Stamp Protocol" class="extiw" href="http://en.wikipedia.org/wiki/Time_Stamp_Protocol" rel="nofollow" style="color:rgb(202,0,0)"><span lang="en" dir="auto">Time
+ Stamp Protocol</span></a></span>）</span></span></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>323/TCP,UDP</td>
+<td>IMMP, Internet Message Mapping Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>383/TCP,UDP</td>
+<td>HP OpenView HTTPs Operations Agent</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>366/TCP,UDP</td>
+<td>SMTP, Simple Mail Transfer Protocol. ODMR, On-Demand Mail Relay</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>369/TCP,UDP</td>
+<td>Rpc2portmap</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>371/TCP,UDP</td>
+<td>ClearCase albd</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>384/TCP,UDP</td>
+<td>一个远程网络服务器系统</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>387/TCP,UDP</td>
+<td>AURP, AppleTalk Update-based Routing Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>389/TCP,UDP</td>
+<td><a target="_blank" title="轻型目录访问协议" href="http://zh.wikipedia.org/wiki/%E8%BD%BB%E5%9E%8B%E7%9B%AE%E5%BD%95%E8%AE%BF%E9%97%AE%E5%8D%8F%E8%AE%AE" rel="nofollow" style="color:rgb(202,0,0)">轻型目录访问协议</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>401/TCP,UDP</td>
+<td><a target="_blank" title="Uninterruptible power supply（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Uninterruptible_power_supply&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">UPS</a>&nbsp;Uninterruptible Power Supply</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>411/TCP</td>
+<td><a target="_blank" title="Direct Connect network（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Direct_Connect_network&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Direct Connect</a>&nbsp;Hub port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>412/TCP</td>
+<td><a target="_blank" title="Direct Connect network（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Direct_Connect_network&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Direct Connect</a>&nbsp;Client-To-Client port</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>427/TCP,UDP</td>
+<td><a target="_blank" title="Service Location Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Service_Location_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SLP</a>&nbsp;(Service Location Protocol)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>443/TCP</td>
+<td><a target="_blank" title="HTTPS" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTPS" rel="nofollow" style="color:rgb(202,0,0)">HTTPS</a>&nbsp;-<a target="_blank" title="HTTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTP" rel="nofollow" style="color:rgb(202,0,0)">HTTP</a>&nbsp;over
+ TLS/<a target="_blank" title="传输层安全协议" class="mw-redirect" href="http://zh.wikipedia.org/wiki/%E4%BC%A0%E8%BE%93%E5%B1%82%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE" rel="nofollow" style="color:rgb(202,0,0)">SSL</a>&nbsp;（加密传输）</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>444/TCP,UDP</td>
+<td><a target="_blank" title="Simple Network Paging Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Simple_Network_Paging_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SNPP</a>，Simple Network Paging
+ Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>445/TCP</td>
+<td>Microsoft-DS (<a target="_blank" title="Active Directory" href="http://zh.wikipedia.org/wiki/Active_Directory" rel="nofollow" style="color:rgb(202,0,0)">Active Directory</a>，Windows shares,<a target="_blank" title="Sasser (computer worm)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Sasser_(computer_worm)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Sasser
+ worm</a>，Agobot, Zobotworm)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>445/UDP</td>
+<td>Microsoft-DS&nbsp;<a target="_blank" title="Server Message Block" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Server_Message_Block" rel="nofollow" style="color:rgb(202,0,0)">SMB</a>&nbsp;file sharing</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>464/TCP,UDP</td>
+<td>Kerberos Change/Set password</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>465/TCP</td>
+<td>Cisco protocol</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>465/TCP</td>
+<td><a target="_blank" title="SMTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/SMTP" rel="nofollow" style="color:rgb(202,0,0)">SMTP</a>&nbsp;over<a target="_blank" title="Transport Layer Security" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Transport_Layer_Security" rel="nofollow" style="color:rgb(202,0,0)">SSL</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>475/TCP</td>
+<td>tcpnethaspsrv (<a target="_blank" title="Hasp（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Hasp&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Hasp</a>&nbsp;services, TCP/IP version)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>497/TCP</td>
+<td><a target="_blank" title="Retrospect（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Retrospect&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">dantz</a>&nbsp;backup service</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>500/TCP,UDP</td>
+<td><a target="_blank" title="ISAKMP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/ISAKMP" rel="nofollow" style="color:rgb(202,0,0)">ISAKMP</a>，IKE-Internet Key Exchange</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>502/TCP,UDP</td>
+<td><a target="_blank" title="Modbus" href="http://zh.wikipedia.org/wiki/Modbus" rel="nofollow" style="color:rgb(202,0,0)">Modbus</a>，Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>512/TCP</td>
+<td>exec, Remote Process Execution</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>512/UDP</td>
+<td>comsat, together with&nbsp;<a target="_blank" title="Biff (computing)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Biff_(computing)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">biff</a>：notifies users of new c.q. yet
+ unread&nbsp;<a target="_blank" title="E-mail" class="mw-redirect" href="http://zh.wikipedia.org/wiki/E-mail" rel="nofollow" style="color:rgb(202,0,0)">e-mail</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>513/TCP</td>
+<td>登陆</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>513/UDP</td>
+<td>Who</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>514/TCP</td>
+<td><a target="_blank" title="Remote Shell（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Remote_Shell&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">rsh</a>&nbsp;protocol - used to execute non-interactive commandline commands
+ on a remote system and see the screen return</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>514/UDP</td>
+<td><a target="_blank" title="Syslog" href="http://zh.wikipedia.org/wiki/Syslog" rel="nofollow" style="color:rgb(202,0,0)">syslog</a>&nbsp;protocol - used for system logging</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>515/TCP</td>
+<td><a target="_blank" title="Line Printer Daemon protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Line_Printer_Daemon_protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Line Printer Daemon protocol</a>&nbsp;-
+ used in LPD printer servers</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>517/UDP</td>
+<td>Talk</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>518/UDP</td>
+<td>NTalk</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>520/TCP</td>
+<td>efs</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>520/UDP</td>
+<td>Routing -&nbsp;<a target="_blank" title="Routing Information Protocol" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Routing_Information_Protocol" rel="nofollow" style="color:rgb(202,0,0)">RIP</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>513/UDP</td>
+<td>Router</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>524/TCP,UDP</td>
+<td><a target="_blank" title="NetWare Core Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=NetWare_Core_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">NCP</a>&nbsp;(NetWare Core Protocol) is used for a variety
+ things such as access to primary NetWare server resources, Time Synchronization, etc.</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>525/UDP</td>
+<td>Timed，Timeserver</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>530/TCP,UDP</td>
+<td><a target="_blank" title="远程过程调用" class="mw-redirect" href="http://zh.wikipedia.org/wiki/%E8%BF%9C%E7%A8%8B%E8%BF%87%E7%A8%8B%E8%B0%83%E7%94%A8" rel="nofollow" style="color:rgb(202,0,0)">远程过程调用</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>531/TCP,UDP</td>
+<td>AOL Instant Messenger, IRC</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>532/TCP</td>
+<td>netnews</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>533/UDP</td>
+<td>netwall, For Emergency Broadcasts</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>540/TCP</td>
+<td><a target="_blank" title="UUCP" href="http://zh.wikipedia.org/wiki/UUCP" rel="nofollow" style="color:rgb(202,0,0)">UUCP</a>&nbsp;(Unix-to-Unix Copy Protocol)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>542/TCP,UDP</td>
+<td><a target="_blank" title="Commerce（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Commerce&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">commerce</a>&nbsp;(Commerce Applications)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>543/TCP</td>
+<td>klogin, Kerberos login</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>544/TCP</td>
+<td>kshell, Kerberos Remote shell</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>546/TCP,UDP</td>
+<td>DHCPv6 客户端</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>547/TCP,UDP</td>
+<td>DHCPv6 服务器</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>548/TCP</td>
+<td>AFP (<a target="_blank" title="Apple Filing Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Apple_Filing_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Apple Filing Protocol</a>)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>550/UDP</td>
+<td>new-rwho, new-who</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>554/TCP,UDP</td>
+<td><a target="_blank" title="RTSP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/RTSP" rel="nofollow" style="color:rgb(202,0,0)">RTSP</a>&nbsp;(Real Time Streaming Protocol)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>556/TCP</td>
+<td>Remotefs, rfs, rfs_server</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>560/UDP</td>
+<td>rmonitor, Remote Monitor</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>561/UDP</td>
+<td>monitor</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>563/TCP,UDP</td>
+<td><a target="_blank" title="NNTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/NNTP" rel="nofollow" style="color:rgb(202,0,0)">NNTP</a>&nbsp;protocol over TLS/SSL (NNTPS)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>587/TCP</td>
+<td>email message submission（<a target="_blank" title="SMTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/SMTP" rel="nofollow" style="color:rgb(202,0,0)">SMTP</a>） (<a target="_blank" class="external mw-magiclink-rfc" href="http://tools.ietf.org/html/rfc2476" rel="nofollow" style="color:rgb(202,0,0)">RFC
+ 2476</a>)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>591/TCP</td>
+<td><a target="_blank" title="FileMaker" href="http://zh.wikipedia.org/wiki/FileMaker" rel="nofollow" style="color:rgb(202,0,0)">FileMaker</a>&nbsp;6.0 （及之后版本）网络共享<em>（HTTP的替代，见80端口）</em></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>593/TCP,UDP</td>
+<td>HTTP RPC Ep Map（RPC over HTTP, often used by&nbsp;<a target="_blank" title="Distributed Component Object Model" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Distributed_Component_Object_Model" rel="nofollow" style="color:rgb(202,0,0)">DCOM</a>&nbsp;services
+ and&nbsp;<a target="_blank" title="Microsoft Exchange Server" href="http://zh.wikipedia.org/wiki/Microsoft_Exchange_Server" rel="nofollow" style="color:rgb(202,0,0)">Microsoft Exchange Server</a>）</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>604/TCP</td>
+<td>TUNNEL</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>631/TCP,UDP</td>
+<td><a target="_blank" title="互联网打印协议" href="http://zh.wikipedia.org/wiki/%E4%BA%92%E8%81%AF%E7%B6%B2%E5%88%97%E5%8D%B0%E5%8D%94%E5%AE%9A" rel="nofollow" style="color:rgb(202,0,0)">互联网打印协议</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>636/TCP,UDP</td>
+<td><a target="_blank" title="轻型目录访问协议" href="http://zh.wikipedia.org/wiki/%E8%BD%BB%E5%9E%8B%E7%9B%AE%E5%BD%95%E8%AE%BF%E9%97%AE%E5%8D%8F%E8%AE%AE" rel="nofollow" style="color:rgb(202,0,0)">LDAP</a>&nbsp;over<a target="_blank" title="传输层安全协议" class="mw-redirect" href="http://zh.wikipedia.org/wiki/%E4%BC%A0%E8%BE%93%E5%B1%82%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE" rel="nofollow" style="color:rgb(202,0,0)">SSL</a>&nbsp;（加密传输，也被称为LDAPS）</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>639/TCP,UDP</td>
+<td>MSDP,&nbsp;<a target="_blank" title="Multicast Source Discovery Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Multicast_Source_Discovery_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Multicast Source
+ Discovery Protocol</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>646/TCP</td>
+<td>LDP, Label Distribution Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>647/TCP</td>
+<td>DHCP Failover Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>648/TCP</td>
+<td>RRP, Registry Registrar Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>652/TCP</td>
+<td>DTCP, Dynamic Tunnel Configuration Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>654/UDP</td>
+<td>AODV, Ad hoc On-Demand Distance Vector</td>
+<td>&nbsp;</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>665/TCP</td>
+<td>sun-dr, Remote Dynamic Reconfiguration</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>666/UDP</td>
+<td><a target="_blank" title="毁灭战士" class="mw-redirect" href="http://zh.wikipedia.org/wiki/%E6%AF%81%E7%81%AD%E6%88%98%E5%A3%AB" rel="nofollow" style="color:rgb(202,0,0)">毁灭战士</a>，电脑平台上的一系列<a target="_blank" title="第一人称射击游戏" href="http://zh.wikipedia.org/wiki/%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0%E5%B0%84%E5%87%BB%E6%B8%B8%E6%88%8F" rel="nofollow" style="color:rgb(202,0,0)">第一人称射击游戏</a>。</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>674/TCP</td>
+<td>ACAP, Application Configuration Access Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>691/TCP</td>
+<td>MS Exchange Routing</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>692/TCP</td>
+<td>Hyperwave-ISP</td>
+<td>&nbsp;</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>694/UDP</td>
+<td>Linux-HA High availability Heartbeat port</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>695/TCP</td>
+<td>IEEE-MMS-SSL</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>698/UDP</td>
+<td>OLSR, Optimized Link State Routing</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>699/TCP</td>
+<td>Access Network</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>700/TCP</td>
+<td>EPP, Extensible Provisioning Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>701/TCP</td>
+<td>LMP, Link Management Protocol.</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>702/TCP</td>
+<td>IRIS over BEEP</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>706/TCP</td>
+<td>SILC, Secure Internet Live Conferencing</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>711/TCP</td>
+<td>TDP, Tag Distribution Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>712/TCP</td>
+<td>TBRPF, Topology Broadcast based on Reverse-Path Forwarding</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>720/TCP</td>
+<td>SMQP, Simple Message Queue Protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>749/TCP, UDP</td>
+<td>kerberos-adm, Kerberos administration</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>750/UDP</td>
+<td>Kerberos version IV</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>782/TCP</td>
+<td><a target="_blank" title="Conserver（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Conserver&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Conserver</a>&nbsp;serial-console management server</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>829/TCP</td>
+<td>CMP (Certificate Management Protocol)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>860/TCP</td>
+<td><a target="_blank" title="ISCSI" href="http://zh.wikipedia.org/wiki/ISCSI" rel="nofollow" style="color:rgb(202,0,0)">iSCSI</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>873/TCP</td>
+<td><a target="_blank" title="Rsync" href="http://zh.wikipedia.org/wiki/Rsync" rel="nofollow" style="color:rgb(202,0,0)">rsync</a>&nbsp;File synchronisation protocol</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>901/TCP</td>
+<td><a target="_blank" title="Samba software（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Samba_software&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Samba</a>&nbsp;Web Administration Tool (SWAT)</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>902</td>
+<td><a target="_blank" title="VMware" href="http://zh.wikipedia.org/wiki/VMware" rel="nofollow" style="color:rgb(202,0,0)">VMware</a>服务器控制台<sup class="reference" id="cite_ref-2"><a target="_blank" href="http://zh.wikipedia.org/wiki/TCP/UDP%E7%AB%AF%E5%8F%A3%E5%88%97%E8%A1%A8#cite_note-2" rel="nofollow" style="color:rgb(202,0,0)"><span style="font-size:12px">[2]</span></a></sup></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>904</td>
+<td><a target="_blank" title="VMware" href="http://zh.wikipedia.org/wiki/VMware" rel="nofollow" style="color:rgb(202,0,0)">VMware</a>服务器替代（如果902端口已被占用）</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>911/TCP</td>
+<td><a target="_blank" title="Network Console on Acid（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Network_Console_on_Acid&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Network Console on Acid</a>&nbsp;(NCA) - local<a target="_blank" title="Linux" href="http://zh.wikipedia.org/wiki/Linux" rel="nofollow" style="color:rgb(202,0,0)">tty</a>&nbsp;redirection
+ over<a target="_blank" title="OpenSSH" href="http://zh.wikipedia.org/wiki/OpenSSH" rel="nofollow" style="color:rgb(202,0,0)">OpenSSH</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>981/TCP</td>
+<td><a target="_blank" title="SofaWare Technologies（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=SofaWare_Technologies&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SofaWare Technologies</a>&nbsp;Remote HTTPS management
+ for firewall devices running embedded<a target="_blank" title="Checkpoint Firewall-1（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Checkpoint_Firewall-1&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Checkpoint Firewall-1</a>&nbsp;software</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>989/TCP,UDP</td>
+<td><a target="_blank" title="FTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/FTP" rel="nofollow" style="color:rgb(202,0,0)">FTP</a>&nbsp;Protocol (data) over TLS/SSL</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>990/TCP,UDP</td>
+<td>FTP Protocol (control) over TLS/SSL</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>991/TCP,UDP</td>
+<td>NAS (Netnews Admin System)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>992/TCP,UDP</td>
+<td>Telnet protocol over TLS/SSL</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>993/TCP</td>
+<td><a target="_blank" title="Internet Message Access Protocol" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Internet_Message_Access_Protocol" rel="nofollow" style="color:rgb(202,0,0)">IMAP4</a>&nbsp;over<a target="_blank" title="Transport Layer Security" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Transport_Layer_Security" rel="nofollow" style="color:rgb(202,0,0)">SSL</a>&nbsp;(encrypted
+ transmission)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>995/TCP</td>
+<td><a target="_blank" title="Post Office Protocol" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Post_Office_Protocol" rel="nofollow" style="color:rgb(202,0,0)">POP3</a>&nbsp;over<a target="_blank" title="Transport Layer Security" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Transport_Layer_Security" rel="nofollow" style="color:rgb(202,0,0)">SSL</a>&nbsp;(encrypted
+ transmission)</td>
+<td>官方</td>
+</tr>
+</tbody>
+</table>
+
+
+<table class="wikitable    " style="color:rgb(0,0,0); font-family:Arial; font-size:14px">
+<tbody>
+<tr>
+<th>端口</th>
+<th>描述</th>
+<th>状态</th>
+</tr>
+<tr>
+<td>1025/tcp</td>
+<td>NFS-or-IIS</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>1026/tcp</td>
+<td>Often utilized by Microsoft&nbsp;<a target="_blank" title="Distributed Component Object Model" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Distributed_Component_Object_Model" rel="nofollow" style="color:rgb(202,0,0)">DCOM</a>&nbsp;services</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>1029/tcp</td>
+<td>Often utilized by Microsoft&nbsp;<a target="_blank" title="Distributed Component Object Model" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Distributed_Component_Object_Model" rel="nofollow" style="color:rgb(202,0,0)">DCOM</a>&nbsp;services</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>1058/tcp</td>
+<td>nim&nbsp;<a target="_blank" title="IBM AIX (operating system)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=IBM_AIX_(operating_system)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">AIX Network Installation Manager</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1059/tcp</td>
+<td>nimreg</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1080/tcp</td>
+<td><a target="_blank" title="SOCKS" href="http://zh.wikipedia.org/wiki/SOCKS" rel="nofollow" style="color:rgb(202,0,0)">SOCKS</a>&nbsp;proxy</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1099/tcp</td>
+<td><a target="_blank" title="Java remote method invocation（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Java_remote_method_invocation&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">RMI</a>&nbsp;Registry</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1099/udp</td>
+<td><a target="_blank" title="Java remote method invocation（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Java_remote_method_invocation&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">RMI</a>&nbsp;Registry</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1109/tcp</td>
+<td>Kerberos POP</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>1140/tcp</td>
+<td>AutoNOC</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1167/udp</td>
+<td>phone, conference calling</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>1176/tcp</td>
+<td>Perceptive Automation Indigo home control server</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1182/tcp,udp</td>
+<td><a target="_blank" title="AcceleNet（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=AcceleNet&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">AcceleNet</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1194/udp</td>
+<td><a target="_blank" title="OpenVPN" href="http://zh.wikipedia.org/wiki/OpenVPN" rel="nofollow" style="color:rgb(202,0,0)">OpenVPN</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1198/tcp,udp</td>
+<td>The&nbsp;<a target="_blank" title="Cajo project（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Cajo_project&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">cajo project</a>&nbsp;Free dynamic transparent distributed computing
+ in Java</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1200/udp</td>
+<td><a target="_blank" title="Steam content delivery（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Steam_content_delivery&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Steam Friends Applet</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1214/tcp</td>
+<td><a target="_blank" title="Kazaa（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Kazaa&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Kazaa</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1223/tcp,udp</td>
+<td>TGP: "TrulyGlobal Protocol" aka "The Gur Protocol"</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1241/tcp,udp</td>
+<td><a target="_blank" title="Nessus (software)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Nessus_(software)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Nessus</a>&nbsp;Security Scanner</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>1248/tcp</td>
+<td>NSClient/NSClient++/NC_Net (Nagios)</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>1270/tcp,udp</td>
+<td>Microsoft Operations Manager 2005 agent (MOM 2005)</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>1311/tcp</td>
+<td>Dell Open Manage Https Port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>1313/tcp</td>
+<td>Xbiim (Canvii server) Port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>1337/tcp</td>
+<td><a target="_blank" title="WASTE（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=WASTE&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">WASTE</a>&nbsp;Encrypted File Sharing Program</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>1352/tcp</td>
+<td>IBM&nbsp;<a target="_blank" title="Lotus Notes" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Lotus_Notes" rel="nofollow" style="color:rgb(202,0,0)">Lotus Notes</a>/Domino RPC</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1387/tcp</td>
+<td>Computer Aided Design Software Inc LM (cadsi-lm )</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1387/udp</td>
+<td>Computer Aided Design Software Inc LM (cadsi-lm )</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1414/tcp</td>
+<td>IBM&nbsp;<a target="_blank" title="MQSeries（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=MQSeries&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">MQSeries</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1431/tcp</td>
+<td>RGTP</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1433/tcp,udp</td>
+<td><a target="_blank" title="Microsoft SQL Server" href="http://zh.wikipedia.org/wiki/Microsoft_SQL_Server" rel="nofollow" style="color:rgb(202,0,0)">Microsoft SQL</a>&nbsp;database system</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1434/tcp,udp</td>
+<td>Microsoft SQL Monitor</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1494/tcp</td>
+<td><a target="_blank" title="Citrix Presentation Server（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Citrix_Presentation_Server&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Citrix Presentation Server</a>&nbsp;ICA Client</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1512/tcp,udp</td>
+<td><a target="_blank" title="WINS" href="http://zh.wikipedia.org/wiki/WINS" rel="nofollow" style="color:rgb(202,0,0)">WINS</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr bgcolor="khaki">
+<td>1521/tcp</td>
+<td><a target="_blank" title="NCube（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=NCube&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">nCube</a>&nbsp;License Manager</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>1521/tcp</td>
+<td><a target="_blank" title="Oracle database" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Oracle_database" rel="nofollow" style="color:rgb(202,0,0)">Oracle database</a>&nbsp;default listener, in future releases official port 2483</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>1524/tcp,udp</td>
+<td>ingreslock, ingres</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>1526/tcp</td>
+<td><a target="_blank" title="Oracle database" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Oracle_database" rel="nofollow" style="color:rgb(202,0,0)">Oracle database</a>&nbsp;common alternative for listener</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>1533/tcp</td>
+<td>IBM&nbsp;<a target="_blank" title="Sametime（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Sametime&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Sametime</a>&nbsp;IM - Virtual Places Chat</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1547/tcp</td>
+<td><a target="_blank" title="Laplink（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Laplink&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Laplink</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1547/udp</td>
+<td><a target="_blank" title="Laplink（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Laplink&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Laplink</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>1550</td>
+<td><a target="_blank" title="Gadu-Gadu（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Gadu-Gadu&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Gadu-Gadu</a>&nbsp;(Direct Client-to-Client)</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>1581/udp</td>
+<td><a target="_blank" title="Combat-net radio（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Combat-net_radio&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">MIL STD 2045-47001 VMF</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>1589/udp</td>
+<td>Cisco&nbsp;<a target="_blank" title="VQP（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=VQP&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">VQP</a>&nbsp;(VLAN Query Protocol) /&nbsp;<a target="_blank" title="VLAN Management Policy Server（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=VLAN_Management_Policy_Server&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">VMPS</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>1627</td>
+<td>iSketch</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>1677/tcp</td>
+<td>Novell GroupWise clients in client/server access mode</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>1701/udp</td>
+<td><a target="_blank" title="L2tp（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=L2tp&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">l2tp</a>, Layer 2 Tunnelling protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>1716/tcp</td>
+<td><a target="_blank" title="America's Army" class="mw-redirect" href="http://zh.wikipedia.org/wiki/America%27s_Army" rel="nofollow" style="color:rgb(202,0,0)">America's Army</a>&nbsp;MMORPG Default Game Port</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1723/tcp</td>
+<td>Microsoft&nbsp;<a target="_blank" title="PPTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/PPTP" rel="nofollow" style="color:rgb(202,0,0)">PPTP</a>&nbsp;VPN</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1723/udp</td>
+<td>Microsoft&nbsp;<a target="_blank" title="PPTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/PPTP" rel="nofollow" style="color:rgb(202,0,0)">PPTP</a>&nbsp;VPN</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>1725/udp</td>
+<td>Valve Steam Client</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>1755/tcp</td>
+<td><a target="_blank" title="Microsoft Media Services（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Microsoft_Media_Services&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Microsoft Media Services</a>&nbsp;(MMS, ms-streaming)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1755/udp</td>
+<td><a target="_blank" title="Microsoft Media Services（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Microsoft_Media_Services&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Microsoft Media Services</a>&nbsp;(MMS, ms-streaming)</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>1761/tcp,udp</td>
+<td>cft-0</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>1761/tcp</td>
+<td><a target="_blank" title="Novell" href="http://zh.wikipedia.org/wiki/Novell" rel="nofollow" style="color:rgb(202,0,0)">Novell</a>&nbsp;Zenworks Remote Control utility</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>1762-1768/tcp,udp</td>
+<td>cft-1 to cft-7</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1812/udp</td>
+<td>radius,&nbsp;<a target="_blank" title="RADIUS" href="http://zh.wikipedia.org/wiki/RADIUS" rel="nofollow" style="color:rgb(202,0,0)">RADIUS</a>&nbsp;authentication protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>1813/udp</td>
+<td>radacct,&nbsp;<a target="_blank" title="RADIUS" href="http://zh.wikipedia.org/wiki/RADIUS" rel="nofollow" style="color:rgb(202,0,0)">RADIUS</a>&nbsp;accounting protocol</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>1863/tcp</td>
+<td><a target="_blank" title="Windows Live Messenger" href="http://zh.wikipedia.org/wiki/Windows_Live_Messenger" rel="nofollow" style="color:rgb(202,0,0)">Windows Live Messenger</a>, MSN</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1900/udp</td>
+<td>Microsoft&nbsp;<a target="_blank" title="Simple Service Discovery Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Simple_Service_Discovery_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SSDP</a>&nbsp;Enables
+ discovery of&nbsp;<a target="_blank" title="UPnP" href="http://zh.wikipedia.org/wiki/UPnP" rel="nofollow" style="color:rgb(202,0,0)">UPnP</a>&nbsp;devices</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1935/tcp</td>
+<td><a target="_blank" title="Real Time Messaging Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Real_Time_Messaging_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Real Time Messaging Protocol</a>&nbsp;(RTMP)
+ raw protocol</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1970/tcp,udp</td>
+<td><a target="_blank" title="Danware Data A/S（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Danware_Data_A/S&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Danware Data</a>&nbsp;NetOp Remote Control</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1971/tcp,udp</td>
+<td><a target="_blank" title="Danware Data A/S（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Danware_Data_A/S&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Danware Data</a>&nbsp;NetOp School</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1972/tcp,udp</td>
+<td><a target="_blank" title="InterSystems Caché（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=InterSystems_Cach%C3%A9&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">InterSystems Caché</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1975-77/udp</td>
+<td>Cisco&nbsp;<a target="_blank" title="Total cost of ownership（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Total_cost_of_ownership&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">TCO</a>&nbsp;(<a target="_blank" class="external text" href="http://www.cisco.com/en/US/netsol/networking_solutions_networking_basic09186a00800a3524.html" rel="nofollow" style="color:rgb(202,0,0)">Documentation</a>)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1984/tcp</td>
+<td>Big Brother - network monitoring tool</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1985/udp</td>
+<td><a target="_blank" title="Hot Standby Router Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Hot_Standby_Router_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Cisco HSRP</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>1994/TCP</td>
+<td>STUN-SDLC protocol for tunneling</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>1998/tcp</td>
+<td>Cisco X.25 service (XOT)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>2000/udp</td>
+<td><a target="_blank" title="Skinny Client Control Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Skinny_Client_Control_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Cisco SCCP (Skinny)</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2000/tcp</td>
+<td><a target="_blank" title="Skinny Client Control Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Skinny_Client_Control_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Cisco SCCP (Skinny)</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2002/tcp</td>
+<td>Cisco Secure Access Control Server (ACS) for Windows</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2030</td>
+<td><a target="_blank" title="Oracle Corporation" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Oracle_Corporation" rel="nofollow" style="color:rgb(202,0,0)">Oracle</a>&nbsp;Services for<a target="_blank" title="Microsoft Transaction Server（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Microsoft_Transaction_Server&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Microsoft
+ Transaction Server</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>2031/tcp</td>
+<td><a target="_blank" title="Mobrien-chat（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Mobrien-chat&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">mobrien-chat</a>&nbsp;- Mike O'Brien &lt;mike@mobrien.com&gt; November 2004</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2031/udp</td>
+<td><a target="_blank" title="Mobrien-chat（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Mobrien-chat&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">mobrien-chat</a>&nbsp;- Mike O'Brien &lt;mike@mobrien.com&gt; November 2004</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>2049/udp</td>
+<td>nfs,&nbsp;<a target="_blank" title="NFS" class="mw-disambig" href="http://zh.wikipedia.org/wiki/NFS" rel="nofollow" style="color:rgb(202,0,0)">NFS</a>&nbsp;Server</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>2049/udp</td>
+<td>shilp</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2053/tcp</td>
+<td>knetd,&nbsp;<a target="_blank" title="Kerberos (protocol)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Kerberos_(protocol)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Kerberos</a>&nbsp;de-multiplexor</td>
+<td>&nbsp;</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2056/udp</td>
+<td><a target="_blank" title="Civilization 4（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Civilization_4&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Civilization 4</a>&nbsp;multiplayer</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>2073/tcp</td>
+<td>DataReel Database</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2073/udp</td>
+<td>DataReel Database</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2074/tcp</td>
+<td>Vertel VMF SA (i.e. App.. SpeakFreely)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2074/udp</td>
+<td>Vertel VMF SA (i.e. App.. SpeakFreely)</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>2082/tcp</td>
+<td>Infowave Mobility Server</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>2082/tcp</td>
+<td><a target="_blank" title="CPanel" href="http://zh.wikipedia.org/wiki/CPanel" rel="nofollow" style="color:rgb(202,0,0)">CPanel</a>, default port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>2083/tcp</td>
+<td>Secure Radius Service (radsec)</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>2083/tcp</td>
+<td><a target="_blank" title="CPanel" href="http://zh.wikipedia.org/wiki/CPanel" rel="nofollow" style="color:rgb(202,0,0)">CPanel</a>&nbsp;default SSL port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>2086/tcp</td>
+<td><a target="_blank" title="GNUnet（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=GNUnet&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">GNUnet</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>2086/tcp</td>
+<td><a target="_blank" title="CPanel" href="http://zh.wikipedia.org/wiki/CPanel#WHM_.28Web_Host_Manager.29" rel="nofollow" style="color:rgb(202,0,0)">WebHost Manager</a>&nbsp;default port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2087/tcp</td>
+<td><a target="_blank" title="CPanel" href="http://zh.wikipedia.org/wiki/CPanel#WHM_.28Web_Host_Manager.29" rel="nofollow" style="color:rgb(202,0,0)">WebHost Manager</a>&nbsp;default SSL port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2095/tcp</td>
+<td><a target="_blank" title="CPanel" href="http://zh.wikipedia.org/wiki/CPanel" rel="nofollow" style="color:rgb(202,0,0)">CPanel</a>&nbsp;default webmail port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2096/tcp</td>
+<td><a target="_blank" title="CPanel" href="http://zh.wikipedia.org/wiki/CPanel" rel="nofollow" style="color:rgb(202,0,0)">CPanel</a>&nbsp;default SSL webmail port</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>2161/tcp</td>
+<td><a target="_blank" title="?" class="mw-redirect" href="http://zh.wikipedia.org/wiki/%3F" rel="nofollow" style="color:rgb(202,0,0)">?</a>-APC Agent</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2181/tcp</td>
+<td><a target="_blank" title="EForward（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=EForward&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">EForward</a>-document transport system</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2181/udp</td>
+<td><a target="_blank" title="EForward（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=EForward&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">EForward</a>-document transport system</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2200/tcp</td>
+<td>Tuxanci game server</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>2219/tcp</td>
+<td>NetIQ NCAP Protocol</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2219/udp</td>
+<td>NetIQ NCAP Protocol</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2220/tcp</td>
+<td>NetIQ End2End</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2220/udp</td>
+<td>NetIQ End2End</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2222/tcp</td>
+<td><a target="_blank" title="DirectAdmin（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=DirectAdmin&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">DirectAdmin</a>'s default port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2222/udp</td>
+<td>Microsoft Office OS X antipiracy network monitor&nbsp;<a target="_blank" class="external autonumber" href="http://www.ciac.org/ciac/techbull/CIACTech02-003.shtml" rel="nofollow" style="color:rgb(202,0,0)">[1]</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2301/tcp</td>
+<td>HP System Management Redirect to port 2381</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2302/udp</td>
+<td><a target="_blank" title="ArmA（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=ArmA&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">ArmA</a>&nbsp;multiplayer (default for game)</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2302/udp</td>
+<td><a target="_blank" title="Halo: Combat Evolved" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Halo:_Combat_Evolved" rel="nofollow" style="color:rgb(202,0,0)">Halo: Combat Evolved</a>&nbsp;multiplayer</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2303/udp</td>
+<td><a target="_blank" title="ArmA（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=ArmA&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">ArmA</a>&nbsp;multiplayer (default for server reporting)<em>(default port for game +1)</em></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2305/udp</td>
+<td><a target="_blank" title="ArmA（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=ArmA&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">ArmA</a>&nbsp;multiplayer (default for VoN)<em>(default port for game +3)</em></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2369/tcp</td>
+<td>Default port for&nbsp;<a target="_blank" title="BMC Software（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=BMC_Software&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">BMC Software</a>&nbsp;CONTROL-M/Server - Configuration
+ Agent port number - though often changed during installation</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2370/tcp</td>
+<td>Default port for&nbsp;<a target="_blank" title="BMC Software（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=BMC_Software&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">BMC Software</a>&nbsp;CONTROL-M/Server - Port utilized
+ to allow the CONTROL-M/Enterprise Manager to connect to the CONTROL-M/Server - though often changed during installation</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2381/tcp</td>
+<td>HP Insight Manager default port for webserver</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>2404/tcp</td>
+<td>IEC 60870-5-104</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2427/udp</td>
+<td>Cisco&nbsp;<a target="_blank" title="MGCP（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=MGCP&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">MGCP</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2447/tcp</td>
+<td>ovwdb -&nbsp;<a target="_blank" title="OpenView（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=OpenView&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">OpenView</a>&nbsp;<a target="_blank" title="Network Node Manager（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Network_Node_Manager&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Network
+ Node Manager</a>&nbsp;(NNM) daemon</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2447/udp</td>
+<td>ovwdb - OpenView Network Node Manager (NNM) daemon</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2483/tcp,udp</td>
+<td><a target="_blank" title="Oracle database" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Oracle_database" rel="nofollow" style="color:rgb(202,0,0)">Oracle database</a>&nbsp;listening port for unsecure client connections to the listener, replaces port
+ 1521</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2484/tcp,udp</td>
+<td><a target="_blank" title="Oracle database" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Oracle_database" rel="nofollow" style="color:rgb(202,0,0)">Oracle database</a>&nbsp;listening port for SSL client connections to the listener</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2546/tcp,udp</td>
+<td>Vytal Vault - Data Protection Services</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2593/tcp,udp</td>
+<td>RunUO -&nbsp;<a target="_blank" title="Ultima Online（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Ultima_Online&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Ultima Online</a>&nbsp;server</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2598/tcp</td>
+<td>new ICA - when Session Reliability is enabled, TCP port 2598 replaces port 1494</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>2612/tcp,udp</td>
+<td>QPasa from MQSoftware</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2710/tcp</td>
+<td>XBT Bittorrent Tracker</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2710/udp</td>
+<td>XBT Bittorrent Tracker experimental UDP tracker extension</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2710/tcp</td>
+<td>Knuddels.de</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>2735/tcp</td>
+<td>NetIQ Monitor Console</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2735/udp</td>
+<td>NetIQ Monitor Console</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2809/tcp</td>
+<td>corbaloc:iiop URL, per the&nbsp;<a target="_blank" title="CORBA" href="http://zh.wikipedia.org/wiki/CORBA" rel="nofollow" style="color:rgb(202,0,0)">CORBA</a>&nbsp;3.0.3 specification.
+<p style="margin-top:0px; margin-bottom:0px; padding-top:0px; padding-bottom:0px">
+Also used by IBM&nbsp;<a target="_blank" title="WebSphere Application Server" class="mw-redirect" href="http://zh.wikipedia.org/wiki/WebSphere_Application_Server" rel="nofollow" style="color:rgb(202,0,0)">WebSphere Application Server</a>&nbsp;Node Agent</p>
+</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2809/udp</td>
+<td>corbaloc:iiop URL, per the&nbsp;<a target="_blank" title="CORBA" href="http://zh.wikipedia.org/wiki/CORBA" rel="nofollow" style="color:rgb(202,0,0)">CORBA</a>&nbsp;3.0.3 specification.</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2944/udp</td>
+<td><a target="_blank" title="Megaco" href="http://zh.wikipedia.org/wiki/Megaco" rel="nofollow" style="color:rgb(202,0,0)">Megaco</a>&nbsp;Text H.248</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2945/udp</td>
+<td><a target="_blank" title="Megaco" href="http://zh.wikipedia.org/wiki/Megaco" rel="nofollow" style="color:rgb(202,0,0)">Megaco</a>&nbsp;Binary (ASN.1) H.248</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>2948/tcp</td>
+<td><a target="_blank" title="Wireless Application Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Wireless_Application_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">WAP</a>-push<a target="_blank" title="Multimedia Messaging Service（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Multimedia_Messaging_Service&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Multimedia
+ Messaging Service</a>&nbsp;(MMS)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2948/udp</td>
+<td><a target="_blank" title="Wireless Application Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Wireless_Application_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">WAP</a>-push<a target="_blank" title="Multimedia Messaging Service（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Multimedia_Messaging_Service&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Multimedia
+ Messaging Service</a>&nbsp;(MMS)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2949/tcp</td>
+<td><a target="_blank" title="Wireless Application Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Wireless_Application_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">WAP</a>-pushsecure<a target="_blank" title="Multimedia Messaging Service（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Multimedia_Messaging_Service&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Multimedia
+ Messaging Service</a>&nbsp;(MMS)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>2949/udp</td>
+<td><a target="_blank" title="Wireless Application Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Wireless_Application_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">WAP</a>-pushsecure<a target="_blank" title="Multimedia Messaging Service（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Multimedia_Messaging_Service&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Multimedia
+ Messaging Service</a>&nbsp;(MMS)</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>2967/tcp</td>
+<td>Symantec AntiVirus Corporate Edition</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>3000/tcp</td>
+<td>Miralix License server</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>3000/udp</td>
+<td><a target="_blank" title="Distributed Interactive Simulation（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Distributed_Interactive_Simulation&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Distributed Interactive
+ Simulation</a>&nbsp;(DIS), modifiable default port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>3001/tcp</td>
+<td>Miralix Phone Monitor</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>3002/tcp</td>
+<td>Miralix CSTA</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>3003/tcp</td>
+<td>Miralix GreenBox API</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>3004/tcp</td>
+<td>Miralix InfoLink</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>3006/tcp</td>
+<td>Miralix SMS Client Connector</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>3007/tcp</td>
+<td>Miralix OM Server</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>3025/tcp</td>
+<td>netpd.org</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>3050/tcp,udp</td>
+<td>gds_db (Interbase/Firebird)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3074/tcp,udp</td>
+<td><a target="_blank" title="Xbox Live" href="http://zh.wikipedia.org/wiki/Xbox_Live" rel="nofollow" style="color:rgb(202,0,0)">Xbox Live</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3128/tcp</td>
+<td><a target="_blank" title="HTTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTP" rel="nofollow" style="color:rgb(202,0,0)">HTTP</a>&nbsp;used by<a target="_blank" title="Web cache（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Web_cache&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">web
+ cache</a>s and the default port for the&nbsp;<a target="_blank" title="Squid cache" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Squid_cache" rel="nofollow" style="color:rgb(202,0,0)">Squid cache</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3260/tcp</td>
+<td><a target="_blank" title="ISCSI" href="http://zh.wikipedia.org/wiki/ISCSI" rel="nofollow" style="color:rgb(202,0,0)">iSCSI</a>&nbsp;target</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3268/tcp</td>
+<td>msft-gc, Microsoft Global Catalog (<a target="_blank" title="LDAP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/LDAP" rel="nofollow" style="color:rgb(202,0,0)">LDAP</a>&nbsp;service which contains data from<a target="_blank" title="Active Directory" href="http://zh.wikipedia.org/wiki/Active_Directory" rel="nofollow" style="color:rgb(202,0,0)">Active
+ Directory</a>&nbsp;forests)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3269/tcp</td>
+<td>msft-gc-ssl, Microsoft Global Catalog over SSL (similar to port 3268,&nbsp;<a target="_blank" title="LDAP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/LDAP" rel="nofollow" style="color:rgb(202,0,0)">LDAP</a>&nbsp;over&nbsp;<a target="_blank" title="Secure Sockets Layer（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Secure_Sockets_Layer&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SSL</a>&nbsp;version)</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>3300/tcp</td>
+<td><a target="_blank" title="TripleA (computer game)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=TripleA_(computer_game)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">TripleA</a>&nbsp;game server</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>3305/tcp,udp</td>
+<td><a target="_blank" title="ODETTE-FTP（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=ODETTE-FTP&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">ODETTE-FTP</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3306/tcp,udp</td>
+<td><a target="_blank" title="MySQL" href="http://zh.wikipedia.org/wiki/MySQL" rel="nofollow" style="color:rgb(202,0,0)">MySQL</a>&nbsp;Database system</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>3333/tcp</td>
+<td>Network Caller ID server</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>3386/tcp,udp</td>
+<td><a target="_blank" title="GTP'（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=GTP%27&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">GTP'</a><a target="_blank" title="3GPP" href="http://zh.wikipedia.org/wiki/3GPP" rel="nofollow" style="color:rgb(202,0,0)">3GPP</a><a target="_blank" title="GSM" class="mw-redirect" href="http://zh.wikipedia.org/wiki/GSM" rel="nofollow" style="color:rgb(202,0,0)">GSM</a>/<a target="_blank" title="UMTS" class="mw-redirect" href="http://zh.wikipedia.org/wiki/UMTS" rel="nofollow" style="color:rgb(202,0,0)">UMTS</a><a target="_blank" title="Call detail record（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Call_detail_record&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">CDR</a>&nbsp;logging
+ protocol</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3389/tcp</td>
+<td><a target="_blank" title="远程桌面协议" href="http://zh.wikipedia.org/wiki/%E9%81%A0%E7%AB%AF%E6%A1%8C%E9%9D%A2%E5%8D%94%E5%AE%9A" rel="nofollow" style="color:rgb(202,0,0)">远程桌面协议</a>（RDP）</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3396/tcp</td>
+<td><a target="_blank" title="Novell" href="http://zh.wikipedia.org/wiki/Novell" rel="nofollow" style="color:rgb(202,0,0)">Novell</a>&nbsp;NDPS Printer Agent</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3689/tcp</td>
+<td><a target="_blank" title="Digital Audio Access Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Digital_Audio_Access_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">DAAP</a>&nbsp;Digital Audio Access Protocol
+ used by<a target="_blank" title="Apple Computer" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Apple_Computer" rel="nofollow" style="color:rgb(202,0,0)">Apple’s</a><a target="_blank" title="ITunes" href="http://zh.wikipedia.org/wiki/ITunes" rel="nofollow" style="color:rgb(202,0,0)">iTunes</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3690/tcp</td>
+<td><a target="_blank" title="Subversion (software)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Subversion_(software)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Subversion</a>&nbsp;version control system</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3702/tcp,udp</td>
+<td><a target="_blank" title="Web Services Dynamic Discovery（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Web_Services_Dynamic_Discovery&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Web Services Dynamic Discovery</a>&nbsp;(WS-Discovery),
+ used by various components of&nbsp;<a target="_blank" title="Windows Vista" href="http://zh.wikipedia.org/wiki/Windows_Vista" rel="nofollow" style="color:rgb(202,0,0)">Windows Vista</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3724/tcp</td>
+<td><a target="_blank" title="World of Warcraft" class="mw-redirect" href="http://zh.wikipedia.org/wiki/World_of_Warcraft" rel="nofollow" style="color:rgb(202,0,0)">World of Warcraft</a>&nbsp;Online gaming MMORPG</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3784/tcp,udp</td>
+<td><a target="_blank" title="Ventrilo（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Ventrilo&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Ventrilo</a>&nbsp;VoIP program used by<a target="_blank" title="Ventrilo（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Ventrilo&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Ventrilo</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3785/udp</td>
+<td><a target="_blank" title="Ventrilo（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Ventrilo&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Ventrilo</a>&nbsp;VoIP program used by<a target="_blank" title="Ventrilo（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Ventrilo&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Ventrilo</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3868 tcp,udp</td>
+<td><a target="_blank" title="Diameter base protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Diameter_base_protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Diameter base protocol</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>3872/tcp</td>
+<td>Oracle Management Remote Agent</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>3899/tcp</td>
+<td><a target="_blank" title="Remote Administrator（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Remote_Administrator&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Remote Administrator</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>3900/tcp</td>
+<td><a target="_blank" title="Unidata UDT OS（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Unidata_UDT_OS&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Unidata UDT OS</a>&nbsp;udt_os</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>3945/tcp</td>
+<td>Emcads server service port, a Giritech product used by&nbsp;<a target="_blank" title="G/On（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=G/On&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">G/On</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>4000/tcp</td>
+<td><a target="_blank" title="Diablo II" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Diablo_II" rel="nofollow" style="color:rgb(202,0,0)">Diablo II</a>&nbsp;game</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>4007/tcp</td>
+<td>PrintBuzzer printer monitoring socket server</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>4089/udp</td>
+<td>OpenCORE Remote Control Service</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>4089/tcp</td>
+<td>OpenCORE Remote Control Service</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>4093/udp</td>
+<td>PxPlus Client server interface&nbsp;<a target="_blank" title="ProvideX（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=ProvideX&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">ProvideX</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>4093/tcp</td>
+<td>PxPlus Client server interface&nbsp;<a target="_blank" title="ProvideX（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=ProvideX&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">ProvideX</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>4096/udp</td>
+<td>Bridge-Relay Element&nbsp;<a target="_blank" title="ASCOM（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=ASCOM&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">ASCOM</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>4100</td>
+<td>WatchGuard Authentication Applet - default port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>4111/tcp,udp</td>
+<td><a target="_blank" title="Xgrid（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Xgrid&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Xgrid</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>4111/tcp</td>
+<td><a target="_blank" title="Microsoft Office SharePoint Portal Server" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Microsoft_Office_SharePoint_Portal_Server" rel="nofollow" style="color:rgb(202,0,0)">Microsoft Office SharePoint Portal Server</a>&nbsp;-
+ 默认管理端口</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>4226/tcp,udp</td>
+<td><a target="_blank" title="Aleph One (computer game)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Aleph_One_(computer_game)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Aleph One (computer game)</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>4224/tcp</td>
+<td><a target="_blank" title="Cisco" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Cisco" rel="nofollow" style="color:rgb(202,0,0)">Cisco</a>&nbsp;CDP Cisco discovery Protocol</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>4569/udp</td>
+<td><a target="_blank" title="Inter-Asterisk eXchange（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Inter-Asterisk_eXchange&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Inter-Asterisk eXchange</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>4662/tcp</td>
+<td>OrbitNet Message Service</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>4662/tcp</td>
+<td>通常用于<a target="_blank" title="EMule" href="http://zh.wikipedia.org/wiki/EMule" rel="nofollow" style="color:rgb(202,0,0)">eMule</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>4664/tcp</td>
+<td><a target="_blank" title="Google桌面" href="http://zh.wikipedia.org/wiki/Google%E6%A1%8C%E9%9D%A2" rel="nofollow" style="color:rgb(202,0,0)">Google桌面搜索</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>4672/udp</td>
+<td><a target="_blank" title="EMule" href="http://zh.wikipedia.org/wiki/EMule" rel="nofollow" style="color:rgb(202,0,0)">eMule</a>&nbsp;- 常用端口</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>4894/tcp</td>
+<td><a target="_blank" title="LysKOM（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=LysKOM&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">LysKOM</a>&nbsp;Protocol A</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>4899/tcp</td>
+<td><a target="_blank" title="Radmin（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Radmin&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Radmin</a>&nbsp;远程控制工具</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>5000/tcp</td>
+<td>commplex-main</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>5000/tcp</td>
+<td><a target="_blank" title="UPnP" href="http://zh.wikipedia.org/wiki/UPnP" rel="nofollow" style="color:rgb(202,0,0)">UPnP</a>&nbsp;- Windows network device interoperability</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>5000/tcp,udp</td>
+<td><a target="_blank" title="VTun（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=VTun&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">VTun</a>&nbsp;-<a target="_blank" title="VPN" class="mw-redirect" href="http://zh.wikipedia.org/wiki/VPN" rel="nofollow" style="color:rgb(202,0,0)">VPN</a>&nbsp;软件</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>5001/tcp,udp</td>
+<td>Iperf (Tool for measuring TCP and UDP bandwidth performance)</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>5001/tcp</td>
+<td><a target="_blank" title="Slingbox（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Slingbox&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Slingbox</a>及Slingplayer</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>5003/tcp</td>
+<td><a target="_blank" title="FileMaker" href="http://zh.wikipedia.org/wiki/FileMaker" rel="nofollow" style="color:rgb(202,0,0)">FileMaker</a>&nbsp;Filemaker Pro</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5004/udp</td>
+<td><a target="_blank" title="Real-time Transport Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Real-time_Transport_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">RTP</a>&nbsp;Real-time Transport Protocol</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5005/udp</td>
+<td><a target="_blank" title="Real-time Transport Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Real-time_Transport_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">RTP</a>&nbsp;Real-time Transport Protocol</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5031/tcp,udp</td>
+<td>AVM CAPI-over-TCP (<a target="_blank" title="ISDN" class="mw-redirect" href="http://zh.wikipedia.org/wiki/ISDN" rel="nofollow" style="color:rgb(202,0,0)">ISDN</a>&nbsp;over<a target="_blank" title="Ethernet" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Ethernet" rel="nofollow" style="color:rgb(202,0,0)">Ethernet</a>&nbsp;tunneling)</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>5050/tcp</td>
+<td><a target="_blank" title="Yahoo! Messenger" href="http://zh.wikipedia.org/wiki/Yahoo!_Messenger" rel="nofollow" style="color:rgb(202,0,0)">Yahoo! Messenger</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5051/tcp</td>
+<td><a target="_blank" title="Ita-agent（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Ita-agent&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">ita-agent</a>&nbsp;Symantec Intruder Alert</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5060/tcp</td>
+<td><a target="_blank" title="Session Initiation Protocol" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Session_Initiation_Protocol" rel="nofollow" style="color:rgb(202,0,0)">Session Initiation Protocol</a>&nbsp;(SIP)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5060/udp</td>
+<td><a target="_blank" title="Session Initiation Protocol" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Session_Initiation_Protocol" rel="nofollow" style="color:rgb(202,0,0)">Session Initiation Protocol</a>&nbsp;(SIP)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5061/tcp</td>
+<td><a target="_blank" title="Session Initiation Protocol" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Session_Initiation_Protocol" rel="nofollow" style="color:rgb(202,0,0)">Session Initiation Protocol</a>&nbsp;(SIP) over<a target="_blank" title="Transport Layer Security" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Transport_Layer_Security" rel="nofollow" style="color:rgb(202,0,0)">Transport
+ Layer Security</a>&nbsp;(TLS)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5093/udp</td>
+<td><a target="_blank" title="SPSS License Administrator（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=SPSS_License_Administrator&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SPSS License Administrator</a>&nbsp;(SPSS)</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5104/tcp</td>
+<td><a target="_blank" title="IBM NetCOOL / IMPACT HTTP Service（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=IBM_NetCOOL_/_IMPACT_HTTP_Service&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">IBM NetCOOL / IMPACT HTTP
+ Service</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>5106/tcp</td>
+<td><a target="_blank" title="Atalk（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Atalk&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">A-Talk</a>&nbsp;Common connection</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>5107/tcp</td>
+<td><a target="_blank" title="Atalk（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Atalk&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">A-Talk</a>&nbsp;远程服务器连接</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>5110/tcp</td>
+<td>ProRat Server</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>5121/tcp</td>
+<td><a target="_blank" title="Neverwinter Nights（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Neverwinter_Nights&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Neverwinter Nights</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5176/tcp</td>
+<td>ConsoleWorks default UI interface</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>5190/tcp</td>
+<td><a target="_blank" title="ICQ" href="http://zh.wikipedia.org/wiki/ICQ" rel="nofollow" style="color:rgb(202,0,0)">ICQ</a>&nbsp;and<a target="_blank" title="AOL Instant Messenger" class="mw-redirect" href="http://zh.wikipedia.org/wiki/AOL_Instant_Messenger" rel="nofollow" style="color:rgb(202,0,0)">AOL
+ Instant Messenger</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5222/tcp</td>
+<td><a target="_blank" title="Jabber" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Jabber" rel="nofollow" style="color:rgb(202,0,0)">XMPP/Jabber</a>&nbsp;- client connection</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5223/tcp</td>
+<td><a target="_blank" title="Jabber" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Jabber" rel="nofollow" style="color:rgb(202,0,0)">XMPP/Jabber</a>&nbsp;- default port for SSL Client Connection</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>5269/tcp</td>
+<td><a target="_blank" title="Jabber" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Jabber" rel="nofollow" style="color:rgb(202,0,0)">XMPP/Jabber</a>&nbsp;- server connection</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5351/tcp,udp</td>
+<td><a target="_blank" title="NAT Port Mapping Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=NAT_Port_Mapping_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">NAT Port Mapping Protocol</a>&nbsp;- client-requested
+ configuration for inbound connections through&nbsp;<a target="_blank" title="Network Address Translation（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Network_Address_Translation&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">network
+ address translators</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5353/udp</td>
+<td><a target="_blank" title="MDNS（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=MDNS&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">mDNS</a>&nbsp;- multicastDNS</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>5402/tcp,udp</td>
+<td>StarBurst AutoCast MFTP</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5405/tcp,udp</td>
+<td><a target="_blank" title="NetSupport（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=NetSupport&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">NetSupport</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5421/tcp,udp</td>
+<td><a target="_blank" title="NetSupport（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=NetSupport&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Net Support 2</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5432/tcp</td>
+<td><a target="_blank" title="PostgreSQL" href="http://zh.wikipedia.org/wiki/PostgreSQL" rel="nofollow" style="color:rgb(202,0,0)">PostgreSQL</a>&nbsp;database system</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5445/udp</td>
+<td><a target="_blank" title="Cisco" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Cisco" rel="nofollow" style="color:rgb(202,0,0)">Cisco</a>&nbsp;Vidéo VT Advantage</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5495/tcp</td>
+<td><a target="_blank" title="Applix（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Applix&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Applix</a>&nbsp;TM1 Admin server</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5498/tcp</td>
+<td><a target="_blank" title="Hotline Communications（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Hotline_Communications&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Hotline</a>&nbsp;tracker server connection</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5499/udp</td>
+<td><a target="_blank" title="Hotline Communications（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Hotline_Communications&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Hotline</a>&nbsp;tracker server discovery</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5500/tcp</td>
+<td><a target="_blank" title="Virtual Network Computing" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Virtual_Network_Computing" rel="nofollow" style="color:rgb(202,0,0)">VNC</a>&nbsp;remote desktop protocol - for incoming listening viewer,<a target="_blank" title="Hotline Communications（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Hotline_Communications&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Hotline</a>&nbsp;control
+ connection</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5501/tcp</td>
+<td><a target="_blank" title="Hotline Communications（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Hotline_Communications&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Hotline</a>&nbsp;file transfer connection</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5517/tcp</td>
+<td><a target="_blank" title="Setiqueue（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Setiqueue&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Setiqueue</a>&nbsp;Proxy server client for<a target="_blank" title="SETI@Home" class="mw-redirect" href="http://zh.wikipedia.org/wiki/SETI@Home" rel="nofollow" style="color:rgb(202,0,0)">SETI@Home</a>&nbsp;project</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5555/tcp</td>
+<td><a target="_blank" title="Freeciv" href="http://zh.wikipedia.org/wiki/Freeciv" rel="nofollow" style="color:rgb(202,0,0)">Freeciv</a>&nbsp;multiplay port for versions up to 2.0,<a target="_blank" title="Hewlett Packard" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Hewlett_Packard" rel="nofollow" style="color:rgb(202,0,0)">Hewlett
+ Packard</a>&nbsp;Data Protector,&nbsp;<a target="_blank" title="Session Announcement Protocol（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Session_Announcement_Protocol&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SAP</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>5556/tcp</td>
+<td><a target="_blank" title="Freeciv" href="http://zh.wikipedia.org/wiki/Freeciv" rel="nofollow" style="color:rgb(202,0,0)">Freeciv</a>&nbsp;multiplay port</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5631/tcp</td>
+<td><a target="_blank" title="赛门铁克" href="http://zh.wikipedia.org/wiki/%E8%B5%9B%E9%97%A8%E9%93%81%E5%85%8B" rel="nofollow" style="color:rgb(202,0,0)">赛门铁克</a>&nbsp;pcAnywhere</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5632/udp</td>
+<td><a target="_blank" title="赛门铁克" href="http://zh.wikipedia.org/wiki/%E8%B5%9B%E9%97%A8%E9%93%81%E5%85%8B" rel="nofollow" style="color:rgb(202,0,0)">赛门铁克</a>&nbsp;pcAnywhere</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5666/tcp</td>
+<td>NRPE (Nagios)</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5667/tcp</td>
+<td>NSCA (Nagios)</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>5800/tcp</td>
+<td><a target="_blank" title="Virtual Network Computing" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Virtual_Network_Computing" rel="nofollow" style="color:rgb(202,0,0)">VNC</a>&nbsp;remote desktop protocol - for use over<a target="_blank" title="HTTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTP" rel="nofollow" style="color:rgb(202,0,0)">HTTP</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>5814/tcp,udp</td>
+<td><a target="_blank" title="Hewlett-Packard" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Hewlett-Packard" rel="nofollow" style="color:rgb(202,0,0)">Hewlett-Packard</a>&nbsp;Support Automation (HP OpenView Self-Healing Services)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>5900/tcp</td>
+<td><a target="_blank" title="Virtual Network Computing" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Virtual_Network_Computing" rel="nofollow" style="color:rgb(202,0,0)">VNC</a>&nbsp;remote desktop protocol (used by<a target="_blank" title="Apple Remote Desktop（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Apple_Remote_Desktop&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">ARD</a>)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>6000/tcp</td>
+<td><a target="_blank" title="X Window System" class="mw-redirect" href="http://zh.wikipedia.org/wiki/X_Window_System" rel="nofollow" style="color:rgb(202,0,0)">X11</a>&nbsp;- used between an X client and server over the network</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>6001/udp</td>
+<td><a target="_blank" title="X Window System" class="mw-redirect" href="http://zh.wikipedia.org/wiki/X_Window_System" rel="nofollow" style="color:rgb(202,0,0)">X11</a>&nbsp;- used between an X client and server over the network</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6005/tcp</td>
+<td>Default port for&nbsp;<a target="_blank" title="BMC Software（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=BMC_Software&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">BMC Software</a>&nbsp;CONTROL-M/Server - Socket Port number
+ used for communication between CONTROL-M processes - though often changed during installation</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6050/tcp</td>
+<td>Brightstor Arcserve Backup</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6051/tcp</td>
+<td>Brightstor Arcserve Backup</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>6100/tcp</td>
+<td>Vizrt System</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>6110/tcp</td>
+<td>softcm&nbsp;<a target="_blank" title="HP SoftBench（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=HP_SoftBench&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">HP SoftBench</a>&nbsp;CM</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>6110/udp</td>
+<td>softcm&nbsp;<a target="_blank" title="HP SoftBench（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=HP_SoftBench&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">HP SoftBench</a>&nbsp;CM</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>6111/tcp</td>
+<td>spc&nbsp;<a target="_blank" title="HP SoftBench（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=HP_SoftBench&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">HP SoftBench</a>&nbsp;Sub-Process Control</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>6111/udp</td>
+<td>spc&nbsp;<a target="_blank" title="HP SoftBench（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=HP_SoftBench&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">HP SoftBench</a>&nbsp;Sub-Process Control</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>6112/tcp</td>
+<td>"dtspcd" - a network daemon that accepts requests from clients to execute commands and launch applications remotely</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>6112/tcp</td>
+<td><a target="_blank" title="Blizzard Entertainment" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Blizzard_Entertainment" rel="nofollow" style="color:rgb(202,0,0)">Blizzard</a>'s<a target="_blank" title="Battle.net" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Battle.net" rel="nofollow" style="color:rgb(202,0,0)">Battle.net</a>&nbsp;gaming
+ service,&nbsp;<a target="_blank" title="ArenaNet" href="http://zh.wikipedia.org/wiki/ArenaNet" rel="nofollow" style="color:rgb(202,0,0)">ArenaNet</a>&nbsp;gaming service</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6129/tcp</td>
+<td><a target="_blank" title="Dameware（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Dameware&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Dameware Remote Control</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6257/udp</td>
+<td><a target="_blank" title="WinMX" href="http://zh.wikipedia.org/wiki/WinMX" rel="nofollow" style="color:rgb(202,0,0)">WinMX</a>&nbsp;（参见6699端口）</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>6346/tcp,udp</td>
+<td><a target="_blank" title="Gnutella" href="http://zh.wikipedia.org/wiki/Gnutella" rel="nofollow" style="color:rgb(202,0,0)">gnutella-svc</a>&nbsp;(<a target="_blank" title="FrostWire" href="http://zh.wikipedia.org/wiki/FrostWire" rel="nofollow" style="color:rgb(202,0,0)">FrostWire</a>,<a target="_blank" title="Limewire" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Limewire" rel="nofollow" style="color:rgb(202,0,0)">Limewire</a>,<a target="_blank" title="Bearshare（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Bearshare&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Bearshare</a>,
+ etc.)</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>6347/tcp,udp</td>
+<td>gnutella-rtr</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>6444/tcp,udp</td>
+<td><a target="_blank" title="Sun Grid Engine" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Sun_Grid_Engine" rel="nofollow" style="color:rgb(202,0,0)">Sun Grid Engine</a>&nbsp;- Qmaster Service</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>6445/tcp,udp</td>
+<td><a target="_blank" title="Sun Grid Engine" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Sun_Grid_Engine" rel="nofollow" style="color:rgb(202,0,0)">Sun Grid Engine</a>&nbsp;- Execution Service</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6502/tcp,udp</td>
+<td>Danware Data NetOp Remote Control</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6522/tcp</td>
+<td><a target="_blank" title="Gobby（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Gobby&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Gobby</a>&nbsp;(and other libobby-based software)</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6543/udp</td>
+<td><a target="_blank" title="Jetnet（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Jetnet&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Jetnet</a>&nbsp;- default port that the<a target="_blank" title="Paradigm Research &amp; Development（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Paradigm_Research_%26_Development&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Paradigm
+ Research &amp; Development</a>&nbsp;<a target="_blank" title="Jetnet（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Jetnet&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Jetnet</a>&nbsp;protocol communicates on</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6566/tcp</td>
+<td><a target="_blank" title="Scanner Access Now Easy（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Scanner_Access_Now_Easy&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SANE</a>&nbsp;(Scanner Access Now Easy) - SANE network
+ scanner daemon</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6600/tcp</td>
+<td><a target="_blank" title="Music Player Daemon（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Music_Player_Daemon&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Music Playing Daemon (MPD)</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>6619/tcp,udp</td>
+<td>ODETTE-FTP over TLS/SSL</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6665-6669/tcp</td>
+<td><a target="_blank" title="Internet Relay Chat" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Internet_Relay_Chat" rel="nofollow" style="color:rgb(202,0,0)">Internet Relay Chat</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6679/tcp</td>
+<td><a target="_blank" title="IRC" href="http://zh.wikipedia.org/wiki/IRC" rel="nofollow" style="color:rgb(202,0,0)">IRC</a>&nbsp;SSL （安全互联网中继聊天） - 通常使用的端口</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6697/tcp</td>
+<td><a target="_blank" title="IRC" href="http://zh.wikipedia.org/wiki/IRC" rel="nofollow" style="color:rgb(202,0,0)">IRC</a>&nbsp;SSL （安全互联网中继聊天） - 通常使用的端口</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6699/tcp</td>
+<td><a target="_blank" title="WinMX" href="http://zh.wikipedia.org/wiki/WinMX" rel="nofollow" style="color:rgb(202,0,0)">WinMX</a>&nbsp;（参见6257端口）</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>6881-6999/tcp,udp</td>
+<td><a target="_blank" title="BitTorrent (协议)" href="http://zh.wikipedia.org/wiki/BitTorrent_(%E5%8D%8F%E8%AE%AE)" rel="nofollow" style="color:rgb(202,0,0)">BitTorrent</a>&nbsp;通常使用的端口</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>6891-6900/tcp,udp</td>
+<td><a target="_blank" title="Windows Live Messenger" href="http://zh.wikipedia.org/wiki/Windows_Live_Messenger" rel="nofollow" style="color:rgb(202,0,0)">Windows Live Messenger</a>&nbsp;（文件传输）</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>6901/tcp,udp</td>
+<td><a target="_blank" title="Windows Live Messenger" href="http://zh.wikipedia.org/wiki/Windows_Live_Messenger" rel="nofollow" style="color:rgb(202,0,0)">Windows Live Messenger</a>&nbsp;（语音）</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>6969/tcp</td>
+<td><a target="_blank" title="Acmsoda（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Acmsoda&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">acmsoda</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>6969/tcp</td>
+<td><a target="_blank" title="BitTorrent (协议)" href="http://zh.wikipedia.org/wiki/BitTorrent_(%E5%8D%8F%E8%AE%AE)" rel="nofollow" style="color:rgb(202,0,0)">BitTorrent</a>&nbsp;tracker port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7000/tcp</td>
+<td>Default port for&nbsp;<a target="_blank" title="Azureus" class="mw-disambig" href="http://zh.wikipedia.org/wiki/Azureus" rel="nofollow" style="color:rgb(202,0,0)">Azureus</a>'s built in&nbsp;<a target="_blank" title="HTTPS" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTPS" rel="nofollow" style="color:rgb(202,0,0)">HTTPS</a>&nbsp;<a target="_blank" title="Bittorrent Tracker（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Bittorrent_Tracker&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Bittorrent
+ Tracker</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7001/tcp</td>
+<td>Default port for&nbsp;<a target="_blank" title="BEA Systems" href="http://zh.wikipedia.org/wiki/BEA_Systems" rel="nofollow" style="color:rgb(202,0,0)">BEA</a>&nbsp;<a target="_blank" title="WebLogic" href="http://zh.wikipedia.org/wiki/WebLogic" rel="nofollow" style="color:rgb(202,0,0)">WebLogic
+ Server</a>'s&nbsp;<a target="_blank" title="HTTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTP" rel="nofollow" style="color:rgb(202,0,0)">HTTP</a>&nbsp;server - though often changed during installation</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7002/tcp</td>
+<td>Default port for&nbsp;<a target="_blank" title="BEA Systems" href="http://zh.wikipedia.org/wiki/BEA_Systems" rel="nofollow" style="color:rgb(202,0,0)">BEA</a>&nbsp;<a target="_blank" title="WebLogic" href="http://zh.wikipedia.org/wiki/WebLogic" rel="nofollow" style="color:rgb(202,0,0)">WebLogic
+ Server</a>'s&nbsp;<a target="_blank" title="HTTPS" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTPS" rel="nofollow" style="color:rgb(202,0,0)">HTTPS</a>&nbsp;server - though often changed during installation</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7005/tcp,udp</td>
+<td>Default port for&nbsp;<a target="_blank" title="BMC Software（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=BMC_Software&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">BMC Software</a>&nbsp;CONTROL-M/Server and CONTROL-M/Agent's
+ - Agent to Server port though often changed during installation</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7006/tcp,udp</td>
+<td>Default port for&nbsp;<a target="_blank" title="BMC Software（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=BMC_Software&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">BMC Software</a>&nbsp;CONTROL-M/Server and CONTROL-M/Agent's
+ - Server to Agent port though often changed during installation</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7010/tcp</td>
+<td>Default port for Cisco AON AMC (AON Management Console)&nbsp;<a target="_blank" class="external autonumber" href="http://www.cisco.com/en/US/products/ps6692/Products_Sub_Category_Home.html" rel="nofollow" style="color:rgb(202,0,0)">[2]</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7025/tcp</td>
+<td>Zimbra - lmtp [mailbox] - local mail delivery</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7047/tcp</td>
+<td>Zimbra - conversion server</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>7171/tcp</td>
+<td><a target="_blank" title="Tibia (computer game)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Tibia_(computer_game)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Tibia</a></td>
+<td>&nbsp;</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7306/tcp</td>
+<td>Zimbra - mysql [mailbox]</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7307/tcp</td>
+<td>Zimbra - mysql [logger] - logger</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7312/udp</td>
+<td><a target="_blank" title="Sibelius notation program（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Sibelius_notation_program&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Sibelius</a>&nbsp;License Server port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7670/tcp</td>
+<td><a target="_blank" title="BrettspielWelt（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=BrettspielWelt&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">BrettspielWelt</a>&nbsp;BSW Boardgame Portal</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>7777/tcp</td>
+<td>Default port used by Windows backdoor program tini.exe</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8000/tcp</td>
+<td><a target="_blank" title="IRDMI（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=IRDMI&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">iRDMI</a>&nbsp;- often mistakenly used instead of port 8080 (The Internet Assigned Numbers
+ Authority (iana.org) officially lists this port for iRDMI protocol)</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8000/tcp</td>
+<td>Common port used for internet radio streams such as those using&nbsp;<a target="_blank" title="SHOUTcast" href="http://zh.wikipedia.org/wiki/SHOUTcast" rel="nofollow" style="color:rgb(202,0,0)">SHOUTcast</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>8002/tcp</td>
+<td>Cisco Systems Unified Call Manager Intercluster Port</td>
+<td>&nbsp;</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8008/tcp</td>
+<td><a target="_blank" title="HTTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTP" rel="nofollow" style="color:rgb(202,0,0)">HTTP</a>&nbsp;替代端口</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8008/tcp</td>
+<td><a target="_blank" title="IBM HTTP Server（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=IBM_HTTP_Server&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">IBM HTTP Server</a>&nbsp;默认管理端口</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8009/tcp</td>
+<td><a target="_blank" title="Apache" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Apache" rel="nofollow" style="color:rgb(202,0,0)">Apache</a><a target="_blank" title="JServ（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=JServ&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">JServ</a>&nbsp;协议
+ v13 (ajp13) 例如：Apache mod_jk&nbsp;<a target="_blank" title="Tomcat" class="mw-disambig" href="http://zh.wikipedia.org/wiki/Tomcat" rel="nofollow" style="color:rgb(202,0,0)">Tomcat</a>会使用。</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8010/tcp</td>
+<td><a target="_blank" title="Jabber" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Jabber" rel="nofollow" style="color:rgb(202,0,0)">XMPP/Jabber</a>&nbsp;文件传输</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8074/tcp</td>
+<td><a target="_blank" title="Gadu-Gadu（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Gadu-Gadu&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Gadu-Gadu</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8080/tcp</td>
+<td><a target="_blank" title="HTTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTP" rel="nofollow" style="color:rgb(202,0,0)">HTTP</a>&nbsp;替代端口 （http_alt） - commonly used for<a target="_blank" title="Web proxy（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Web_proxy&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">web
+ proxy</a>&nbsp;and&nbsp;<a target="_blank" title="Caching（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Caching&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">caching</a>&nbsp;server, or for running a web server as a non-<a target="_blank" title="Root (computing)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Root_(computing)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">root</a>&nbsp;user</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8080/tcp</td>
+<td><a target="_blank" title="Apache Tomcat" href="http://zh.wikipedia.org/wiki/Apache_Tomcat" rel="nofollow" style="color:rgb(202,0,0)">Apache Tomcat</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8086/tcp</td>
+<td><a target="_blank" title="HELM（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=HELM&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">HELM</a>&nbsp;Web Host Automation Windows Control Panel</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8086/tcp</td>
+<td><a target="_blank" title="Kaspersky" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Kaspersky" rel="nofollow" style="color:rgb(202,0,0)">Kaspersky</a>&nbsp;AV Control Center TCP Port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8087/tcp</td>
+<td><a target="_blank" title="Hosting Accelerator（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Hosting_Accelerator&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Hosting Accelerator</a>&nbsp;Control Panel</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8087/udp</td>
+<td><a target="_blank" title="Kaspersky" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Kaspersky" rel="nofollow" style="color:rgb(202,0,0)">Kaspersky</a>&nbsp;AV Control Center UDP Port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8090/tcp</td>
+<td>Another&nbsp;<a target="_blank" title="HTTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTP" rel="nofollow" style="color:rgb(202,0,0)">HTTP</a>&nbsp;Alternate (http_alt_alt) - used as an alternative to port 8080</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>8118/tcp</td>
+<td><a target="_blank" title="Privoxy" href="http://zh.wikipedia.org/wiki/Privoxy" rel="nofollow" style="color:rgb(202,0,0)">Privoxy</a>&nbsp;web proxy - advertisements-filtering web proxy</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8087/tcp</td>
+<td><a target="_blank" title="SW Soft Plesk（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=SW_Soft_Plesk&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SW Soft Plesk</a>&nbsp;控制面板</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8200/tcp</td>
+<td><a target="_blank" title="GoToMyPC（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=GoToMyPC&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">GoToMyPC</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8220/tcp</td>
+<td><a target="_blank" title="Bloomberg Terminal（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Bloomberg_Terminal&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Bloomberg</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8222</td>
+<td><a target="_blank" title="VMware" href="http://zh.wikipedia.org/wiki/VMware" rel="nofollow" style="color:rgb(202,0,0)">VMware</a>&nbsp;Server Management User Interface (insecure web interface)<sup class="reference" id="cite_ref-3"><a target="_blank" href="http://zh.wikipedia.org/wiki/TCP/UDP%E7%AB%AF%E5%8F%A3%E5%88%97%E8%A1%A8#cite_note-3" rel="nofollow" style="color:rgb(202,0,0)"><span style="font-size:12px">[3]</span></a></sup>.
+ See also, port 8333</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8291/tcp</td>
+<td>Winbox - Default port on a MikroTik RouterOS for a Windows application used to administer MikroTik RouterOS</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8294/tcp</td>
+<td><a target="_blank" title="Bloomberg Terminal（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Bloomberg_Terminal&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Bloomberg</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8333</td>
+<td><a target="_blank" title="VMware" href="http://zh.wikipedia.org/wiki/VMware" rel="nofollow" style="color:rgb(202,0,0)">VMware</a>&nbsp;服务器管理用户界面（安全网络界面）<sup class="reference" id="cite_ref-4"><a target="_blank" href="http://zh.wikipedia.org/wiki/TCP/UDP%E7%AB%AF%E5%8F%A3%E5%88%97%E8%A1%A8#cite_note-4" rel="nofollow" style="color:rgb(202,0,0)"><span style="font-size:12px">[4]</span></a></sup>.
+ See also, port 8222</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8400</td>
+<td><a target="_blank" title="Commvault（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Commvault&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Commvault</a>&nbsp;Unified Data Management</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8443/tcp</td>
+<td><a target="_blank" title="SW Soft Plesk（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=SW_Soft_Plesk&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SW Soft Plesk</a>&nbsp;Control Panel</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8500/tcp</td>
+<td><a target="_blank" title="ColdFusion" class="mw-redirect" href="http://zh.wikipedia.org/wiki/ColdFusion" rel="nofollow" style="color:rgb(202,0,0)">ColdFusion</a>&nbsp;Macromedia/Adobe ColdFusion default Webserver port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8501/udp</td>
+<td><a target="_blank" title="Duke Nukem 3D" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Duke_Nukem_3D" rel="nofollow" style="color:rgb(202,0,0)">Duke Nukem 3D</a>&nbsp;- Default Online Port</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8767/udp</td>
+<td><a target="_blank" title="TeamSpeak" href="http://zh.wikipedia.org/wiki/TeamSpeak" rel="nofollow" style="color:rgb(202,0,0)">TeamSpeak</a>&nbsp;- Default UDP Port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8880</td>
+<td><a target="_blank" title="WebSphere Application Server" class="mw-redirect" href="http://zh.wikipedia.org/wiki/WebSphere_Application_Server" rel="nofollow" style="color:rgb(202,0,0)">WebSphere Application Server</a><a target="_blank" title="SOAP" href="http://zh.wikipedia.org/wiki/SOAP" rel="nofollow" style="color:rgb(202,0,0)">SOAP</a>&nbsp;Connector
+ port</td>
+<td>&nbsp;</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8881/tcp</td>
+<td><a target="_blank" title="Atlasz Informatics Research Ltd（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Atlasz_Informatics_Research_Ltd&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Atlasz Informatics Research Ltd</a>&nbsp;Secure
+ Application Server</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>8882/tcp</td>
+<td><a target="_blank" title="Atlasz Informatics Research Ltd（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Atlasz_Informatics_Research_Ltd&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Atlasz Informatics Research Ltd</a>&nbsp;Secure
+ Application Server</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8888/tcp,udp</td>
+<td><a target="_blank" title="NewsEDGE（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=NewsEDGE&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">NewsEDGE</a>&nbsp;server</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8888/tcp</td>
+<td><a target="_blank" title="Sun Answerbook（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Sun_Answerbook&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Sun Answerbook</a><a target="_blank" title="Web server（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Web_server&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">dwhttpd</a>&nbsp;server
+ (deprecated by&nbsp;<a target="_blank" class="external text" href="http://docs.sun.com/app/docs" rel="nofollow" style="color:rgb(202,0,0)">docs.sun.com</a>)</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8888/tcp</td>
+<td><a target="_blank" title="GNUmp3d（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=GNUmp3d&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">GNUmp3d</a>&nbsp;HTTP music streaming and web interface port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>8888/tcp</td>
+<td><a target="_blank" title="Hero Fighter" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Hero_Fighter" rel="nofollow" style="color:rgb(202,0,0)">Hero Fighter</a>&nbsp;Network Game Server</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>9000/tcp</td>
+<td>Buffalo LinkSystem web access</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>9000/tcp</td>
+<td><a target="_blank" title="DBGp（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=DBGp&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">DBGp</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>9000/udp</td>
+<td><a target="_blank" title="UDPCast（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=UDPCast&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">UDPCast</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>9001</td>
+<td>cisco-xremote router configuration</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>9001</td>
+<td><a target="_blank" title="Tor (anonymity network)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Tor_(anonymity_network)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Tor</a>&nbsp;network default port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>9001/tcp</td>
+<td><a target="_blank" title="DBGp（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=DBGp&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">DBGp</a>&nbsp;Proxy</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>9009/tcp,udp</td>
+<td><a target="_blank" title="Pichat（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Pichat&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Pichat Server</a>&nbsp;- Peer to peer chat software</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>9043/tcp</td>
+<td><a target="_blank" title="WebSphere Application Server" class="mw-redirect" href="http://zh.wikipedia.org/wiki/WebSphere_Application_Server" rel="nofollow" style="color:rgb(202,0,0)">WebSphere Application Server</a>&nbsp;Administration Console secure port</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>9060/tcp</td>
+<td><a target="_blank" title="WebSphere Application Server" class="mw-redirect" href="http://zh.wikipedia.org/wiki/WebSphere_Application_Server" rel="nofollow" style="color:rgb(202,0,0)">WebSphere Application Server</a>&nbsp;Administration Console</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>9100/tcp</td>
+<td><a target="_blank" title="Jetdirect（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Jetdirect&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Jetdirect</a>&nbsp;HP Print Services</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>9110/udp</td>
+<td><a target="_blank" title="SSMP（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=SSMP&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">SSMP</a>&nbsp;Message protocol</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>9101</td>
+<td><a target="_blank" title="Bacula（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Bacula&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Bacula</a>&nbsp;Director</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>9102</td>
+<td><a target="_blank" title="Bacula（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Bacula&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Bacula</a>&nbsp;File Daemon</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>9103</td>
+<td><a target="_blank" title="Bacula（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Bacula&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Bacula</a>&nbsp;Storage Daemon</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>9119/TCP,UDP</td>
+<td><a target="_blank" title="MXit（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=MXit&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">MXit</a>&nbsp;Instant Messenger</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>9535/tcp</td>
+<td>man, Remote Man Server</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>9535</td>
+<td>mngsuite - Management Suite Remote Control</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>9800/tcp,udp</td>
+<td><a target="_blank" title="WebDAV" href="http://zh.wikipedia.org/wiki/WebDAV" rel="nofollow" style="color:rgb(202,0,0)">WebDAV</a>&nbsp;Source Port</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>9800</td>
+<td><a target="_blank" title="WebCT" href="http://zh.wikipedia.org/wiki/WebCT" rel="nofollow" style="color:rgb(202,0,0)">WebCT</a>&nbsp;e-learning portal</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>9999</td>
+<td><a target="_blank" title="Hydranode（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Hydranode&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Hydranode</a>&nbsp;- edonkey2000 telnet control port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>9999</td>
+<td>Urchin Web Analytics</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>10000</td>
+<td><a target="_blank" title="Webmin（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Webmin&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Webmin</a>&nbsp;- web based Linux admin tool</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>10000</td>
+<td><a target="_blank" title="BackupExec（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=BackupExec&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">BackupExec</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>10008</td>
+<td>Octopus Multiplexer - CROMP protocol primary port, hoople.org</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>10017</td>
+<td>AIX,NeXT, HPUX - rexd daemon control port</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>10024/tcp</td>
+<td>Zimbra - smtp [mta] - to amavis from postfix</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>10025/tcp</td>
+<td>Ximbra - smtp [mta] - back to postfix from amavis</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>10050/tcp</td>
+<td>Zabbix-Agent</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>10051/tcp</td>
+<td>Zabbix-Server</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>10113/tcp</td>
+<td>NetIQ Endpoint</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>10113/udp</td>
+<td>NetIQ Endpoint</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>10114/tcp</td>
+<td>NetIQ Qcheck</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>10114/udp</td>
+<td>NetIQ Qcheck</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>10115/tcp</td>
+<td>NetIQ Endpoint</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>10115/udp</td>
+<td>NetIQ Endpoint</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>10116/tcp</td>
+<td>NetIQ VoIP Assessor</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>10116/udp</td>
+<td>NetIQ VoIP Assessor</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>10480</td>
+<td>SWAT 4 Dedicated Server</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>11211</td>
+<td><a target="_blank" title="Memcached" href="http://zh.wikipedia.org/wiki/Memcached" rel="nofollow" style="color:rgb(202,0,0)">memcached</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>11235</td>
+<td>Savage:Battle for Newerth Server Hosting</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>11294</td>
+<td>Blood Quest Online Server</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>11371</td>
+<td><a target="_blank" title="OpenPGP（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=OpenPGP&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">OpenPGP</a>&nbsp;HTTP Keyserver</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>11576</td>
+<td><a target="_blank" title="IPStor（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=IPStor&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">IPStor</a>&nbsp;Server management communication</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>12035/udp</td>
+<td><a target="_blank" class="external text" href="http://wiki.secondlife.com/wiki/Authentication_Flow" rel="nofollow" style="color:rgb(202,0,0)">Linden Lab</a>&nbsp;viewer to sim</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>12345</td>
+<td><a target="_blank" title="NetBus" href="http://zh.wikipedia.org/wiki/NetBus" rel="nofollow" style="color:rgb(202,0,0)">NetBus</a>&nbsp;- remote administration tool (often<a target="_blank" title="Trojan horse (computing)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Trojan_horse_(computing)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Trojan
+ horse</a>). Also used by&nbsp;<a target="_blank" title="NetBuster（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=NetBuster&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">NetBuster</a>. Little Fighter 2 (TCP).</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>12975/tcp</td>
+<td>LogMeIn&nbsp;<a target="_blank" title="Hamachi（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Hamachi&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Hamachi</a>&nbsp;(VPN tunnel software;also port 32976)</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>13000-13050/udp</td>
+<td><a target="_blank" class="external text" href="http://wiki.secondlife.com/wiki/Authentication_Flow" rel="nofollow" style="color:rgb(202,0,0)">Linden Lab</a>&nbsp;viewer to sim</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>13720/tcp</td>
+<td><a target="_blank" title="Symantec" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Symantec" rel="nofollow" style="color:rgb(202,0,0)">Symantec</a><a target="_blank" title="NetBackup（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=NetBackup&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">NetBackup</a>&nbsp;-
+ bprd (formerly&nbsp;<a target="_blank" title="Veritas Software（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Veritas_Software&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">VERITAS</a>)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>13721/tcp</td>
+<td><a target="_blank" title="Symantec" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Symantec" rel="nofollow" style="color:rgb(202,0,0)">Symantec</a><a target="_blank" title="NetBackup（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=NetBackup&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">NetBackup</a>&nbsp;-
+ bpdbm (formerly&nbsp;<a target="_blank" title="Veritas Software（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Veritas_Software&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">VERITAS</a>)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>13724/tcp</td>
+<td><a target="_blank" title="Symantec" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Symantec" rel="nofollow" style="color:rgb(202,0,0)">Symantec</a>&nbsp;Network Utility - vnet (formerly<a target="_blank" title="Veritas Software（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Veritas_Software&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">VERITAS</a>)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>13782/tcp</td>
+<td><a target="_blank" title="Symantec" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Symantec" rel="nofollow" style="color:rgb(202,0,0)">Symantec</a><a target="_blank" title="NetBackup（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=NetBackup&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">NetBackup</a>&nbsp;-
+ bpcd (formerly&nbsp;<a target="_blank" title="Veritas Software（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Veritas_Software&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">VERITAS</a>)</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>13783/tcp</td>
+<td><a target="_blank" title="Symantec" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Symantec" rel="nofollow" style="color:rgb(202,0,0)">Symantec</a>&nbsp;VOPIED protocol (formerly<a target="_blank" title="Veritas Software（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Veritas_Software&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">VERITAS</a>)</td>
+<td>&nbsp;</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>14567/udp</td>
+<td><a target="_blank" title="Battlefield 1942" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Battlefield_1942" rel="nofollow" style="color:rgb(202,0,0)">Battlefield 1942</a>&nbsp;and mods</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>15000/tcp</td>
+<td><a target="_blank" title="PsyBNC（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=PsyBNC&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">psyBNC</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>15000/tcp</td>
+<td><a target="_blank" title="Wesnoth" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Wesnoth" rel="nofollow" style="color:rgb(202,0,0)">Wesnoth</a></td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>15567/udp</td>
+<td><a target="_blank" title="Battlefield Vietnam（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Battlefield_Vietnam&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Battlefield Vietnam</a>&nbsp;and mods</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>15345/udp</td>
+<td><a target="_blank" title="XPilot（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=XPilot&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">XPilot</a></td>
+<td>官方</td>
+</tr>
+<tr>
+<td>16000/tcp</td>
+<td><a target="_blank" title="ShroudBNC（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=ShroudBNC&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">shroudBNC</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>16080/tcp</td>
+<td><a target="_blank" title="Mac OS X Server" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Mac_OS_X_Server" rel="nofollow" style="color:rgb(202,0,0)">Mac OS X Server</a>&nbsp;performance cache for<a target="_blank" title="HTTP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/HTTP" rel="nofollow" style="color:rgb(202,0,0)">HTTP</a><sup class="reference" id="cite_ref-5"><a target="_blank" href="http://zh.wikipedia.org/wiki/TCP/UDP%E7%AB%AF%E5%8F%A3%E5%88%97%E8%A1%A8#cite_note-5" rel="nofollow" style="color:rgb(202,0,0)"><span style="font-size:12px">[5]</span></a></sup></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>16384/udp</td>
+<td>Iron Mountain Digital - online backup</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>16567/udp</td>
+<td><a target="_blank" title="Battlefield 2（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Battlefield_2&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Battlefield 2</a>&nbsp;and mods</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>17788/udp</td>
+<td><a target="_blank" title="PPS网络电视" class="mw-redirect" href="http://zh.wikipedia.org/wiki/PPS%E7%B6%B2%E8%B7%AF%E9%9B%BB%E8%A6%96" rel="nofollow" style="color:rgb(202,0,0)">PPS网络电视</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>19226/tcp</td>
+<td><a target="_blank" title="Panda Software（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Panda_Software&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Panda Software</a>&nbsp;AdminSecure Communication Agent</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>19638/tcp</td>
+<td>Ensim Control Panel</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>19813/tcp</td>
+<td>4D database Client Server Communication</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>20000</td>
+<td><a target="_blank" title="Usermin（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Usermin&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Usermin</a>&nbsp;- 基于网络的用户工具</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>20720/tcp</td>
+<td><a target="_blank" title="Symantec i3（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Symantec_i3&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Symantec i3</a>&nbsp;Web GUI server</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>22347/tcp,udp</td>
+<td>WibuKey - default port for WibuKey Network Server of WIBU-SYSTEMS AG</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>22350/tcp,udp</td>
+<td>CodeMeter - default port for CodeMeter Server of WIBU-SYSTEMS AG</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>24554/tcp,udp</td>
+<td><a target="_blank" title="Binkp（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Binkp&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">binkp</a>&nbsp;-<a target="_blank" title="Fidonet" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Fidonet" rel="nofollow" style="color:rgb(202,0,0)">Fidonet</a>&nbsp;mail
+ transfers over&nbsp;<a target="_blank" title="TCP/IP" class="mw-redirect" href="http://zh.wikipedia.org/wiki/TCP/IP" rel="nofollow" style="color:rgb(202,0,0)">TCP/IP</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>24800</td>
+<td><a target="_blank" title="Synergy (software)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Synergy_(software)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Synergy</a>：keyboard/mouse sharing software</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>24842</td>
+<td><a target="_blank" title="StepMania" href="http://zh.wikipedia.org/wiki/StepMania" rel="nofollow" style="color:rgb(202,0,0)">StepMania</a>：Online:<em><a target="_blank" title="Dance Dance Revolution" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Dance_Dance_Revolution" rel="nofollow" style="color:rgb(202,0,0)">Dance
+ Dance Revolution</a></em>&nbsp;Simulator</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>25999/tcp</td>
+<td><a target="_blank" title="Xfire（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Xfire&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Xfire</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>26000/tcp,udp</td>
+<td><a target="_blank" title="Id Software" href="http://zh.wikipedia.org/wiki/Id_Software" rel="nofollow" style="color:rgb(202,0,0)">id Software</a>'s<em><a target="_blank" title="Quake" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Quake" rel="nofollow" style="color:rgb(202,0,0)">Quake</a></em>&nbsp;server,</td>
+<td>官方</td>
+</tr>
+<tr bgcolor="khaki">
+<td>26000/tcp</td>
+<td><a target="_blank" title="CCP hf（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=CCP_hf&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">CCP</a>'s<a target="_blank" title="EVE Online" class="mw-redirect" href="http://zh.wikipedia.org/wiki/EVE_Online" rel="nofollow" style="color:rgb(202,0,0)">EVE
+ Online</a>&nbsp;Online gaming MMORPG,</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>27000/udp</td>
+<td>(through 27006)&nbsp;<a target="_blank" title="Id Software" href="http://zh.wikipedia.org/wiki/Id_Software" rel="nofollow" style="color:rgb(202,0,0)">id Software</a>'s&nbsp;<em><a target="_blank" title="QuakeWorld" class="mw-redirect" href="http://zh.wikipedia.org/wiki/QuakeWorld" rel="nofollow" style="color:rgb(202,0,0)">QuakeWorld</a></em>&nbsp;master
+ server</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>27010/udp</td>
+<td><a target="_blank" title="Half-Life" class="mw-disambig" href="http://zh.wikipedia.org/wiki/Half-Life" rel="nofollow" style="color:rgb(202,0,0)">Half-Life</a>及其修改版，如<em><a target="_blank" title="Counter-Strike" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Counter-Strike" rel="nofollow" style="color:rgb(202,0,0)">Counter-Strike</a></em></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>27015/udp</td>
+<td><a target="_blank" title="Half-Life" class="mw-disambig" href="http://zh.wikipedia.org/wiki/Half-Life" rel="nofollow" style="color:rgb(202,0,0)">Half-Life</a>及其修改版，如<em><a target="_blank" title="Counter-Strike" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Counter-Strike" rel="nofollow" style="color:rgb(202,0,0)">Counter-Strike</a></em></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>27374</td>
+<td><a target="_blank" title="Sub7（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Sub7&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Sub7</a>'s default port. Most<a target="_blank" title="Script kiddie（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Script_kiddie&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">script
+ kiddie</a>s do not change the default port.</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>27500/udp</td>
+<td>(through 27900)&nbsp;<a target="_blank" title="Id Software" href="http://zh.wikipedia.org/wiki/Id_Software" rel="nofollow" style="color:rgb(202,0,0)">id Software</a>'s&nbsp;<em><a target="_blank" title="QuakeWorld" class="mw-redirect" href="http://zh.wikipedia.org/wiki/QuakeWorld" rel="nofollow" style="color:rgb(202,0,0)">QuakeWorld</a></em></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>27888/udp</td>
+<td><a target="_blank" title="Kaillera（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Kaillera&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Kaillera</a>&nbsp;server</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>27900</td>
+<td>(through 27901)&nbsp;<a target="_blank" title="Nintendo" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Nintendo" rel="nofollow" style="color:rgb(202,0,0)">Nintendo</a>&nbsp;<a target="_blank" title="Nintendo Wi-Fi Connection（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Nintendo_Wi-Fi_Connection&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Wi-Fi
+ Connection</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>27901/udp</td>
+<td>(through 27910)&nbsp;<a target="_blank" title="Id Software" href="http://zh.wikipedia.org/wiki/Id_Software" rel="nofollow" style="color:rgb(202,0,0)">id Software</a>'s&nbsp;<em><a target="_blank" title="Quake II（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Quake_II&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Quake
+ II</a></em>&nbsp;master server</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>27960/udp</td>
+<td>(through 27969)&nbsp;<a target="_blank" title="Activision" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Activision" rel="nofollow" style="color:rgb(202,0,0)">Activision</a>'s&nbsp;<em><a target="_blank" title="Enemy Territory（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Enemy_Territory&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Enemy
+ Territory</a></em>&nbsp;and<a target="_blank" title="Id Software" href="http://zh.wikipedia.org/wiki/Id_Software" rel="nofollow" style="color:rgb(202,0,0)">id Software</a>'s&nbsp;<em><a target="_blank" title="Quake III Arena" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Quake_III_Arena" rel="nofollow" style="color:rgb(202,0,0)">Quake
+ III Arena</a></em>&nbsp;and<em>Quake III</em>&nbsp;and some ioquake3 derived games</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>28910</td>
+<td><a target="_blank" title="任天堂" href="http://zh.wikipedia.org/wiki/%E4%BB%BB%E5%A4%A9%E5%A0%82" rel="nofollow" style="color:rgb(202,0,0)">任天堂</a><a target="_blank" title="Nintendo Wi-Fi Connection（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Nintendo_Wi-Fi_Connection&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Wi-Fi连接</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>28960</td>
+<td><a target="_blank" title="Call of Duty 2" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Call_of_Duty_2" rel="nofollow" style="color:rgb(202,0,0)">Call of Duty 2</a>&nbsp;Common Call of Duty 2 port - (PC Version)</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>29900</td>
+<td>(through 29901)&nbsp;<a target="_blank" title="Nintendo" class="mw-redirect" href="http://zh.wikipedia.org/wiki/Nintendo" rel="nofollow" style="color:rgb(202,0,0)">Nintendo</a>&nbsp;<a target="_blank" title="Nintendo Wi-Fi Connection（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Nintendo_Wi-Fi_Connection&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Wi-Fi
+ Connection</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>29920</td>
+<td><a target="_blank" title="任天堂" href="http://zh.wikipedia.org/wiki/%E4%BB%BB%E5%A4%A9%E5%A0%82" rel="nofollow" style="color:rgb(202,0,0)">任天堂</a><a target="_blank" title="Nintendo Wi-Fi Connection（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Nintendo_Wi-Fi_Connection&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Wi-Fi连接</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>30000</td>
+<td><a target="_blank" title="Pokemon Netbattle（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Pokemon_Netbattle&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Pokemon Netbattle</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>30564/tcp</td>
+<td><a target="_blank" title="Multiplicity (software)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Multiplicity_(software)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Multiplicity</a>：keyboard/mouse/clipboard sharing
+ software</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>31337/tcp</td>
+<td><a target="_blank" title="Back Orifice（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Back_Orifice&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Back Orifice</a>&nbsp;- remote administration tool（often<a target="_blank" title="Trojan horse (computing)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Trojan_horse_(computing)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Trojan
+ horse</a>）</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>31337/tcp</td>
+<td>xc0r3 - xc0r3 security antivir port</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>31415</td>
+<td><a target="_blank" title="ThoughtSignal（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=ThoughtSignal&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">ThoughtSignal</a>&nbsp;- Server Communication Service（often<a target="_blank" title="Information (computing)（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Information_(computing)&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Informational</a>）</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>31456-31458/tcp</td>
+<td><a target="_blank" title="TetriNET（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=TetriNET&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">TetriNET</a>&nbsp;ports (in order: IRC, game, and spectating)</td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>32245/tcp</td>
+<td><a target="_blank" title="True Mutualization Service（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=True_Mutualization_Service&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">MMTSG-mutualed</a>&nbsp;over<a target="_blank" title="True Mutualization Service（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=True_Mutualization_Service&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">MMT</a>&nbsp;(encrypted
+ transmission)</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>33434</td>
+<td><a target="_blank" title="Traceroute" href="http://zh.wikipedia.org/wiki/Traceroute" rel="nofollow" style="color:rgb(202,0,0)">traceroute</a></td>
+<td>官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>37777/tcp</td>
+<td><a target="_blank" title="Digital Video Recorder hardware（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Digital_Video_Recorder_hardware&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Digital Video Recorder hardware</a></td>
+<td>非官方</td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>36963</td>
+<td><a target="_blank" title="Counter Strike 2D（页面不存在）" class="new" href="http://zh.wikipedia.org/w/index.php?title=Counter_Strike_2D&amp;action=edit&amp;redlink=1" rel="nofollow" style="color:rgb(202,0,0)">Counter Strike 2D</a>&nbsp;multiplayer port (2D clone of popular
+ CounterStrike computer game)</td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>40000</td>
+<td>SafetyNET p</td>
+<td>官方</td>
+</tr>
+<tr>
+<td>40523</td>
+<td>data packets</td>
+<td>不确定&nbsp;<sup><a target="_blank" class="external text" href="http://www.adminsub.net/tcp-udp-port-finder/40523" rel="nofollow" style="color:rgb(202,0,0)"><span style="font-size:12px">6</span></a></sup></td>
+</tr>
+<tr bgcolor="lightsteelblue">
+<td>43594-43595/tcp</td>
+<td><a target="_blank" title="RuneScape" href="http://zh.wikipedia.org/wiki/RuneScape" rel="nofollow" style="color:rgb(202,0,0)">RuneScape</a></td>
+<td>非官方</td>
+</tr>
+<tr>
+<td>47808</td>
+<td><a target="_blank" title="BACnet" href="http://zh.wikipedia.org/wiki/BACnet" rel="nofollow" style="color:rgb(202,0,0)">BACnet</a>&nbsp;Building Automation and Control Networks</td>
+<td>官方</td>
+</tr>
+</tbody>
+</table>

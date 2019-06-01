@@ -24,7 +24,30 @@ def test_recode():
     collect_recodes()
 
 
+def common_ports():
+    with open("F:\\xx-scan\\data\\ports.txt", "r", encoding="utf-8") as f:
+        string = f.read()
+        f.close()
+    import re
+    datas = re.findall("<tr>(.*?)</tr>", string)
+
+    _results = []
+    for x in datas:
+        print(x)
+        _tds = re.findall("<td>(.*?)</td>", x)
+        if len(_tds) > 3:
+            _results.append({
+                "port_info": _tds[0],
+                "desc": _tds[1],
+                "official": _tds[2]
+            })
+    for x in _results:
+        print(x["port_info"])
+
+
+
 if __name__ == '__main__':
-    test()
+    #test()
     #test_discover()
     #test_recode()
+    common_ports()
