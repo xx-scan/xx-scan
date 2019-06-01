@@ -72,3 +72,36 @@ Traceback (most recent call last):
   File "/home/django/xx-scan/apps/scan/tasks.py", line 170, in hosts_monitors
     chain_all_tasks.s())()
 NameError: name 'chain_all_tasks' is not defined
+Received task: scan.tasks.hosts_monitors[01cc516f-9c5c-46ab-a1cd-dab7cefb8302]  
+Task scan.tasks.hosts_monitors[01cc516f-9c5c-46ab-a1cd-dab7cefb8302] raised unexpected: NameError("name 'chain_all_tasks' is not defined",)
+Traceback (most recent call last):
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 170, in hosts_monitors
+    load_cache_data.s(),
+NameError: name 'chain_all_tasks' is not defined
+Connected to redis://:**@127.0.0.1:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/cso_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@xxscan ready.
+Events of group {task} enabled by remote.
+Received task: scan.tasks.hosts_monitors[3470bc11-57ed-4caf-afed-73ae3f404747]  
+Received task: scan.tasks.nmap_survive_scan[911e3c71-b0bb-405c-b9ce-b2522cf548c4]  
+Task scan.tasks.hosts_monitors[3470bc11-57ed-4caf-afed-73ae3f404747] succeeded in 0.0639215249998415s: {'task_name': '存活性检测一条龙', 'args': '192.168.1.10', 'process': '只扫描存活的主机,而不是通用扫描。'}
+Task scan.tasks.nmap_survive_scan[911e3c71-b0bb-405c-b9ce-b2522cf548c4] succeeded in 1.1109993410000243s: '/home/django/xx-scan/datas/nmap_scan/result_49b060c7-9649-40eb-a27a-e301588efbd0.xml'
+Received task: scan.tasks.hosts_stat[48d6d6d5-9af4-44bd-a8b7-f72b1cd28e26]  
+Task scan.tasks.hosts_stat[48d6d6d5-9af4-44bd-a8b7-f72b1cd28e26] raised unexpected: AttributeError("'Host' object has no attribute 'zip'",)
+Traceback (most recent call last):
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/cso_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 156, in hosts_stat
+    hosts_survice_monitor(xml_path=xml_path)
+  File "/home/django/xx-scan/apps/scan/api/mudules/monitor/nmap_utils.py", line 110, in hosts_survice_monitor
+    _up = host.zip
+AttributeError: 'Host' object has no attribute 'zip'
