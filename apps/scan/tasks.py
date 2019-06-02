@@ -26,7 +26,7 @@ from ops.celery.decorator import after_app_ready_start, \
 ## http://docs.celeryproject.org/en/latest/userguide/configuration.html#configuration
 
 @shared_task
-def nmap_service_scan(targets="172.17.*.*"):
+def nmap_scan(targets="172.17.*.*"):
     django_setup()
 
     from scan.api.mudules.monitor.nmap_cfg import NmapScanDefaultArgs, NmapScanDefaultBin, \
@@ -51,45 +51,30 @@ def nmap_service_scan(targets="172.17.*.*"):
 
 
 @shared_task
-def nmap_survive_scan(targets="172.17.*.*"):
-    django_setup()
-
-    from scan.api.mudules.monitor.nmap_cfg import NmapScanDefaultArgs, NmapScanDefaultBin, \
-        NmapDataDir, Nmap_xml_result_path
-    cmds = [
-        NmapScanDefaultBin
-    ]
-    cmds.extend(["-sP", "-PR", "-sn", targets])
-    cmds.extend(["-oX", Nmap_xml_result_path])
-    p = subprocess.Popen(cmds)
-    import time
-    time.sleep(1)
-    os.waitpid(p.pid, os.W_OK)
-    return Nmap_xml_result_path
-
-
-@shared_task
 def nmap_result_import(xml_path):
     django_setup()
+
     from scan.api.mudules.monitor.nmap_utils import get_needs_datas_from_xmlpath
-    get_needs_datas_from_xmlpath(xml_path)
-    return {
-        "stat": True,
-        "reason":"Nmap Scan Result Extract!"
-    }
+    try:
+        # from django.core.cache import cache
+        # _path = cache.get(__NMAP_SCAN_XML_PATH)
+        get_needs_datas_from_xmlpath(xml_path)
+    except Exception as e:
+        import logging
+        logging.error("\n>>>>Extract Error---\n")
+    return "Nmap Scan Result Extract!"
 
 
 @shared_task
 def push_cmd(cmd):
-    p = subprocess.Popen(cmd, shell=True)
-    import time
-    time.sleep(1)
-    os.waitpid(p.pid, os.W_OK)
-    return {
-        "stat": True,
-        "reason": "远程执行命令执行成功！"
-    }
-
+    try:
+        p = subprocess.Popen(cmd, shell=True)
+        import time
+        time.sleep(1)
+        os.waitpid(p.pid, os.W_OK)
+    except:
+        print("\n>>>>>>>>>>>>>>>>>>>Nmap--ERROR----\n")
+    return "Task OK"
 
 
 @shared_task
@@ -97,10 +82,7 @@ def loads_service_to_recodes(prepare=None):
     from scan.api.mudules.scan_v2.recode import collect_recodes
     collect_recodes()
 
-    return {
-        "stat": True,
-        "reason": "Load All Service Prepare Recode Scan Tasks."
-    }
+    return "Load Recode End."
 
 
 @shared_task
@@ -109,84 +91,29 @@ def get_all_need_l2_scan_tasks(prepare=None):
 
     from scan.models import ScanRecode
     for x in ScanRecode.objects.all():
-        # print(x.script)
+        print(x.script)
         result = push_cmd.delay(x.script)
         x.task_id=result.id
         x.save()
 
-    return {
-        "stat": True,
-        "reason": "All OK of Tasks Scanner."
-    }
+    return "all_ok"
 
 @shared_task
 @register_as_period_task(interval=3600*3)
 def nmap_tasks(targets="192.168.2.*"):
     # chord(header=[ nmap_scan.s(), ], body=nmap_result_import.s() )()
-    chain(nmap_service_scan.s(targets), nmap_result_import.s())()
-    return {
-        "stat": True,
-        "reason": "Nmap Service Simple Scan v0.1"
-    }
-
-
-@shared_task
-def load_cache_data(prepare=None):
-    
-    django_setup()
-    from scan.api.mudules.monitor.nmap_utils import SURVIVE_MONITOR_CACHE_KEY
-    from django.core.cache import cache
-    survived_hosts = cache.get(SURVIVE_MONITOR_CACHE_KEY, [])
-
-    return " ".join(survived_hosts)
-
+    chain(nmap_scan.s(targets), nmap_result_import.s())()
+    return "Task End"
 
 
 @shared_task
 @register_as_period_task(interval=3600*3)
-def common_scan(targets="192.168.1.*"):
+def chain_all_tasks(targets="192.168.1.*"):
     # chord(header=[ nmap_scan.s(), ], body=nmap_result_import.s() )()
-    chain(nmap_service_scan.s(targets), nmap_result_import.s(), loads_service_to_recodes.s(), get_all_need_l2_scan_tasks.s() )()
-    return {"stat": True, "reason": "Scan Task End."}
+    chain(nmap_scan.s(targets), nmap_result_import.s(), loads_service_to_recodes.s(), get_all_need_l2_scan_tasks.s() )()
+    return "Task End"
 
-
-@shared_task
-def hosts_stat(xml_path):
-    from scan.api.mudules.monitor.nmap_utils import hosts_survice_monitor
-    hosts_survice_monitor(xml_path=xml_path)
-    return {"stat": True, "reason": "Pushed Survive Scan Results to DB."}
-
-
-@shared_task
-def hosts_monitors(targets="192.168.2/0/24"):
-    """
-    步骤： 先进行存活扫描的检测, 再扫描对应的服务
-    :param targets:
-    :return:
-    """
-
-    chain(nmap_survive_scan.s(targets),
-          hosts_stat.s(),
-          load_cache_data.s(),
-          common_scan.s())()
-
-    return {
-        "task_name": "存活性检测一条龙",
-        "args": targets,
-        "process": "只扫描存活的主机,而不是通用扫描。"
-    }
-
-@shared_task
-@register_as_period_task(interval=3600*3)
-def saved_reportstxt_2db(prepared=None):
-    django_setup()
-
-    from scan.api.mudules.scan_v2.report import txt2reportdb
-    from scan.conf import REPORT_TO_SQL
-    if REPORT_TO_SQL:
-        txt2reportdb()
-
-    return {
-        "task_name": "ScamRecode Reports Logs 2 Db",
-        "REPORT_TO_SQL": REPORT_TO_SQL,
-    }
+"""
+from scan.tasks import chain_all_tasks
+chain_all_tasks().delay("192.168.1.*")
+"""

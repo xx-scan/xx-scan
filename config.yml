@@ -48,8 +48,6 @@ HTTP_LISTEN_PORT: 8888
 # Flower 设置
 
 FLOWER_BIND_PORT: 5555
-FLOWER_BASE_USER: admin001
-FLOWER_BASE_PASSWORD: 1q2w3e4R
 # Use Redis as broker for celery and web socket
 # Redis配置
 REDIS_HOST: 127.0.0.1

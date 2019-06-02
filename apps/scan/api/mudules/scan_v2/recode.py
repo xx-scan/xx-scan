@@ -3,14 +3,7 @@ from ....models import ScanReport, ScanRecode, Service, Protocol, Scheme, NmapSe
 UNSERV = "_unserv"
 DEFAULT_SCHEME = Scheme.objects.filter(name="scheme_nmap")[0]
 
-
 def get_scan_plan_based_scheme_and_service(service, scheme_id=DEFAULT_SCHEME.id):
-    """
-
-    :param service: Nmap扫描出来的Service实例
-    :param scheme_id: 方案ID
-    :return: 预备的扫描记录
-    """
     target = service.host.ip
     port = service.port
     service_name = service.service
@@ -28,20 +21,16 @@ def get_scan_plan_based_scheme_and_service(service, scheme_id=DEFAULT_SCHEME.id)
 
     for x in _selected_tools:
         if x.protocol == protocol:
-            _scheme = ScanRecode(scan_tool=x, target=target, port=port, path=path, active=True)
+            _scheme = ScanRecode(scan_tool=x, target=target, port=port, path=path)
             scan_recodes.append( _scheme )
             # print(_scheme.extract_self())
     return scan_recodes
 
 
-def get_scan_plan_based_scheme_and_target():
-    pass
-
-
 def collect_recodes():
-    services = Service.objects.filter(running=True)
+    ScanRecode.objects.all().delete()
     recodes = []
-    for service in services:
+    for service in Service.objects.all():
         _recodes_part = get_scan_plan_based_scheme_and_service(service=service)
         if _recodes_part:
             recodes.extend(_recodes_part)

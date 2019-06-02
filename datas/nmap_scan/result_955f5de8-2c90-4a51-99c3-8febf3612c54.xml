@@ -1,4 +1,0 @@
-<?xml version="1.0"?>
-<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
-<!-- Nmap 6.40 scan initiated Sat Jun  1 23:02:47 2019 as: /usr/bin/nmap -sP -PR -sn -oX /home/django/xx-scan/datas/nmap_scan/result_955f5de8-2c90-4a51-99c3-8febf3612c54.xml 192.168.1.0/8 -->
-<nmaprun scanner="nmap" args="/usr/bin/nmap -sP -PR -sn -oX /home/django/xx-scan/datas/nmap_scan/result_955f5de8-2c90-4a51-99c3-8febf3612c54.xml 192.168.1.0/8" start="1559401367" startstr="Sat Jun  1 23:02:47 2019" version="6.40" xmloutputversion="1.04">

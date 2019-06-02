@@ -1,17 +1,10 @@
 from rest_framework import serializers
 from ...models import ScanTool, ScanRecode, Scheme, Host, Service, \
-    Protocol, NmapServiceName, ScanReport, ScanTask, ReportFormat, ScanScript
+    Protocol, NmapServiceName, ScanReport, ScanTask, ReportFormat
 
 class ScanToolSerializer(serializers.ModelSerializer):
     class Meta:
         model = ScanTool
-        fields = '__all__'
-        # fields = ('rule_id', 'phaser', 'param', 'maxlength', 'is_active')
-        # fields = ('rule_id', 'phaser', 'param', 'maxlength', 'is_active', )
-
-class ScanScriptSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ScanScript
         fields = '__all__'
         # fields = ('rule_id', 'phaser', 'param', 'maxlength', 'is_active')
         # fields = ('rule_id', 'phaser', 'param', 'maxlength', 'is_active', )
