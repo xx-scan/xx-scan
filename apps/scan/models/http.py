@@ -9,7 +9,7 @@ class ServicePort(models.Model):
     desc = models.CharField(verbose_name="端口描述", blank=True, max_length=255)
     type = models.CharField(verbose_name="类型", blank=True, max_length=255)
     type_desc = models.CharField(verbose_name="类型描述", blank=True, max_length=255)
-    protocol = models.CharField(verbose_name="传输层协议", default="tcp")
+    protocol = models.CharField(verbose_name="传输层协议", default="tcp", max_length=30)
     # official = models.BooleanField(verbose_name="官方", default=True)
     # date_created = models.DateTimeField(auto_now_add=True)
     # date_updated = models.DateTimeField(auto_now=True)
@@ -22,8 +22,10 @@ def inital_ports():
     import re
     from scan.utils.ltool.port_data import port_data
 
-    for x in port_data:
+    for x in port_data["data"]:
+
         port_info = x["port"]
+
         matched_sigle = re.match("(\d+)/(\w+)\s*", port_info)
         protocol = ""
         if matched_sigle:

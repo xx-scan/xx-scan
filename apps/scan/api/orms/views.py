@@ -4,10 +4,14 @@ from rest_framework import serializers, viewsets, routers
 # from rest_framework.response import Response
 
 from .serializers import ScanTool, ScanRecode, Scheme, Host, Service, \
-    Protocol, NmapServiceName, ScanReport, ScanTask, ReportFormat
+    Protocol, NmapServiceName, ScanReport, ScanTask, ReportFormat, ScanScript
 
-from .serializers import ScanToolSerializer, ScanRecodeSerializer, SchemeSerializer, HostSerializer, ServiceSerializer, \
-    ProtocolSerializer, NmapServiceNameSerializer, ScanReportSerializer, ScanTaskSerializer, ReportFormatSerializer
+from .serializers import ScanToolSerializer, ScanScriptSerializer,  ScanRecodeSerializer, \
+    SchemeSerializer, HostSerializer, ServiceSerializer, \
+    ProtocolSerializer, NmapServiceNameSerializer, \
+    ScanReportSerializer, ScanTaskSerializer, ReportFormatSerializer
+
+from .serializers import ServicePort, ServicePortSerializer
 
 
 class ScanToolViewSet(viewsets.ModelViewSet):
@@ -15,6 +19,10 @@ class ScanToolViewSet(viewsets.ModelViewSet):
     serializer_class = ScanToolSerializer
     # permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
 
+class ScanScriptViewSet(viewsets.ModelViewSet):
+    queryset = ScanScript.objects.all()
+    serializer_class = ScanScriptSerializer
+    # permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
 
 class ScanRecodeViewSet(viewsets.ModelViewSet):
     queryset = ScanRecode.objects.all()
@@ -61,18 +69,26 @@ class ReportFormatViewSet(viewsets.ModelViewSet):
     serializer_class = ReportFormatSerializer
 
 
+class ServicePortViewSet(viewsets.ModelViewSet):
+    queryset = ServicePort.objects.all()
+    serializer_class = ServicePortSerializer
+
+
 scan_v1_router = routers.DefaultRouter()
 scan_v1_router.register(r'hosts', HostViewSet)
 scan_v1_router.register(r'services', ServiceViewSet)
 
+scan_v1_router.register(r'server_ports', ServicePortViewSet)
 scan_v1_router.register(r'protocal', ProtocolViewSet)
 scan_v1_router.register(r'nmap_service_names', NmapServiceNameViewSet)
-
 scan_v1_router.register(r'scan_tools', ScanToolViewSet)
+scan_v1_router.register(r'scan_scripts', ScanScriptViewSet)
 scan_v1_router.register(r'scan_recodes', ScanRecodeViewSet)
-scan_v1_router.register(r'scan_reports', ScanReportViewSet)
-scan_v1_router.register(r'scan_tasks', ScanTaskViewSet)
 scan_v1_router.register(r'scan_schemes', SchemeViewSet)
+
+scan_v1_router.register(r'scan_tasks', ScanTaskViewSet)
+
+scan_v1_router.register(r'scan_reports', ScanReportViewSet)
 scan_v1_router.register(r'report_formats', ReportFormatViewSet)
 
 

@@ -311,6 +311,7 @@ CELERY_BROKER_URL = 'redis://:%(password)s@%(host)s:%(port)s/%(db)s' % {
     'port': CONFIG.REDIS_PORT,
     'db': CONFIG.REDIS_DB_CELERY,
 }
+
 CELERY_TASK_SERIALIZER = 'pickle'
 CELERY_RESULT_SERIALIZER = 'pickle'
 CELERY_RESULT_BACKEND = CELERY_BROKER_URL
