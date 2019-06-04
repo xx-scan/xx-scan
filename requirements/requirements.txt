@@ -29,4 +29,4 @@ django-celery-beat==1.4.0
 #eventlet==0.24.1
 python-libnmap==0.7.0
 
-djang-jet==1.0.8
+django-jet==1.0.8
