@@ -24,6 +24,9 @@ class Host(models.Model):
     # 2019-6-1
     workspace = models.ForeignKey(Workspace, on_delete=models.CASCADE, related_name="workspace_hosts")
 
+    def __str__(self):
+        return str(self.ip) + "(" + str(self.mac) + ")"
+
     class Meta:
         db_table = "hosts"
         verbose_name = "主机设备表"

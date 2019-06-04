@@ -37,19 +37,6 @@ services:
        customize_net:
          ipv4_address: 192.168.132.79
 
-   fb:
-     container_name: fb
-     image: 'filebrowser/filebrowser'
-     restart: always
-     volumes:
-       - /mnt:/srv
-       - /etc/localtime:/etc/localtime
-       - /srv/docker/.filebrowser.json:/.filebrowser.json 
-     ports:
-       - "9080:80"
-     networks:
-       customize_net:
-         ipv4_address: 192.168.132.222
 
 networks:
   customize_net:

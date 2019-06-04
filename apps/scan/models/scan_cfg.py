@@ -80,17 +80,18 @@ class ScanScript(models.Model):
         verbose_name = "扫描工具集合"
 
 
+from scan.models import Service
+
 class ScanRecode(models.Model):
     id = models.UUIDField(default=uuid.uuid4, primary_key=True)
     scan_tool = models.ForeignKey(ScanScript, verbose_name="使用的扫描工具", on_delete=models.CASCADE, related_name="scan_event_2_scan_tool" )
-    target = models.GenericIPAddressField(verbose_name="扫描的IP目标")
-    port = models.IntegerField(verbose_name="扫描端口")
+    service = models.ForeignKey(Service, verbose_name="需要扫描记录的服务", on_delete=models.CASCADE, related_name="scan_service2code")
     path = models.CharField(verbose_name="PATH路径", blank=True, max_length=255)
     domain = models.CharField(verbose_name="域名", blank=True, max_length=255)
     output = models.CharField(max_length=255, verbose_name=u"保存路径", blank=True)
     task_id = models.CharField(max_length=155, verbose_name=u"任务ID", blank=True)
     # managers = models.ManyToManyField("ConnectManagerUserInfo", related_name="sys_cop_conn_users")
-    script = models.TextField(verbose_name="完整的执行脚本", blank=True)
+    script = models.TextField(verbose_name="完整的执行脚本[生成]", blank=True)
     active = models.BooleanField(verbose_name="记录是否被激活", default=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
@@ -98,20 +99,29 @@ class ScanRecode(models.Model):
     def extract_self(self):
         from datetime import datetime
         _date = str(datetime.now().date()).replace("-", "")
+        workspace = self.service.host.workspace
+        _temp = dict(
+            target=str(self.service.host.ip),
+            port=str(self.service.port),
+            workspace=str(workspace.name),
+            username=str(workspace.user.username)
+        )
 
         output = self.scan_tool.name + "-" \
-                 + self.target + "-" \
-                 + self.port + "-" \
+                 + _temp["ip"] + "-" \
+                 + _temp["port"] + "-" \
                  + _date  if not self.output else str(uuid.uuid4())
 
+        _temp["output"] = output
 
-        OutputDir = os.path.join(RESULT_PATH, self.target + "-" + str(self.port))
+        OutputDir = os.path.join(RESULT_PATH, _temp["username"], _temp["workspace"])
+
         if not os.path.exists(OutputDir):
             os.makedirs(OutputDir)
         # self.output = str(os.path.join(OutputDir, output))
         _path = os.path.join(OutputDir, output)
-        script = self.scan_tool.used_script.replace("[TARGET]", self.target
-                                        ).replace( "[PORT]", str(self.port)
+        script = self.scan_tool.used_script.replace("[TARGET]", _temp["target"]
+                                        ).replace( "[PORT]", _temp["port"]
                                         ).replace("[OUTPUT]", _path
                                         ).replace("[DOMAIN]", self.domain
                                         ).replace("[PATH]", self.path)
@@ -141,9 +151,12 @@ class ScanRecode(models.Model):
         finally:
             pass
 
+    def __str__(self):
+        return self.script
+
     class Meta:
         db_table = "scan_recode"
-        verbose_name = "扫描事件"
+        verbose_name = "扫描事件记录"
 
 
 # 定制扫描器的扫描方案

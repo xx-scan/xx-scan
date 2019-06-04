@@ -15,10 +15,28 @@ class ServicePort(models.Model):
     # date_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.port
+        return "[" + str(self.port) + "](" + str(self.port_name) + ")"
+
+    class Meta:
+        db_table = "service_port"
+        verbose_name = "常见服务端口映射表"
+
+
+class PortRange(models.Model):
+    id = models.UUIDField(default=uuid.uuid4, primary_key=True)
+    name = models.CharField(verbose_name="端口范围描述", blank=True, max_length=255)
+    ports = models.TextField(verbose_name="端口范围", blank=True)
+
+    def __str__(self):
+        return self.name
+    class Meta:
+        db_table = "port_range"
+        verbose_name = "端口集合"
 
 
 def inital_ports():
+    ServicePort.objects.all().delete()
+
     import re
     from scan.utils.ltool.port_data import port_data
 
@@ -68,3 +86,24 @@ def inital_ports():
         )
 
 
+def ports_range():
+    names = ["全段口", "tcp常见端口", "udp常见端口"]
+
+    PortRange.objects.all().delete()
+
+    PortRange.objects.create(
+        name=names[0],
+        ports="1-65535"
+    )
+
+    PortRange.objects.create(
+        name=names[1],
+        ports=",".join([str(x.port) for x in ServicePort.objects.filter(protocol="tcp")])
+    )
+
+    PortRange.objects.create(
+        name=names[2],
+        ports=",".join([str(x.port) for x in ServicePort.objects.filter(protocol="udp")])
+    )
+
+    print("端口初始化完毕")

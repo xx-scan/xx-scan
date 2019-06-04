@@ -9,30 +9,28 @@ path = "F:\\workspace\\xx-scan\\apps\\scan\\datas\\nmap_results\\sV.xml"
 FilterByIp = True
 
 
-def get_current_host(_host):
+def get_current_host(_host, workspace):
     _ip = _host.id
     _mac = _host.mac
     _vendor = _host.vendor
-    _filters = Host.objects.filter(mac=_mac)
-    if FilterByIp:
-        _filters = Host.objects.filter(ip=_ip)
-    if len(_filters) > 0:
-        host = _filters[0]
-    else:
-        host = Host(name=_ip,ip=_ip,type="自发现设备",os="-",mac=_mac,mac_vendor=_vendor,up=True,)
-        host.save()
+
+    host = Host(name=_ip, ip=_ip, type="自发现设备",os="-", mac=_mac, mac_vendor=_vendor, up=True, workspace=workspace)
+    host.save()
+
     return dict(host=host, ip=_host.id, mac = _host.mac,  vendor= _host.vendor, )
 
 
-def get_needs_datas_from_xmlpath(xml_path=path, incomplete=False):
+def get_needs_datas_from_xmlpath(xml_path=path, workspace=None, incomplete=False):
+    Host.objects.filter(workspace=workspace).delete() # 工作组初始化
+
     nmap_report = NmapParser.parse_fromfile(xml_path, incomplete=incomplete)
     # 主机存活验证
-    judge_hosts_survived(nmap_report)
+    #judge_hosts_survived(nmap_report)
 
     _time = get_pydt2_based_nmap(nmap_report._runstats["finished"]["timestr"])
     _services_list = []
     for _host in nmap_report.hosts:
-        _host_info = get_current_host(_host)
+        _host_info = get_current_host(_host, workspace)
         host = _host_info["host"]
         for _service in _host.services:
             service = _service.get_dict()
