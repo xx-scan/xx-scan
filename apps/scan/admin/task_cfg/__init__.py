@@ -8,7 +8,8 @@ class ScanTaskAdmin(admin.ModelAdmin):
     def schedule(self, obj=None, is_header=False):
         return obj.run_schedule()
 
-    list_display = ('targets', "ports", "scan_scheme", "date_created", schedule)
+    list_display = ('targets', "ports", "scan_scheme", "date_created", )
+    # list_display = ('targets', "ports", "scan_scheme", "date_created", schedule)
 
     fieldsets = [
         # ("基本描述", {'fields': ['type', "name", "desc"] }),

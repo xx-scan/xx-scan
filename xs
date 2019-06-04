@@ -14,13 +14,13 @@ sys.path.insert(0, BASE_DIR)
 
 DOCKERD = False
 
-PYTHON_BIN = os.path.join(BASE_DIR, "../cso_venv/bin/python") if not DOCKERD else "/usr/local/bin/python"
-CELERY_BIN = os.path.join(BASE_DIR, "../cso_venv/bin/celery") if not DOCKERD else "/usr/local/bin/celery"
+PYTHON_BIN = os.path.join(BASE_DIR, "../xs_venv/bin/python") if not DOCKERD else "/usr/local/bin/python"
+CELERY_BIN = os.path.join(BASE_DIR, "../xs_venv/bin/celery") if not DOCKERD else "/usr/local/bin/celery"
 
-GUNICORN_BIN = os.path.join(BASE_DIR, "../cso_venv/bin/gunicorn") if not DOCKERD else "/usr/local/bin/gunicorn"
+GUNICORN_BIN = os.path.join(BASE_DIR, "../xs_venv/bin/gunicorn") if not DOCKERD else "/usr/local/bin/gunicorn"
 GUNICORN_CONF_PATH=os.path.join(BASE_DIR, "apps", "gunicorn.conf")
 
-FLOWER_BIN = os.path.join(BASE_DIR, "../cso_venv/bin/flower") if not DOCKERD else "/usr/local/bin/flower"
+FLOWER_BIN = os.path.join(BASE_DIR, "../xs_venv/bin/flower") if not DOCKERD else "/usr/local/bin/flower"
 
 
 try:
@@ -186,7 +186,7 @@ ServiceDict = {
             '--broker={}'.format(CELERY_BROKER_URL),
             '--pidfile={}'.format(get_pid_file_path("flower")),
             '--log-to-stderr={}'.format(get_log_file_path("flower")),
-            '--basic_auth=admin001:1q2w3e4r'.format(CONFIG.FLOWER_BASE_USER, CONFIG.FLOWER_BASE_PASSWORD),
+            '--basic_auth={}:{}'.format(CONFIG.FLOWER_BASE_USER, CONFIG.FLOWER_BASE_PASSWORD),
             '--persistent',
         ],
         "stop_cmd":"ps -axu | grep 'flower' | grep -v grep | awk '{print $2}' | xargs kill -15",

@@ -48,11 +48,14 @@ class ScanTask(models.Model):
         pass
 
     def save(self, *args, **kwargs):
+        uid = uuid.uuid4()
         try:
-
+            self.id = uid
             super(ScanTask, self).save(*args, **kwargs)
         finally:
-            pass
+            from scan.tasks import run
+            run.delay(uid)
+
 
     def run_schedule(self):
         showed = []

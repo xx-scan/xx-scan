@@ -2,37 +2,24 @@
 from celery import chain, chord
 
 from ops.celery.utils import create_or_update_celery_periodic_tasks
-
-from scan.tasks import nmap_result_import, loads_service_to_recodes , run_all_level2_scan_tasks
-
-
-def descover_run(targets, ports, scheme, domains=None):
-
-    pass
+from scan.models import ScanTask
 
 
-
-def import_run(import_file, scheme, workspace):
-    # from scan.api.mudules.monitor.nmap_utils import get_needs_datas_from_xmlpath
-
-
-    chain(nmap_result_import.s(xml_path=import_file, workspaceid=workspace),
-
-          loads_service_to_recodes.s(),
-          run_all_level2_scan_tasks.s()
+def descover_run(scantaskid):
+    from scan.tasks import nmap_result_import, recodes_and_run, nmap_service_scan
+    chain(nmap_service_scan.s(scantaskid),
+        nmap_result_import.s(),
+          recodes_and_run.s())()
+    return "Common Scan"
 
 
-          )
+def import_run(xml_path, workspaceid, scan_schemeid):
+    from scan.tasks import nmap_result_import, recodes_and_run
 
-    pass
+    chain(nmap_result_import.s([xml_path, workspaceid, scan_schemeid]),
+          recodes_and_run.s())()
+
+    return "Import Scan"
 
 
-def run(scantask):
-    ## 当前都是立即执行的;
-
-    if scantask.imports_active:
-        import_run(scantask.import_file, scheme=scantask.scan_scheme, workspace=scantask.workspace)
-        return
-
-    descover_run(scantask.targets, scantask.ports, scantask.scan_scheme)
 

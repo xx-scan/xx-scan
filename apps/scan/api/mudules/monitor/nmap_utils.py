@@ -14,13 +14,16 @@ def get_current_host(_host, workspace):
     _mac = _host.mac
     _vendor = _host.vendor
 
-    host = Host(name=_ip, ip=_ip, type="自发现设备",os="-", mac=_mac, mac_vendor=_vendor, up=True, workspace=workspace)
+    host = Host(name=_ip, ip=_ip, type="自发现设备", os="-", mac=_mac,
+                mac_vendor=_vendor, up=True, workspace=workspace)
     host.save()
 
     return dict(host=host, ip=_host.id, mac = _host.mac,  vendor= _host.vendor, )
 
 
-def get_needs_datas_from_xmlpath(xml_path=path, workspace=None, incomplete=False):
+def get_needs_datas_from_xmlpath(xml_path=path, workspaceid=None, incomplete=False):
+    from scan.models import Workspace
+    workspace = Workspace.objects.get(id=workspaceid)
     Host.objects.filter(workspace=workspace).delete() # 工作组初始化
 
     nmap_report = NmapParser.parse_fromfile(xml_path, incomplete=incomplete)

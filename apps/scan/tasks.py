@@ -18,6 +18,19 @@ def django_setup():
     django.setup()
 
 django_setup()
+from scan.models import Workspace, ScanTask
+
+@shared_task
+def push_cmd(cmd):
+    p = subprocess.Popen(cmd, shell=True)
+    import time
+    time.sleep(1)
+    os.waitpid(p.pid, os.W_OK)
+    return {
+        "stat": True,
+        "cmd": cmd,
+        "reason": "远程执行命令执行成功！"
+    }
 
 from ops.celery.decorator import after_app_ready_start, \
     after_app_shutdown_clean_periodic, \
@@ -27,16 +40,39 @@ from ops.celery.decorator import after_app_ready_start, \
 ## http://docs.celeryproject.org/en/latest/userguide/configuration.html#configuration
 
 @shared_task
-def nmap_service_scan(targets="172.17.*.*", workspaceid=None):
-
-
-    from scan.api.mudules.monitor.nmap_cfg import NmapScanDefaultArgs, NmapScanDefaultBin, \
+def nmap_survive_scan(scantaskid=None):
+    scantask = ScanTask.objects.get(id=scantaskid)
+    targets = scantask.targets
+    ports = scantask.ports
+    from scan.api.mudules.monitor.nmap_cfg import NmapScanDefaultBin, \
         NmapDataDir, Nmap_xml_result_path
     cmds = [
         NmapScanDefaultBin
     ]
-    cmds.extend(NmapScanDefaultArgs.split(" "))
-    cmds.extend([targets, ])
+    cmds.extend(["-sP", "-PR", "-sn", targets])
+    cmds.extend(["-p", ports])
+    cmds.extend(["-oX", Nmap_xml_result_path])
+    p = subprocess.Popen(cmds)
+    import time
+    time.sleep(1)
+    os.waitpid(p.pid, os.W_OK)
+    return Nmap_xml_result_path, scantask.workspace.id
+
+# 上面是存活检测; 存活检测之后，缩小主机范围再扫描。但是不准确一般来说。
+# 存活检测目前是测试阶段，存活检测的规则是 nmap -sP 不完整。
+
+@shared_task
+def nmap_service_scan(scantaskid):
+    from scan.api.mudules.monitor.nmap_cfg import  NmapScanDefaultBin, \
+        NmapDataDir, Nmap_xml_result_path
+
+    from scan.models import ScanTask
+    scantask = ScanTask.objects.get(id=scantaskid)
+    cmds = [
+        NmapScanDefaultBin
+    ]
+    cmds.extend("-sS -sV -p{ports} -O".format(ports=scantask.ports.ports).split(" "))
+    cmds.extend([scantask.targets, ])
     cmds.extend(["-oX", Nmap_xml_result_path])
     # from django.core.cache import cache
     # cache.set(__NMAP_SCAN_XML_PATH, Nmap_xml_result_path)
@@ -48,100 +84,49 @@ def nmap_service_scan(targets="172.17.*.*", workspaceid=None):
     except:
         import logging
         logging.error("\n>>>>>>>>>>>>>>>>>>>Nmap--ERROR----\n")
-    return Nmap_xml_result_path
+    return [Nmap_xml_result_path, scantask.workspace.id, scantask.scan_scheme.id]
 
 
 @shared_task
-def nmap_survive_scan(targets="172.17.*.*"):
-
-
-    from scan.api.mudules.monitor.nmap_cfg import NmapScanDefaultArgs, NmapScanDefaultBin, \
-        NmapDataDir, Nmap_xml_result_path
-    cmds = [
-        NmapScanDefaultBin
-    ]
-    cmds.extend(["-sP", "-PR", "-sn", targets])
-    cmds.extend(["-oX", Nmap_xml_result_path])
-    p = subprocess.Popen(cmds)
-    import time
-    time.sleep(1)
-    os.waitpid(p.pid, os.W_OK)
-    return Nmap_xml_result_path
-
-
-@shared_task
-def nmap_result_import(xml_path, workspaceid):
-
-
-    from scan.models import Workspace
+def nmap_result_import(args):
+    xml_path, workspaceid, scan_schemeid = args[0], args[1], args[2]
     from scan.api.mudules.monitor.nmap_utils import get_needs_datas_from_xmlpath
-    get_needs_datas_from_xmlpath(xml_path, workspace=Workspace.objects.get(id=workspaceid))
-    return {
-        "stat": True,
-        "reason":"Nmap Scan Result Extract!"
-    }
+    get_needs_datas_from_xmlpath(xml_path, workspaceid=workspaceid)
+    return [workspaceid, scan_schemeid]
+
+# =================================================================
+# 2019-6-4 晚上 21：11 记录：这个地方实际上执行非常快，为社么要分开。
+# 原因 后面不一定是调用nmap扫描出来的结果，也可能是 Masscan, Nessus, Nexpose 等等，都能进行格式化，充值任务。
+# =================================================================
 
 
 @shared_task
-def push_cmd(cmd):
-    p = subprocess.Popen(cmd, shell=True)
-    import time
-    time.sleep(1)
-    os.waitpid(p.pid, os.W_OK)
-    return {
-        "stat": True,
-        "reason": "远程执行命令执行成功！"
-    }
-
-
-
-@shared_task
-def loads_service_to_recodes(prepare=None):
+def recodes_and_run(args):
+    workspaceid, scan_schemeid = args[0], args[1]
     from scan.api.mudules.scan_v2.recode import collect_recodes
-    collect_recodes()
 
-    return {
-        "stat": True,
-        "reason": "Load All Service Prepare Recode Scan Tasks."
-    }
-
-
-@shared_task
-def run_all_level2_scan_tasks(prepare=None):
-    """
-    开始执行第二个扫描阶段需要执行的内容
-    :param prepare:
-    :return:
-    """
-    from scan.models import ScanRecode
-    for x in ScanRecode.objects.filter(active=True):
-        # print(x.script)
+    recodes = collect_recodes(scheme_id=scan_schemeid, workspaceid=workspaceid)
+    for x in recodes:
         result = push_cmd.delay(x.script)
         x.task_id=result.id
+        # 在这个环节可以把task_id都存下来便于下次
         x.save()
-
     return {
         "stat": True,
-        "reason": "All OK of Tasks Scanner."
+        "reason": "All OK of Tasks Scanner.",
+        "workspaceid": workspaceid
     }
 
 
 @shared_task
-def load_cache_data(prepare=None):
-
-    from scan.api.mudules.monitor.nmap_utils import SURVIVE_MONITOR_CACHE_KEY
-    from django.core.cache import cache
-    survived_hosts = cache.get(SURVIVE_MONITOR_CACHE_KEY, [])
-
-    return " ".join(survived_hosts)
-
-
-@shared_task
-@register_as_period_task(interval=3600*3)
-def common_scan(workspace=None, targets="192.168.1.*"):
-    # chord(header=[ nmap_scan.s(), ], body=nmap_result_import.s() )()
-    chain(nmap_service_scan.s(targets),
-          nmap_result_import.s(),
-          loads_service_to_recodes.s(),
-          run_all_level2_scan_tasks.s() )()
-    return {"stat": True, "reason": "Scan Task End."}
+def run(scantaskid):
+    from scan.api.mudules.scan_v2.run.task_run import import_run, descover_run
+    import time
+    time.sleep(2)
+    ## 当前都是立即执行的;
+    scantask = ScanTask.objects.get(id=scantaskid)
+    if scantask.imports_active:
+        return import_run(str(scantask.imports.path),
+                          workspaceid=scantask.workspace.id,
+                        scan_schemeid=scantask.scan_scheme.id)
+    return descover_run(scantaskid)

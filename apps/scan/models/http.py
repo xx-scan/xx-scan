@@ -29,6 +29,7 @@ class PortRange(models.Model):
 
     def __str__(self):
         return self.name
+
     class Meta:
         db_table = "port_range"
         verbose_name = "端口集合"

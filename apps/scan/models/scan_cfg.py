@@ -108,7 +108,7 @@ class ScanRecode(models.Model):
         )
 
         output = self.scan_tool.name + "-" \
-                 + _temp["ip"] + "-" \
+                 + _temp["target"] + "-" \
                  + _temp["port"] + "-" \
                  + _date  if not self.output else str(uuid.uuid4())
 
@@ -169,6 +169,13 @@ class Scheme(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         db_table = "scan_scheme"
         verbose_name = "扫描方案"
+
+
+class ScanCfgUploads(models.Model):
+    config_file = models.FileField(upload_to="uploads/scan_cfgs/", verbose_name="扫描文件")

@@ -11,8 +11,7 @@ def get_scan_plan_based_scheme_and_service(service, scheme_id=DEFAULT_SCHEME.id)
     :param scheme_id: 方案ID
     :return: 预备的扫描记录
     """
-    target = service.host.ip
-    port = service.port
+    scheme_id = scheme_id if scheme_id else DEFAULT_SCHEME.id
     service_name = service.service
     try:
         protocol = NmapServiceName.objects.filter(service_name=service_name)[0].protocol
@@ -28,21 +27,17 @@ def get_scan_plan_based_scheme_and_service(service, scheme_id=DEFAULT_SCHEME.id)
 
     for x in _selected_tools:
         if x.protocol == protocol:
-            _scheme = ScanRecode(scan_tool=x, target=target, port=port, path=path, active=True)
-            scan_recodes.append( _scheme )
+            _recode = ScanRecode(scan_tool=x, service=service, path=path, active=True)
+            scan_recodes.append( _recode )
             # print(_scheme.extract_self())
     return scan_recodes
 
 
-def get_scan_plan_based_scheme_and_target():
-    pass
-
-
-def collect_recodes():
-    services = Service.objects.filter(running=True)
+def collect_recodes(scheme_id=None, workspaceid=None):
+    services = [x for x in Service.objects.all() if x.host.workspace.id == workspaceid]
     recodes = []
     for service in services:
-        _recodes_part = get_scan_plan_based_scheme_and_service(service=service)
+        _recodes_part = get_scan_plan_based_scheme_and_service(service=service, scheme_id=scheme_id)
         if _recodes_part:
             recodes.extend(_recodes_part)
     [x.save() for x in recodes]
