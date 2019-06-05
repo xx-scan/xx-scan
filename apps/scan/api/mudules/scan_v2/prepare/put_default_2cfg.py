@@ -2,17 +2,33 @@
 import os
 import re
 from configparser import ConfigParser
-
+from django.contrib.auth.models import User
 from website.settings import PROJECT_DIR
+
+
 SCAN_CONFIG_FILE = os.path.join(PROJECT_DIR, "apps", "scan", "config.ini")
 
-from .....models import Protocol, NmapServiceName, ScanTool, Scheme
+from .....models import Protocol, NmapServiceName, ScanScript, Scheme, Workspace
+
 
 def orm_delete():
+    Workspace.objects.all().delete()
+
     Scheme.objects.all().delete()
-    ScanTool.objects.all().delete()
+    ScanScript.objects.all().delete()
     NmapServiceName.objects.all().delete()
     Protocol.objects.all().delete()
+
+    create_default_user_and_workspace()
+
+
+def create_default_user_and_workspace():
+    superuser, _ = User.objects.get_or_create(username="admin", password="admin", email="test@example.com",
+                                    is_superuser=True, is_staff = True, is_active = True)
+    Workspace.objects.create(
+        user=superuser,
+        name="xadmin"
+    )
 
 
 def inintal_services(config_file=SCAN_CONFIG_FILE, add_many=True):
@@ -50,7 +66,7 @@ def inintal_services(config_file=SCAN_CONFIG_FILE, add_many=True):
 
 
 def inital_scan_tools():
-    ScanTool.objects.all().delete()
+    ScanScript.objects.all().delete()
 
     config = ConfigParser(allow_no_value=True)
     config.read([SCAN_CONFIG_FILE])
@@ -61,9 +77,9 @@ def inital_scan_tools():
         for (name, used_script) in config.items(protocol.protocol):
 
             args = ",".join(re.findall("\[(.*?)\]", used_script))
-            _scan_tool = ScanTool(name=name, used_script=used_script, args=args, protocol=protocol)
+            _scan_tool = ScanScript(name=name, used_script=used_script, args=args, protocol=protocol)
             scan_tools.append(_scan_tool)
-    ScanTool.objects.bulk_create(scan_tools)
+    ScanScript.objects.bulk_create(scan_tools)
 
 
 def inital_scheme():
@@ -79,7 +95,7 @@ def inital_scheme():
     scheme_nmap.save()
     scheme_all.save()
 
-    for x in ScanTool.objects.all():
+    for x in ScanScript.objects.all():
         have_installed_tools = ["nmap", ]
         _tool_sets = "|".join(have_installed_tools)
         matched = re.match("^({}).*?".format(_tool_sets), x.used_script)

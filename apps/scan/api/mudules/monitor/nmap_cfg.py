@@ -8,4 +8,3 @@ if not os.path.exists(NmapDataDir):
 
 Nmap_xml_result_path = os.path.join(NmapDataDir, "result_" + str(uuid.uuid4()) + ".xml")
 NmapScanDefaultBin = "/usr/bin/nmap"
-NmapScanDefaultArgs = "-sS -sV -p1-65535 -O"

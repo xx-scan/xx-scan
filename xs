@@ -14,13 +14,10 @@ sys.path.insert(0, BASE_DIR)
 
 DOCKERD = False
 
-PYTHON_BIN = os.path.join(BASE_DIR, "../cso_venv/bin/python") if not DOCKERD else "/usr/local/bin/python"
-CELERY_BIN = os.path.join(BASE_DIR, "../cso_venv/bin/celery") if not DOCKERD else "/usr/local/bin/celery"
-
-GUNICORN_BIN = os.path.join(BASE_DIR, "../cso_venv/bin/gunicorn") if not DOCKERD else "/usr/local/bin/gunicorn"
-GUNICORN_CONF_PATH=os.path.join(BASE_DIR, "apps", "gunicorn.conf")
-
-FLOWER_BIN = os.path.join(BASE_DIR, "../cso_venv/bin/flower") if not DOCKERD else "/usr/local/bin/flower"
+PYTHON_BIN = os.path.join(BASE_DIR, "../xs_venv/bin/python") if not DOCKERD else "/usr/local/bin/python"
+CELERY_BIN = os.path.join(BASE_DIR, "../xs_venv/bin/celery") if not DOCKERD else "/usr/local/bin/celery"
+GUNICORN_BIN = os.path.join(BASE_DIR, "../xs_venv/bin/gunicorn") if not DOCKERD else "/usr/local/bin/gunicorn"
+FLOWER_BIN = os.path.join(BASE_DIR, "../xs_venv/bin/flower") if not DOCKERD else "/usr/local/bin/flower"
 
 
 try:
@@ -222,10 +219,10 @@ class Service():
 
     def stop(self):
         print("{} 关闭".format(self.name))
-        time.sleep(2)
+        time.sleep(1)
         if self.status():
             p = subprocess.Popen(self.stop_cmd, shell=True)
-            print("{} 已经停止。".format(self.name))
+            print("检查状态: {} 已经停止。".format(self.name))
             return p
         print("{} 正在停止...".format(self.name))
 

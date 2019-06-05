@@ -9,8 +9,8 @@ services:
         - ./mysql/mysql.conf.d:/etc/mysql/mysql.conf.d
         - /etc/localtime:/etc/localtime
       restart: always
-      ports:
-        - "3306:3306"
+      expose:
+        - "3306"
       environment:
        - MYSQL_USER=admin007
        - MYSQL_PASSWORD=myadmin@816
@@ -31,11 +31,12 @@ services:
        - /etc/localtime:/etc/localtime
      environment:
        - REDIS_PASSWORD=xxscan
-     ports:
-       - "6379:6379"
+     expose:
+       - "6379"
      networks:
        customize_net:
          ipv4_address: 192.168.132.79
+
 
 networks:
   customize_net:

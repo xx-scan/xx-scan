@@ -30,6 +30,7 @@ def get_pydt2_based_nmap(logdt_str):
             second=int(dt_matched.group(5)),
         )
         return datetime(**dt_kwargs)
+    return datetime.now()
 
 
 def get_ua_and_os_from_User_Agent(ua_str):

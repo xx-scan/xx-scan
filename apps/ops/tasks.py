@@ -22,16 +22,3 @@ def create_or_update_registered_periodic_tasks():
     from .celery.decorator import get_register_period_tasks
     for task in get_register_period_tasks():
         create_or_update_celery_periodic_tasks(task)
-
-
-@shared_task
-def hello(name, callback=None):
-    import time
-    time.sleep(10)
-    print("Hello {}".format(name))
-
-
-@shared_task
-def hello_callback(result):
-    print(result)
-    print("Hello callback")
