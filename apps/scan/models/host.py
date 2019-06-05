@@ -47,6 +47,9 @@ class Service(models.Model):
 
     running = models.BooleanField(verbose_name="运行中", default=True)
 
+    def __str__(self):
+        return "[" + self.service + "](" + self.host.ip + "-" + self.port + ")"
+
     class Meta:
         db_table="host_services"
         verbose_name="主机服务探测"

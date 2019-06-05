@@ -109,12 +109,11 @@ class ScanRecode(models.Model):
 
         output = self.scan_tool.name + "-" \
                  + _temp["target"] + "-" \
-                 + _temp["port"] + "-" \
-                 + _date  if not self.output else str(uuid.uuid4())
+                 + _temp["port"]
 
         _temp["output"] = output
 
-        OutputDir = os.path.join(RESULT_PATH, _temp["username"], _temp["workspace"])
+        OutputDir = os.path.join(RESULT_PATH, _temp["username"], _temp["workspace"], _temp["target"] ,_date)
 
         if not os.path.exists(OutputDir):
             os.makedirs(OutputDir)

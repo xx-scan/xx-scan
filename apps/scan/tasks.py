@@ -39,40 +39,20 @@ from ops.celery.decorator import after_app_ready_start, \
 # from ops.celery.Task import CustomTask
 ## http://docs.celeryproject.org/en/latest/userguide/configuration.html#configuration
 
-@shared_task
-def nmap_survive_scan(scantaskid=None):
-    scantask = ScanTask.objects.get(id=scantaskid)
-    targets = scantask.targets
-    ports = scantask.ports
+
+def nmap_scan(nmap_args, scantaskid):
     from scan.api.mudules.monitor.nmap_cfg import NmapScanDefaultBin, \
         NmapDataDir, Nmap_xml_result_path
-    cmds = [
-        NmapScanDefaultBin
-    ]
-    cmds.extend(["-sP", "-PR", "-sn", targets])
-    cmds.extend(["-p", ports])
-    cmds.extend(["-oX", Nmap_xml_result_path])
-    p = subprocess.Popen(cmds)
-    import time
-    time.sleep(1)
-    os.waitpid(p.pid, os.W_OK)
-    return Nmap_xml_result_path, scantask.workspace.id
 
-# 上面是存活检测; 存活检测之后，缩小主机范围再扫描。但是不准确一般来说。
-# 存活检测目前是测试阶段，存活检测的规则是 nmap -sP 不完整。
-
-@shared_task
-def nmap_service_scan(scantaskid):
-    from scan.api.mudules.monitor.nmap_cfg import  NmapScanDefaultBin, \
-        NmapDataDir, Nmap_xml_result_path
-
-    from scan.models import ScanTask
     scantask = ScanTask.objects.get(id=scantaskid)
+    ports = scantask.ports.ports
+    targets = scantask.targets
+
     cmds = [
         NmapScanDefaultBin
     ]
-    cmds.extend("-sS -sV -p{ports} -O".format(ports=scantask.ports.ports).split(" "))
-    cmds.extend([scantask.targets, ])
+    cmds.extend("{nmap_args} -p{ports} -O".format(ports=ports, nmap_args=nmap_args).split(" "))
+    cmds.extend([targets, ])
     cmds.extend(["-oX", Nmap_xml_result_path])
     # from django.core.cache import cache
     # cache.set(__NMAP_SCAN_XML_PATH, Nmap_xml_result_path)
@@ -84,6 +64,24 @@ def nmap_service_scan(scantaskid):
     os.waitpid(p.pid, os.W_OK)
 
     return [Nmap_xml_result_path, scantask.workspace.id, scantask.scan_scheme.id]
+
+
+@shared_task
+def nmap_tcp_scan(scantaskid):
+    return nmap_scan(nmap_args="-sS -sV", scantaskid=scantaskid)
+
+
+@shared_task
+def nmap_udp_scan(scantaskid):
+    return nmap_scan(nmap_args="-sU -sV", scantaskid=scantaskid)
+
+
+# 上面是存活检测; 存活检测之后，缩小主机范围再扫描。但是不准确一般来说。
+# 存活检测目前是测试阶段，存活检测的规则是 nmap -sP 不完整。
+@shared_task
+def nmap_survive_scan(scantaskid):
+    # 这里是基于UCP扫描的Scan
+    return nmap_scan(nmap_args="-sU -T5 -sV --max-retries 1", scantaskid=scantaskid)
 
 
 @shared_task

@@ -9,6 +9,7 @@ class HostAdmin(admin.ModelAdmin):
 admin.site.register(Host, HostAdmin)
 
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ("host", "port", "banner", "protocol", "service", "version", "descover_time")
+    search_fields = ("port", "host__ip", "service", "state")
+    list_display = ("host", "port", "state", "banner", "protocol", "service", "version", "descover_time")
 
 admin.site.register(Service, ServiceAdmin)

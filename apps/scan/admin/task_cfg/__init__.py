@@ -15,7 +15,7 @@ class ScanTaskAdmin(admin.ModelAdmin):
         # ("基本描述", {'fields': ['type', "name", "desc"] }),
         ('工作组', {'fields': ['workspace']}),
         ('文件导入', {'fields': ['imports_active' , 'imports']}),
-        ('自定义目标', {'fields': ['targets', "ports", "domains"]}),
+        ('自定义目标', {'fields': ['targets', "ports", "udp", "domains"]}),
         ('选定扫描方案', {'fields': ['scan_scheme']}),
         ('执行类型', {'fields': ['atnow', "regular", "interval", "crontab"]}),
     ]

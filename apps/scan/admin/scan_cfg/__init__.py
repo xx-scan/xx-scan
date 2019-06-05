@@ -22,19 +22,8 @@ admin.site.register(ScanTool, ScanToolAdmin)
 
 
 class ScanRecodeAdmin(admin.ModelAdmin):
-    def target(self, obj=None, is_header=False):
-        return obj.service.host.ip
 
-    def port(self, obj=None, is_header=False):
-        return obj.service.port
-
-    def service(self, obj=None, is_header=False):
-        return obj.service.service
-
-    def workspace(self, obj=None, is_header=False):
-        return obj.service.host.workspace
-
-    list_display = (target, port, service,  "scan_tool", "active", "domain")
+    list_display = ("service", "scan_tool", "active", "domain")
 
 admin.site.register(ScanRecode, ScanRecodeAdmin)
 
