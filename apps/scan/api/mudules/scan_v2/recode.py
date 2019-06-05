@@ -40,7 +40,10 @@ def collect_recodes(scheme_id=None, workspaceid=None):
         _recodes_part = get_scan_plan_based_scheme_and_service(service=service, scheme_id=scheme_id)
         if _recodes_part:
             recodes.extend(_recodes_part)
-    [x.save() for x in recodes]
+    if len(recodes) > 0:
+        for x in recodes:
+            x.save()
+        # [x.save() for x in recodes]
     # ScanRecode.objects.bulk_create(recodes)
     return recodes
 

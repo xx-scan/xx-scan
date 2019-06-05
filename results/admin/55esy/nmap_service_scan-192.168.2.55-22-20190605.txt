@@ -1,0 +1,12 @@
+# Nmap 6.40 scan initiated Wed Jun  5 09:33:32 2019 as: nmap -p 22 -sC -sV -v -Pn -oN /home/django/xx-scan/results/admin/55esy/nmap_service_scan-192.168.2.55-22-20190605.txt 192.168.2.55
+Nmap scan report for 192.168.2.55
+Host is up (0.0011s latency).
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 2048 ab:2b:6c:20:68:9c:12:6d:61:e1:0e:5a:31:4f:23:4a (RSA)
+|_256 92:94:a6:3e:a6:5e:02:40:4f:10:e2:d3:b4:5d:e3:98 (ECDSA)
+MAC Address: 52:54:00:B4:19:64 (QEMU Virtual NIC)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+# Nmap done at Wed Jun  5 09:33:33 2019 -- 1 IP address (1 host up) scanned in 0.68 seconds

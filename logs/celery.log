@@ -1,0 +1,416 @@
+Connected to redis://:**@192.168.2.189:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/xs_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@localhost.localdomain ready.
+Events of group {task} enabled by remote.
+Received task: scan.tasks.run[3d79405a-10f4-43b3-83cf-7763ff081e63]  
+Received task: scan.tasks.nmap_service_scan[dd94a175-fa9f-4423-9265-1402a0718f40]  
+Task scan.tasks.run[3d79405a-10f4-43b3-83cf-7763ff081e63] succeeded in 2.1070371180001075s: 'Common Scan'
+
+>>>>>>>>>>>>>>>>>>>Nmap--ERROR----
+
+Task scan.tasks.nmap_service_scan[dd94a175-fa9f-4423-9265-1402a0718f40] succeeded in 0.09825840799999241s: ['/home/django/xx-scan/datas/nmap_scan/result_14f3b116-1e1e-457f-9acc-b367aeec5cd6.xml', UUID('b7e2fef7-c277-4ad8-8e5b-426511b46cb7'), UUID('e9fde679-6fb6-4d29-8a44-ccaf6f66a1bc')]
+Received task: scan.tasks.nmap_result_import[a92a64c2-4b39-4450-82e4-1fcb745d95f6]  
+Task scan.tasks.nmap_result_import[a92a64c2-4b39-4450-82e4-1fcb745d95f6] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 94, in nmap_result_import
+    get_needs_datas_from_xmlpath(xml_path, workspaceid=workspaceid)
+  File "/home/django/xx-scan/apps/scan/api/mudules/monitor/nmap_utils.py", line 29, in get_needs_datas_from_xmlpath
+    nmap_report = NmapParser.parse_fromfile(xml_path, incomplete=incomplete)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/libnmap/parser.py", line 191, in parse_fromfile
+    with open(nmap_report_path, 'r') as fileobj:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/django/xx-scan/datas/nmap_scan/result_14f3b116-1e1e-457f-9acc-b367aeec5cd6.xml'
+Connected to redis://:**@192.168.2.189:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/xs_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@localhost.localdomain ready.
+Events of group {task} enabled by remote.
+Received task: scan.tasks.run[89ba4989-4e7f-462e-9419-b9b53fed1ade]  
+Task scan.tasks.run[89ba4989-4e7f-462e-9419-b9b53fed1ade] succeeded in 2.0904059620002045s: 'Common Scan'
+Received task: scan.tasks.nmap_service_scan[76fe0d88-1175-44dd-ab4f-b8a0f7c6fc48]  
+
+>>>>>>>>>>>>>>>>>>>Nmap--ERROR----
+
+Received task: scan.tasks.nmap_result_import[e1667ab7-cdb9-4265-8970-54a5dd34b5d5]  
+Task scan.tasks.nmap_service_scan[76fe0d88-1175-44dd-ab4f-b8a0f7c6fc48] succeeded in 0.08721448200003579s: ['/home/django/xx-scan/datas/nmap_scan/result_ce45753f-d838-43f0-9ca7-bcf8957ddd55.xml', UUID('b7e2fef7-c277-4ad8-8e5b-426511b46cb7'), UUID('e9fde679-6fb6-4d29-8a44-ccaf6f66a1bc')]
+Task scan.tasks.nmap_result_import[e1667ab7-cdb9-4265-8970-54a5dd34b5d5] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 94, in nmap_result_import
+    get_needs_datas_from_xmlpath(xml_path, workspaceid=workspaceid)
+  File "/home/django/xx-scan/apps/scan/api/mudules/monitor/nmap_utils.py", line 29, in get_needs_datas_from_xmlpath
+    nmap_report = NmapParser.parse_fromfile(xml_path, incomplete=incomplete)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/libnmap/parser.py", line 191, in parse_fromfile
+    with open(nmap_report_path, 'r') as fileobj:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/django/xx-scan/datas/nmap_scan/result_ce45753f-d838-43f0-9ca7-bcf8957ddd55.xml'
+Received task: scan.tasks.run[2bee305b-829a-48ca-b387-95a0915fd421]  
+Received task: scan.tasks.nmap_service_scan[8bc8ca2a-46e3-4b65-a5c3-e282f2223104]  
+Task scan.tasks.run[2bee305b-829a-48ca-b387-95a0915fd421] succeeded in 2.02493369900003s: 'Common Scan'
+
+>>>>>>>>>>>>>>>>>>>Nmap--ERROR----
+
+Task scan.tasks.nmap_service_scan[8bc8ca2a-46e3-4b65-a5c3-e282f2223104] succeeded in 0.06019679399969391s: ['/home/django/xx-scan/datas/nmap_scan/result_6d03f269-24ed-4f96-85fe-143532ecb983.xml', UUID('b7e2fef7-c277-4ad8-8e5b-426511b46cb7'), UUID('e9fde679-6fb6-4d29-8a44-ccaf6f66a1bc')]
+Received task: scan.tasks.nmap_result_import[8f4df5a8-47f4-420c-b698-17107b2ae7b2]  
+Task scan.tasks.nmap_result_import[8f4df5a8-47f4-420c-b698-17107b2ae7b2] raised unexpected: FileNotFoundError(2, 'No such file or directory')
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 94, in nmap_result_import
+    get_needs_datas_from_xmlpath(xml_path, workspaceid=workspaceid)
+  File "/home/django/xx-scan/apps/scan/api/mudules/monitor/nmap_utils.py", line 29, in get_needs_datas_from_xmlpath
+    nmap_report = NmapParser.parse_fromfile(xml_path, incomplete=incomplete)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/libnmap/parser.py", line 191, in parse_fromfile
+    with open(nmap_report_path, 'r') as fileobj:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/django/xx-scan/datas/nmap_scan/result_6d03f269-24ed-4f96-85fe-143532ecb983.xml'
+Connected to redis://:**@192.168.2.189:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/xs_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@localhost.localdomain ready.
+Events of group {task} enabled by remote.
+Connected to redis://:**@192.168.2.189:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/xs_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@localhost.localdomain ready.
+Events of group {task} enabled by remote.
+Received task: scan.tasks.run[80b00076-4917-436a-9bcf-220006cec763]  
+Task scan.tasks.run[80b00076-4917-436a-9bcf-220006cec763] succeeded in 2.1017323730002317s: 'Common Scan'
+Received task: scan.tasks.nmap_service_scan[056e715c-172f-48c3-b320-7fe45bb22c3d]  
+Task scan.tasks.nmap_service_scan[056e715c-172f-48c3-b320-7fe45bb22c3d] raised unexpected: FileNotFoundError(2, "No such file or directory: '/usr/bin/nmap'")
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 81, in nmap_service_scan
+    p = subprocess.Popen(cmds)
+  File "/usr/lib64/python3.6/subprocess.py", line 729, in __init__
+    restore_signals, start_new_session)
+  File "/usr/lib64/python3.6/subprocess.py", line 1364, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: '/usr/bin/nmap': '/usr/bin/nmap'
+Received task: scan.tasks.run[a05fe5d2-8c03-408b-8bd4-c1b7e130f388]  
+Task scan.tasks.run[a05fe5d2-8c03-408b-8bd4-c1b7e130f388] succeeded in 2.021484244000021s: 'Common Scan'
+Received task: scan.tasks.nmap_service_scan[d0516b13-3b22-4833-b2a3-85bb84a84901]  
+Received task: scan.tasks.run[1cdb5061-5670-4836-93d3-e68c1961ddd2]  
+Received task: scan.tasks.nmap_result_import[4fcb00d5-6b64-43cf-918f-871c8598b1aa]  
+Task scan.tasks.nmap_service_scan[d0516b13-3b22-4833-b2a3-85bb84a84901] succeeded in 55.11228232800022s: ['/home/django/xx-scan/datas/nmap_scan/result_d5e7c6e5-cfb4-40fe-bf78-9c7e64b70647.xml', UUID('b7e2fef7-c277-4ad8-8e5b-426511b46cb7'), UUID('e9fde679-6fb6-4d29-8a44-ccaf6f66a1bc')]
+Task scan.tasks.nmap_result_import[4fcb00d5-6b64-43cf-918f-871c8598b1aa] succeeded in 0.07187010399957217s: [UUID('b7e2fef7-c277-4ad8-8e5b-426511b46cb7'), UUID('e9fde679-6fb6-4d29-8a44-ccaf6f66a1bc')]
+Received task: scan.tasks.recodes_and_run[eb1a17a5-eb5b-4356-bc6a-95e8a9f70220]  
+unknown没有注册服务
+postgresql没有注册服务
+Task scan.tasks.recodes_and_run[eb1a17a5-eb5b-4356-bc6a-95e8a9f70220] raised unexpected: InternalError(1054, "Unknown column 'service_id' in 'field list'")
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'service_id' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 107, in recodes_and_run
+    recodes = collect_recodes(scheme_id=scan_schemeid, workspaceid=workspaceid)
+  File "/home/django/xx-scan/apps/scan/api/mudules/scan_v2/recode.py", line 43, in collect_recodes
+    [x.save() for x in recodes]
+  File "/home/django/xx-scan/apps/scan/api/mudules/scan_v2/recode.py", line 43, in <listcomp>
+    [x.save() for x in recodes]
+  File "/home/django/xx-scan/apps/scan/models/scan_cfg.py", line 150, in save
+    super(ScanRecode, self).save(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 812, in _save_table
+    forced_update)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 861, in _do_update
+    return filtered._update(values) > 0
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/query.py", line 712, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/sql/compiler.py", line 1383, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/sql/compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.InternalError: (1054, "Unknown column 'service_id' in 'field list'")
+Received task: scan.tasks.nmap_result_import[31b6d0f0-4036-41b5-82eb-b595baa17a5f]  
+Task scan.tasks.run[1cdb5061-5670-4836-93d3-e68c1961ddd2] succeeded in 2.03059958599988s: 'Import Scan'
+Received task: scan.tasks.recodes_and_run[8a8ab47d-8a25-4cdb-8fbf-295ca211dfd4]  
+Task scan.tasks.nmap_result_import[31b6d0f0-4036-41b5-82eb-b595baa17a5f] succeeded in 0.11499137399960091s: [UUID('95379e7c-cd8c-481b-9a51-e18df4613323'), UUID('e9fde679-6fb6-4d29-8a44-ccaf6f66a1bc')]
+没有注册服务
+redis没有注册服务
+tcp-id-port没有注册服务
+tram没有注册服务
+mongodb没有注册服务
+Task scan.tasks.recodes_and_run[8a8ab47d-8a25-4cdb-8fbf-295ca211dfd4] raised unexpected: InternalError(1054, "Unknown column 'service_id' in 'field list'")
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1054, "Unknown column 'service_id' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 107, in recodes_and_run
+    recodes = collect_recodes(scheme_id=scan_schemeid, workspaceid=workspaceid)
+  File "/home/django/xx-scan/apps/scan/api/mudules/scan_v2/recode.py", line 43, in collect_recodes
+    [x.save() for x in recodes]
+  File "/home/django/xx-scan/apps/scan/api/mudules/scan_v2/recode.py", line 43, in <listcomp>
+    [x.save() for x in recodes]
+  File "/home/django/xx-scan/apps/scan/models/scan_cfg.py", line 150, in save
+    super(ScanRecode, self).save(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 812, in _save_table
+    forced_update)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 861, in _do_update
+    return filtered._update(values) > 0
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/query.py", line 712, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/sql/compiler.py", line 1383, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/sql/compiler.py", line 1065, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.InternalError: (1054, "Unknown column 'service_id' in 'field list'")
+Connected to redis://:**@192.168.2.189:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/xs_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@localhost.localdomain ready.
+Events of group {task} enabled by remote.
+Received task: scan.tasks.run[94746d57-d647-46ee-b538-d8ef4702a28c]  
+Received task: scan.tasks.nmap_result_import[2f9af60b-74c8-401c-8582-a2eeb5e44dfd]  
+Task scan.tasks.run[94746d57-d647-46ee-b538-d8ef4702a28c] succeeded in 2.0710432549999496s: 'Import Scan'
+Task scan.tasks.nmap_result_import[2f9af60b-74c8-401c-8582-a2eeb5e44dfd] succeeded in 0.09234868199973789s: [UUID('39406ddf-2b94-47e5-92df-4829a3ef7161'), UUID('eb6e8106-8170-4040-838b-62cdc1975abe')]
+Received task: scan.tasks.recodes_and_run[3d5fc6e0-f39c-4799-95b2-db1bfc32903a]  
+redis没有注册服务
+tcp-id-port没有注册服务
+postgresql没有注册服务
+mongodb没有注册服务
+没有注册服务
+tram没有注册服务
+Received task: scan.tasks.push_cmd[de9b3f0e-94cd-488b-a445-cca93911dced]  
+Received task: scan.tasks.push_cmd[25373dfe-5976-4ddd-9ea4-1d8fe8b80751]  
+Received task: scan.tasks.push_cmd[3c9acbce-5271-41fc-b41c-fa5e0fba7270]  
+Received task: scan.tasks.push_cmd[20e3ef38-1752-494c-9b3c-0e515f8f9792]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[0d0a96b4-1afa-4281-beb6-c2af02eee7cb]  
+Scaling up 1 processes.
+Task scan.tasks.recodes_and_run[3d5fc6e0-f39c-4799-95b2-db1bfc32903a] succeeded in 1.2846847860000707s: {'scripts_num': 34, 'scripts': ['nmap 192.168.2.223 -p 7280 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'nmap -sC -sV -Pn -v -p 7280 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.223 -oN /home/django/xx-scan/results/admin/test111/nmap_http_vuln-192.168.2.223-7280-20190605.txt --host-timeout 40m --script-timeout 20m', 'nmap -sC -sV -Pn -v -p 7280 --script=http-* 192.168.2.223 -d -oN /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-7280-20190605.txt -oX /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-7280-20190605.xml --host-timeout 120m --script-timeout 20m', 'nmap 192.168.2.223 -p 10080 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'nmap -sC -sV -Pn -v -p 10080 --script=http-vuln*...', , ...]}
+Received task: scan.tasks.push_cmd[ead41561-0b40-4bfb-8ec0-265467c667d2]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[89c7d9b0-da25-4008-90f3-1b33132c1041]  
+Received task: scan.tasks.push_cmd[3a5b346c-c98b-412e-b31e-b66d3d184adb]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[303eaa31-cc98-45ae-bcc1-409f6fb22b36]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[43e0a8a3-b3c8-45be-8805-90f068479c10]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[298ce968-e116-480b-89d1-6401e15b8990]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[a57977cc-4136-4f88-b412-e745d8210dca]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[c9a9ff7d-cb97-4a56-b269-7f0784c09651]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[e4f33b9a-c179-4737-a4d0-2559657a9083]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[25373dfe-5976-4ddd-9ea4-1d8fe8b80751] succeeded in 1.0221480039999733s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 7280 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.223 -oN /home/django/xx-scan/results/admin/test111/nmap_http_vuln-192.168.2.223-7280-20190605.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[de9b3f0e-94cd-488b-a445-cca93911dced] succeeded in 1.0299774469999647s: {'stat': True, 'cmd': 'nmap 192.168.2.223 -p 7280 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[3c9acbce-5271-41fc-b41c-fa5e0fba7270] succeeded in 1.022895365000295s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 7280 --script=http-* 192.168.2.223 -d -oN /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-7280-20190605.txt -oX /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-7280-20190605.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[f1dc847c-5fde-421e-8c3a-5efe20ae078d]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[2f902f8f-5cdd-4ddf-90be-0b65a8569dd9]  
+Received task: scan.tasks.push_cmd[0ff03314-9a77-43c1-b70c-ffd6b5dbb9ad]  
+Received task: scan.tasks.push_cmd[de75bd93-8e37-4251-9ea3-4c4d85bf8849]  
+Received task: scan.tasks.push_cmd[4ad6daa6-9655-4101-9a45-5a76b2ff1f16]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[20e3ef38-1752-494c-9b3c-0e515f8f9792] succeeded in 1.0188241449995985s: {'stat': True, 'cmd': 'nmap 192.168.2.223 -p 10080 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[0d0a96b4-1afa-4281-beb6-c2af02eee7cb] succeeded in 1.0246621470000719s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 10080 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.223 -oN /home/django/xx-scan/results/admin/test111/nmap_http_vuln-192.168.2.223-10080-20190605.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[ddfc6c52-5009-4c9e-99a8-739b35ba10ef]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[ead41561-0b40-4bfb-8ec0-265467c667d2] succeeded in 1.0278007469996737s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 10080 --script=http-* 192.168.2.223 -d -oN /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-10080-20190605.txt -oX /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-10080-20190605.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[0f53a5b0-44c5-4a83-a932-941f82fe41b0]  
+Received task: scan.tasks.push_cmd[0770d761-4cdd-4d85-a3b5-9eff08504fd3]  
+Received task: scan.tasks.push_cmd[57625aee-5582-4cf0-8042-61ad9fa258d0]  
+Received task: scan.tasks.push_cmd[3f2bbd4b-27c5-4304-b7ac-8e65be6618ff]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[3a5b346c-c98b-412e-b31e-b66d3d184adb] succeeded in 1.0236301639997691s: {'stat': True, 'cmd': 'nmap 192.168.2.223 -p 22 -sC -sV -v -Pn -oN /home/django/xx-scan/results/admin/test111/nmap_service_scan-192.168.2.223-22-20190605.txt', 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[b901b478-9b6c-4aab-a196-6b99765d4c33]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[4e523351-dc2f-4edb-818f-4936e2863ef2]  
+Received task: scan.tasks.push_cmd[23777b9d-2654-4dd3-84c7-2ce991d4da18]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[303eaa31-cc98-45ae-bcc1-409f6fb22b36] succeeded in 1.0464590380001937s: {'stat': True, 'cmd': 'nmap 192.168.2.223 -p 8080 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[a95fa084-03a2-4492-8e03-9ba01a5d36f4]  
+Received task: scan.tasks.push_cmd[5b7100e4-abc2-40b3-a5e2-b31c0049d2f1]  
+Received task: scan.tasks.push_cmd[4f1ad193-5883-4bae-9953-9f3ccccdf1f8]  
+Task scan.tasks.push_cmd[43e0a8a3-b3c8-45be-8805-90f068479c10] succeeded in 1.0373978200000238s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 8080 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.223 -oN /home/django/xx-scan/results/admin/test111/nmap_http_vuln-192.168.2.223-8080-20190605.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[3c5ccf18-3940-45d5-9fc1-ba0b4def4de0]  
+Received task: scan.tasks.push_cmd[a57adfa7-a82f-4f56-a3b4-821d9e51c8eb]  
+Received task: scan.tasks.push_cmd[0d953c90-98ec-47f9-b64b-04308b2b426d]  
+Received task: scan.tasks.push_cmd[8f5372f8-d728-442e-97c5-c824fc56798a]  
+Task scan.tasks.push_cmd[298ce968-e116-480b-89d1-6401e15b8990] succeeded in 1.0206526960000701s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 8080 --script=http-* 192.168.2.223 -d -oN /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-8080-20190605.txt -oX /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-8080-20190605.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[c9a9ff7d-cb97-4a56-b269-7f0784c09651] succeeded in 1.0157784309999442s: {'stat': True, 'cmd': 'nmap 192.168.2.41 -p 80 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[e4f33b9a-c179-4737-a4d0-2559657a9083] succeeded in 1.0221252260002984s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 80 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.41 -oN /home/django/xx-scan/results/admin/test111/nmap_http_vuln-192.168.2.41-80-20190605.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[f1dc847c-5fde-421e-8c3a-5efe20ae078d] succeeded in 1.044862632999866s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 80 --script=http-* 192.168.2.41 -d -oN /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.41-80-20190605.txt -oX /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.41-80-20190605.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[2f902f8f-5cdd-4ddf-90be-0b65a8569dd9] succeeded in 1.0435419700002058s: {'stat': True, 'cmd': 'nmap 192.168.2.223 -p 60080 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[0ff03314-9a77-43c1-b70c-ffd6b5dbb9ad] succeeded in 1.0423084860003655s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 60080 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.223 -oN /home/django/xx-scan/results/admin/test111/nmap_http_vuln-192.168.2.223-60080-20190605.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[a57977cc-4136-4f88-b412-e745d8210dca] succeeded in 1.0724963320003553s: {'stat': True, 'cmd': 'nmap 192.168.2.41 -p 2222 -sC -sV -v -Pn -oN /home/django/xx-scan/results/admin/test111/nmap_service_scan-192.168.2.41-2222-20190605.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[de75bd93-8e37-4251-9ea3-4c4d85bf8849] succeeded in 1.0263522949999242s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 60080 --script=http-* 192.168.2.223 -d -oN /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-60080-20190605.txt -oX /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-60080-20190605.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[ddfc6c52-5009-4c9e-99a8-739b35ba10ef] succeeded in 1.0140172279998296s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 2280 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.41 -oN /home/django/xx-scan/results/admin/test111/nmap_http_vuln-192.168.2.41-2280-20190605.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[4ad6daa6-9655-4101-9a45-5a76b2ff1f16] succeeded in 1.0114475430000311s: {'stat': True, 'cmd': 'nmap 192.168.2.41 -p 2280 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[0f53a5b0-44c5-4a83-a932-941f82fe41b0] succeeded in 1.0210917170002176s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 2280 --script=http-* 192.168.2.41 -d -oN /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.41-2280-20190605.txt -oX /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.41-2280-20190605.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[0770d761-4cdd-4d85-a3b5-9eff08504fd3] succeeded in 1.0124917500002084s: {'stat': True, 'cmd': 'nmap 192.168.2.223 -p 8888 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[57625aee-5582-4cf0-8042-61ad9fa258d0] succeeded in 1.0177472980003586s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 8888 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.223 -oN /home/django/xx-scan/results/admin/test111/nmap_http_vuln-192.168.2.223-8888-20190605.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[3f2bbd4b-27c5-4304-b7ac-8e65be6618ff] succeeded in 1.0189015109999673s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 8888 --script=http-* 192.168.2.223 -d -oN /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-8888-20190605.txt -oX /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-8888-20190605.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[b901b478-9b6c-4aab-a196-6b99765d4c33] succeeded in 1.0248423529997126s: {'stat': True, 'cmd': 'nmap 192.168.2.223 -p 80 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[23777b9d-2654-4dd3-84c7-2ce991d4da18] succeeded in 1.0130547369999476s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 80 --script=http-* 192.168.2.223 -d -oN /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-80-20190605.txt -oX /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-80-20190605.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[a95fa084-03a2-4492-8e03-9ba01a5d36f4] succeeded in 1.015821276999759s: {'stat': True, 'cmd': 'nmap 192.168.2.223 -p 7380 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[4e523351-dc2f-4edb-818f-4936e2863ef2] succeeded in 1.0280652169999485s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 80 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.223 -oN /home/django/xx-scan/results/admin/test111/nmap_http_vuln-192.168.2.223-80-20190605.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[5b7100e4-abc2-40b3-a5e2-b31c0049d2f1] succeeded in 1.0168912750000345s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 7380 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.223 -oN /home/django/xx-scan/results/admin/test111/nmap_http_vuln-192.168.2.223-7380-20190605.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[4f1ad193-5883-4bae-9953-9f3ccccdf1f8] succeeded in 1.009698452000066s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 7380 --script=http-* 192.168.2.223 -d -oN /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-7380-20190605.txt -oX /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-7380-20190605.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[3c5ccf18-3940-45d5-9fc1-ba0b4def4de0] succeeded in 1.0130080069998257s: {'stat': True, 'cmd': 'nmap 192.168.2.223 -p 8443 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[a57adfa7-a82f-4f56-a3b4-821d9e51c8eb] succeeded in 1.0135982900001181s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 8443 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.223 -oN /home/django/xx-scan/results/admin/test111/nmap_http_vuln-192.168.2.223-8443-20190605.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[0d953c90-98ec-47f9-b64b-04308b2b426d] succeeded in 1.0149633320002067s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 8443 --script=http-* 192.168.2.223 -d -oN /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-8443-20190605.txt -oX /home/django/xx-scan/results/admin/test111/nmap_script_http-192.168.2.223-8443-20190605.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[8f5372f8-d728-442e-97c5-c824fc56798a] succeeded in 1.0099850739998146s: {'stat': True, 'cmd': 'nmap 192.168.2.41 -p 22 -sC -sV -v -Pn -oN /home/django/xx-scan/results/admin/test111/nmap_service_scan-192.168.2.41-22-20190605.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[89c7d9b0-da25-4008-90f3-1b33132c1041] succeeded in 6.693824998000309s: {'stat': True, 'cmd': 'nmap -sC -sV -v -Pn 192.168.2.223 -p 111 -oN /home/django/xx-scan/results/admin/test111/nmap_service_scan-192.168.2.223-111-20190605.txt', 'reason': '远程执行命令执行成功！'}
+Scaling down 16 processes.
+Received task: scan.tasks.run[2189fa8f-3042-432e-9033-7afb339be88b]  
+Task scan.tasks.run[2189fa8f-3042-432e-9033-7afb339be88b] succeeded in 2.101881953999964s: 'Common Scan'
+Received task: scan.tasks.nmap_service_scan[a11eca43-f151-46a8-961e-f18511cd8be2]  
+Received task: scan.tasks.nmap_result_import[53ee8776-b7a5-49fe-ac45-97edb1c17914]  
+Task scan.tasks.nmap_service_scan[a11eca43-f151-46a8-961e-f18511cd8be2] succeeded in 165.55280566200008s: ['/home/django/xx-scan/datas/nmap_scan/result_28bbe17e-e2d9-4f1b-a32c-696f134b0c42.xml', UUID('063a4c0c-757e-418c-a7f3-5dad5283ba2f'), UUID('eb6e8106-8170-4040-838b-62cdc1975abe')]
+Task scan.tasks.nmap_result_import[53ee8776-b7a5-49fe-ac45-97edb1c17914] succeeded in 0.05581911699982811s: [UUID('063a4c0c-757e-418c-a7f3-5dad5283ba2f'), UUID('eb6e8106-8170-4040-838b-62cdc1975abe')]
+Received task: scan.tasks.recodes_and_run[94705b8b-93fd-416a-bfa9-19e3eea4fd94]  
+Received task: scan.tasks.push_cmd[ae92b010-ff9a-40c4-8007-f26b1d81e5a5]  
+Received task: scan.tasks.push_cmd[28190171-24df-4225-a722-34f84cd5a426]  
+Received task: scan.tasks.push_cmd[8e41de1f-3cce-4785-97d6-7c42d29bdeb1]  
+Received task: scan.tasks.push_cmd[4a698001-f791-41c2-84d7-d09beee716d0]  
+Scaling up 1 processes.
+Task scan.tasks.recodes_and_run[94705b8b-93fd-416a-bfa9-19e3eea4fd94] succeeded in 0.3825679980000132s: {'scripts_num': 4, 'scripts': ['nmap 192.168.2.55 -p 22 -sC -sV -v -Pn -oN /home/django/xx-scan/results/admin/55esy/nmap_service_scan-192.168.2.55-22-20190605.txt', 'nmap 192.168.2.55 -p 20080 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'nmap -sC -sV -Pn -v -p 20080 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.55 -oN /home/django/xx-scan/results/admin/55esy/nmap_http_vuln-192.168.2.55-20080-20190605.txt --host-timeout 40m --script-timeout 20m', 'nmap -sC -sV -Pn -v -p 20080 --script=http-* 192.168.2.55 -d -oN /home/django/xx-scan/results/admin/55esy/nmap_script_http-192.168.2.55-20080-20190605.txt -oX /home/django/xx-scan/results/admin/55esy/nmap_script_http-192.168.2.55-20080-20190605.xml --host-timeout 120m --script-timeout 20m'], 'stat': True, 'reason': 'All OK of Tasks Scanner.', 'workspaceid': UUID('063a4c0c-757e-418c-a7f3-5dad52..., ...
+Task scan.tasks.push_cmd[ae92b010-ff9a-40c4-8007-f26b1d81e5a5] succeeded in 1.0149931870000728s: {'stat': True, 'cmd': 'nmap 192.168.2.55 -p 22 -sC -sV -v -Pn -oN /home/django/xx-scan/results/admin/55esy/nmap_service_scan-192.168.2.55-22-20190605.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[28190171-24df-4225-a722-34f84cd5a426] succeeded in 1.014155481999751s: {'stat': True, 'cmd': 'nmap 192.168.2.55 -p 20080 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[8e41de1f-3cce-4785-97d6-7c42d29bdeb1] succeeded in 1.0274902400001338s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 20080 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 192.168.2.55 -oN /home/django/xx-scan/results/admin/55esy/nmap_http_vuln-192.168.2.55-20080-20190605.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[4a698001-f791-41c2-84d7-d09beee716d0] succeeded in 1.017979883999942s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 20080 --script=http-* 192.168.2.55 -d -oN /home/django/xx-scan/results/admin/55esy/nmap_script_http-192.168.2.55-20080-20190605.txt -oX /home/django/xx-scan/results/admin/55esy/nmap_script_http-192.168.2.55-20080-20190605.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Scaling down 1 processes.

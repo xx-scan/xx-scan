@@ -76,14 +76,13 @@ def nmap_service_scan(scantaskid):
     cmds.extend(["-oX", Nmap_xml_result_path])
     # from django.core.cache import cache
     # cache.set(__NMAP_SCAN_XML_PATH, Nmap_xml_result_path)
-    try:
-        p = subprocess.Popen(cmds)
-        import time
-        time.sleep(1)
-        os.waitpid(p.pid, os.W_OK)
-    except:
-        import logging
-        logging.error("\n>>>>>>>>>>>>>>>>>>>Nmap--ERROR----\n")
+
+    # 2019-6-5 修改这个地方， 一旦失败跳出来。而不是用try
+    p = subprocess.Popen(cmds)
+    import time
+    time.sleep(1)
+    os.waitpid(p.pid, os.W_OK)
+
     return [Nmap_xml_result_path, scantask.workspace.id, scantask.scan_scheme.id]
 
 
@@ -104,14 +103,18 @@ def nmap_result_import(args):
 def recodes_and_run(args):
     workspaceid, scan_schemeid = args[0], args[1]
     from scan.api.mudules.scan_v2.recode import collect_recodes
+    runed_scripts = []
 
     recodes = collect_recodes(scheme_id=scan_schemeid, workspaceid=workspaceid)
     for x in recodes:
         result = push_cmd.delay(x.script)
+        runed_scripts.append(x.script)
         x.task_id=result.id
         # 在这个环节可以把task_id都存下来便于下次
         x.save()
     return {
+        "scripts_num": len(runed_scripts),
+        "scripts": runed_scripts,
         "stat": True,
         "reason": "All OK of Tasks Scanner.",
         "workspaceid": workspaceid

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Jun  5 09:09:26 2019 as: nmap -sS -sV -p- -v -oX test.xml 192.168.2.41 192.168.2.223 -->
+<nmaprun scanner="nmap" args="nmap -sS -sV -p- -v -oX test.xml 192.168.2.41 192.168.2.223" start="1559696966" startstr="Wed Jun  5 09:09:26 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="ARP Ping Scan" time="1559696966"/>
+<taskend task="ARP Ping Scan" time="1559696966" extrainfo="2 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1559696966"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1559696966"/>
+<taskbegin task="SYN Stealth Scan" time="1559696966"/>
+<taskend task="SYN Stealth Scan" time="1559696969" extrainfo="131070 total ports"/>
+<taskbegin task="Service scan" time="1559696970"/>
+<taskend task="Service scan" time="1559697121" extrainfo="21 services on 2 hosts"/>
+<taskbegin task="NSE" time="1559697121"/>
+<taskend task="NSE" time="1559697128"/>
+<taskbegin task="NSE" time="1559697128"/>
+<taskend task="NSE" time="1559697129"/>
+<host starttime="1559696966" endtime="1559697129"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.2.41" addrtype="ipv4"/>
+<address addr="52:54:00:3F:32:37" addrtype="mac" vendor="QEMU virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65527">
+<extrareasons reason="resets" count="65527"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.4.6" extrainfo="(CentOS) PHP/5.4.45" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.6</cpe></service></port>
+<port protocol="tcp" portid="1999"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="tcp-id-port" method="table" conf="3"/></port>
+<port protocol="tcp" portid="2222"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="Paramiko Python sshd" version="2.4.1" extrainfo="protocol 2.0" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="2280"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.16.0" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.16.0</cpe></service></port>
+<port protocol="tcp" portid="6379"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="redis" product="Redis key-value store" version="3.2.12" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="24224"><state state="open" reason="syn-ack" reason_ttl="63"/></port>
+<port protocol="tcp" portid="27017"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mongodb" product="MongoDB" version="4.0.9" method="probed" conf="10"><cpe>cpe:/a:mongodb:mongodb:4.0.9</cpe></service></port>
+</ports>
+<times srtt="55" rttvar="9" to="100000"/>
+</host>
+<host starttime="1559696966" endtime="1559697128"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.2.223" addrtype="ipv4"/>
+<address addr="52:54:00:E4:AD:8D" addrtype="mac" vendor="QEMU virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65522">
+<extrareasons reason="resets" count="65522"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Tengine httpd" method="probed" conf="10"><cpe>cpe:/a:alibaba:tengine</cpe></service></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mysql" product="MySQL" version="5.7.26" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql:5.7.26</cpe></service></port>
+<port protocol="tcp" portid="4567"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="tram" servicefp="SF-Port4567-TCP:V=7.70%I=7%D=6/5%Time=5CF71650%P=x86_64-redhat-linux-gnu%r(GetRequest,35ED,&quot;HTTP/1\.1\x20200\x20OK\r\nX-DNS-Prefetch-Control:\x20off\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nReferrer-Policy:\x20strict-origin-when-cross-origin\r\nX-Powered-By:\x20NodeBB\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x2013214\r\nETag:\x20W/\&quot;339e-e17\+0eEnpCbOZ5RYP8aFJdtJw9s\&quot;\r\nSet-Cookie:\x20express\.sid=s%3AtrqoOt42pSco2ZAAZg-6c5ThR8tbqR6W\.FllQdsxVR8aMRWiAWudXgZPJhq1UcTduJC7fOOPnQIY;\x20Path=/;\x20Expires=Wed,\x2019\x20Jun\x202019\x2001:09:36\x20GMT;\x20HttpOnly\r\nVary:\x20Accept-Encoding\r\nDate:\x20Wed,\x2005\x20Jun\x202019\x2001:09:36\x20GMT\r\nConnection:\x20close\r\n\r\n&lt;!DOCTYPE\x20html&gt;\r\n&lt;html\x20lang=\&quot;zh-CN\&quot;\x20data-dir=\&quot;ltr\&quot;\x20style=\&quot;direction:\x20ltr;\&quot;\x20\x20&gt;\r\n&lt;head&gt;\r\n\t&lt;title&gt;\xe4\xb8\xbb\xe9\xa1\xb5\x20\|\x20NodeBB&lt;/title&gt;\r\n\t&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width&amp;#x3D;device-width,\x20initial-scale&amp;#x3D;1\.0\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;content-type\&quot;\x20content=\&quot;text/html;\x20charset=UTF-8\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;apple-mobile-web-app-capab&quot;)%r(HTTPOptions,1BF,&quot;HTTP/1\.1\x20200\x20OK\r\nX-DNS-Prefetch-Control:\x20off\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nReferrer-Policy:\x20strict-origin-when-cross-origin\r\nX-Powered-By:\x20NodeBB\r\nAllow:\x20GET,HEAD\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x208\r\nETag:\x20W/\&quot;8-ZRAf8oNBS3Bjb/SU2GYZCmbtmXg\&quot;\r\nVary:\x20Accept-Encoding\r\nDate:\x20Wed,\x2005\x20Jun\x202019\x2001:09:41\x20GMT\r\nConnection:\x20close\r\n\r\nGET,HEAD&quot;)%r(FourOhFourRequest,358E,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nX-DNS-Prefetch-Control:\x20off\r\nX-Frame-Options:\x20SAMEORIGIN\r\nX-Download-Options:\x20noopen\r\nX-Content-Type-Options:\x20nosniff\r\nX-XSS-Protection:\x201;\x20mode=block\r\nReferrer-Policy:\x20strict-origin-when-cross-origin\r\nX-Powered-By:\x20NodeBB\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x2013112\r\nETag:\x20W/\&quot;3338-gP3eO91A\+Em99EYOYGGaJyvAkhc\&quot;\r\nSet-Cookie:\x20express\.sid=s%3AWoBaCuO1WOR7Bx7xuzpJ9utZxrJ7DOIT\.OsJg1CoRJ4l0bKecRNECEcvyYggmL2gH7vvzoAGB0jM;\x20Path=/;\x20Expires=Wed,\x2019\x20Jun\x202019\x2001:09:41\x20GMT;\x20HttpOnly\r\nVary:\x20Accept-Encoding\r\nDate:\x20Wed,\x2005\x20Jun\x202019\x2001:09:41\x20GMT\r\nConnection:\x20close\r\n\r\n&lt;!DOCTYPE\x20html&gt;\r\n&lt;html\x20lang=\&quot;zh-CN\&quot;\x20data-dir=\&quot;ltr\&quot;\x20style=\&quot;direction:\x20ltr;\&quot;\x20\x20&gt;\r\n&lt;head&gt;\r\n\t&lt;title&gt;\xe6\x9c\xaa\xe6\x89\xbe\xe5\x88\xb0\x20\|\x20NodeBB&lt;/title&gt;\r\n\t&lt;meta\x20name=\&quot;viewport\&quot;\x20content=\&quot;width&amp;#x3D;device-width,\x20initial-scale&amp;#x3D;1\.0\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;content-type\&quot;\x20content=\&quot;text/html;\x20charset=UTF-8\&quot;\x20/&gt;\n\t&lt;meta\x20name=\&quot;apple-mobile-web&quot;);" method="table" conf="3"/></port>
+<port protocol="tcp" portid="5432"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="postgresql" product="PostgreSQL DB" version="9.6.0 - 9.6.1" method="probed" conf="10"><cpe>cpe:/a:postgresql:postgresql:9.6</cpe></service></port>
+<port protocol="tcp" portid="7280"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.7" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.7</cpe></service></port>
+<port protocol="tcp" portid="7380"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache Tomcat/Coyote JSP engine" version="1.1" method="probed" conf="10"><cpe>cpe:/a:apache:coyote_http_connector:1.1</cpe></service></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Tengine httpd" method="probed" conf="10"><cpe>cpe:/a:alibaba:tengine</cpe></service></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.2.22" extrainfo="(Debian)" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.22</cpe></service></port>
+<port protocol="tcp" portid="8888"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.2.22" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.22</cpe></service></port>
+<port protocol="tcp" portid="10080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Tengine httpd" method="probed" conf="10"><cpe>cpe:/a:alibaba:tengine</cpe></service></port>
+<port protocol="tcp" portid="60080"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Tengine httpd" method="probed" conf="10"><cpe>cpe:/a:alibaba:tengine</cpe></service></port>
+</ports>
+<times srtt="63" rttvar="10" to="100000"/>
+</host>
+<runstats><finished time="1559697129" timestr="Wed Jun  5 09:12:09 2019" elapsed="163.26" summary="Nmap done at Wed Jun  5 09:12:09 2019; 2 IP addresses (2 hosts up) scanned in 163.26 seconds" exit="success"/><hosts up="2" down="0" total="2"/>
+</runstats>
+</nmaprun>

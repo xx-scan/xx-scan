@@ -1,0 +1,14 @@
+# Nmap 6.40 scan initiated Wed Jun  5 09:26:15 2019 as: nmap -sC -sV -v -Pn -p 111 -oN /home/django/xx-scan/results/admin/test111/nmap_service_scan-192.168.2.223-111-20190605.txt 192.168.2.223
+Nmap scan report for 192.168.2.223
+Host is up (0.00034s latency).
+PORT    STATE SERVICE VERSION
+111/tcp open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2,3,4        111/tcp  rpcbind
+|_  100000  2,3,4        111/udp  rpcbind
+MAC Address: 52:54:00:E4:AD:8D (QEMU Virtual NIC)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+# Nmap done at Wed Jun  5 09:26:22 2019 -- 1 IP address (1 host up) scanned in 6.64 seconds
