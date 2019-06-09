@@ -373,5 +373,6 @@ except:
 
 ## 取消CSRF中间件
 MIDDLEWARE.append('services.middle.MiddleWare.DisableCSRFCheck')
-MIDDLEWARE.append('services.middle.MiddleWare.SiteMainMiddleware')
+# MIDDLEWARE.append('services.middle.MiddleWare.SiteMainMiddleware')
 
+PREVILEGED_USER_SETS = ["actanble", "admin007"]

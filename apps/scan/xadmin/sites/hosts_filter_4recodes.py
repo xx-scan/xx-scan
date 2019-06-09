@@ -1,28 +1,27 @@
 import xadmin
 from xadmin.views import ModelAdminView
+from xadmin.views import BaseAdminView
+from django.http import HttpResponse
+from django.shortcuts import render
+
 
 from scan.models import Host
 
-class TestModelAdminView(ModelAdminView):
 
-    def get(self, request, obj_id):
-        return Host.objects.get(obj_id)
+class TestModelAdminView(BaseAdminView):
+
+    def get(self, request):
+
+        return HttpResponse("TEST_VIEW")
 
 
+xadmin.site.register_view(r'^test_view/$', TestModelAdminView, name='for_test')
 # xadmin.site.register_modelview(r'^(.+)/test/$', TestModelAdminView, name='%s_%s_test')
 
+class TestAdminView(BaseAdminView):
 
-class ServiceRecordAdmin(object):
+    def get(self, request):
 
+        return render(request, "scan/base_add.html", {"datas": [i for i in range(100)]})
 
-
-    data_charts = {
-        "services_count": {'title': u"探测到的主机服务数量",
-                       "x-field": "host",
-                       "y-field": ("user_count", "view_count"),
-                       "order": ('date',)},
-        "avg_count": {'title': u"Avg Report",
-                      "x-field": "date",
-                      "y-field": ('avg_count',),
-                      "order": ('date',)}
-    }
+xadmin.site.register_view(r'^test/$', TestAdminView, name='test001')

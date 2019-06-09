@@ -18,6 +18,8 @@
     <orderEntry type="module" module-name="_dev" />
     <orderEntry type="module" module-name="_dev" />
     <orderEntry type="module" module-name="_dev" />
+    <orderEntry type="module" module-name="requirements" />
+    <orderEntry type="module" module-name="xadmin" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

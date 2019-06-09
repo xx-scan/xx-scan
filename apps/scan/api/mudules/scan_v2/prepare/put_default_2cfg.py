@@ -12,6 +12,7 @@ from .....models import Protocol, NmapServiceName, ScanScript, Scheme, Workspace
 
 
 def orm_delete():
+
     Workspace.objects.all().delete()
 
     Scheme.objects.all().delete()
@@ -19,12 +20,25 @@ def orm_delete():
     NmapServiceName.objects.all().delete()
     Protocol.objects.all().delete()
 
+    User.objects.all().delete()
     create_default_user_and_workspace()
 
 
+def get_default_superuser():
+    try:
+        superuser = User(username="admin", password="admin",
+                            email="test@example.com",
+                            is_superuser=True, is_staff=True, is_active=True)
+        superuser.set_password("admin")
+        superuser.save()
+    except:
+        superuser = User.objects.filter(username="admin")[0]
+    return superuser
+
+
 def create_default_user_and_workspace():
-    superuser, _ = User.objects.get_or_create(username="admin", password="admin", email="test@example.com",
-                                    is_superuser=True, is_staff = True, is_active = True)
+    superuser = get_default_superuser()
+
     Workspace.objects.create(
         user=superuser,
         name="xadmin"
@@ -89,8 +103,8 @@ def inital_scheme():
     """
     Scheme.objects.all().delete()
 
-    scheme_nmap = Scheme(name="scheme_nmap", desc="Nmap方案")
-    scheme_all = Scheme(name="scheme_all", desc="所有扫描配置的方案")
+    scheme_nmap = Scheme(name="scheme_nmap", desc="Nmap方案", create_user=get_default_superuser())
+    scheme_all = Scheme(name="scheme_all", desc="所有扫描配置的方案", create_user=get_default_superuser())
 
     scheme_nmap.save()
     scheme_all.save()

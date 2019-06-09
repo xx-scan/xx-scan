@@ -22,9 +22,17 @@ class ScanReport(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
 
-
     class Meta:
         db_table = "scan_reports"
         verbose_name = "扫描报告"
 
 
+class Report2DbRun(models.Model):
+    id = models.UUIDField(default=uuid.uuid4, primary_key=True)
+
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = "report_import_runs"
+        verbose_name = "执行报告导入"

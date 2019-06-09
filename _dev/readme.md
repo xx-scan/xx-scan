@@ -61,3 +61,5 @@ cd apps && python manage.py createsuperuser
 - 昨天尝试了下 `backbox5.3` 今天尝试了 `ubuntu:16.04` 发现环境可以在这个中。
 - 已经更新对应的安装文档和说明的环境 [Ubuntu-Secuciry](https://github.com/xx-scan/ubsec)
 
+## 2019-6-9
+- 晚上和测试xx-scan的部分关于xadmin的内容

@@ -1,9 +1,7 @@
 import uuid
 from django.db import models
-
-from .scan_cfg import Scheme
 from .workspace import Workspace
-
+from .scan_cfg import Scheme
 
 ScanTypeChoices = (
     ("service", "服务"),

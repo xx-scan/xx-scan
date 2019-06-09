@@ -26,6 +26,7 @@ admin.site.register(ScanTask, ScanTaskAdmin)
 class WorkspaceAdmin(admin.ModelAdmin):
     fieldsets = [("工作组名称", {'fields': ['name']}),
                  ('用户', {'fields': ['user'], 'classes': ['collapse']}), ]
+
     def save_model(self, request, obj, form, change):
         obj.user = request.user
         super().save_model(request, obj, form, change)

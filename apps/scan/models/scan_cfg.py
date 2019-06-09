@@ -158,13 +158,20 @@ class ScanRecode(models.Model):
         verbose_name = "扫描事件记录"
 
 
+def DefaultUser():
+    return User.objects.all()[0]
+
+
+from django.contrib.auth.models import User
+
 # 定制扫描器的扫描方案
 class Scheme(models.Model):
     id = models.UUIDField(default=uuid.uuid4, primary_key=True)
     name = models.CharField(verbose_name="方案名称", blank=True, max_length=100)
     desc = models.TextField(verbose_name="方案描述", blank=True)
     scan_tools = models.ManyToManyField(ScanScript, related_name="scan_tools_2_scheme", blank=True)
-
+    create_user = models.ForeignKey(User, verbose_name="scheme_user",
+                on_delete=models.DO_NOTHING, related_name="scheme_2_user")
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
 
@@ -178,3 +185,9 @@ class Scheme(models.Model):
 
 class ScanCfgUploads(models.Model):
     config_file = models.FileField(upload_to="uploads/scan_cfgs/", verbose_name="扫描文件")
+    name = models.CharField(verbose_name="配置名字", blank=True, max_length=100)
+    date_created = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        db_table = "scan_cfg_file"
+        verbose_name = "扫描方案上传"

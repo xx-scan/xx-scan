@@ -8,3 +8,9 @@ from .report_cfg import *
 
 # xadmin 自定义查看的视图管理
 
+from scan.xadmin.dashboard import *
+
+
+## 2019-6-9 测试xadmin的View
+from scan.xadmin.sites.hosts_filter_4recodes import *
+

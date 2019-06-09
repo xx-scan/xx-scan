@@ -1,7 +1,6 @@
 from __future__ import absolute_import
 import xadmin
 from xadmin import views
-from .models import IDC, Host, MaintainLog, HostGroup, AccessRecord
 from xadmin.layout import Main, TabHolder, Tab, Fieldset, Row, Col, AppendedText, Side
 from xadmin.plugins.inline import Inline
 from xadmin.plugins.batch import BatchChangeAction
@@ -18,8 +17,10 @@ class MainDashboard(object):
             {"type": "list", "model": "app.host", "params": {"o": "-guarantee_date"}},
         ],
         [
-            {"type": "qbutton", "title": "Quick Start",
-             "btns": [{"model": Host}, {"model": IDC}, {"title": "Google", "url": "http://www.google.com"}]},
+            {"type": "qbutton",
+             "title": "Quick Start",
+             "btns": [{"model": Host}, {"model": IDC},
+                      {"title": "Google", "url": "http://www.google.com"}]},
             {"type": "addform", "model": MaintainLog},
         ]
     ]

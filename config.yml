@@ -9,7 +9,7 @@ BOOTSTRAP_TOKEN:
 
 # Development env open this, when error occur display the full process track, Production disable it
 # DEBUG 模式 开启DEBUG后遇到错误时可以看到更多日志
-# DEBUG: true
+DEBUG: true
 
 # DEBUG, INFO, WARNING, ERROR, CRITICAL can set. See https://docs.djangoproject.com/en/1.10/topics/logging/
 # 日志级别
@@ -33,7 +33,7 @@ BOOTSTRAP_TOKEN:
 # MySQL or postgres setting like:
 # 使用Mysql作为数据库
 DB_ENGINE: mysql
-DB_HOST: 192.168.2.189
+DB_HOST: 192.168.1.10
 DB_PORT: 3306
 DB_USER: admin007
 DB_PASSWORD: myadmin@816
@@ -52,7 +52,7 @@ FLOWER_BASE_USER: admin001
 FLOWER_BASE_PASSWORD: 1q2w3e4R
 # Use Redis as broker for celery and web socket
 # Redis配置
-REDIS_HOST: 192.168.2.189
+REDIS_HOST: 192.168.1.10
 REDIS_PORT: 6379
 REDIS_PASSWORD: xxscan
 REDIS_DB_CELERY: 5

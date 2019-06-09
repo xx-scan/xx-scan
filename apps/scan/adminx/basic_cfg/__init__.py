@@ -2,6 +2,7 @@ import xadmin
 
 from ...models import PortRange, ServicePort, Protocol
 
+
 class ServicePortAdmin(object):
     # ...
     list_display = ('port', "port_name", "desc", 'type', 'type_desc', 'protocol')

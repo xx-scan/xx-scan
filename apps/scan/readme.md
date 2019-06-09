@@ -55,3 +55,9 @@ from .task import ScanTask
 ## OpenVas Scan Add (openvas)
 
 ## Vuls Scan Add (vuls)
+
+
+## 2019-6-6
+- 借助 masscan 扫描出端口和主机, 接着进行Nmap服务扫描。
+
+
