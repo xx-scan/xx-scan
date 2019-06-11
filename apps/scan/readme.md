@@ -59,5 +59,13 @@ from .task import ScanTask
 
 ## 2019-6-6
 - 借助 masscan 扫描出端口和主机, 接着进行Nmap服务扫描。
+- 由于部署环境下的网卡不是 IntelXL/Intel8000x 系列，所以没有加速环境。不进行扫描。
+- 只提供masscan扫描结果的json文本导入到平台中，再进行二次扫描。
+- [Code_Location](./api/mudules/scan_v2/upgrade/masscan.py)
+
+## 2019-6-9
+- 增加平台的告警消息。主要记录平台中扫描器设置相关的问题。
+- [CodeLocation](./models/audit.py) 当前未注册
+- 上面的平台告警信息, 已经移动到 services 中 的 `PlatHistory`
 
 

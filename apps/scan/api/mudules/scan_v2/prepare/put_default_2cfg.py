@@ -45,9 +45,10 @@ def create_default_user_and_workspace():
     )
 
 
-def inintal_services(config_file=SCAN_CONFIG_FILE, add_many=True):
-    Protocol.objects.all().delete()
-    NmapServiceName.objects.all().delete()
+def inintal_services(config_file=SCAN_CONFIG_FILE, inintal=True, add_many=True):
+    if inintal:
+        Protocol.objects.all().delete()
+        NmapServiceName.objects.all().delete()
 
     config = ConfigParser(allow_no_value=True)
     config.read([config_file])
@@ -58,6 +59,8 @@ def inintal_services(config_file=SCAN_CONFIG_FILE, add_many=True):
         _protocol, _slug = Protocol.objects.get_or_create(protocol=protocol)
         # supported_protocols.append(_protocol)
         for servicename in services:
+            if len(NmapServiceName.objects.filter(protocol=_protocol, service_name=servicename)) > 0:
+                continue
             service = NmapServiceName(protocol=_protocol, service_name=servicename)
             supported_services.append(service)
             if not add_many:

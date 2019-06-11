@@ -6,9 +6,9 @@ from website.settings import PREVILEGED_USER_SETS
 
 
 class SchemeAdmin(object):
-    list_display = ("name", "desc",)
+    list_display = ("name", "desc", "create_user", "date_create")
     # list_display = ("name", "desc", "scan_tools")
-    ## 职能获取到自己的设置的方案了
+    # 用户只可以获取到自己的设置的方案了
 
     def queryset(self):
         qs = super(SchemeAdmin, self).queryset()
@@ -17,6 +17,12 @@ class SchemeAdmin(object):
         else:
             return qs.filter(create_user=self.request.user)
 
+    def save_models(self):
+        instance = self.new_obj
+        request = self.request
+
+        instance.create_user = request.user
+        instance.save()
 
 xadmin.sites.site.register(Scheme, SchemeAdmin)
 

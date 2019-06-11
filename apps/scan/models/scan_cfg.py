@@ -24,7 +24,7 @@ class NmapServiceName(models.Model):
     #service_name = models.CharField(max_length=255, verbose_name=u"模糊协议", unique=True)
     service_name = models.CharField(max_length=255, verbose_name=u"服务名", unique=True)
     active = models.BooleanField(verbose_name="激活.当前有工具的状态", default=True)
-
+    
     def __str__(self):
         return str(self.service_name) + "[" + str(self.protocol) + "]"
 
@@ -183,10 +183,22 @@ class Scheme(models.Model):
         verbose_name = "扫描方案"
 
 
+from scan.api.mudules.scan_v2.prepare.onestep_2_push_cfg2_scheme import config_directory_path
+
 class ScanCfgUploads(models.Model):
-    config_file = models.FileField(upload_to="uploads/scan_cfgs/", verbose_name="扫描文件")
+    config_file = models.FileField(upload_to=config_directory_path, verbose_name="扫描文件")
     name = models.CharField(verbose_name="配置名字", blank=True, max_length=100)
+    desc = models.TextField(verbose_name="配置描述", default="")
     date_created = models.DateTimeField(auto_now_add=True)
+
+    def save(self, *args, **kwargs):
+        try:
+
+            super(ScanCfgUploads, self).save(*args, **kwargs)
+        finally:
+            from scan.api.mudules.scan_v2.prepare.onestep_2_push_cfg2_scheme import push_cfg_2_scheme_in_one_step
+            push_cfg_2_scheme_in_one_step(cfg_path=self.config_file.path, scheme_name=self.name, scheme_desc=self.desc)
+
 
     class Meta:
         db_table = "scan_cfg_file"

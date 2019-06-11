@@ -32,4 +32,6 @@ class SchemeAdmin(admin.ModelAdmin):
     list_display = ("name", "desc",)
     # list_display = ("name", "desc", "scan_tools")
 
+
+
 admin.site.register(Scheme, SchemeAdmin)
