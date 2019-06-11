@@ -68,4 +68,9 @@ from .task import ScanTask
 - [CodeLocation](./models/audit.py) 当前未注册
 - 上面的平台告警信息, 已经移动到 services 中 的 `PlatHistory`
 
+## 2019-6-11
+- 1, WorkSpace-Form在xadmin的ScanTask-StepForm中不能完美兼容，后期修改为Raw;
+- 2, 产生文本并记录。chain到环境上。或者手动更新到页面【推荐】。
+
+
 

@@ -6,7 +6,7 @@ from website.settings import PREVILEGED_USER_SETS
 
 
 class SchemeAdmin(object):
-    list_display = ("name", "desc", "create_user", "date_create")
+    list_display = ("name", "desc", "create_user", "date_created")
     # list_display = ("name", "desc", "scan_tools")
     # 用户只可以获取到自己的设置的方案了
 

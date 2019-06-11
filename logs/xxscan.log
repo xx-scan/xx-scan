@@ -4370,3 +4370,627 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 14: 'v
 2019-06-09 18:34:46 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
 2019-06-09 18:35:02 [basehttp INFO] "GET /test/ HTTP/1.1" 200 5400
 2019-06-09 18:35:03 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-11 20:26:12 [log WARNING] Not Found: /static/xadmin/css/themes/bootstrap-xadmin.css
+2019-06-11 20:26:12 [log WARNING] Not Found: /static/xadmin/vendor/font-awesome/css/font-awesome.css
+2019-06-11 20:26:12 [log WARNING] Not Found: /static/xadmin/css/xadmin.main.css
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/css/xadmin.plugins.css
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/css/xadmin.responsive.css
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/vendor/jquery/jquery.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/vendor/jquery-ui/jquery.ui.core.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/vendor/bootstrap/js/bootstrap.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/js/xadmin.main.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/js/xadmin.responsive.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/js/xadmin.plugin.themes.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/vendor/bootstrap/css/bootstrap.css
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/vendor/jquery-ui/jquery.ui.core.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js
+2019-06-11 20:26:13 [log WARNING] Not Found: /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js
+2019-06-11 20:26:14 [log WARNING] Not Found: /static/xadmin/vendor/bootstrap/js/bootstrap.js
+2019-06-11 20:26:14 [log WARNING] Not Found: /static/xadmin/js/xadmin.main.js
+2019-06-11 20:26:14 [log WARNING] Not Found: /static/xadmin/js/xadmin.responsive.js
+2019-06-11 20:26:14 [log WARNING] Not Found: /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js
+2019-06-11 20:26:14 [log WARNING] Not Found: /static/xadmin/js/xadmin.plugin.themes.js
+2019-06-11 20:26:14 [log WARNING] Not Found: /favicon.ico
+2019-06-11 20:32:15 [log ERROR] Internal Server Error: /scan/scheme/
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/options.py", line 564, in get_field
+    return self.fields_map[field_name]
+KeyError: 'date_create'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/contrib/admin/utils.py", line 332, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/contrib/admin/utils.py", line 309, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/options.py", line 566, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Scheme has no field named 'date_create'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python3.6/contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 405, in get
+    context = self.get_context()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  [Previous line repeated 2 more times]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  [Previous line repeated 2 more times]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 384, in get_context
+    'result_headers': self.result_headers(),
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 524, in result_headers
+    field_name, row) for field_name in self.list_display]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 524, in <listcomp>
+    field_name, row) for field_name in self.list_display]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 441, in result_header
+    return_attr=True
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/contrib/admin/utils.py", line 357, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'date_create' on Scheme or scanschemeAdminListAdminViewModelAdminViewGlobalSettingCommAdminViewBaseSettingBaseAdminViewBaseAdminObjectViewobject
+2019-06-11 20:32:57 [log ERROR] Internal Server Error: /scan/scheme/
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/options.py", line 564, in get_field
+    return self.fields_map[field_name]
+KeyError: 'date_create'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/contrib/admin/utils.py", line 332, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/contrib/admin/utils.py", line 309, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/options.py", line 566, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Scheme has no field named 'date_create'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python3.6/contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 405, in get
+    context = self.get_context()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  [Previous line repeated 2 more times]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  [Previous line repeated 2 more times]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 384, in get_context
+    'result_headers': self.result_headers(),
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 524, in result_headers
+    field_name, row) for field_name in self.list_display]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 524, in <listcomp>
+    field_name, row) for field_name in self.list_display]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 441, in result_header
+    return_attr=True
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/contrib/admin/utils.py", line 357, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'date_create' on Scheme or scanschemeAdminListAdminViewModelAdminViewGlobalSettingCommAdminViewBaseSettingBaseAdminViewBaseAdminObjectViewobject
+2019-06-11 20:33:05 [log ERROR] Internal Server Error: /scan/scheme/
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/options.py", line 564, in get_field
+    return self.fields_map[field_name]
+KeyError: 'date_create'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/contrib/admin/utils.py", line 332, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/contrib/admin/utils.py", line 309, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/options.py", line 566, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Scheme has no field named 'date_create'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python3.6/contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 405, in get
+    context = self.get_context()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  [Previous line repeated 2 more times]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  [Previous line repeated 2 more times]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 384, in get_context
+    'result_headers': self.result_headers(),
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 524, in result_headers
+    field_name, row) for field_name in self.list_display]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 524, in <listcomp>
+    field_name, row) for field_name in self.list_display]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 441, in result_header
+    return_attr=True
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/contrib/admin/utils.py", line 357, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'date_create' on Scheme or scanschemeAdminListAdminViewModelAdminViewGlobalSettingCommAdminViewBaseSettingBaseAdminViewBaseAdminObjectViewobject
+2019-06-11 20:33:06 [log ERROR] Internal Server Error: /scan/scheme/
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/options.py", line 564, in get_field
+    return self.fields_map[field_name]
+KeyError: 'date_create'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/contrib/admin/utils.py", line 332, in label_for_field
+    field = _get_non_gfk_field(model._meta, name)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/contrib/admin/utils.py", line 309, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/options.py", line 566, in get_field
+    raise FieldDoesNotExist("%s has no field named '%s'" % (self.object_name, field_name))
+django.core.exceptions.FieldDoesNotExist: Scheme has no field named 'date_create'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python3.6/contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 405, in get
+    context = self.get_context()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  [Previous line repeated 2 more times]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  [Previous line repeated 2 more times]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 384, in get_context
+    'result_headers': self.result_headers(),
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 524, in result_headers
+    field_name, row) for field_name in self.list_display]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 524, in <listcomp>
+    field_name, row) for field_name in self.list_display]
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/list.py", line 441, in result_header
+    return_attr=True
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/contrib/admin/utils.py", line 357, in label_for_field
+    raise AttributeError(message)
+AttributeError: Unable to lookup 'date_create' on Scheme or scanschemeAdminListAdminViewModelAdminViewGlobalSettingCommAdminViewBaseSettingBaseAdminViewBaseAdminObjectViewobject
+2019-06-11 20:38:51 [log ERROR] Internal Server Error: /scan/scantask/add/
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python3.6/contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 271, in view
+    self = cls(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/edit.py", line 85, in __init__
+    super(ModelFormAdminView, self).__init__(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 499, in __init__
+    super(ModelAdminView, self).__init__(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 266, in __init__
+    self.init_request(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/edit.py", line 375, in init_request
+    self.prepare_form()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/edit.py", line 141, in prepare_form
+    self.model_form = self.get_model_form()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/plugins/quickform.py", line 29, in get_model_form
+    return modelform_factory(self.model, **defaults)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/forms/models.py", line 551, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/forms/models.py", line 266, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (step_0-workspace) specified for ScanTask
+2019-06-11 20:48:22 [log WARNING] Not Found: /scan/scantask/7685afaf-3cab-45e1-b6c8-5d667336651d/update/
+2019-06-11 20:51:40 [log ERROR] Internal Server Error: /scan/scancfguploads/add/
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/configparser.py", line 846, in items
+    d.update(self._sections[section])
+KeyError: '_unserv'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python3.6/contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib64/python3.6/contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/edit.py", line 292, in post
+    self.save_models()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/edit.py", line 267, in save_models
+    self.new_obj.save()
+  File "/home/django/xx-scan/apps/scan/models/scan_cfg.py", line 208, in save
+    push_cfg_2_scheme_in_one_step(cfg_path=self.config_file.path, scheme_name=self.name, scheme_desc=self.desc)
+  File "/home/django/xx-scan/apps/scan/api/mudules/scan_v2/prepare/onestep_2_push_cfg2_scheme.py", line 24, in push_cfg_2_scheme_in_one_step
+    for (name, used_script) in config.items(protocol.protocol):
+  File "/usr/lib64/python3.6/configparser.py", line 849, in items
+    raise NoSectionError(section)
+configparser.NoSectionError: No section: '_unserv'
+2019-06-11 21:02:24 [log ERROR] Internal Server Error: /scan/scancfguploads/add/
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1048, "Column 'create_user_id' cannot be null")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/exception.py", line 34, in inner
+    response = get_response(request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/core/handlers/base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/lib64/python3.6/contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/views/decorators/cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/utils/decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/utils/decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/usr/lib64/python3.6/contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/edit.py", line 292, in post
+    self.save_models()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 49, in filter_chain
+    return func()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/xadmin/views/edit.py", line 267, in save_models
+    self.new_obj.save()
+  File "/home/django/xx-scan/apps/scan/models/scan_cfg.py", line 208, in save
+    push_cfg_2_scheme_in_one_step(cfg_path=self.config_file.path, scheme_name=self.name, scheme_desc=self.desc)
+  File "/home/django/xx-scan/apps/scan/api/mudules/scan_v2/prepare/onestep_2_push_cfg2_scheme.py", line 39, in push_cfg_2_scheme_in_one_step
+    _scheme.save()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/sql/compiler.py", line 1289, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.IntegrityError: (1048, "Column 'create_user_id' cannot be null")

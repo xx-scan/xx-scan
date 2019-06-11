@@ -21,17 +21,25 @@ def push_cfg_2_scheme_in_one_step(cfg_path, scheme_name=str(uuid.uuid4()), schem
     scan_tools = []
     supported_protocols = Protocol.objects.all()
     for protocol in supported_protocols:
-        for (name, used_script) in config.items(protocol.protocol):
-            args = ",".join(re.findall("\[(.*?)\]", used_script))
-            filterd = ScanScript.objects.filter(name=name, used_script=used_script, args=args, protocol=protocol)
-            if len(filterd) > 0:
-                scan_tools.append(filterd[0])
-                continue
-            _scan_tool = ScanScript.objects.create(name=name, used_script=used_script, args=args, protocol=protocol)
-            scan_tools.append(_scan_tool)
+        try:
+            for (name, used_script) in config.items(protocol.protocol):
+                args = ",".join(re.findall("\[(.*?)\]", used_script))
+                filterd = ScanScript.objects.filter(name=name, used_script=used_script, args=args, protocol=protocol)
+                if len(filterd) > 0:
+                    scan_tools.append(filterd[0])
+                    continue
+                _scan_tool = ScanScript.objects.create(name=name, used_script=used_script, args=args, protocol=protocol)
+                scan_tools.append(_scan_tool)
+        except:
+            import logging
+            logging.error(protocol.protocol + ": 异常")
 
     ## 工具已经导入了, 开始指定加载的方案;
-    _scheme = Scheme(name=scheme_name, desc=scheme_desc)
+    from django.contrib.auth.models import User
+    _scheme = Scheme(name=scheme_name, desc=scheme_desc, create_user=User.objects.get(username="admin"))
+
+    ## 能不能在这里调用 Xadmin 的 save_model; 这里可以放置; 只有某些用户能导入。
+
     _scheme.save()
     for x in scan_tools:
         _scheme.scan_tools.add(x)
@@ -46,15 +54,6 @@ def push_cfg_2_scheme_in_one_step(cfg_path, scheme_name=str(uuid.uuid4()), schem
     except:
         # Alert
         pass
-
-
-def config_directory_path(instance, filename):
-    ext = filename.split('.')[-1]
-    filename = '{}.{}'.format(uuid.uuid4().hex[:8], ext)
-    # return the whole path to the file
-    # from datetime import datetime
-    # _date = str(datetime.now()).replace(".","").replace("-", "").replace(" ", "")
-    return "{0}/{1}".format("cfgs", instance.name+"_"+filename)
 
 
 def export(instance):

@@ -77,7 +77,7 @@ class ScanScript(models.Model):
 
     class Meta:
         db_table = "scan_scripts"
-        verbose_name = "扫描工具集合"
+        verbose_name = "扫描脚本集合"
 
 
 from scan.models import Service
@@ -93,6 +93,7 @@ class ScanRecode(models.Model):
     # managers = models.ManyToManyField("ConnectManagerUserInfo", related_name="sys_cop_conn_users")
     script = models.TextField(verbose_name="完整的执行脚本[生成]", blank=True)
     active = models.BooleanField(verbose_name="记录是否被激活", default=True)
+    exported = models.BooleanField(verbose_name="是否被导出", default=False)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
 
@@ -183,7 +184,15 @@ class Scheme(models.Model):
         verbose_name = "扫描方案"
 
 
-from scan.api.mudules.scan_v2.prepare.onestep_2_push_cfg2_scheme import config_directory_path
+#  model 调用 model 必须包裹和安全包裹。
+def config_directory_path(instance, filename):
+    ext = filename.split('.')[-1]
+    filename = '{}.{}'.format(uuid.uuid4().hex[:8], ext)
+    # return the whole path to the file
+    # from datetime import datetime
+    # _date = str(datetime.now()).replace(".","").replace("-", "").replace(" ", "")
+    return "{0}/{1}".format("cfgs", instance.name+"_"+filename)
+
 
 class ScanCfgUploads(models.Model):
     config_file = models.FileField(upload_to=config_directory_path, verbose_name="扫描文件")

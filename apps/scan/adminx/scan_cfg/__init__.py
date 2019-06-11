@@ -40,5 +40,8 @@ class ScanRecodeAdmin(object):
 xadmin.site.register(ScanRecode, ScanRecodeAdmin)
 
 
+from ...models import ScanCfgUploads
+class ScanCfgUploadsAdmin(object):
+    list_display = ("name", "config_file", "desc", "date_created")
 
-
+xadmin.site.register(ScanCfgUploads, ScanCfgUploadsAdmin)
