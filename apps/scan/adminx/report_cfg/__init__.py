@@ -14,10 +14,19 @@ from ...models import ReportFormat, ScanReport
 #     ]
 
 # admin.site.register(ServicePort, ServicePortAdmin)
+class ScanReportAdmin(object):
+    def queryset(self):
+        from website.settings import PREVILEGED_USER_SETS
+        qs = super(ScanReportAdmin, self).queryset()
+        if self.request.user.username in PREVILEGED_USER_SETS:
+            return qs
+        else:
+            return qs.filter(scan_recode__service__host__workspace__user=self.request.user)
 
+    list_display = ("scan_recode", "report", "date_created")
 
 
 xadmin.site.register(ReportFormat)
-xadmin.site.register(ScanReport)
+xadmin.site.register(ScanReport, ScanReportAdmin)
 
 

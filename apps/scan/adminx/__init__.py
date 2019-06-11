@@ -14,3 +14,6 @@ from scan.xadmin.dashboard import *
 ## 2019-6-9 测试xadmin的View
 from scan.xadmin.sites.hosts_filter_4recodes import *
 
+## 2019-6-11
+from scan.xadmin.views.export_recodes import *
+

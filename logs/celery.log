@@ -1,0 +1,205 @@
+Received task: scan.tasks.run[9a0b5662-a485-4e80-bf5c-8c75277dd7e9]  
+Received task: scan.tasks.nmap_tcp_scan[b7210666-df3a-4270-872c-591c31f18574]  
+Task scan.tasks.run[9a0b5662-a485-4e80-bf5c-8c75277dd7e9] succeeded in 2.139181190000272s: 'Tcp Fast Scan'
+Received task: scan.tasks.nmap_result_import[6364ac10-bb9c-4bf0-b3a9-8bea7de41033]  
+Task scan.tasks.nmap_tcp_scan[b7210666-df3a-4270-872c-591c31f18574] succeeded in 12.499969948999933s: ['/home/django/xx-scan/datas/nmap_scan/result_40bd2d06-4e56-4051-824f-e61934ba69fd.xml', UUID('b8aea289-1ec4-4ed0-8535-cb0771a14941'), UUID('7fd7570b-3496-4677-b4d4-c92289b52df7')]
+Received task: scan.tasks.recodes_and_run[92b4ff2d-5f48-45d1-9d7c-8654523533a1]  
+Task scan.tasks.nmap_result_import[6364ac10-bb9c-4bf0-b3a9-8bea7de41033] succeeded in 0.09405431199957093s: [UUID('b8aea289-1ec4-4ed0-8535-cb0771a14941'), UUID('7fd7570b-3496-4677-b4d4-c92289b52df7')]
+没有注册服务
+Task scan.tasks.recodes_and_run[92b4ff2d-5f48-45d1-9d7c-8654523533a1] raised unexpected: InternalError(1364, "Field 'exported' doesn't have a default value")
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.InternalError: (1364, "Field 'exported' doesn't have a default value")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 374, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/celery/app/trace.py", line 629, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/home/django/xx-scan/apps/scan/tasks.py", line 106, in recodes_and_run
+    recodes = collect_recodes(scheme_id=scan_schemeid, workspaceid=workspaceid)
+  File "/home/django/xx-scan/apps/scan/api/mudules/scan_v2/recode.py", line 45, in collect_recodes
+    x.save()
+  File "/home/django/xx-scan/apps/scan/models/scan_cfg.py", line 149, in save
+    self.script = script
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 718, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 748, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 831, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/base.py", line 869, in _do_insert
+    using=using, raw=raw)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/query.py", line 1136, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/models/sql/compiler.py", line 1289, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 100, in execute
+    return super().execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/django/db/backends/mysql/base.py", line 71, in execute
+    return self.cursor.execute(query, args)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 516, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 727, in _read_query_result
+    result.read()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 1066, in read
+    first_packet = self.connection._read_packet()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/connections.py", line 683, in _read_packet
+    packet.check_error()
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/django/xs_venv/lib64/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.InternalError: (1364, "Field 'exported' doesn't have a default value")
+Connected to redis://:**@192.168.1.199:6379/5
+mingle: searching for neighbors
+mingle: all alone
+/home/django/xs_venv/lib64/python3.6/site-packages/celery/fixups/django.py:202: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+celery@xxscan ready.
+Events of group {task} enabled by remote.
+Received task: scan.tasks.run[144014ed-d33c-4265-a422-8d2f363329da]  
+Received task: scan.tasks.nmap_tcp_scan[07cabeda-ac98-4679-9e2e-5235e098ad24]  
+Task scan.tasks.run[144014ed-d33c-4265-a422-8d2f363329da] succeeded in 2.1162182850002864s: 'Tcp Fast Scan'
+Received task: scan.tasks.nmap_result_import[636b8e4a-ac9b-4225-8b96-7e6d8d8184cd]  
+Task scan.tasks.nmap_tcp_scan[07cabeda-ac98-4679-9e2e-5235e098ad24] succeeded in 21.68345733299975s: ['/home/django/xx-scan/datas/nmap_scan/result_b5dee479-91c1-40cd-9dd1-a407c0e061e3.xml', UUID('d7c2f2c7-2afa-46fd-b17d-c2d1f5376dcc'), UUID('75493d0c-d611-4090-aa74-8aef72c1432b')]
+Received task: scan.tasks.recodes_and_run[d8da69bb-0d93-477c-8fd6-5639c411f323]  
+Task scan.tasks.nmap_result_import[636b8e4a-ac9b-4225-8b96-7e6d8d8184cd] succeeded in 0.06644692499958182s: [UUID('d7c2f2c7-2afa-46fd-b17d-c2d1f5376dcc'), UUID('75493d0c-d611-4090-aa74-8aef72c1432b')]
+redis没有注册服务
+Received task: scan.tasks.push_cmd[20e571e5-da7b-4bf5-8a1b-968c75ff5db6]  
+Received task: scan.tasks.push_cmd[1842d370-c8a9-4172-9155-ae246c553afa]  
+Received task: scan.tasks.push_cmd[f0506e2e-09e6-452b-83ec-db47ac511a95]  
+Received task: scan.tasks.push_cmd[d4f437dd-ab87-44bc-a436-f26e78d40197]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[29afeecb-7d92-49ef-bfb4-c23f449f6033]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[1e849222-02d9-43e4-925d-b3a4371fb997]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[b51630ec-69ea-48d9-828f-3b429cc4025c]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[46e246e5-1b46-442c-bc26-0ac2c084d989]  
+Scaling up 1 processes.
+Task scan.tasks.recodes_and_run[d8da69bb-0d93-477c-8fd6-5639c411f323] succeeded in 2.5074269079996157s: {'scripts_num': 41, 'scripts': ['nmblookup -A 127.0.0.1 > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmblookup-127.0.0.1-111.txt', 'enum4linux -a 127.0.0.1 > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/enum4linux-127.0.0.1-111.txt', 'nmap -sC -sV -v -Pn 127.0.0.1 -p 111 -oN /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmap_service_scan-127.0.0.1-111.txt', 'smbclient -L //127.0.0.1 -p 111 -N > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/smbclient-127.0.0.1-111.txt', 'rpcclient -U \"\" 127.0.0.1 -p 111 -N > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/rpcclient-127.0.0.1-111.txt', 'smtp-user-enum -M VRFY -U /usr/share/seclists/Usernames/top-usernames-shortlist.txt -t 127.0.0.1 -p 25 > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/smtp-user-enum-127.0.0.1-25.txt', 'nmap 127.0.0.1 -p 25 -sC -sV -v -Pn  -oN /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmap_service_scan-127.0.0.1-25.txt', 'nmap...', 'py...', ...]}
+Received task: scan.tasks.push_cmd[011729b2-5430-4c98-9f8c-09d45d21658b]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[20e571e5-da7b-4bf5-8a1b-968c75ff5db6] succeeded in 1.0148287729998628s: {'stat': True, 'cmd': 'nmblookup -A 127.0.0.1 > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmblookup-127.0.0.1-111.txt', 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[c3bd21f9-13bf-4043-bcbe-d444f13f062c]  
+Task scan.tasks.push_cmd[1842d370-c8a9-4172-9155-ae246c553afa] succeeded in 1.034001777999947s: {'stat': True, 'cmd': 'enum4linux -a 127.0.0.1 > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/enum4linux-127.0.0.1-111.txt', 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[fe4d4709-a7e5-4974-9048-2dec04c729ce]  
+Received task: scan.tasks.push_cmd[3e959f4c-f79f-44ad-9fc0-a187cb70cb47]  
+Received task: scan.tasks.push_cmd[f56a8520-ccf7-48e8-9747-b192c2a7a8d3]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[470bea36-69ba-4197-8b78-fe8e12dd7e45]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[cfb45e22-0389-43f6-a142-5b6837e40d7f]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[b0eec79d-0625-4c03-a7d3-55e2f579f524]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[f15b8d8a-b614-401b-99cd-21716b8161cd]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[d4f437dd-ab87-44bc-a436-f26e78d40197] succeeded in 1.03273138700024s: {'stat': True, 'cmd': 'smbclient -L //127.0.0.1 -p 111 -N > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/smbclient-127.0.0.1-111.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[29afeecb-7d92-49ef-bfb4-c23f449f6033] succeeded in 1.0435466779999842s: {'stat': True, 'cmd': 'rpcclient -U \"\" 127.0.0.1 -p 111 -N > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/rpcclient-127.0.0.1-111.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[1e849222-02d9-43e4-925d-b3a4371fb997] succeeded in 1.033553149999534s: {'stat': True, 'cmd': 'smtp-user-enum -M VRFY -U /usr/share/seclists/Usernames/top-usernames-shortlist.txt -t 127.0.0.1 -p 25 > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/smtp-user-enum-127.0.0.1-25.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[b51630ec-69ea-48d9-828f-3b429cc4025c] succeeded in 1.0450208329993984s: {'stat': True, 'cmd': 'nmap 127.0.0.1 -p 25 -sC -sV -v -Pn  -oN /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmap_service_scan-127.0.0.1-25.txt', 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[04973562-ec0d-4219-8439-b1bcb079c9a4]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[011729b2-5430-4c98-9f8c-09d45d21658b] succeeded in 1.1083706909994362s: {'stat': True, 'cmd': 'python /opt/Photon/photon.py -u http://127.0.0.1:8888//robot.txt -o /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/photon-127.0.0.1-8888 -e json && cat /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/photon-127.0.0.1-8888/exported.json > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/photon-127.0.0.1-8888.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[c3bd21f9-13bf-4043-bcbe-d444f13f062c] succeeded in 1.1167849210005443s: {'stat': True, 'cmd': 'gobuster -u http://127.0.0.1:8888//robot.txt -f -k -w /usr/share/seclists/Discovery/Web_Content/cgis.txt -s '200,204,301,307,403,500' -e -n -q > '/home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/gobuster_cgis-127.0.0.1-8888.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[46e246e5-1b46-442c-bc26-0ac2c084d989] succeeded in 1.1556362920000538s: {'stat': True, 'cmd': 'nmap 127.0.0.1 -p 8888 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[fe4d4709-a7e5-4974-9048-2dec04c729ce] succeeded in 1.1651247559993863s: {'stat': True, 'cmd': 'curl -i http:/127.0.0.1:8888//robot.txt -o /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/curl_main-127.0.0.1-8888.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[3e959f4c-f79f-44ad-9fc0-a187cb70cb47] succeeded in 1.038730628999474s: {'stat': True, 'cmd': 'gobuster -u http://127.0.0.1:8888//robot.txt -f -k -w /usr/share/seclists/Discovery/Web-Content/common.txt -s '200,204,302,307,403,500' -e -n -q > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/gobuster_common-127.0.0.1-8888.txt', 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[f6e1dd52-c757-41d1-98ea-dbbd332f2a82]  
+Received task: scan.tasks.push_cmd[30cf6bfa-1766-4e73-bfb9-90e9e461817e]  
+Received task: scan.tasks.push_cmd[e25cbced-aac9-48df-8937-f85fa9452fa9]  
+Received task: scan.tasks.push_cmd[94fea685-c87e-40b8-8607-792a01a8c5c6]  
+Received task: scan.tasks.push_cmd[d91341cd-d762-4659-83b0-ea21ed5fc9b1]  
+Received task: scan.tasks.push_cmd[7c5b2014-8bcf-4de4-a376-b92cb7d2b838]  
+Received task: scan.tasks.push_cmd[8936bb1c-c711-4333-a295-4ec46c8d5ab1]  
+Received task: scan.tasks.push_cmd[db8e7f01-e781-4fd8-bf5e-df9403d92804]  
+Received task: scan.tasks.push_cmd[b8b64013-4cfd-4730-b193-2c5869ebf79c]  
+Received task: scan.tasks.push_cmd[a7a3bd4c-45b4-4b0e-9f6d-089eb39c7dcc]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[f56a8520-ccf7-48e8-9747-b192c2a7a8d3] succeeded in 1.06597702199997s: {'stat': True, 'cmd': 'wpscan --url http://127.0.0.1:8888//robot.txt --disable-tls-checks --no-banner -f cli-no-color --enumerate p t tt u > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/wpscan-127.0.0.1-8888.txt', 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[cac10784-1c19-4fe2-9b0c-383339731be8]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[083b9444-5bdd-462b-8d8c-8a48f7bcfd1d]  
+Received task: scan.tasks.push_cmd[6cf0886e-f75f-4978-b8c1-67b384f9af39]  
+Scaling up 1 processes.
+Received task: scan.tasks.push_cmd[2b4c8b67-f712-4f70-8ddf-7d8c27e68b2d]  
+Scaling up 1 processes.
+Task scan.tasks.push_cmd[470bea36-69ba-4197-8b78-fe8e12dd7e45] succeeded in 1.1077977629993256s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 8888 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 127.0.0.1 -oN /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmap_http_vuln-127.0.0.1-8888.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Received task: scan.tasks.push_cmd[e1ba8aa4-c35f-445a-90a3-12d0f34f94ed]  
+Received task: scan.tasks.push_cmd[e1b0b185-b74c-445c-8911-bc1db6b9151e]  
+Received task: scan.tasks.push_cmd[3f11b2fe-493b-4716-b116-e8e67e5fee32]  
+Received task: scan.tasks.push_cmd[6a14345f-fb63-4153-8465-3f26ca5f817b]  
+Received task: scan.tasks.push_cmd[f200b06c-b8e6-4dff-9a06-669967690cf2]  
+Received task: scan.tasks.push_cmd[6e3d6a97-a708-41aa-833d-269c075bbc9d]  
+Received task: scan.tasks.push_cmd[d8856d25-8fc7-4822-9501-f176a92ba019]  
+Received task: scan.tasks.push_cmd[d6cbabc3-3413-438d-b2c4-4a10e2b3117d]  
+Received task: scan.tasks.push_cmd[4779b8c8-d41b-4332-9d11-b5b7ede70b6f]  
+Task scan.tasks.push_cmd[04973562-ec0d-4219-8439-b1bcb079c9a4] succeeded in 1.0424595000004047s: {'stat': True, 'cmd': 'sqlmap -u http://127.0.0.1:8888//robot.txt --batch --crawl=5 --level 1 --risk 1 -f -a --smart -v0 --disable-coloring > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/sqlmap-127.0.0.1-8888.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[f15b8d8a-b614-401b-99cd-21716b8161cd] succeeded in 1.050480642000366s: {'stat': True, 'cmd': 'cewl http://127.0.0.1:8888//robot.txt -m 6 -w /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/cewl-127.0.0.1-8888.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[cfb45e22-0389-43f6-a142-5b6837e40d7f] succeeded in 1.053574347999529s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 8888 --script=http-* 127.0.0.1 -d -oN /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmap_script_http-127.0.0.1-8888.txt -oX /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmap_script_http-127.0.0.1-8888.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[b0eec79d-0625-4c03-a7d3-55e2f579f524] succeeded in 1.0710892440001771s: {'stat': True, 'cmd': 'curl http://127.0.0.1:8888//robot.txt/robots.txt --user-agent 'Googlebot/2.1 (+http://www.google.com/bot.html)' --connect-timeout 30 --max-time 180  > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/curl_robots-127.0.0.1-8888.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[f6e1dd52-c757-41d1-98ea-dbbd332f2a82] succeeded in 1.0370075560003897s: {'stat': True, 'cmd': 'nikto -h http://127.0.0.1:8888//robot.txt -output /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nikto-127.0.0.1-8888.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[30cf6bfa-1766-4e73-bfb9-90e9e461817e] succeeded in 1.0423872840001422s: {'stat': True, 'cmd': 'gobuster -u http://127.0.0.1:8888//robot.txt -f -k -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -s '200,204,307,403,500' -e -n -q > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/gobuster_2.3-medium-127.0.0.1-8888.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[d91341cd-d762-4659-83b0-ea21ed5fc9b1] succeeded in 1.0421057929997914s: {'stat': True, 'cmd': 'nmap 127.0.0.1 -p 5555 -Pn --script='http* and not (broadcast or dos or external or http-slowloris* or fuzzer)' -oN [output].txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[94fea685-c87e-40b8-8607-792a01a8c5c6] succeeded in 1.0531448439996893s: {'stat': True, 'cmd': 'gobuster -u http://127.0.0.1:8888//robot.txt -f -k -w /usr/share/seclists/Discovery/Web-Content/RobotsDisallowed-Top1000.txt -s '200,204,302,307,403,500' -e -n -q > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/gobuster_robots-dis-127.0.0.1-8888.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[8936bb1c-c711-4333-a295-4ec46c8d5ab1] succeeded in 1.0252285529995788s: {'stat': True, 'cmd': 'gobuster -u http://127.0.0.1:5555//robot.txt -f -k -w /usr/share/seclists/Discovery/Web_Content/cgis.txt -s '200,204,301,307,403,500' -e -n -q > '/home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/gobuster_cgis-127.0.0.1-5555.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[e25cbced-aac9-48df-8937-f85fa9452fa9] succeeded in 1.1179796460000944s: {'stat': True, 'cmd': 'whatweb http://127.0.0.1:8888//robot.txt -a3 --colour=never > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/whatweb-127.0.0.1-8888.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[7c5b2014-8bcf-4de4-a376-b92cb7d2b838] succeeded in 1.1230758070005322s: {'stat': True, 'cmd': 'python /opt/Photon/photon.py -u http://127.0.0.1:5555//robot.txt -o /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/photon-127.0.0.1-5555 -e json && cat /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/photon-127.0.0.1-5555/exported.json > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/photon-127.0.0.1-5555.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[db8e7f01-e781-4fd8-bf5e-df9403d92804] succeeded in 1.104199047000293s: {'stat': True, 'cmd': 'curl -i http:/127.0.0.1:5555//robot.txt -o /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/curl_main-127.0.0.1-5555.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[b8b64013-4cfd-4730-b193-2c5869ebf79c] succeeded in 1.019392040000639s: {'stat': True, 'cmd': 'gobuster -u http://127.0.0.1:5555//robot.txt -f -k -w /usr/share/seclists/Discovery/Web-Content/common.txt -s '200,204,302,307,403,500' -e -n -q > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/gobuster_common-127.0.0.1-5555.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[a7a3bd4c-45b4-4b0e-9f6d-089eb39c7dcc] succeeded in 1.0931088680008543s: {'stat': True, 'cmd': 'wpscan --url http://127.0.0.1:5555//robot.txt --disable-tls-checks --no-banner -f cli-no-color --enumerate p t tt u > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/wpscan-127.0.0.1-5555.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[2b4c8b67-f712-4f70-8ddf-7d8c27e68b2d] succeeded in 1.090200819000529s: {'stat': True, 'cmd': 'cewl http://127.0.0.1:5555//robot.txt -m 6 -w /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/cewl-127.0.0.1-5555.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[e1ba8aa4-c35f-445a-90a3-12d0f34f94ed] succeeded in 1.0477894969999397s: {'stat': True, 'cmd': 'sqlmap -u http://127.0.0.1:5555//robot.txt --batch --crawl=5 --level 1 --risk 1 -f -a --smart -v0 --disable-coloring > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/sqlmap-127.0.0.1-5555.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[cac10784-1c19-4fe2-9b0c-383339731be8] succeeded in 1.3909366500001852s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 5555 --script=http-vuln* --script-args http-vuln-cve2014-3704.cmd="uname -a",http-vuln-cve2014-3704.uri="/drupal" 127.0.0.1 -oN /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmap_http_vuln-127.0.0.1-5555.txt --host-timeout 40m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[e1b0b185-b74c-445c-8911-bc1db6b9151e] succeeded in 1.048191687000326s: {'stat': True, 'cmd': 'nikto -h http://127.0.0.1:5555//robot.txt -output /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nikto-127.0.0.1-5555.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[083b9444-5bdd-462b-8d8c-8a48f7bcfd1d] succeeded in 1.3952766379998138s: {'stat': True, 'cmd': 'nmap -sC -sV -Pn -v -p 5555 --script=http-* 127.0.0.1 -d -oN /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmap_script_http-127.0.0.1-5555.txt -oX /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmap_script_http-127.0.0.1-5555.xml --host-timeout 120m --script-timeout 20m', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[6e3d6a97-a708-41aa-833d-269c075bbc9d] succeeded in 1.0315582329994868s: {'stat': True, 'cmd': 'medusa -u root -P /usr/share/seclists/Passwords/Common-Credentials/best15.txt -e ns -h 127.0.0.1 - 22 -M ssh > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/medusa-127.0.0.1-22.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[d6cbabc3-3413-438d-b2c4-4a10e2b3117d] succeeded in 1.0232349860007162s: {'stat': True, 'cmd': 'hydra -f -V -t 1 -l root -P /usr/share/seclists/Passwords/Common-Credentials/best15.txt -s 22 127.0.0.1 ssh > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/hydra_ssh_best15-127.0.0.1-22.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[6a14345f-fb63-4153-8465-3f26ca5f817b] succeeded in 1.1315237720000368s: {'stat': True, 'cmd': 'whatweb http://127.0.0.1:5555//robot.txt -a3 --colour=never > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/whatweb-127.0.0.1-5555.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[f200b06c-b8e6-4dff-9a06-669967690cf2] succeeded in 1.11855315000048s: {'stat': True, 'cmd': 'gobuster -u http://127.0.0.1:5555//robot.txt -f -k -w /usr/share/seclists/Discovery/Web-Content/RobotsDisallowed-Top1000.txt -s '200,204,302,307,403,500' -e -n -q > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/gobuster_robots-dis-127.0.0.1-5555.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[d8856d25-8fc7-4822-9501-f176a92ba019] succeeded in 1.1260202539997408s: {'stat': True, 'cmd': 'ncrack -vv -p 22 --user root -P /usr/share/seclists/Passwords/Common-Credentials/best15.txt 127.0.0.1 > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/ncrack_ssh_best15-127.0.0.1-22.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[6cf0886e-f75f-4978-b8c1-67b384f9af39] succeeded in 1.2590138640007353s: {'stat': True, 'cmd': 'curl http://127.0.0.1:5555//robot.txt/robots.txt --user-agent 'Googlebot/2.1 (+http://www.google.com/bot.html)' --connect-timeout 30 --max-time 180  > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/curl_robots-127.0.0.1-5555.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[3f11b2fe-493b-4716-b116-e8e67e5fee32] succeeded in 1.1626682160003838s: {'stat': True, 'cmd': 'gobuster -u http://127.0.0.1:5555//robot.txt -f -k -w /usr/share/wordlists/dirbuster/directory-list-lowercase-2.3-medium.txt -s '200,204,307,403,500' -e -n -q > /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/gobuster_2.3-medium-127.0.0.1-5555.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[4779b8c8-d41b-4332-9d11-b5b7ede70b6f] succeeded in 2.999144800999602s: {'stat': True, 'cmd': 'nmap 127.0.0.1 -p 22 -sC -sV -v -Pn -oN /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmap_service_scan-127.0.0.1-22.txt', 'reason': '远程执行命令执行成功！'}
+Task scan.tasks.push_cmd[f0506e2e-09e6-452b-83ec-db47ac511a95] succeeded in 6.715242840999963s: {'stat': True, 'cmd': 'nmap -sC -sV -v -Pn 127.0.0.1 -p 111 -oN /home/django/xx-scan/results/admin/xadmin/127.0.0.1/20190611/nmap_service_scan-127.0.0.1-111.txt', 'reason': '远程执行命令执行成功！'}
+Scaling down 16 processes.
