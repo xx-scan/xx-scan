@@ -13,7 +13,7 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.6.4 virtualenv at F:\xs_venv" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.6 (xs_venv)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="_dev" />
     <orderEntry type="module" module-name="_dev" />
