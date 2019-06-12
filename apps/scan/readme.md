@@ -74,4 +74,7 @@ from .task import ScanTask
 
 ## 2019-6-12
 - 关闭报告Report过滤; 当前提供简单的文本请求。
+- [修改左侧栏的显示情况](./xadmin/sites/nav_list.py)
+- [图标库](http://www.fontawesome.com.cn/faicons/)
+
 

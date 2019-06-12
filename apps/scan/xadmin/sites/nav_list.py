@@ -23,6 +23,7 @@ class GlobalSetting(object):
     site_footer = 'COPYRIGHT © 2010 - 2018 ALL RIGHTS RESERVED"'  # 底部版权
     # menu_style = 'accordion'  # 设置数据管理导航折叠，以每一个app为一个折叠框
 
+
     global_search_models = [Host, Workspace, Service, ScanRecode, ScanTool]
     global_models_icon = {
         Host: "fa fa-laptop", Workspace: "fa fa-cloud"
@@ -30,7 +31,53 @@ class GlobalSetting(object):
 
     menu_style = 'accordion'  # 'accordion'  default
 
-    @filter_hook
+    # http://www.fontawesome.com.cn/faicons/
+    def get_site_menu(self):
+        return (
+            {'title': '扫描任务设置', 'menus': (
+                {'title': '开启扫描任务', 'url': self.get_model_url(ScanTask, 'changelist'), "icon":"fa fa-home"},
+                {'title': '用户工作台', 'url': self.get_model_url(Workspace, 'changelist'), "icon":"fa fa-leaf"},
+                {'title': '扫描方案', 'url': self.get_model_url(Scheme, 'changelist')},
+            ), "icon":"fa fa-heart"},
+            {'title': '扫描结果查看', 'menus': (
+                {'title': '探测主机', 'url': self.get_model_url(Host, 'changelist')},
+                {'title': '探测服务', 'url': self.get_model_url(Service, 'changelist')},
+                {'title': '二次探测记录', 'url': self.get_model_url(ScanRecode, 'changelist')},
+            )},
+            {'title': '扫描方案设置', 'menus': (
+                {'title': '扫描方案上传', 'url': self.get_model_url(ScanCfgUploads, 'changelist')},
+                {'title': '扫描脚本', 'url': self.get_model_url(ScanScript, 'changelist')},
+                {'title': '待添加扫描工具', 'url': self.get_model_url(ScanTool, 'changelist')},
+            ), "icon":"fa fa-certificate"},
+            # {'title': '扫描报告处理', 'menus': (
+            #     {'title': '扫描报告', 'url': self.get_model_url(ScanReport, 'changelist')},
+            #     {'title': '报告格式化', 'url': self.get_model_url(ReportFormat, 'changelist')},
+            # )},
+            {'title': '其他工具', 'menus': (
+                {'title': '扫描协议', 'url': self.get_model_url(Protocol, 'changelist')},
+                {'title': '端口范围', 'url': self.get_model_url(PortRange, 'changelist')},
+                {'title': '常见端口', 'url': self.get_model_url(ServicePort, 'changelist')},
+                {'title': 'Nmap探测服务名', 'url': self.get_model_url(NmapServiceName, 'changelist')},
+            ), "icon":"fa fa-book"},
+            {'title': '定时器任务', 'menus': (
+                {'title': '分段任务', 'url': self.get_model_url(PeriodicTask, 'changelist')},
+                {'title': '间隔执行任务', 'url': self.get_model_url(IntervalSchedule, 'changelist')},
+                {'title': 'Crontab执行任务', 'url': self.get_model_url(CrontabSchedule, 'changelist')},
+            ), "icon":"fa fa-book"},
+
+            {'title': '安全机制', 'menus': (
+                {'title': '用户信息', 'url': self.get_model_url(User, 'changelist')},
+                {'title': '组', 'url': self.get_model_url(Group, 'changelist')},
+                {'title': '权限', 'url': self.get_model_url(Permission, 'changelist')},
+            ), "icon":"fa fa-user"}
+        )
+
+
+
+
+
+"""
+@filter_hook
     def get_nav_menu(self):
         site_menu = list(self.get_site_menu() or [])
         had_urls = []
@@ -110,43 +157,4 @@ class GlobalSetting(object):
 
         return site_menu
 
-    def get_site_menu(self):
-        return (
-            {'title': '扫描任务设置', 'menus': (
-                {'title': '开启扫描任务', 'url': self.get_model_url(ScanTask, 'changelist'), "icon":"fa fa-home"},
-                {'title': '用户工作台', 'url': self.get_model_url(Workspace, 'changelist')},
-                {'title': '扫描方案', 'url': self.get_model_url(Scheme, 'changelist')},
-            ), "icon":"fa fa-phone"},
-            {'title': '扫描结果查看', 'menus': (
-                {'title': '探测主机', 'url': self.get_model_url(Host, 'changelist')},
-                {'title': '探测服务', 'url': self.get_model_url(Service, 'changelist')},
-                {'title': '二次探测记录', 'url': self.get_model_url(ScanRecode, 'changelist')},
-            )},
-            {'title': '扫描方案设置', 'menus': (
-                {'title': '扫描方案上传', 'url': self.get_model_url(ScanCfgUploads, 'changelist')},
-                {'title': '扫描脚本', 'url': self.get_model_url(ScanScript, 'changelist')},
-                {'title': '待添加扫描工具', 'url': self.get_model_url(ScanTool, 'changelist')},
-            ), "icon":"fa fa-certificate"},
-            # {'title': '扫描报告处理', 'menus': (
-            #     {'title': '扫描报告', 'url': self.get_model_url(ScanReport, 'changelist')},
-            #     {'title': '报告格式化', 'url': self.get_model_url(ReportFormat, 'changelist')},
-            # )},
-            {'title': '其他工具', 'menus': (
-                {'title': '扫描协议', 'url': self.get_model_url(Protocol, 'changelist')},
-                {'title': '端口范围', 'url': self.get_model_url(PortRange, 'changelist')},
-                {'title': '常见端口', 'url': self.get_model_url(ServicePort, 'changelist')},
-                {'title': 'Nmap探测服务名', 'url': self.get_model_url(NmapServiceName, 'changelist')},
-            ), "icon":"fa fa-book"},
-            {'title': '定时器任务', 'menus': (
-                {'title': '分段任务', 'url': self.get_model_url(PeriodicTask, 'changelist')},
-                {'title': '间隔执行任务', 'url': self.get_model_url(IntervalSchedule, 'changelist')},
-                {'title': 'Crontab执行任务', 'url': self.get_model_url(CrontabSchedule, 'changelist')},
-            ), "icon":"fa fa-book"},
-
-            {'title': '安全机制', 'menus': (
-                {'title': '用户信息', 'url': self.get_model_url(User, 'changelist')},
-                {'title': '组', 'url': self.get_model_url(Group, 'changelist')},
-                {'title': '权限', 'url': self.get_model_url(Permission, 'changelist')},
-            ), "icon":"fa fa-user"}
-        )
-
+"""

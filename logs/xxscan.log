@@ -1157,3 +1157,168 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'django_celery_beat_periodict
 2019-06-12 15:01:09 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
 2019-06-12 15:01:09 [basehttp INFO] "GET /scan/workspace/chart/%E6%8E%A2%E6%B5%8B%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 442
 2019-06-12 15:01:12 [basehttp INFO] "GET /scan/workspace/chart/%E5%B7%A5%E4%BD%9C%E5%8F%B0%E5%88%9B%E5%BB%BA%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 297
+2019-06-12 15:08:06 [basehttp INFO] "GET / HTTP/1.1" 200 41227
+2019-06-12 15:08:06 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:11:04 [basehttp INFO] "GET /auth/user/ HTTP/1.1" 200 44797
+2019-06-12 15:11:04 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:11:07 [basehttp INFO] "GET /auth/user/add/ HTTP/1.1" 200 27861
+2019-06-12 15:11:07 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:11:14 [basehttp INFO] "GET / HTTP/1.1" 200 41227
+2019-06-12 15:11:15 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:11:17 [log ERROR] Internal Server Error: /xadmin/userwidget/add/
+Traceback (most recent call last):
+  File "F:\xs_venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "F:\xs_venv\lib\site-packages\django\core\handlers\base.py", line 156, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "F:\xs_venv\lib\site-packages\django\core\handlers\base.py", line 154, in _get_response
+    response = response.render()
+  File "F:\xs_venv\lib\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "F:\xs_venv\lib\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "F:\xs_venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\loader_tags.py", line 150, in render
+    return compiled_parent._render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "F:\xs_venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_tags.py", line 199, in render
+    c = self.get_render(context).flatten()
+  File "F:\xs_venv\lib\site-packages\crispy_forms\templatetags\crispy_forms_tags.py", line 118, in get_render
+    actual_form.form_html = helper.render_layout(actual_form, node_context, template_pack=self.template_pack)
+  File "F:\xs_venv\lib\site-packages\crispy_forms\helper.py", line 308, in render_layout
+    template_pack=template_pack
+  File "F:\xs_venv\lib\site-packages\crispy_forms\layout.py", line 140, in render
+    return self.get_rendered_fields(form, form_style, context, template_pack, **kwargs)
+  File "F:\xs_venv\lib\site-packages\crispy_forms\layout.py", line 104, in get_rendered_fields
+    for field in self.fields
+  File "F:\xs_venv\lib\site-packages\crispy_forms\layout.py", line 104, in <genexpr>
+    for field in self.fields
+  File "F:\xs_venv\lib\site-packages\crispy_forms\utils.py", line 62, in render_field
+    form, form_style, context, template_pack=template_pack,
+  File "F:\xs_venv\lib\site-packages\crispy_forms\layout.py", line 361, in render
+    fields = self.get_rendered_fields(form, form_style, context, template_pack, **kwargs)
+  File "F:\xs_venv\lib\site-packages\crispy_forms\layout.py", line 104, in get_rendered_fields
+    for field in self.fields
+  File "F:\xs_venv\lib\site-packages\crispy_forms\layout.py", line 104, in <genexpr>
+    for field in self.fields
+  File "F:\xs_venv\lib\site-packages\crispy_forms\utils.py", line 62, in render_field
+    form, form_style, context, template_pack=template_pack,
+  File "F:\xs_venv\lib\site-packages\crispy_forms\layout.py", line 361, in render
+    fields = self.get_rendered_fields(form, form_style, context, template_pack, **kwargs)
+  File "F:\xs_venv\lib\site-packages\crispy_forms\layout.py", line 104, in get_rendered_fields
+    for field in self.fields
+  File "F:\xs_venv\lib\site-packages\crispy_forms\layout.py", line 104, in <genexpr>
+    for field in self.fields
+  File "F:\xs_venv\lib\site-packages\crispy_forms\utils.py", line 62, in render_field
+    form, form_style, context, template_pack=template_pack,
+  File "F:\xs_venv\lib\site-packages\crispy_forms\layout.py", line 287, in render
+    fields = self.get_rendered_fields(form, form_style, context, template_pack, **kwargs)
+  File "F:\xs_venv\lib\site-packages\crispy_forms\layout.py", line 104, in get_rendered_fields
+    for field in self.fields
+  File "F:\xs_venv\lib\site-packages\crispy_forms\layout.py", line 104, in <genexpr>
+    for field in self.fields
+  File "F:\xs_venv\lib\site-packages\crispy_forms\utils.py", line 148, in render_field
+    html = template.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\defaulttags.py", line 309, in render
+    return nodelist.render(context)
+  File "F:\xs_venv\lib\site-packages\django\template\base.py", line 940, in render
+    bits.append(str(bit))
+  File "F:\xs_venv\lib\site-packages\django\utils\html.py", line 397, in <lambda>
+    klass.__str__ = lambda self: mark_safe(klass_str(self))
+  File "F:\xs_venv\lib\site-packages\django\forms\boundfield.py", line 33, in __str__
+    return self.as_widget()
+  File "F:\xs_venv\lib\site-packages\django\forms\boundfield.py", line 93, in as_widget
+    renderer=self.form.renderer,
+TypeError: render() got an unexpected keyword argument 'renderer'
+2019-06-12 15:11:17 [basehttp ERROR] "GET /xadmin/userwidget/add/?user=1&page_id=home&_redirect=/ HTTP/1.1" 500 712413
+2019-06-12 15:16:08 [basehttp INFO] "GET / HTTP/1.1" 200 41290
+2019-06-12 15:16:09 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:16:10 [basehttp INFO] "GET / HTTP/1.1" 200 41290
+2019-06-12 15:16:10 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:16:12 [basehttp INFO] "GET /xadmin/userwidget/add/?user=1&page_id=home&_redirect=/ HTTP/1.1" 200 28994
+2019-06-12 15:16:12 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:16:23 [basehttp INFO] "POST /xadmin/userwidget/add/?user=1&page_id=home&_redirect=/ HTTP/1.1" 200 27360
+2019-06-12 15:16:23 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:18:24 [basehttp INFO] "POST /xadmin/userwidget/add/?user=1&page_id=home&_redirect=/ HTTP/1.1" 302 0
+2019-06-12 15:18:24 [basehttp INFO] "GET /xadmin/userwidget/ HTTP/1.1" 200 44808
+2019-06-12 15:18:24 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:18:35 [basehttp INFO] "GET / HTTP/1.1" 200 46348
+2019-06-12 15:18:35 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:19:09 [basehttp INFO] "GET / HTTP/1.1" 200 46348
+2019-06-12 15:19:21 [basehttp INFO] "POST /scan/workspace/add/ HTTP/1.1" 200 264
+2019-06-12 15:19:25 [basehttp INFO] "GET /scan/scantool/ HTTP/1.1" 200 34754
+2019-06-12 15:19:25 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:19:29 [basehttp INFO] "GET /scan/scanscript/ HTTP/1.1" 200 151968
+2019-06-12 15:19:29 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:20:04 [basehttp INFO] "GET /scan/scancfguploads/ HTTP/1.1" 200 38604
+2019-06-12 15:20:04 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:20:59 [basehttp INFO] "GET / HTTP/1.1" 200 46428
+2019-06-12 15:20:59 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:21:00 [basehttp INFO] "GET / HTTP/1.1" 200 46428
+2019-06-12 15:21:00 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:23:43 [basehttp INFO] "GET / HTTP/1.1" 200 46348
+2019-06-12 15:23:43 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:23:46 [basehttp INFO] "GET /scan/host/ HTTP/1.1" 200 45449
+2019-06-12 15:23:47 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:23:47 [basehttp INFO] "GET /scan/host/chart/%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 338
+2019-06-12 15:23:48 [basehttp INFO] "GET /scan/service/ HTTP/1.1" 200 60785
+2019-06-12 15:23:48 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:23:48 [basehttp INFO] "GET /scan/service/chart/%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 433
+2019-06-12 15:23:54 [basehttp INFO] "GET /xx/scan/download_zip_by_service?sid=cf47d97d-99b6-4c81-bf9a-70f8db7b1b3e HTTP/1.1" 200 22
+2019-06-12 15:23:59 [basehttp INFO] "GET /xx/scan/download_zip_by_service?sid=8bf6bd57-fc59-42a7-97c5-93e894a45edb HTTP/1.1" 200 22
