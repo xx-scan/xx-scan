@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e8ad612-6e16-42c5-945c-8e24fc5f6d5a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../_dev/supervisord.d/beat.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../_dev/supervisord.d/beat.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_dev/supervisord.d/celery.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../_dev/supervisord.d/celery.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_dev/supervisord.d/docker-compose.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../_dev/supervisord.d/docker-compose.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_dev/supervisord.d/flower.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../_dev/supervisord.d/flower.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_dev/kali2/celerystalk_tools.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scan/utils/screenshot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,11 +20,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/gunicron.ini">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scan/utils/screenshot.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="100" selection-start-line="4" selection-start-column="100" selection-end-line="4" selection-end-column="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../_dev/kali2/celerystalk_tools.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="48" column="5" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scan/xadmin/sites/nav_list.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="727">
+              <caret line="89" column="26" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,26 +73,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
               <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../_dev/devolop_retest/test/dump_db.sh">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../_dev/devolop_retest/prepare.sh">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../_dev/devolop_retest/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -137,8 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scan/xadmin/upgrade.md" />
-        <option value="$PROJECT_DIR$/scan/jet/xadmin_demo.py" />
         <option value="$PROJECT_DIR$/scan/models/utils.py" />
         <option value="$PROJECT_DIR$/website/settings.py" />
         <option value="$PROJECT_DIR$/scan/models/task.py" />
@@ -188,6 +195,8 @@
         <option value="$PROJECT_DIR$/../_dev/supervisord.d/docker-compose.ini" />
         <option value="$PROJECT_DIR$/../_dev/supervisord.d/flower.ini" />
         <option value="$PROJECT_DIR$/../_dev/supervisord.d/gunicron.ini" />
+        <option value="$PROJECT_DIR$/scan/utils/screenshot.py" />
+        <option value="$PROJECT_DIR$/../_dev/kali2/celerystalk_tools.sh" />
       </list>
     </option>
   </component>
@@ -221,12 +230,17 @@
             </path>
             <path>
               <item name="apps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="scan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apps" type="b2602c69:ProjectViewProjectNode" />
               <item name="_dev" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="apps" type="b2602c69:ProjectViewProjectNode" />
               <item name="_dev" type="462c0819:PsiDirectoryNode" />
-              <item name="supervisord.d" type="462c0819:PsiDirectoryNode" />
+              <item name="kali2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="apps" type="b2602c69:ProjectViewProjectNode" />
@@ -242,7 +256,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="H:/xpm/cso" />
+    <property name="last_opened_file_path" value="H:/xpm/apps" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -582,26 +596,6 @@
     <option name="processedProjectFiles" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scan/admin/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#1#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scan/xadmin/sites/hosts_filter_4recodes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scan/config.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1368" />
@@ -873,16 +867,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scan/xadmin/sites/nav_list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../_dev/setup/install.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -969,6 +953,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scan/utils/screenshot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="100" selection-start-line="4" selection-start-column="100" selection-end-line="4" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scan/xadmin/sites/nav_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="727">
+          <caret line="89" column="26" selection-start-line="89" selection-start-column="26" selection-end-line="89" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../_dev/kali2/celerystalk_tools.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
         </state>
       </provider>
     </entry>
