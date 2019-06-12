@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e8ad612-6e16-42c5-945c-8e24fc5f6d5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../_dev/supervisord.d/beat.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_dev/supervisord.d/celery.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../_dev/supervisord.d/gunicron.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_dev/hk_host.pub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_dev/kali2/celerystalk.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_dev/kali2/opt.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_dev/prepare.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_dev/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/../_dev/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_dev/setup/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../_dev/setup/install.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_dev/supervisord.d/beat.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../_dev/supervisord.d/beat.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_dev/supervisord.d/celery.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../_dev/supervisord.d/celery.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_dev/supervisord.d/docker-compose.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../_dev/supervisord.d/docker-compose.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_dev/supervisord.d/flower.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../_dev/supervisord.d/flower.ini" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/gunicron.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="31" />
+            <state relative-caret-position="96">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -40,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/celery.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="17" column="16" lean-forward="true" selection-end-line="20" />
+            <state relative-caret-position="96">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -49,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/docker-compose.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="96">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -80,7 +73,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../_dev/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -95,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/flower.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+            <state relative-caret-position="96">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -104,8 +97,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/beat.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="96">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -189,12 +182,12 @@
         <option value="$PROJECT_DIR$/scan/readme.md" />
         <option value="$PROJECT_DIR$/scan/templates/scan/base_add.html" />
         <option value="$PROJECT_DIR$/scan/xadmin/sites/nav_list.py" />
-        <option value="$PROJECT_DIR$/../_dev/supervisord.d/gunicron.ini" />
-        <option value="$PROJECT_DIR$/../_dev/supervisord.d/flower.ini" />
-        <option value="$PROJECT_DIR$/../_dev/supervisord.d/celery.ini" />
-        <option value="$PROJECT_DIR$/../_dev/supervisord.d/beat.ini" />
-        <option value="$PROJECT_DIR$/../_dev/supervisord.d/docker-compose.ini" />
         <option value="$PROJECT_DIR$/../_dev/readme.md" />
+        <option value="$PROJECT_DIR$/../_dev/supervisord.d/beat.ini" />
+        <option value="$PROJECT_DIR$/../_dev/supervisord.d/celery.ini" />
+        <option value="$PROJECT_DIR$/../_dev/supervisord.d/docker-compose.ini" />
+        <option value="$PROJECT_DIR$/../_dev/supervisord.d/flower.ini" />
+        <option value="$PROJECT_DIR$/../_dev/supervisord.d/gunicron.ini" />
       </list>
     </option>
   </component>
@@ -229,6 +222,11 @@
             <path>
               <item name="apps" type="b2602c69:ProjectViewProjectNode" />
               <item name="_dev" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="apps" type="b2602c69:ProjectViewProjectNode" />
+              <item name="_dev" type="462c0819:PsiDirectoryNode" />
+              <item name="supervisord.d" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="apps" type="b2602c69:ProjectViewProjectNode" />
@@ -912,41 +910,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/gunicron.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/flower.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/beat.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/celery.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="16" lean-forward="true" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/docker-compose.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../_dev/devolop_retest/test/dump_db.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -971,6 +934,41 @@
             <caret line="67" column="31" selection-start-line="67" selection-start-column="31" selection-end-line="67" selection-end-column="31" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/beat.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/celery.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/docker-compose.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/flower.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../_dev/supervisord.d/gunicron.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
