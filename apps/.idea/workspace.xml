@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e8ad612-6e16-42c5-945c-8e24fc5f6d5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../_dev/kali2/celerystalk_tools.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scan/utils/screenshot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7e8ad612-6e16-42c5-945c-8e24fc5f6d5a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
