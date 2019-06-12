@@ -6,6 +6,8 @@ from .task_cfg import *
 from .report_cfg import *
 
 
+from scan.xadmin.djcelery.xadmin import *
+
 # xadmin 自定义查看的视图管理
 
 from scan.xadmin.dashboard import *
@@ -16,4 +18,5 @@ from scan.xadmin.sites.hosts_filter_4recodes import *
 
 ## 2019-6-11
 from scan.xadmin.views.export_recodes import *
+
 

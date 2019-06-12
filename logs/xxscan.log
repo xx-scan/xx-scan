@@ -555,3 +555,605 @@ django.db.transaction.TransactionManagementError: An error occurred in the curre
 2019-06-12 12:00:48 [basehttp INFO] "GET /scan/service/chart/%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 433
 2019-06-12 12:00:50 [basehttp INFO] "GET /scan/service/8bf6bd57-fc59-42a7-97c5-93e894a45edb/update/ HTTP/1.1" 200 28145
 2019-06-12 12:00:50 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:16:34 [log WARNING] Not Found: /waf/p2/modify_patchrule_datafile
+2019-06-12 14:16:34 [basehttp WARNING] "GET /waf/p2/modify_patchrule_datafile?type=WhiteIpUrlList&url=login.php HTTP/1.1" 404 8755
+2019-06-12 14:16:34 [log WARNING] Not Found: /favicon.ico
+2019-06-12 14:16:34 [basehttp WARNING] "GET /favicon.ico HTTP/1.1" 404 8654
+2019-06-12 14:16:38 [basehttp INFO] "GET / HTTP/1.1" 200 35532
+2019-06-12 14:16:38 [basehttp INFO] "GET /static/xadmin/vendor/bootstrap/css/bootstrap.css HTTP/1.1" 200 133529
+2019-06-12 14:16:38 [basehttp INFO] "GET /static/xadmin/css/themes/bootstrap-xadmin.css HTTP/1.1" 200 1949
+2019-06-12 14:16:38 [basehttp INFO] "GET /static/xadmin/vendor/font-awesome/css/font-awesome.css HTTP/1.1" 200 22996
+2019-06-12 14:16:38 [basehttp INFO] "GET /static/xadmin/css/xadmin.plugins.css HTTP/1.1" 200 186
+2019-06-12 14:16:38 [basehttp INFO] "GET /static/xadmin/css/xadmin.main.css HTTP/1.1" 200 8805
+2019-06-12 14:16:38 [basehttp INFO] "GET /static/xadmin/css/xadmin.page.dashboard.css HTTP/1.1" 200 836
+2019-06-12 14:16:38 [basehttp INFO] "GET /static/xadmin/css/xadmin.responsive.css HTTP/1.1" 200 4610
+2019-06-12 14:16:38 [basehttp INFO] "GET /static/xadmin/vendor/select2/select2.css HTTP/1.1" 200 19841
+2019-06-12 14:16:38 [basehttp INFO] "GET /static/xadmin/vendor/selectize/selectize.bootstrap3.css HTTP/1.1" 200 11003
+2019-06-12 14:16:38 [basehttp INFO] "GET /static/xadmin/vendor/selectize/selectize.css HTTP/1.1" 200 8742
+2019-06-12 14:16:38 [basehttp INFO] "GET /static/xadmin/css/xadmin.form.css HTTP/1.1" 200 3763
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/vendor/jquery/jquery.js HTTP/1.1" 200 248951
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/vendor/jquery-ui/jquery.ui.mouse.js HTTP/1.1" 200 4730
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/vendor/jquery-ui/jquery.ui.widget.js HTTP/1.1" 200 15590
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/vendor/jquery-ui/jquery.ui.core.js HTTP/1.1" 200 8515
+2019-06-12 14:16:39 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/vendor/jquery-ui/jquery.ui.sortable.js HTTP/1.1" 200 43825
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/vendor/bootstrap/js/bootstrap.js HTTP/1.1" 200 60329
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/js/xadmin.plugin.portal.js HTTP/1.1" 200 1029
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/js/xadmin.page.dashboard.js HTTP/1.1" 200 3285
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/js/xadmin.plugin.themes.js HTTP/1.1" 200 3583
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/js/xadmin.main.js HTTP/1.1" 200 3508
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/vendor/jquery-ui/jquery.ui.effect.js HTTP/1.1" 200 33207
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/js/xadmin.responsive.js HTTP/1.1" 200 4165
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/vendor/select2/select2_locale_zh-hans.js HTTP/1.1" 200 708
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/js/xadmin.page.form.js HTTP/1.1" 200 1999
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/js/xadmin.plugin.quick-form.js HTTP/1.1" 200 7777
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/js/xadmin.widget.select.js HTTP/1.1" 200 1382
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/vendor/select2/select2.js HTTP/1.1" 200 107692
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/vendor/selectize/selectize.js HTTP/1.1" 200 102268
+2019-06-12 14:16:39 [basehttp INFO] "GET /static/xadmin/vendor/font-awesome/fonts/fontawesome-webfont.woff?v=4.0.3 HTTP/1.1" 200 44432
+2019-06-12 14:16:45 [basehttp INFO] "GET /scan/serviceport/ HTTP/1.1" 200 83268
+2019-06-12 14:16:45 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:16:45 [basehttp INFO] "GET /static/xadmin/js/xadmin.plugin.bookmark.js HTTP/1.1" 200 545
+2019-06-12 14:16:45 [basehttp INFO] "GET /static/xadmin/js/xadmin.plugin.details.js HTTP/1.1" 200 2380
+2019-06-12 14:16:45 [basehttp INFO] "GET /static/xadmin/js/xadmin.plugin.actions.js HTTP/1.1" 200 4316
+2019-06-12 14:16:45 [basehttp INFO] "GET /static/xadmin/js/xadmin.plugin.filters.js HTTP/1.1" 200 2046
+2019-06-12 14:16:45 [basehttp INFO] "GET /static/xadmin/js/xadmin.page.list.js HTTP/1.1" 200 1133
+2019-06-12 14:16:56 [basehttp INFO] "GET /scan/scheme/ HTTP/1.1" 200 38052
+2019-06-12 14:16:56 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:18:03 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 38358
+2019-06-12 14:18:03 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:18:04 [basehttp INFO] "GET /scan/protocol/ HTTP/1.1" 200 59490
+2019-06-12 14:18:04 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:18:08 [basehttp INFO] "GET /scan/scancfguploads/ HTTP/1.1" 200 32762
+2019-06-12 14:18:08 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:18:25 [basehttp INFO] "GET /services/platopthistory/ HTTP/1.1" 200 33611
+2019-06-12 14:18:25 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:18:26 [basehttp INFO] "GET /scan/protocol/ HTTP/1.1" 200 59490
+2019-06-12 14:18:26 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:19:50 [basehttp INFO] "GET /scan/protocol/ HTTP/1.1" 200 59490
+2019-06-12 14:19:50 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:20:47 [basehttp INFO] "GET /scan/scantool/ HTTP/1.1" 200 28606
+2019-06-12 14:20:48 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:20:49 [basehttp INFO] "GET /scan/scancfguploads/ HTTP/1.1" 200 32452
+2019-06-12 14:20:49 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:20:50 [basehttp INFO] "GET /scan/scanrecode/ HTTP/1.1" 200 49266
+2019-06-12 14:20:50 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:20:51 [basehttp INFO] "GET /scan/scancfguploads/ HTTP/1.1" 200 32452
+2019-06-12 14:20:51 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:21:04 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 37716
+2019-06-12 14:21:04 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:21:05 [basehttp INFO] "GET /scan/service/ HTTP/1.1" 200 54289
+2019-06-12 14:21:05 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:21:05 [basehttp INFO] "GET /static/xadmin/vendor/flot/jquery.flot.pie.js HTTP/1.1" 200 24217
+2019-06-12 14:21:05 [basehttp INFO] "GET /static/xadmin/vendor/flot/jquery.flot.js HTTP/1.1" 200 118910
+2019-06-12 14:21:05 [basehttp INFO] "GET /static/xadmin/vendor/flot/jquery.flot.time.js HTTP/1.1" 200 12103
+2019-06-12 14:21:05 [basehttp INFO] "GET /static/xadmin/vendor/flot/jquery.flot.resize.js HTTP/1.1" 200 2564
+2019-06-12 14:21:05 [basehttp INFO] "GET /static/xadmin/vendor/flot/jquery.flot.categories.js HTTP/1.1" 200 6223
+2019-06-12 14:21:05 [basehttp INFO] "GET /static/xadmin/vendor/flot/jquery.flot.aggregate.js HTTP/1.1" 200 4236
+2019-06-12 14:21:05 [basehttp INFO] "GET /static/xadmin/js/xadmin.plugin.charts.js HTTP/1.1" 200 2203
+2019-06-12 14:21:05 [basehttp INFO] "GET /scan/service/chart/%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 433
+2019-06-12 14:21:08 [basehttp INFO] "GET /scan/host/ HTTP/1.1" 200 38955
+2019-06-12 14:21:08 [basehttp INFO] "GET /static/xadmin/css/xadmin.widget.editable.css HTTP/1.1" 200 1162
+2019-06-12 14:21:08 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:21:08 [basehttp INFO] "GET /static/xadmin/js/xadmin.plugin.editable.js HTTP/1.1" 200 6359
+2019-06-12 14:21:09 [basehttp INFO] "GET /scan/host/chart/%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 338
+2019-06-12 14:21:10 [basehttp INFO] "GET /scan/scancfguploads/ HTTP/1.1" 200 32120
+2019-06-12 14:21:10 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:21:12 [basehttp INFO] "GET /scan/scheme/ HTTP/1.1" 200 36739
+2019-06-12 14:21:12 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:21:15 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 37716
+2019-06-12 14:21:15 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:21:15 [basehttp INFO] "GET /scan/scancfguploads/ HTTP/1.1" 200 32120
+2019-06-12 14:21:15 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:21:19 [basehttp INFO] "GET /scan/workspace/ HTTP/1.1" 200 40258
+2019-06-12 14:21:19 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:21:19 [basehttp INFO] "GET /scan/workspace/chart/%E6%8E%A2%E6%B5%8B%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 442
+2019-06-12 14:36:31 [log ERROR] Internal Server Error: /scan/workspace/
+Traceback (most recent call last):
+  File "F:\xs_venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "F:\xs_venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "F:\xs_venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\anaconda\lib\contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "F:\xs_venv\lib\site-packages\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\list.py", line 405, in get
+    context = self.get_context()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\list.py", line 387, in get_context
+    context = super(ListAdminView, self).get_context()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 510, in get_context
+    context = super(ModelAdminView, self).get_context()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 410, in get_context
+    menus = copy.copy(self.get_nav_menu())
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "H:\xx-scan\apps\scan\xadmin\sites\nav_list.py", line 39, in get_nav_menu
+    site_menu = list(self.get_site_menu() or [])
+  File "H:\xx-scan\apps\scan\xadmin\sites\nav_list.py", line 135, in get_site_menu
+    {'title': '扫描报告', 'url': self.get_model_url(ScanReport, 'changelist')},
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 148, in get_model_url
+    args=args, kwargs=kwargs, current_app=self.admin_site.name)
+  File "F:\xs_venv\lib\site-packages\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "F:\xs_venv\lib\site-packages\django\urls\resolvers.py", line 622, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'scan_scanreport_changelist' not found. 'scan_scanreport_changelist' is not a valid view function or pattern name.
+2019-06-12 14:36:31 [basehttp ERROR] "GET /scan/workspace/ HTTP/1.1" 500 365505
+2019-06-12 14:37:32 [log ERROR] Internal Server Error: /scan/workspace/
+Traceback (most recent call last):
+  File "F:\xs_venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "F:\xs_venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "F:\xs_venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\anaconda\lib\contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "F:\xs_venv\lib\site-packages\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\list.py", line 405, in get
+    context = self.get_context()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\list.py", line 387, in get_context
+    context = super(ListAdminView, self).get_context()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 510, in get_context
+    context = super(ModelAdminView, self).get_context()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 410, in get_context
+    menus = copy.copy(self.get_nav_menu())
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "H:\xx-scan\apps\scan\xadmin\sites\nav_list.py", line 39, in get_nav_menu
+    site_menu = list(self.get_site_menu() or [])
+  File "H:\xx-scan\apps\scan\xadmin\sites\nav_list.py", line 142, in get_site_menu
+    {'title': 'Nmap探测服务名', 'url': self.get_model_url(NmapServiceName, 'changelist')},
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 148, in get_model_url
+    args=args, kwargs=kwargs, current_app=self.admin_site.name)
+  File "F:\xs_venv\lib\site-packages\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "F:\xs_venv\lib\site-packages\django\urls\resolvers.py", line 622, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'scan_nmapservicename_changelist' not found. 'scan_nmapservicename_changelist' is not a valid view function or pattern name.
+2019-06-12 14:37:32 [basehttp ERROR] "GET /scan/workspace/ HTTP/1.1" 500 365522
+2019-06-12 14:40:28 [log ERROR] Internal Server Error: /scan/workspace/
+Traceback (most recent call last):
+  File "F:\xs_venv\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "F:\xs_venv\lib\site-packages\django\core\handlers\base.py", line 126, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "F:\xs_venv\lib\site-packages\django\core\handlers\base.py", line 124, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "G:\anaconda\lib\contextlib.py", line 52, in inner
+    return func(*args, **kwds)
+  File "F:\xs_venv\lib\site-packages\xadmin\sites.py", line 300, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\sites.py", line 208, in inner
+    return view(request, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 282, in view
+    return handler(request, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\django\utils\decorators.py", line 45, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\django\utils\decorators.py", line 142, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\list.py", line 405, in get
+    context = self.get_context()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\list.py", line 387, in get_context
+    context = super(ListAdminView, self).get_context()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 510, in get_context
+    context = super(ModelAdminView, self).get_context()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 63, in filter_chain
+    return filter_chain(filters, token - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 62, in _inner_method
+    return fm(func if fargs[1] == '__' else func(), *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 410, in get_context
+    menus = copy.copy(self.get_nav_menu())
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 80, in method
+    return filter_chain(filters, len(filters) - 1, _inner_method, *args, **kwargs)
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 49, in filter_chain
+    return func()
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 74, in _inner_method
+    return func(self, *args, **kwargs)
+  File "H:\xx-scan\apps\scan\xadmin\sites\nav_list.py", line 39, in get_nav_menu
+    site_menu = list(self.get_site_menu() or [])
+  File "H:\xx-scan\apps\scan\xadmin\sites\nav_list.py", line 145, in get_site_menu
+    {'title': '分段任务', 'url': self.get_model_url(PeriodicTask, 'changelist')},
+  File "F:\xs_venv\lib\site-packages\xadmin\views\base.py", line 148, in get_model_url
+    args=args, kwargs=kwargs, current_app=self.admin_site.name)
+  File "F:\xs_venv\lib\site-packages\django\urls\base.py", line 90, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "F:\xs_venv\lib\site-packages\django\urls\resolvers.py", line 622, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'django_celery_beat_periodictask_changelist' not found. 'django_celery_beat_periodictask_changelist' is not a valid view function or pattern name.
+2019-06-12 14:40:28 [basehttp ERROR] "GET /scan/workspace/ HTTP/1.1" 500 365292
+2019-06-12 14:41:28 [basehttp INFO] "GET /scan/workspace/ HTTP/1.1" 200 46633
+2019-06-12 14:41:28 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:41:28 [basehttp INFO] "GET /scan/workspace/chart/%E6%8E%A2%E6%B5%8B%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 442
+2019-06-12 14:41:38 [basehttp INFO] "GET /scan/protocol/ HTTP/1.1" 200 72789
+2019-06-12 14:41:38 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:41:39 [basehttp INFO] "GET /scan/portrange/ HTTP/1.1" 200 42632
+2019-06-12 14:41:39 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:41:40 [basehttp INFO] "GET /scan/serviceport/ HTTP/1.1" 200 88330
+2019-06-12 14:41:40 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:41:42 [basehttp INFO] "GET /scan/nmapservicename/ HTTP/1.1" 200 71899
+2019-06-12 14:41:42 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:41:44 [basehttp INFO] "GET /django_celery_beat/intervalschedule/ HTTP/1.1" 200 33684
+2019-06-12 14:41:44 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:41:45 [basehttp INFO] "GET /django_celery_beat/crontabschedule/ HTTP/1.1" 200 36694
+2019-06-12 14:41:45 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:41:46 [basehttp INFO] "GET /django_celery_beat/periodictask/ HTTP/1.1" 200 37640
+2019-06-12 14:41:46 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:41:49 [basehttp INFO] "GET /django_celery_beat/intervalschedule/ HTTP/1.1" 200 33684
+2019-06-12 14:41:50 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:41:50 [basehttp INFO] "GET /django_celery_beat/crontabschedule/ HTTP/1.1" 200 36694
+2019-06-12 14:41:50 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:41:51 [basehttp INFO] "GET /django_celery_beat/periodictask/ HTTP/1.1" 200 37640
+2019-06-12 14:41:51 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:41:55 [basehttp INFO] "GET /services/platopthistory/ HTTP/1.1" 200 39344
+2019-06-12 14:41:55 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:42:00 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 44091
+2019-06-12 14:42:00 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:42:01 [basehttp INFO] "GET /scan/workspace/ HTTP/1.1" 200 46633
+2019-06-12 14:42:01 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:42:01 [basehttp INFO] "GET /scan/workspace/chart/%E6%8E%A2%E6%B5%8B%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 442
+2019-06-12 14:42:03 [basehttp INFO] "GET /scan/scheme/ HTTP/1.1" 200 43114
+2019-06-12 14:42:03 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:42:06 [basehttp INFO] "GET /scan/service/ HTTP/1.1" 200 60664
+2019-06-12 14:42:06 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:42:06 [basehttp INFO] "GET /scan/service/chart/%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 433
+2019-06-12 14:42:07 [basehttp INFO] "GET /scan/host/ HTTP/1.1" 200 45330
+2019-06-12 14:42:07 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:42:07 [basehttp INFO] "GET /scan/host/chart/%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 338
+2019-06-12 14:42:11 [basehttp INFO] "GET /scan/scanrecode/ HTTP/1.1" 200 55309
+2019-06-12 14:42:11 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:42:17 [basehttp INFO] "GET /services/platopthistory/ HTTP/1.1" 200 39344
+2019-06-12 14:42:17 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:42:20 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 44091
+2019-06-12 14:42:20 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:42:21 [basehttp INFO] "GET /scan/workspace/ HTTP/1.1" 200 46633
+2019-06-12 14:42:21 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:42:21 [basehttp INFO] "GET /scan/workspace/chart/%E6%8E%A2%E6%B5%8B%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 442
+2019-06-12 14:42:21 [basehttp INFO] "GET /scan/workspace/ HTTP/1.1" 200 46633
+2019-06-12 14:42:21 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:42:21 [basehttp INFO] "GET /scan/workspace/chart/%E6%8E%A2%E6%B5%8B%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 442
+2019-06-12 14:42:22 [basehttp INFO] "GET /scan/scheme/ HTTP/1.1" 200 43114
+2019-06-12 14:42:22 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:42:25 [basehttp INFO] "GET / HTTP/1.1" 200 41136
+2019-06-12 14:42:25 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:43:09 [basehttp INFO] "GET /scan/scancfguploads/ HTTP/1.1" 200 38495
+2019-06-12 14:43:09 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:43:25 [basehttp INFO] "GET /scan/scantool/ HTTP/1.1" 200 34649
+2019-06-12 14:43:25 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:43:26 [basehttp INFO] "GET /scan/portrange/ HTTP/1.1" 200 42632
+2019-06-12 14:43:26 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:43:28 [basehttp INFO] "GET /scan/serviceport/ HTTP/1.1" 200 88330
+2019-06-12 14:43:28 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:43:30 [basehttp INFO] "GET /scan/portrange/ HTTP/1.1" 200 42632
+2019-06-12 14:43:30 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:43:30 [basehttp INFO] "GET /scan/protocol/ HTTP/1.1" 200 72789
+2019-06-12 14:43:30 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:43:32 [basehttp INFO] "GET /scan/serviceport/ HTTP/1.1" 200 88330
+2019-06-12 14:43:32 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:43:33 [basehttp INFO] "GET /scan/nmapservicename/ HTTP/1.1" 200 71899
+2019-06-12 14:43:33 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:43:38 [basehttp INFO] "GET /scan/protocol/24/detail/?_format=html HTTP/1.1" 200 709
+2019-06-12 14:44:15 [basehttp INFO] "GET /scan/nmapservicename/ HTTP/1.1" 200 71899
+2019-06-12 14:44:16 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:44:16 [basehttp INFO] "GET /scan/serviceport/ HTTP/1.1" 200 88330
+2019-06-12 14:44:16 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:44:32 [basehttp INFO] "GET /scan/portrange/ HTTP/1.1" 200 42632
+2019-06-12 14:44:32 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:44:34 [basehttp INFO] "GET /reversion/revision/ HTTP/1.1" 200 39217
+2019-06-12 14:44:34 [basehttp INFO] "GET /static/xadmin/vendor/bootstrap-datepicker/css/datepicker.css HTTP/1.1" 200 10526
+2019-06-12 14:44:34 [basehttp INFO] "GET /static/xadmin/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js HTTP/1.1" 200 33703
+2019-06-12 14:44:34 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:44:34 [basehttp INFO] "GET /static/xadmin/js/xadmin.widget.datetime.js HTTP/1.1" 200 3069
+2019-06-12 14:44:35 [basehttp INFO] "GET /xadmin/log/ HTTP/1.1" 200 48945
+2019-06-12 14:44:35 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:44:39 [basehttp INFO] "GET /scan/service/ HTTP/1.1" 200 60664
+2019-06-12 14:44:39 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:44:39 [basehttp INFO] "GET /scan/service/chart/%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 433
+2019-06-12 14:44:39 [basehttp INFO] "GET /scan/host/ HTTP/1.1" 200 45330
+2019-06-12 14:44:40 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:44:40 [basehttp INFO] "GET /scan/host/chart/%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 338
+2019-06-12 14:44:43 [basehttp INFO] "GET /scan/service/ HTTP/1.1" 200 60664
+2019-06-12 14:44:43 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:44:43 [basehttp INFO] "GET /scan/service/chart/%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 433
+2019-06-12 14:52:30 [basehttp INFO] "GET /scan/service/ HTTP/1.1" 200 60671
+2019-06-12 14:52:30 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:52:30 [basehttp INFO] "GET /scan/service/chart/%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 433
+2019-06-12 14:52:35 [basehttp INFO] "GET /scan/host/ HTTP/1.1" 200 45337
+2019-06-12 14:52:35 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:52:35 [basehttp INFO] "GET /scan/host/chart/%E4%B8%BB%E6%9C%BA%E6%9C%8D%E5%8A%A1%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 338
+2019-06-12 14:52:39 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 44098
+2019-06-12 14:52:39 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:52:56 [basehttp INFO] "POST /settings/user HTTP/1.1" 200 0
+2019-06-12 14:53:03 [basehttp INFO] "POST /settings/user HTTP/1.1" 200 0
+2019-06-12 14:53:03 [basehttp INFO] "GET /static/xadmin/css/themes/bootstrap-theme.css HTTP/1.1" 200 20249
+2019-06-12 14:53:06 [basehttp INFO] "POST /settings/user HTTP/1.1" 200 0
+2019-06-12 14:53:19 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 44100
+2019-06-12 14:53:19 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:53:22 [basehttp INFO] "GET /scan/workspace/ HTTP/1.1" 200 46642
+2019-06-12 14:53:22 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:53:22 [basehttp INFO] "GET /scan/workspace/chart/%E6%8E%A2%E6%B5%8B%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 442
+2019-06-12 14:53:23 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 44100
+2019-06-12 14:53:23 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:54:49 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 44130
+2019-06-12 14:54:49 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:56:31 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 44188
+2019-06-12 14:56:31 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:56:36 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 44188
+2019-06-12 14:56:36 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:56:37 [basehttp INFO] "GET /scan/workspace/ HTTP/1.1" 200 46730
+2019-06-12 14:56:37 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:56:37 [basehttp INFO] "GET /scan/workspace/chart/%E6%8E%A2%E6%B5%8B%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 442
+2019-06-12 14:56:55 [basehttp INFO] "GET /scan/workspace/ HTTP/1.1" 200 46730
+2019-06-12 14:56:55 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:56:55 [basehttp INFO] "GET /scan/workspace/chart/%E6%8E%A2%E6%B5%8B%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 442
+2019-06-12 14:57:00 [basehttp INFO] "GET / HTTP/1.1" 200 41233
+2019-06-12 14:57:00 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:58:14 [basehttp INFO] "GET /scan/protocol/ HTTP/1.1" 200 72884
+2019-06-12 14:58:14 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:58:16 [basehttp INFO] "GET /scan/portrange/ HTTP/1.1" 200 42727
+2019-06-12 14:58:16 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:58:17 [basehttp INFO] "GET /scan/serviceport/ HTTP/1.1" 200 88425
+2019-06-12 14:58:17 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:58:21 [basehttp INFO] "GET /scan/serviceport/?p=2 HTTP/1.1" 200 89754
+2019-06-12 14:58:21 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:58:27 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 44186
+2019-06-12 14:58:27 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:58:29 [basehttp INFO] "GET /scan/scantask/add/ HTTP/1.1" 200 28794
+2019-06-12 14:58:29 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:58:32 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 44186
+2019-06-12 14:58:32 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:59:11 [basehttp INFO] "GET /auth/user/ HTTP/1.1" 200 44801
+2019-06-12 14:59:11 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:59:12 [basehttp INFO] "GET /auth/group/ HTTP/1.1" 200 33971
+2019-06-12 14:59:12 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:59:14 [basehttp INFO] "GET /auth/user/ HTTP/1.1" 200 44801
+2019-06-12 14:59:14 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:59:16 [basehttp INFO] "GET /auth/group/ HTTP/1.1" 200 33971
+2019-06-12 14:59:16 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:59:20 [basehttp INFO] "GET /scan/scanscript/ HTTP/1.1" 200 151856
+2019-06-12 14:59:20 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:59:44 [basehttp INFO] "GET /scan/scanscript/ HTTP/1.1" 200 151856
+2019-06-12 14:59:44 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 14:59:52 [basehttp INFO] "GET /scan/protocol/14/detail/?_format=html HTTP/1.1" 200 713
+2019-06-12 14:59:57 [basehttp INFO] "POST /settings/user HTTP/1.1" 200 0
+2019-06-12 15:00:02 [basehttp INFO] "GET /scan/scantool/ HTTP/1.1" 200 34748
+2019-06-12 15:00:02 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:00:08 [basehttp INFO] "GET /django_celery_beat/periodictask/ HTTP/1.1" 200 37739
+2019-06-12 15:00:08 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:00:09 [basehttp INFO] "GET /django_celery_beat/intervalschedule/ HTTP/1.1" 200 33783
+2019-06-12 15:00:09 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:00:10 [basehttp INFO] "GET /django_celery_beat/crontabschedule/ HTTP/1.1" 200 36793
+2019-06-12 15:00:10 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:00:11 [basehttp INFO] "GET /django_celery_beat/intervalschedule/ HTTP/1.1" 200 33783
+2019-06-12 15:00:11 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:00:13 [basehttp INFO] "GET /auth/group/ HTTP/1.1" 200 33975
+2019-06-12 15:00:13 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:00:14 [basehttp INFO] "GET /auth/user/ HTTP/1.1" 200 44805
+2019-06-12 15:00:14 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:00:17 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 44190
+2019-06-12 15:00:17 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:00:18 [basehttp INFO] "GET /scan/workspace/ HTTP/1.1" 200 46732
+2019-06-12 15:00:18 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:00:18 [basehttp INFO] "GET /scan/workspace/chart/%E6%8E%A2%E6%B5%8B%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 442
+2019-06-12 15:00:22 [basehttp INFO] "GET / HTTP/1.1" 200 41235
+2019-06-12 15:00:22 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:00:41 [basehttp INFO] "GET /xadmin/log/ HTTP/1.1" 200 49044
+2019-06-12 15:00:41 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:00:46 [basehttp INFO] "GET /services/platopthistory/ HTTP/1.1" 200 39443
+2019-06-12 15:00:46 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:01:07 [basehttp INFO] "GET /scan/scantask/ HTTP/1.1" 200 44190
+2019-06-12 15:01:07 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:01:09 [basehttp INFO] "GET /scan/workspace/ HTTP/1.1" 200 46732
+2019-06-12 15:01:09 [basehttp INFO] "GET /jsi18n/ HTTP/1.1" 200 10061
+2019-06-12 15:01:09 [basehttp INFO] "GET /scan/workspace/chart/%E6%8E%A2%E6%B5%8B%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 442
+2019-06-12 15:01:12 [basehttp INFO] "GET /scan/workspace/chart/%E5%B7%A5%E4%BD%9C%E5%8F%B0%E5%88%9B%E5%BB%BA%E7%BB%9F%E8%AE%A1/? HTTP/1.1" 200 297

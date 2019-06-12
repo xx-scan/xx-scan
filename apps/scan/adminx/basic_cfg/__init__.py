@@ -1,9 +1,11 @@
 import xadmin
 
-from ...models import PortRange, ServicePort, Protocol
+from ...models import PortRange, ServicePort, Protocol, NmapServiceName
 
 
 class ServicePortAdmin(object):
+    hidden_menu = True
+
     # ...
     list_display = ('port', "port_name", "desc", 'type', 'type_desc', 'protocol')
 
@@ -15,11 +17,15 @@ class ServicePortAdmin(object):
 
 xadmin.site.register(ServicePort, ServicePortAdmin)
 
-
 class PortRangeAdmin(object):
+    hidden_menu = True
     list_display = ("name", "ports")
-
 xadmin.site.register(PortRange, PortRangeAdmin)
+
+class NmapServiceAdmin(object):
+    list_display = ('protocol', 'service_name')
+xadmin.site.register(NmapServiceName, NmapServiceAdmin)
+
 xadmin.site.register(Protocol)
 
 

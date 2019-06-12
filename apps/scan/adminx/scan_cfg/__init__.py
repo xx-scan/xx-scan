@@ -4,6 +4,8 @@ import xadmin
 from ...models import ScanScript, ScanRecode, ScanTool, Scheme
 
 class ScanScriptAdmin(object):
+    hidden_menu = True
+
     list_display = ('name', "bin_name", "args", 'protocol', 'used_script')
 
 xadmin.site.register(ScanScript, ScanScriptAdmin)
@@ -23,6 +25,7 @@ xadmin.site.register(ScanTool, ScanToolAdmin)
 
 ## 扫描 Recode 记录管理
 class ScanRecodeAdmin(object):
+    hidden_menu = True
 
     def queryset(self):
         from website.settings import PREVILEGED_USER_SETS
