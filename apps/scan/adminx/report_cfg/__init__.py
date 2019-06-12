@@ -26,7 +26,8 @@ class ScanReportAdmin(object):
     list_display = ("scan_recode", "report", "date_created")
 
 
-xadmin.site.register(ReportFormat)
-xadmin.site.register(ScanReport, ScanReportAdmin)
+# xadmin.site.register(ReportFormat)
+# xadmin.site.register(ScanReport, ScanReportAdmin)
+#
 
-
+## 2019-6-12 关闭报告初始化和内容

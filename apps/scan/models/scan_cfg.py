@@ -125,12 +125,12 @@ class ScanRecode(models.Model):
                                         ).replace("[OUTPUT]", _path
                                         ).replace("[DOMAIN]", self.domain
                                         ).replace("[PATH]", self.path)
-        return output, script
+        return _path, script
 
     def get_report_txt(self):
-        reports_str = ""
+        reports_str = "==========OUTPUT==========\n"
         try:
-            with open(self.output, "rb") as f:
+            with open(str(self.output) + ".txt", "rb") as f:
                 temp_lines = f.readlines()
                 for line in temp_lines:
                     try:
@@ -139,17 +139,26 @@ class ScanRecode(models.Model):
                         pass
                 f.close()
         except:
-            pass
+            import logging
+            logging.error("文件不存在")
+            reports_str += "- 1.文件有可能不存在\n"
+            reports_str += "- 2.文件有可能转移\n"
+            reports_str += "- 3.文件有可能不是后缀名.txt \n"
         return reports_str
 
     def save(self, *args, **kwargs):
         try:
-            output, script = self.extract_self()
-            self.output = output
-            self.script = script
-            super(ScanRecode, self).save(*args, **kwargs)
+            if not self.id:
+                output, script = self.extract_self()
+                self.output = output
+                self.script = script
         finally:
-            pass
+            super(ScanRecode, self).save(*args, **kwargs)
+
+    def export2txt(self):
+        if not self.exported:
+            from scan.xadmin.views.export_recodes import export_recode_2_report
+            export_recode_2_report(self)
 
     def __str__(self):
         return self.script

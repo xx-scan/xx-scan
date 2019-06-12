@@ -1,52 +1,74 @@
 import os, re
-from scan.models import ScanRecode, ScanReport
-import xadmin
-from xadmin.views import ModelAdminView
-from xadmin.views import BaseAdminView
+from django.db import DatabaseError, transaction
 from django.http import HttpResponse, HttpResponseRedirect
 
-def exports_recodes():
+import xadmin
+from xadmin.views import BaseAdminView
+
+from scan.models import ScanRecode, ScanReport
+
+def exports_recodes(user=None):
     """
     ## 这里只涉及到文件导出到Report 后续有压缩包导出
     :return:
     """
-    srid_lists = []
-    for x in ScanRecode.objects.filter(exported=False):
+    recodes = ScanRecode.objects.all()
+    for x in recodes:
+        x.export2txt()
 
-        matched = re.match(".*?(/home/django.*?\.txt).*", x.script)
-        if not matched:
-            continue
+## 2019-6-1
+# ScanRecode 进行Update Save过程中进行这个函数。
+def export_recode_2_report(recode):
+    matched = re.match(".*?(/home/django.*?\.txt).*", recode.script)
+    if not matched:
+        return None
 
-        _filepath = matched.group(1)
+    _filepath = matched.group(1)
+    if not os.path.exists(_filepath):
+        try:
+            from services.models import PlatOptHistory
+            PlatOptHistory.objects.create(
+                extra="脚本执行错误;",
+                desc=str(recode.id) + "[" + recode.script + "]"
+            )
+        except:
+            import logging
+            logging.error(recode.script + "<<<- Error, Not This Bin!")
+        return None
 
-        if not os.path.exists(_filepath):
-            print(_filepath)
-            try:
-                from services.models import PlatOptHistory
-                PlatOptHistory.objects.create(
-                    extra="脚本执行错误;",
-                    desc=str(str(x.id) + "[" + x.script + "]")
-                )
-            except:
-                import logging
-                logging.error(x.script + "<<<- Error, Not This Bin!")
-            continue
+    with open(_filepath, "r", encoding="utf-8") as f:
+        txt = f.read()
+        f.close()
 
-        with open(_filepath, "r", encoding="utf-8") as f:
-            txt = f.read()
-            f.close()
-        srid_lists.append(x.id)
+    recode.exported = True
 
-        ScanReport.objects.create(scan_recode=x, report=txt)
+    try:
+        with transaction.atomic():
+            #transaction.commit()
+            recode.save()
+    except DatabaseError:
+        recode.exported = False
+        from scan.utils.ltool.utils.logaudit import put_log
+        put_log(type="脚本日志",
+                desc="Django Model原子事务错误。",
+                extra=str(recode.script))
 
-    ScanRecode.objects.filter(id__in=srid_lists).update(exported=True)
-
+    obj = ScanReport(scan_recode=recode, report=txt)
+    try:
+        with transaction.atomic():
+            #transaction.commit()
+            obj.save()
+    except DatabaseError:
+        from scan.utils.ltool.utils.logaudit import put_log
+        put_log(type="脚本日志",
+                desc="Django Model原子事务错误。",
+                extra="关联到ScanReport")
 
 
 class RecodeExportView(BaseAdminView):
 
     def get(self, request):
-        exports_recodes()
+        exports_recodes(user=request.user)
         return HttpResponseRedirect("/scan/scanreport/")
 
 

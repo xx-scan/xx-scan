@@ -32,7 +32,14 @@ class ScanRecodeAdmin(object):
         else:
             return qs.filter(service__host__workspace__user=self.request.user)
 
-    list_display = ("service", "scan_tool", "active", "domain")
+    def show_report_txt(self, instance):
+        return "<a href='{}'>文本查看</a>".format("/xx/scan/download_single_reporttxt?sid=" + str(instance.id))
+
+    show_report_txt.short_description = "报告文本打开"
+    show_report_txt.allow_tags = True
+    show_report_txt.is_column = True
+
+    list_display = ("service", "scan_tool", "active", "domain", "show_report_txt")
 
     #readonly_fields = ('create_user', )
 

@@ -60,7 +60,7 @@ class ServiceAdmin(object):
             return qs.filter(host__workspace__user=self.request.user)
 
     search_fields = ("port", "host__ip", "service", "state", 'protocol')
-    list_display = ("host", "port", "state", "banner", "protocol", "service", "version", "descover_time")
+
     list_export = ('xls', 'xml', 'json')
 
     def service_recode_count(self, instance):
@@ -76,6 +76,15 @@ class ServiceAdmin(object):
     uniq_id.is_column = True
 
 
+    def show_report_zip(self, instance):
+        return "<a href='{}'>服务报告Zip下载</a>".format("/xx/scan/download_zip_by_service?sid=" + str(instance.id))
+
+    show_report_zip.short_description = "报告文本打开"
+    show_report_zip.allow_tags = True
+    show_report_zip.is_column = True
+
+    ## /xx/scan/download_zip_by_service
+    list_display = ("host", "port", "state", "banner", "protocol", "service", "version", "show_report_zip", "descover_time")
     data_charts = {
         "主机服务统计": {'title': u"服务记录基本统计", "x-field": "uniq_id",
                  "y-field": ('service_recode_count'),

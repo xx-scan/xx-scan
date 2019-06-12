@@ -40,6 +40,7 @@ def push_cfg_2_scheme_in_one_step(cfg_path, scheme_name=str(uuid.uuid4()), schem
 
     ## 能不能在这里调用 Xadmin 的 save_model; 这里可以放置; 只有某些用户能导入。
 
+
     _scheme.save()
     for x in scan_tools:
         _scheme.scan_tools.add(x)
