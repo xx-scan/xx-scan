@@ -63,3 +63,6 @@ cd apps && python manage.py createsuperuser
 
 ## 2019-6-9
 - 晚上和测试xx-scan的部分关于xadmin的内容
+
+## 2019-6-12
+- 增加了 supervisord 管理, 修复启动和停止异常
