@@ -5,6 +5,7 @@ rm -rf /home/django/xx-scan/tmp/
 rm -rf /home/django/xx-scan/dat*  
 rm -rf /home/django/xx-scan/col* 
 rm -rf /home/django/xx-scan/resu* 
+rm -rf /home/django/xx-scan/.id* 
 
 git config --global user.name "actanble"
 git config --global user.email actanble@gmail.com 

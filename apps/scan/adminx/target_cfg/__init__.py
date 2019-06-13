@@ -16,6 +16,7 @@ class HostAdmin(object):
 
     def host_service_count(self, instance):
         return len(Service.objects.filter(host=instance))
+
     host_service_count.short_description = "主机服务数"
     host_service_count.allow_tags = True
     host_service_count.is_column = True
@@ -77,7 +78,8 @@ class ServiceAdmin(object):
 
 
     def show_report_zip(self, instance):
-        return "<a href='{}'>服务报告Zip下载</a>".format("/xx/scan/download_zip_by_service?sid=" + str(instance.id))
+        from django.utils.safestring import mark_safe
+        return mark_safe("<a href='{}'>服务报告Zip下载</a>".format("/xx/scan/download_zip_by_service?sid=" + str(instance.id)) )
 
     show_report_zip.short_description = "报告文本打开"
     show_report_zip.allow_tags = True
@@ -92,28 +94,29 @@ class ServiceAdmin(object):
                      "series": {"bars": {"align": "center", "barWidth": 0.3, 'show': True}},
                      "xaxis": {"mode": "categories"},
                  },
-                 },
+            },
     }
+
+    list_filter = ["port", "service", 'state', 'protocol', "host__ip"]
 
     refresh_times = (5, 10, 20)
 
     ## 书签使用异常。
     list_bookmarks = [{
         'title': "TCP协议扫描出的服务",  # 书签的名称, 显示在书签菜单中
-        'query': {'port': 80},  # 过滤参数, 是标准的 queryset 过滤
+        'query': {'port': "80", },  # 过滤参数, 是标准的 queryset 过滤
         'order': ('-descover_time',),  # 排序参数
         'cols': ( 'port', 'service', 'state', 'protocol', 'banner'),  # 显示的列
         #'search': 'tcp'  # 搜索参数, 指定搜索的内容
         },
         {
             'title': "开放状态的服务",  # 书签的名称, 显示在书签菜单中
-            'query': {'state': "open"},  # 过滤参数, 是标准的 queryset 过滤
+            'query': {'state': "open", },  # 过滤参数, 是标准的 queryset 过滤
             'order': ('-descover_time', ),  # 排序参数
             'cols': ( 'port', 'service', 'state', 'protocol', 'banner'),  # 显示的列
             #'search': 'open'  # 搜索参数, 指定搜索的内容
         },
     ]
-
 
 
 xadmin.site.register(Service, ServiceAdmin)

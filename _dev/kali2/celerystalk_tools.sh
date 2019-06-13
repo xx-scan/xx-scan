@@ -2,7 +2,6 @@
 
 DISTRO=`grep "^ID=" /etc/os-release | cut -d\= -f2`
 
-
 apt update -y
 
 echo ""
@@ -16,23 +15,6 @@ if [ "$DISTRO" == "kali" ]; then
 elif [ "$DISTRO" == "ubuntu" ]; then
     apt install python-pip python3-pip unzip redis-server firefox xvfb jq -y
 fi
-
-CELERYSTALK_DIR=`pwd`
-
-echo ""
-echo "**************************************"
-echo "*      Starting redis-server          *"
-echo "**************************************"
-echo ""
-/etc/init.d/redis-server start
-
-echo ""
-echo "******************************************"
-echo "* Installing python requirements via pip *"
-echo "******************************************"
-echo ""
-pip install -r requirements.txt --upgrade
-
 
 if [ ! -f /usr/bin/geckodriver ]; then
     echo ""

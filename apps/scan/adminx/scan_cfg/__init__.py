@@ -20,6 +20,8 @@ class ScanToolAdmin(object):
         ('检查', {'fields': ['judge_script'], 'classes': ['collapse']}),
     ]
 
+    wizard_form_list = fieldsets
+
 xadmin.site.register(ScanTool, ScanToolAdmin)
 
 
@@ -36,7 +38,8 @@ class ScanRecodeAdmin(object):
             return qs.filter(service__host__workspace__user=self.request.user)
 
     def show_report_txt(self, instance):
-        return "<a href='{}'>文本查看</a>".format("/xx/scan/download_single_reporttxt?sid=" + str(instance.id))
+        from django.utils.safestring import mark_safe
+        return mark_safe("<a href='{}'>文本查看</a>".format("/xx/scan/download_single_reporttxt?sid=" + str(instance.id)))
 
     show_report_txt.short_description = "报告文本打开"
     show_report_txt.allow_tags = True
