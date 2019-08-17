@@ -1,0 +1,1 @@
+DEFAULT_RECEIVED_LIST = 'actanble@gmail.com,actanble@163.com,admin@actanble.com'

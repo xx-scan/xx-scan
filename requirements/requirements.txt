@@ -31,4 +31,5 @@ python-libnmap==0.7.0
 
 #django-jet==1.0.8
 feedparser==5.2.1
-git+git://github.com/sshwsfc/xadmin.git@django2
+#git+git://github.com/sshwsfc/xadmin.git@django2
+

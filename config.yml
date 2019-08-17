@@ -10,7 +10,7 @@ BOOTSTRAP_TOKEN:
 # Development env open this, when error occur display the full process track, Production disable it
 # DEBUG 模式 开启DEBUG后遇到错误时可以看到更多日志
 DEBUG: true
-
+STATIC_USE_CDN: false
 # DEBUG, INFO, WARNING, ERROR, CRITICAL can set. See https://docs.djangoproject.com/en/1.10/topics/logging/
 # 日志级别
 # LOG_LEVEL: DEBUG
@@ -33,31 +33,31 @@ DEBUG: true
 # MySQL or postgres setting like:
 # 使用Mysql作为数据库
 DB_ENGINE: mysql
-DB_HOST: 192.168.56.200
-DB_PORT: 3306
-DB_USER: admin007
-DB_PASSWORD: myadmin@816
-DB_NAME: xxscan
-
+DB_HOST: 192.168.2.227
+DB_PORT: 33306
+DB_USER: root
+DB_PASSWORD: test@1q2w2e4R
+DB_NAME: cso817
+DB_CHARSET: utf8
 # When Django start it will bind this host and port
 # ./manage.py runserver 127.0.0.1:8080
 # 运行时绑定端口
 HTTP_BIND_HOST: 0.0.0.0
 HTTP_LISTEN_PORT: 8888
 
+# Flower Debug See 
 # Flower 设置
-
 FLOWER_BIND_PORT: 5555
 FLOWER_BASE_USER: admin001
-FLOWER_BASE_PASSWORD: 1q2w3e4R
+FLOWER_BASE_PASSWORD: 1q2w3e4R 
 # Use Redis as broker for celery and web socket
 # Redis配置
-REDIS_HOST: 192.168.56.200
+REDIS_HOST: 192.168.2.227
 REDIS_PORT: 6379
 REDIS_PASSWORD: xxscan
-REDIS_DB_CELERY: 5
-REDIS_DB_CACHE: 6
-
+REDIS_DB_CELERY: 3
+REDIS_DB_CACHE: 4
+REDIS_DB_TORNADO: 6
 # Use OpenID authorization
 # 使用OpenID 来进行认证设置
 # BASE_SITE_URL: http://localhost:8080
@@ -79,3 +79,16 @@ REDIS_DB_CACHE: 6
 # OTP/MFA 配置
 # OTP_VALID_WINDOW: 0
 # OTP_ISSUER_NAME: Jumpserver
+
+MONGO_HOST: 192.169.2.228
+MONGO_PORT: 27017
+MONGO_USER: admin007
+MONGO_PASS: myadmin@816
+MONGO_AUTH_DB: admin
+
+
+MQ_ADDR: 192.168.2.228
+MQ_PORT: 5672
+MQ_VHOST: /
+MQ_USER: admin007
+MQ_PWD: myadmin@816

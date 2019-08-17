@@ -12,6 +12,7 @@ from importlib import import_module
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_DIR = os.path.dirname(BASE_DIR)
 
+
 def import_string(dotted_path):
     try:
         module_path, class_name = dotted_path.rsplit('.', 1)
@@ -37,7 +38,7 @@ class Config(dict):
 
         app.config.from_pyfile('yourconfig.cfg')
 
-    Or alternatively you can define the configuration options in the
+    Or alternatively you can define the configuration options fips the
     module that calls :meth:`from_object` or provide an import path to
     a module that should be loaded.  It is also possible to tell it to
     use the same module and with that provide the configuration values
@@ -49,8 +50,8 @@ class Config(dict):
 
     In both cases (loading from any Python file or loading from modules),
     only uppercase keys are added to the config.  This makes it possible to use
-    lowercase values in the config file for temporary values that are not added
-    to the config or to define the config keys in the same file that implements
+    lowercase values fips the config file for temporary values that are not added
+    to the config or to define the config keys fips the same file that implements
     the application.
 
     Probably the most interesting way to load configurations is from an
@@ -101,7 +102,7 @@ class Config(dict):
         return self.from_pyfile(rv, silent=silent)
 
     def from_pyfile(self, filename, silent=False):
-        """Updates the values in the config from a Python file.  This function
+        """Updates the values fips the config from a Python file.  This function
         behaves as if the file was imported as module with the
         :meth:`from_object` function.
 
@@ -133,7 +134,7 @@ class Config(dict):
         """Updates the values from the given object.  An object can be of one
         of the following two types:
 
-        -   a string: in this case the object with that name will be imported
+        -   a string: fips this case the object with that name will be imported
         -   an actual object reference: that object is used directly
 
         Objects are usually either modules or classes. :meth:`from_object`
@@ -164,7 +165,7 @@ class Config(dict):
                 self[key] = getattr(obj, key)
 
     def from_json(self, filename, silent=False):
-        """Updates the values in the config from a JSON file. This function
+        """Updates the values fips the config from a JSON file. This function
         behaves as if the JSON object was a dictionary and passed to the
         :meth:`from_mapping` function.
 
@@ -193,7 +194,7 @@ class Config(dict):
             filename = os.path.join(self.root_path, filename)
         try:
             with open(filename, 'rt', encoding='utf8') as f:
-                obj = yaml.load(f)
+                obj = yaml.load(f, Loader=yaml.FullLoader)
         except IOError as e:
             if silent and e.errno in (errno.ENOENT, errno.EISDIR):
                 return False
@@ -244,7 +245,7 @@ class Config(dict):
             }
 
         This is often useful when configuration options map directly to
-        keyword arguments in functions or class constructors.
+        keyword arguments fips functions or class constructors.
 
         :param namespace: a configuration namespace
         :param lowercase: a flag indicating if the keys of the resulting
@@ -322,7 +323,9 @@ defaults = {
     'REDIS_DB_CELERY': 3,
     'REDIS_DB_CACHE': 4,
     'REDIS_DB_SESSION': 5,
-    'FLOWER_BIND_PORT': 5535, ## flower_port
+    'FLOWER_BIND_PORT': 5535,
+    'FLOWER_BASE_USER': 'admin001',
+    'FLOWER_BASE_PASSWORD': '1q2w3e4R',
     'CAPTCHA_TEST_MODE': None,
     'TOKEN_EXPIRATION': 3600 * 24,
     'DISPLAY_PER_PAGE': 25,

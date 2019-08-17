@@ -10,11 +10,12 @@ PROJECT_DIR = os.path.dirname(BASE_DIR)
 sys.path.append(PROJECT_DIR)
 
 CONFIG = load_user_config()
+DOCKERD = True
 
 LOG_DIR = os.path.join(PROJECT_DIR, 'logs')
-XXSCAN_LOG_FILE = os.path.join(LOG_DIR, 'xxscan.log')
+CSO_LOG_FILE = os.path.join(LOG_DIR, 'cso.log')
 ANSIBLE_LOG_FILE = os.path.join(LOG_DIR, 'ansible.log')
-GUNICORN_LOG_FILE = os.path.join(LOG_DIR, 'gunicorn.log')\
+GUNICORN_LOG_FILE = os.path.join(LOG_DIR, 'gunicorn.log')
 
 VERSION = const.VERSION
 
@@ -24,17 +25,22 @@ if not os.path.isdir(LOG_DIR):
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
+# SECURITY WARNING: keep the secret key used fips production secret!
 SECRET_KEY = CONFIG.SECRET_KEY
 
 # SECURITY WARNING: keep the token secret, remove it if all coco, guacamole ok
 BOOTSTRAP_TOKEN = CONFIG.BOOTSTRAP_TOKEN
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECURITY WARNING: don't run with debug turned on fips production!
 DEBUG = CONFIG.DEBUG
+STATIC_USE_CDN = CONFIG.STATIC_USE_CDN
 
 # Absolute url for some case, for example email link
-SITE_URL = CONFIG.SITE_URL
+if DEBUG:
+    SITE_URL = 'http://localhost:3322'
+else:
+    SITE_URL = CONFIG.SITE_URL
+
 
 # LOG LEVEL
 LOG_LEVEL = CONFIG.LOG_LEVEL
@@ -43,11 +49,6 @@ ALLOWED_HOSTS = ['*']
 
 
 INSTALLED_APPS = [
-
-
-    'xadmin',
-    'crispy_forms',
-    'reversion',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -59,17 +60,21 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'corsheaders',
 
-    'django_celery_beat',
+    # 'django_celery_beat',
 ]
 
-INSTALLED_APPS += ["services.apps.LocalAppConfig", "scan.apps.LocalAppConfig"]
+INSTALLED_APPS += ["secs.apps.LocalAppConfig", "ops.apps.LocalAppConfig"]
+INSTALLED_APPS += ["scan.apps.LocalAppConfig", ]
+
+# Add apscheduler
+INSTALLED_APPS += ['django_apscheduler.apps.DjangoApschedulerConfig']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
-    #'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -89,99 +94,13 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 # 全局过滤器全部舍弃
-                #'accounts.context_processors.seo_processor',
+                # 'accounts.context_processors.seo_processor',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'website.wsgi.application'
-
-# Logging setting
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
-        },
-        'main': {
-            'datefmt': '%Y-%m-%d %H:%M:%S',
-            'format': '%(asctime)s [%(module)s %(levelname)s] %(message)s',
-        },
-        'simple': {
-            'format': '%(levelname)s %(message)s'
-        },
-        'msg': {
-            'format': '%(message)s'
-        }
-    },
-    'handlers': {
-        'null': {
-            'level': 'DEBUG',
-            'class': 'logging.NullHandler',
-        },
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'main'
-        },
-        'file': {
-            'encoding': 'utf8',
-            'level': 'DEBUG',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'maxBytes': 1024*1024*100,
-            'backupCount': 7,
-            'formatter': 'main',
-            'filename': XXSCAN_LOG_FILE,
-        },
-        'ansible_logs': {
-            'encoding': 'utf8',
-            'level': 'DEBUG',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'main',
-            'maxBytes': 1024*1024*100,
-            'backupCount': 7,
-            'filename': ANSIBLE_LOG_FILE,
-        },
-        'gunicorn_file': {
-            'encoding': 'utf8',
-            'level': 'DEBUG',
-            'class': 'logging.handlers.RotatingFileHandler',
-            'formatter': 'msg',
-            'maxBytes': 1024*1024*100,
-            'backupCount': 2,
-            'filename': GUNICORN_LOG_FILE,
-        },
-        'gunicorn_console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'msg'
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['null'],
-            'propagate': False,
-            'level': LOG_LEVEL,
-        },
-        'django.request': {
-            'handlers': ['console', 'file'],
-            'level': LOG_LEVEL,
-            'propagate': False,
-        },
-        'django.server': {
-            'handlers': ['console', 'file'],
-            'level': LOG_LEVEL,
-            'propagate': False,
-        },
-        # 'django.db': {
-        #     'handlers': ['console', 'file'],
-        #     'level': 'DEBUG'
-        # }
-    }
-}
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -236,7 +155,10 @@ DATABASES = {
         'PASSWORD': CONFIG.DB_PASSWORD,
         'ATOMIC_REQUESTS': True,
         'OPTIONS': DB_OPTIONS
-    }
+    },
+    # 'mongo': {
+    #     'ENGINE': None,
+    # }
 }
 
 DB_CA_PATH = os.path.join(PROJECT_DIR, 'data', 'ca.pem')
@@ -250,6 +172,10 @@ if CONFIG.DB_ENGINE.lower() == 'mysql':
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
 ]
+
+TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
+DATE_TIME_FORMAT = '%Y-%m-%d'
+
 
 # restframework
 from .restframework import *
@@ -265,36 +191,32 @@ FILE_UPLOAD_DIRECTORY_PERMISSIONS = 0o755
 
 SITE_ID = 1
 SITE_ROOT = os.path.dirname(BASE_DIR)
+
 STATIC_ROOT = os.path.join(SITE_ROOT, 'collect_static')
+
+if sys.platform == 'win32':
+    STATIC_ROOT = 'E:\\xadmin\\collect_static\\'
+
 
 STATIC_URL = '/static/'
 STATICFILES = os.path.join(BASE_DIR, 'static')
-
-TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
-DATE_TIME_FORMAT = '%Y-%m-%d'
-
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
 
 
-### Email-settings
+# Email-settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = False
 EMAIL_HOST = 'smtp.163.com'
-EMAIL_HOST_USER = 'test@163.com'
-EMAIL_HOST_PASSWORD = 'tset222'
+EMAIL_HOST_USER = 'actanble@163.com'
+EMAIL_HOST_PASSWORD = 'string123'
 EMAIL_PORT = 25
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 SERVER_EMAIL = EMAIL_HOST_USER
 
-#from .site_settings.logsettings import LOGGING
-
-# from .site_settings.cors import *
-MEDIA_DIR = STATIC_ROOT
-if sys.platform == 'win32':
-    MEDIA_DIR = "e://"
+MEDIA_DIR = os.path.join(STATIC_ROOT, 'media')
 
 if not os.path.exists(MEDIA_DIR):
     os.makedirs(MEDIA_DIR)
@@ -305,7 +227,7 @@ MEDIA_ROOT = os.path.join(MEDIA_DIR, 'collect_static', 'uploads')
 # PROJECT_DIR = STATIC_ROOT
 # import pymysql
 
-SITE_TITLE = u'XX-SCAN'
+SITE_TITLE = u'信息安全管控平台'
 
 # Dump all celery log to here
 CELERY_LOG_DIR = os.path.join(PROJECT_DIR, 'data', 'celery')
@@ -336,14 +258,33 @@ CELERY_WORKER_REDIRECT_STDOUTS_LEVEL = "INFO"
 CELERY_WORKER_MAX_TASKS_PER_CHILD = 40
 CELERY_TASK_SOFT_TIME_LIMIT = 3600
 
-CELERYD_FORCE_EXECV = True
+CELERYD_FORCE_EXECV = True     # 非常重要,有些情况下可以防止死锁
 CELERY_WORKER_CONCURRENCY = 1
+CELERYD_CONCURRENCY = 20  # 并发worker数
+
+# 2019-6-25 设置 interval 出错加上 celery_timezone
+CELERY_TIMEZONE = TIME_ZONE
+CELERYD_PREFETCH_MULTIPLIER = 1
+CELERYD_MAX_TASKS_PER_CHILD = 100 
+
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+CELERY_TASK_ALWAYS_EAGER = False
+CELERY_WORKER_HIJACK_ROOT_LOGGER = False
+CELERY_TASK_ACKS_LATE = True  # Retry if task fails
+CELERY_TASK_TIME_LIMIT = 60 * 25  # fips seconds, so 25 minutes
+CELERY_SEND_TASK_ERROR_EMAILS = False
+
+CELERY_ALWAYS_EAGER = False
+CELERY_ACKS_LATE = True
+CELERY_TASK_PUBLISH_RETRY = True
+CELERY_DISABLE_RATE_LIMITS = False
+
 
 # Cache use redis
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        #'BACKEND': 'redis_cache.cache.RedisCache',
+        # 'BACKEND': 'redis_cache.cache.RedisCache',
         'LOCATION': 'redis://:%(password)s@%(host)s:%(port)s/%(db)s' % {
             'password': CONFIG.REDIS_PASSWORD,
             'host': CONFIG.REDIS_HOST,
@@ -370,9 +311,46 @@ try:
 except:
     pass
 
+# Load Cor Headers 
+X_FRAME_OPTIONS = 'ALLOWALL'
 
-## 取消CSRF中间件
-MIDDLEWARE.append('services.middle.MiddleWare.DisableCSRFCheck')
-# MIDDLEWARE.append('services.middle.MiddleWare.SiteMainMiddleware')
+# 跨域增加忽略
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = ('*')
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+    'VIEW',
+)
 
-PREVILEGED_USER_SETS = ["actanble", "admin007"]
+CORS_ALLOW_HEADERS = (
+    'XMLHttpRequest',
+    'X_FILENAME',
+    'accept-encoding',
+    'authorization',
+    'Authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+    'Pragma',
+    'X-Token',
+)
+
+SESSION_COOKIE_AGE = 60 * 30  # 30分钟
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True  # 关闭浏览器，则COOKIE失效
+
+# 取消CSRF中间件
+MIDDLEWARE.append('secs.middle.MiddleWare.DisableCSRFCheck')
+if DEBUG:
+    MIDDLEWARE.append('secs.middle.MiddleWare.SiteMainMiddleware')
+
+PREVILEGED_USER_SETS = ["admin001", "admin007"]

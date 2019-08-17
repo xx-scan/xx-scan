@@ -8,7 +8,7 @@ REST_FRAMEWORK_APPS = (
 APPEND_SLASH=False
 
 # https://getblimp.github.io/django-rest-framework-jwt/
-from services.api.oauth.local_jwt.jwt_settings import LocalJSONWebTokenAuthentication
+from secs.api.oauth.local_jwt.jwt_settings import LocalJSONWebTokenAuthentication
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
@@ -24,12 +24,12 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
         # 增加 rest_framework_simplejwt ; 注释默认的 jwt
-        #'rest_framework_simplejwt.authentication.JWTTokenUserAuthentication',
-        ),
+        # 'rest_framework_simplejwt.authentication.JWTTokenUserAuthentication',
+    ),
 
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
 
 }
 
-from services.api.oauth.local_jwt.jwt_settings import JWT_AUTH
+from secs.api.oauth.local_jwt.jwt_settings import JWT_AUTH
